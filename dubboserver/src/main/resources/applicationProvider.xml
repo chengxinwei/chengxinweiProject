@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://code.alibabatech.com/schema/dubbo  
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd  
+        ">
+    <dubbo:application name="hello-world-app" />
+    <!-- 本机 伪集群 测试 -->
+    <dubbo:registry  protocol="zookeeper"  address="192.168.220.220:2181"/>
+
+     <!-- name 为协议类型
+          dispatcher
+          threadpool 线程池用在什么地方
+          threads 线程数量
+     -->
+    <dubbo:protocol name="dubbo" port="20883" dispatcher="all"
+                    threadpool="fixed" threads="10" />
+
+    <!-- loadbalance  服务端的均衡策略 -->
+    <dubbo:service interface="com.howbuy.service.DubboDemoService"
+                   ref="demoService"
+                   loadbalance="random" accesslog="foo/bar.log">
+    </dubbo:service>
+
+    <!-- 本地bean实现类 -->
+    <bean id="demoService" class="com.howbuy.server.dubbo.service.DubboDemoServerImpl" />
+
+
+    <!-- 监控中心 -->
+    <dubbo:monitor address="192.168.121.137:17070"></dubbo:monitor>
+
+
+
+</beans>
