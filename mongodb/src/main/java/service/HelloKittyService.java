@@ -18,6 +18,19 @@ public class HelloKittyService {
 
         HelloKitty ret = helloKittyDAO.getHelloKittyByName(hello.getName());
 
+
         return ret;
     }
+
+
+    public void updateHelloKitty(HelloKitty hello){
+        helloKittyDAO.updateHelloKitty(hello);
+
+//        HelloKitty ret = helloKittyDAO.getHelloKittyByNameWithCollection(hello.getName());
+
+
+//        return ret;
+    }
+
+
 }
