@@ -1,14 +1,17 @@
 package chengxinwei.mongo.service;
 
-import chengxinwei.mongo.mongo.City;
+import chengxinwei.mongo.model.City;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.repository.CrudRepository;
+
+import javax.persistence.PersistenceUnit;
 
 /**
  * Created by xinwei.cheng on 2015/7/1.
  */
-public interface MongoService extends MongoRepository<City, Long> {
+public interface MongoRepositoryService extends CrudRepository<City, Long> {
+
 
     Page<City> findAll(Pageable pageable);
 

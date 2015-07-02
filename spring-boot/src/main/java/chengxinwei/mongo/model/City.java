@@ -1,5 +1,6 @@
-package chengxinwei.mongo.mongo;
+package chengxinwei.mongo.model;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.Column;
@@ -51,5 +52,9 @@ public class City implements Serializable {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String toString(){
+        return JSON.toJSONString(this);
     }
 }

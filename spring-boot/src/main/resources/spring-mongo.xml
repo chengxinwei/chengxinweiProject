@@ -7,14 +7,23 @@
             http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 
 
-    <mongo:mongo id="mongo" host="192.168.187.129" port="27017" >
-        <!--<mongo:options connections-per-host="20"/>-->
+    <mongo:mongo id="mongoA" host="192.168.187.129" port="27017" >
+        <mongo:options connections-per-host="20"/>
     </mongo:mongo>
 
+    <!--<mongo:mongo id="mongoB" host="192.168.187.129" port="28017" >-->
+        <!--<mongo:options connections-per-host="20"/>-->
+    <!--</mongo:mongo>-->
+
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-        <constructor-arg ref="mongo" />
+        <constructor-arg ref="mongoA" />
         <constructor-arg name="databaseName" value="testDb" />
     </bean>
+
+    <!--<bean id="mongoTemplateB" class="org.springframework.data.mongodb.core.MongoTemplate">-->
+        <!--<constructor-arg ref="mongoB" />-->
+        <!--<constructor-arg name="databaseName" value="testDb" />-->
+    <!--</bean>-->
 
 
 </beans>
