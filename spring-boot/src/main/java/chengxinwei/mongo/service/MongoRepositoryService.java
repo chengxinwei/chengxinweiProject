@@ -5,8 +5,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 
-import javax.persistence.PersistenceUnit;
-
 /**
  * Created by xinwei.cheng on 2015/7/1.
  */
