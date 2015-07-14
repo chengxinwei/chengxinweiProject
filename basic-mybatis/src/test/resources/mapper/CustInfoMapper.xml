@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CustInfoMapper">
+    <resultMap id="CustInfo" type="com.howbuy.cc.basic.mybatis.model.CustInfo">
+        <result property="custNo" column="CUST_NO"></result>
+        <result property="regDt" column="REG_DT"></result>
+        <result property="f1AppDt" column="lastDealDate"></result>
+        <result property="invstType" column="INVST_TYPE"></result>
+        <result property="idNo" column="ID_NO"></result>
+        <result property="lastLoginDate" column="Last_Login"></result>
+        <result property="custName" column="cust_name"></result>
+        <result property="maxVol3Month" column="val_l3m"></result>
+        <result property="maxVolAll" column="val"></result>
+    </resultMap>
+
+    <select id="selectList" resultMap="CustInfo" parameterType="hashMap">
+       select * from MID_PUB_CUST_TOTAL_INFO_LABEL where cust_no = '1000000180'
+    </select>
+
+    <select id="selectOne" resultMap="CustInfo">
+      select * from MID_PUB_CUST_TOTAL_INFO_LABEL where cust_no = '1000000180'
+    </select>
+
+
+    <select id="count" resultType="Integer">
+        select count(1) from MID_PUB_CUST_TOTAL_INFO_LABEL  where cust_no = '1000000180'
+    </select>
+</mapper>

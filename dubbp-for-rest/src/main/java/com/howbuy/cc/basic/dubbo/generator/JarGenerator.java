@@ -64,7 +64,8 @@ public class JarGenerator {
             }
             String jarName = pom.getArtifactId() + "-" + pom.getVersion() + ".jar";
             pom.setJarName(jarName);
-            pom.setFullJarPath("d:/"+jarName);
+            pom.setFullJarPath(Configuration.get("jarFilePath")+jarName);
+//            pom.setFullJarPath("d:/"+jarName);
         } catch (JDOMException e) {
             logger.error(e.getMessage() , e);
         } catch (IOException e) {

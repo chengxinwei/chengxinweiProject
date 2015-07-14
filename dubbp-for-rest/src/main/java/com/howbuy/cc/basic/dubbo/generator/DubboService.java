@@ -45,18 +45,18 @@ public class DubboService {
 
     public static Object excute(Class<?> clazz , Method method , Object[] args) {
         ApplicationConfig application = new ApplicationConfig();
-        application.setName("howbuy-demo");
+        application.setName("dubbo-for-rest");
 
         RegistryConfig registry = new RegistryConfig();
         registry.setAddress(Configuration.get("zookeeper.ip_port"));
 
-        ProtocolConfig protocol = new ProtocolConfig();
-        protocol.setName("dubbo");
 
         ReferenceConfig<?> rc = new ReferenceConfig();
         rc.setApplication(application);
         rc.setRegistry(registry);
         rc.setInterface(clazz);
+        rc.setProtocol("dubbo");
+
         try {
             Object obj = rc.get();
             return method.invoke(obj, args);

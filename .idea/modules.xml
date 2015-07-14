@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/basic-cache/basic-cache.iml" filepath="$PROJECT_DIR$/basic-cache/basic-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-core/basic-core.iml" filepath="$PROJECT_DIR$/basic-core/basic-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" filepath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-test/basic-test.iml" filepath="$PROJECT_DIR$/basic-test/basic-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/chengxinweiProject.iml" filepath="$PROJECT_DIR$/.idea/chengxinweiProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubboclient/dubboclient.iml" filepath="$PROJECT_DIR$/dubboclient/dubboclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubboservice/dubboservice.iml" filepath="$PROJECT_DIR$/dubboservice/dubboservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbp-for-rest/dubbp-for-rest.iml" filepath="$PROJECT_DIR$/dubbp-for-rest/dubbp-for-rest.iml" />
+    </modules>
+  </component>
+</project>

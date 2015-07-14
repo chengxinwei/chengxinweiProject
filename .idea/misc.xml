@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="Spring" url="file://$PROJECT_DIR$/basic-mongo/src/main/resources/basic.mongo/spring-mongo.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/basic-mongo/target/classes/basic.mongo/spring-mongo.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboclient/src/main/resources/applicationCacheConsumer.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboclient/src/main/resources/applicationConsumer.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboclient/src/main/resources/applicationGroupConsumer.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboclient/src/main/resources/applicationSpringConsumer.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboserver/src/main/resources/applicationFilterProvider.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboserver/src/main/resources/applicationGroupProvider.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboserver/src/main/resources/applicationHttpProvider.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboserver/src/main/resources/applicationProvider.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/dubboserver/src/main/resources/applicationRmiProvider.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/mongodb/src/main/resources/application.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/redis/src/main/resources/applicationHttpProvider.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/redis/src/main/resources/spring-cache.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/spring-boot/src/main/resources/spring-mongo.xml" />
+    <file type="web" url="file://$PROJECT_DIR$/dubbp-for-rest" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/basic-core/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-test/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbp-for-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/dubboclient/pom.xml" />
+        <option value="$PROJECT_DIR$/dubboservice/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK" />
+</project>

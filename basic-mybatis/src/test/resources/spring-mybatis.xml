@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <bean id="cim" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+    </bean>
+
+
+    <bean class="com.howbuy.cc.basic.mybatis.datasourceRoute.SqlSessionFactoryRoute">
+        <property name="dataSourceBeanNameSet">
+            <set>
+                <value>cim</value>
+            </set>
+        </property>
+        <property name="configLocation" value="classpath:spring/mybatis-config.xml" />
+        <property name="typeAliasesPackage" value="com.howbuy.datax.service.taxonomy.model" />
+        <property name="defaultDatasourceBeanName" value="cim"></property>
+        <property name="mapperLocations" >
+            <list>
+                <value>classpath:mapper/*Mapper.xml</value>
+            </list>
+        </property>
+    </bean>
+
+
+
+</beans>
