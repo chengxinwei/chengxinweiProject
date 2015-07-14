@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.howbuy.cc.basic</groupId>
+    <artifactId>dubbo-for-rest</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>dubbo-for-rest</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.howbuy.cc.basic</groupId>
+            <artifactId>basic-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.5.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>3.1.4.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.1.4.RELEASE</version>
+        </dependency>
+
+        <!-- zkclient  -->
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <!--  zookeeper -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.3.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.20.0-GA</version>
+        </dependency>
+
+
+    </dependencies>
+
+
+    <build>
+        <defaultGoal>war</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <!-- or whatever version you use -->
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <outputDirectory>${basedir}/target</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

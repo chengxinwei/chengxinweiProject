@@ -89,5 +89,10 @@
             <artifactId>zookeeper</artifactId>
             <version>3.3.6</version>
         </dependency>
+        <dependency>
+            <groupId>com.howbuy</groupId>
+            <artifactId>dubboservice</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
