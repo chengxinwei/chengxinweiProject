@@ -17,6 +17,16 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="basic-logger" />
+        <module name="basic-mongo" />
+        <module name="basic-mq" />
+        <module name="basic-test" />
+      </profile>
       <profile default="false" name="Annotation profile for basic-core" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
@@ -24,50 +34,29 @@
         <processorPath useClasspath="true" />
         <module name="basic-core" />
       </profile>
-      <profile default="false" name="Annotation profile for base-cache" enabled="true">
+      <profile default="false" name="Annotation profile for basic-cache" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="base-cache" />
+        <module name="basic-cache" />
       </profile>
       <profile default="false" name="Annotation profile for basic-mybatis" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for basic-cache" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="dubboclient" />
-        <module name="dubboservice" />
-      </profile>
-      <profile default="false" name="Annotation profile for dubbp-for-rest" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="dubbp-for-rest" />
+        <module name="basic-mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="base-cache" target="1.7" />
       <module name="basic-cache" target="1.7" />
       <module name="basic-core" target="1.7" />
+      <module name="basic-logger" target="1.5" />
+      <module name="basic-mongo" target="1.5" />
+      <module name="basic-mq" target="1.5" />
       <module name="basic-mybatis" target="1.7" />
       <module name="basic-test" target="1.5" />
-      <module name="dubboclient" target="1.5" />
-      <module name="dubboservice" target="1.5" />
-      <module name="dubbp-for-rest" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

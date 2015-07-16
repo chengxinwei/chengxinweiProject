@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/basic.iml" filepath="$PROJECT_DIR$/.idea/basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-cache/basic-cache.iml" filepath="$PROJECT_DIR$/basic-cache/basic-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-core/basic-core.iml" filepath="$PROJECT_DIR$/basic-core/basic-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-logger/basic-logger.iml" filepath="$PROJECT_DIR$/basic-logger/basic-logger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-mongo/basic-mongo.iml" filepath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-mq/basic-mq.iml" filepath="$PROJECT_DIR$/basic-mq/basic-mq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" filepath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-test/basic-test.iml" filepath="$PROJECT_DIR$/basic-test/basic-test.iml" />
+    </modules>
+  </component>
+</project>

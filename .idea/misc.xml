@@ -4,8 +4,8 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="Spring" url="file://$PROJECT_DIR$/basic-mongo/src/main/resources/basic.mongo/spring-mongo.xml" />
-    <file type="Spring" url="file://$PROJECT_DIR$/basic-mongo/target/classes/basic.mongo/spring-mongo.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/basic/basic-mongo/src/main/resources/basic.mongo/spring-mongo.xml" />
+    <file type="Spring" url="file://$PROJECT_DIR$/basic/basic-mongo/target/classes/basic.mongo/spring-mongo.xml" />
     <file type="Spring" url="file://$PROJECT_DIR$/dubboclient/src/main/resources/applicationCacheConsumer.xml" />
     <file type="Spring" url="file://$PROJECT_DIR$/dubboclient/src/main/resources/applicationConsumer.xml" />
     <file type="Spring" url="file://$PROJECT_DIR$/dubboclient/src/main/resources/applicationGroupConsumer.xml" />

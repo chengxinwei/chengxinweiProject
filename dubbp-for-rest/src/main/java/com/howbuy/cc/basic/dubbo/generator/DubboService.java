@@ -1,16 +1,11 @@
 package com.howbuy.cc.basic.dubbo.generator;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
-import com.alibaba.dubbo.config.ProtocolConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.howbuy.cc.basic.config.Configuration;
 import com.howbuy.cc.basic.dubbo.generator.model.Pom;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import javassist.ClassPath;
-import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
