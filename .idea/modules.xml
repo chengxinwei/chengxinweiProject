@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/chengxinweiProject.iml" filepath="$PROJECT_DIR$/.idea/chengxinweiProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-for-rest/dubbo-for-rest-execute/dubbo-for-rest-execute.iml" filepath="$PROJECT_DIR$/dubbo-for-rest/dubbo-for-rest-execute/dubbo-for-rest-execute.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubboclient/dubboclient.iml" filepath="$PROJECT_DIR$/dubboclient/dubboclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubboservice/dubboservice.iml" filepath="$PROJECT_DIR$/dubboservice/dubboservice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dubbp-for-rest/dubbp-for-rest.iml" filepath="$PROJECT_DIR$/dubbp-for-rest/dubbp-for-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/dubbp-for-rest.iml" filepath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/dubbp-for-rest.iml" />
     </modules>
   </component>
 </project>

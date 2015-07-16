@@ -15,16 +15,7 @@
         <result property="maxVolAll" column="val"></result>
     </resultMap>
 
-    <select id="selectList" resultMap="CustInfo" parameterType="hashMap">
-       select * from MID_PUB_CUST_TOTAL_INFO_LABEL where cust_no = '1000000180'
-    </select>
-
     <select id="selectOne" resultMap="CustInfo">
       select * from MID_PUB_CUST_TOTAL_INFO_LABEL where cust_no = '1000000180'
-    </select>
-
-
-    <select id="count" resultType="Integer">
-        select count(1) from MID_PUB_CUST_TOTAL_INFO_LABEL  where cust_no = '1000000180'
     </select>
 </mapper>

@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="dubbp-for-rest:war exploded">
-    <output-path>$PROJECT_DIR$/dubbp-for-rest/target/dubbo-for-rest-1.0-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="dubbo-for-rest:war exploded">
+    <output-path>D:/workspace/chengxinweiProject/dubbp-for-rest/target/dubbo-for-rest-1.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="dubbp-for-rest" />
+          <element id="module-output" name="dubbo-for-rest" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.howbuy.cc.basic:basic-core:1.0.0" />
@@ -40,9 +40,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/target/dubbo-for-rest-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="D:/workspace/chengxinweiProject/dubbo-for-rest/dubbp-for-rest/target/dubbo-for-rest-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="dubbp-for-rest/web/Web" />
+      <element id="javaee-facet-resources" facet="dubbo-for-rest/web/Web" />
     </root>
   </artifact>
 </component>

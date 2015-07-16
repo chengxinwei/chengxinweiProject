@@ -6,11 +6,14 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
 
 /**
+ * dao层的aop用户确定数据源切换
  * Created by xinwei.cheng on 2015/7/16.
  */
 @Aspect
+@Component
 public class DynamicDataSourceAspect {
 
 

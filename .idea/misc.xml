@@ -19,7 +19,7 @@
     <file type="Spring" url="file://$PROJECT_DIR$/redis/src/main/resources/applicationHttpProvider.xml" />
     <file type="Spring" url="file://$PROJECT_DIR$/redis/src/main/resources/spring-cache.xml" />
     <file type="Spring" url="file://$PROJECT_DIR$/spring-boot/src/main/resources/spring-mongo.xml" />
-    <file type="web" url="file://$PROJECT_DIR$/dubbp-for-rest" />
+    <file type="web" url="file://$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -31,6 +31,7 @@
         <option value="$PROJECT_DIR$/dubbp-for-rest/pom.xml" />
         <option value="$PROJECT_DIR$/dubboclient/pom.xml" />
         <option value="$PROJECT_DIR$/dubboservice/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-for-rest-execute/pom.xml" />
       </list>
     </option>
   </component>

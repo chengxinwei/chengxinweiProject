@@ -4,8 +4,9 @@
     <file url="file://$PROJECT_DIR$/basic/basic-cache" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basic/basic-mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basic/basic-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-for-rest/dubbo-for-rest-execute" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboclient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dubboservice" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/dubbp-for-rest" charset="UTF-8" />
   </component>
 </project>

@@ -48,6 +48,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="dubbo-for-rest-execute" />
         <module name="dubboclient" />
         <module name="dubboservice" />
       </profile>
@@ -65,6 +66,7 @@
       <module name="basic-core" target="1.7" />
       <module name="basic-mybatis" target="1.7" />
       <module name="basic-test" target="1.5" />
+      <module name="dubbo-for-rest-execute" target="1.5" />
       <module name="dubboclient" target="1.5" />
       <module name="dubboservice" target="1.5" />
       <module name="dubbp-for-rest" target="1.7" />

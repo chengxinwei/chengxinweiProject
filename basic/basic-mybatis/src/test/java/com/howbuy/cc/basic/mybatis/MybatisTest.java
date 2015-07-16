@@ -1,10 +1,10 @@
 package com.howbuy.cc.basic.mybatis;
 
-import com.howbuy.cc.basic.mybatis.dao.CustInfoDao;
+import com.howbuy.cc.basic.mybatis.annotation.CCNameSpaceMapper;
+import com.howbuy.cc.basic.mybatis.dao.CustInfoMasterDao;
+import com.howbuy.cc.basic.mybatis.dao.CustInfoSlaveDao;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.HashMap;
 
 /**
  * Created by xinwei.cheng on 2015/7/8.
@@ -12,13 +12,15 @@ import java.util.HashMap;
 public class MybatisTest extends BaseTest{
 
     @Autowired
-    private CustInfoDao custInfoDao;
+    private CustInfoMasterDao custInfoMasterDao;
+    @Autowired
+    private CustInfoSlaveDao custInfoSlaveDao;
 
 
     @Test
-    public void selectOne(){
-        System.out.println(custInfoDao.selectOne(new HashMap<String, Object>()));
-
+    public void selectOne() throws InterruptedException {
+        System.out.println(custInfoMasterDao.selectOne(null));
+        System.out.println(custInfoSlaveDao.selectOne(null));
     }
 
 }

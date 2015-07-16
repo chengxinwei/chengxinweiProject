@@ -1,11 +1,13 @@
 package com.howbuy.cc.basic.mybatis.dao;
 
+import com.howbuy.cc.basic.mybatis.annotation.CCNameSpaceMapper;
 import com.howbuy.cc.basic.mybatis.dao.callback.ExecuteCallBack;
 import com.howbuy.cc.basic.mybatis.model.Page;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -24,9 +26,29 @@ public class MybatisCommonDao<T>{
 
     private  String nameSpace;
 
-    public MybatisCommonDao(){
-        clazz = (Class <T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-        nameSpace  = clazz.getSimpleName() + "Mapper";
+    public MybatisCommonDao() {
+        ParameterizedType parameterizedType = null;
+        Class _clazz =  getClass();
+        while (true) {
+            Type type = _clazz.getGenericSuperclass();
+            if (type instanceof ParameterizedType) {
+                parameterizedType = (ParameterizedType)type;
+                break;
+            }
+            _clazz = _clazz.getSuperclass();
+        }
+        clazz = (Class<T>) parameterizedType.getActualTypeArguments()[0];
+        nameSpace = getNameSpace();
+    }
+
+
+    /**
+     * 获取命名空间
+     * @return
+     */
+    public String getNameSpace(){
+        CCNameSpaceMapper ccMapper = this.getClass().getAnnotation(CCNameSpaceMapper.class);
+        return ccMapper == null ?  clazz.getSimpleName() + "Mapper" : ccMapper.value();
     }
 
 
@@ -108,8 +130,8 @@ public class MybatisCommonDao<T>{
      * @param <E>   泛型类
      * @return 返回数据
      */
-    public <E> E execute(ExecuteCallBack<E> executeCallBack){
-        return executeCallBack.execute(sqlSession);
+    protected  <E> E execute(ExecuteCallBack<E> executeCallBack){
+        return executeCallBack.execute(this.nameSpace , sqlSession);
     }
 
 }
