@@ -1,0 +1,10 @@
+com\howbuy\cc\basic\dubbo\generator\model\InterfaceInfo.class
+com\howbuy\cc\basic\dubbo\generator\DubboXmlGenerator.class
+com\howbuy\cc\basic\dubbo\generator\DubboService.class
+com\howbuy\cc\basic\dubbo\generator\DubboClassLoader.class
+com\howbuy\cc\basic\dubbo\generator\JarGenerator.class
+com\howbuy\cc\basic\mvc\DubboController.class
+com\howbuy\cc\basic\mvc\HelloController.class
+com\howbuy\cc\basic\dubbo\generator\model\Pom.class
+com\howbuy\cc\basic\dubbo\generator\MethodParamName.class
+com\howbuy\cc\basic\dubbo\generator\model\MethodParamsInfo.class
