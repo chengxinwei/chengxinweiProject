@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: xinwei.cheng
-  Date: 2015/7/13
-  Time: 15:13
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN" ng-app="dubbo-for-rest-app">
@@ -36,7 +29,7 @@
             <h2><b>导入新的pom文件</b></h2>
             <div class="bs-example pull-left" style="width: 50%;">
                 <form>
-                    <textarea class="form-control" ng-model="pomStr" rows="6" placeholder="输入pom文件中的dependency"></textarea>
+                    <textarea class="form-control" style="max-width: 570px;min-width: 570px;" ng-model="pomStr" rows="6" placeholder="输入pom文件中的dependency"></textarea>
                 </form>
             </div>
 
@@ -89,7 +82,7 @@
                     <tr>
                         <th width="5%">#</th>
                         <th width="20%">参数名</th>
-                        <th width="40%">参数类型</th>
+                        <th width="30%">参数类型</th>
                         <th width="45%;">输入参数值</th>
                     </tr>
                     </thead>
@@ -98,7 +91,10 @@
                         <th scope="row">{{$index}}</th>
                         <td style="word-break:break-all; word-wrap:break-word;">{{params.paramsName || '-'}}</td>
                         <td style="word-break:break-all; word-wrap:break-word;">{{params.paramsClass}}</td>
-                        <td><input type="text" class="form-control" placeholder="参数值" ng-model="params.value"></td>
+                        <td>
+                            <textarea class="form-control" rows="2" ng-model="params.value" style="max-width: 500px;min-width: 500px;"></textarea>
+                            <%--<input type="text" class="form-control" placeholder="参数值" >--%>
+                        </td>
                     </tr>
                     </tbody>
                 </table>

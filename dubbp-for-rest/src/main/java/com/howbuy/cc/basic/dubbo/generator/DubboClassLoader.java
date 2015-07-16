@@ -2,7 +2,7 @@ package com.howbuy.cc.basic.dubbo.generator;
 
 import org.apache.log4j.Logger;
 
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.JarURLConnection;
@@ -10,6 +10,7 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.HashSet;
 import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -27,15 +28,11 @@ public class DubboClassLoader {
         jarPath = "jar:file:" + jarPath + "!/";
 
         URL url = new URL(jarPath);
+
         JarURLConnection secJarCon = (JarURLConnection)url.openConnection();
         JarFile jarFile = secJarCon.getJarFile();
 
-        Method method = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
-
-        URLClassLoader urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
-
-        method.setAccessible(true);
-        method.invoke(urlClassLoader, url);
+        URLClassLoader urlClassLoader = new URLClassLoader(new URL[]{url} , ClassLoader.getSystemClassLoader());
 
         Enumeration<JarEntry> jarEntrys = jarFile.entries();
 
@@ -45,10 +42,9 @@ public class DubboClassLoader {
             if(entry.getName().endsWith(".class")){
                 String className = entry.getName().replace("/" , ".");
                 className = className.substring(0 , className.lastIndexOf("."));
-                urlClassLoader.loadClass(className);
 
-                try {
-                    Class<?> clazz = Class.forName(className);
+                try{
+                    Class<?> clazz = urlClassLoader.loadClass(className);
                     classList.add(clazz);
                 }catch (ClassNotFoundException e){
                     logger.error("加载class失败" , e);
@@ -57,12 +53,19 @@ public class DubboClassLoader {
                 logger.info("加载class成功：" + className);
             }
         }
+        Thread.currentThread().setContextClassLoader(urlClassLoader);
         return classList;
     }
 
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        loadJar("/D:/crm-label-api2Login-model-1.0.jar");
+        List<Class> clazzList1 = loadJar("/D:/crm-label-api2Login-model-1.0.jar");
+        List<Class> clazzList2 = loadJar("/D:/crm-label-api2Login-model-1.1.jar");
+        for(Class<?> clazz : clazzList1){
+            if(clazz.getSimpleName().equals("ICustLoginService")){
+                System.out.println("class1 ICustLoginService method count " + clazz);
+            }
+        }
         System.out.println(1);
     }
 }

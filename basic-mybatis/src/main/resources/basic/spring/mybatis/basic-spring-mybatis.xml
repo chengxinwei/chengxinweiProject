@@ -8,5 +8,26 @@
 
     <context:component-scan base-package="com.howbuy.cc.basic.mybatis"/>
 
+    <!--&lt;!&ndash; 动态数据源 &ndash;&gt;-->
+    <!--<bean id="dynamicdataSource" class="com.howbuy.common.datasource.DynamicDataSource">-->
+        <!--<property name="targetDataSources">-->
+            <!--<map key-type="java.lang.String">-->
+                <!--<entry key="master" value-ref="masterdataSource"/>-->
+                <!--<entry key="slave" value-ref="slavedataSource"/>-->
+            <!--</map>-->
+        <!--</property>-->
+        <!--<property name="defaultTargetDataSource" ref="masterdataSource"/>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;Spring|myibatis整合配置 &ndash;&gt;-->
+    <!--<bean id="sqlSessionFactoryBeanName" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+        <!--<property name="configLocation" value="classpath:/provider/mybatis-config.xml" />-->
+        <!--<property name="dataSource" ref="dynamicdataSource" />-->
+        <!--<property name="plugins">-->
+            <!--<list>-->
+                <!--<ref bean="paginationInterceptor" />-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
 </beans>

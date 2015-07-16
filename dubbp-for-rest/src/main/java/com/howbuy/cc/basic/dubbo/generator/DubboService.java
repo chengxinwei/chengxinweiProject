@@ -25,19 +25,14 @@ import java.util.*;
  */
 public class DubboService {
 
-    private static Map<Pom , ClassPathXmlApplicationContext> applicationContextMap = new HashMap<>();
+    private static Map<Pom,List<Class>> pomIdClazzList = new HashMap<>();
 
 
-
-    public static  List<Class> generator(String pomStr) throws ParserConfigurationException, SAXException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        Pom pom = JarGenerator.getPomByStr(pomStr);
-        if(applicationContextMap.containsKey(pom)){
-            return Collections.emptyList();
-        }
-        //下载
-        JarGenerator.getJarByPom(pom);
+    public static List<Class> generator(Pom pom) throws ParserConfigurationException, SAXException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         //加载类
         List<Class> classList = DubboClassLoader.loadJar(pom.getFullJarPath());
+        pom.setClassLoader(Thread.currentThread().getContextClassLoader());
+        pomIdClazzList.put(pom , classList);
         return classList;
     }
 
@@ -81,11 +76,29 @@ public class DubboService {
      * @throws InvocationTargetException
      * @throws IllegalAccessException
      */
-    public static Object excute(String interfaceClass , String methodName , Class[] methodParamsClassAry , String[] args) throws ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchMethodException, IOException {
-        Class<?> clazz = Class.forName(interfaceClass);
-        Method method = clazz.getMethod(methodName , methodParamsClassAry);
-        Object[] methodArgs  = matchMethodParams(args , method);
-        return excute(clazz , method , methodArgs);
+    public static Object excute(String artifactId , String groupId , String interfaceClass , String methodName , Class[] methodParamsClassAry , String[] args) throws ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchMethodException, IOException {
+        Pom pom = new Pom();
+        pom.setGroupId(groupId);
+        pom.setArtifactId(artifactId);
+
+        for(Map.Entry<Pom,List<Class>> entry : pomIdClazzList.entrySet()){
+            Pom entryPom = entry.getKey();
+            if(entryPom.getArtifactId().equals(artifactId) && entryPom.getGroupId().equals(groupId)){
+
+                for(Class<?> clazz : entry.getValue()){
+                    if(clazz.getName().equals(interfaceClass)){
+                        Method method = clazz.getMethod(methodName , methodParamsClassAry);
+                        Object[] methodArgs  = matchMethodParams(args , method);
+                        Thread.currentThread().setContextClassLoader(entryPom.getClassLoader());
+                        return excute(clazz , method , methodArgs);
+                    }
+                }
+            }
+        }
+
+
+        throw  new ClassNotFoundException("class "+ interfaceClass + " is not found");
+
     }
 
 

@@ -7,6 +7,8 @@ dubboForRestApp.controller("dubbo-for-rest-controller",function($scope,$http,$fi
     };
     $scope.isOk=true;
     $scope.isSend = false;
+    $scope.pom = {
+    }
 
     /**
      * 导入pom
@@ -16,8 +18,10 @@ dubboForRestApp.controller("dubbo-for-rest-controller",function($scope,$http,$fi
         var params = {pomStr : pomStr};
         $http.post("/dubbo/pom" , params).success(function (data) {
             console.log(data);
-            if(data.resultList){
+            if(data.status == 'ok'){
                 $scope.interfaceList = data.resultList;
+                $scope.pom.artifactId = data.artifactId;
+                $scope.pom.groupId = data.groupId;
             }else {
                 alert("导入pom失败")
             }
@@ -52,6 +56,8 @@ dubboForRestApp.controller("dubbo-for-rest-controller",function($scope,$http,$fi
         params.interfaceName = $scope.selectInterface.clazz;
         params.methodParamsClassAry = $scope.selectInterface.method.parameterTypes;
         params.method = $scope.selectInterface.method.name;
+        params.groupId = $scope.pom.groupId;
+        params.artifactId = $scope.pom.artifactId;
         $http.post("/dubbo/excute" , params).success(function (data) {
             $scope.responseMessage = data.message;
             if (data.status == 'ok') {

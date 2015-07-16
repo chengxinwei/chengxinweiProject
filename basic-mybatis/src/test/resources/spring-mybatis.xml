@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-    <bean id="cim" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driver}"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
@@ -13,18 +13,15 @@
         <property name="initialSize" value="${jdbc.initialSize}"/>
         <property name="maxActive" value="${jdbc.maxActive}"/>
         <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="validationQuery" value="select 1 from dual"/>
     </bean>
 
-
-    <bean class="com.howbuy.cc.basic.mybatis.datasourceRoute.SqlSessionFactoryRoute">
-        <property name="dataSourceBeanNameSet">
-            <set>
-                <value>cim</value>
-            </set>
-        </property>
-        <property name="configLocation" value="classpath:spring/mybatis-config.xml" />
+    <!-- 集成mybatis -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:mybatis-config.xml" />
+        <!-- 自动配置别名 -->
         <property name="typeAliasesPackage" value="com.howbuy.datax.service.taxonomy.model" />
-        <property name="defaultDatasourceBeanName" value="cim"></property>
         <property name="mapperLocations" >
             <list>
                 <value>classpath:mapper/*Mapper.xml</value>
@@ -32,6 +29,8 @@
         </property>
     </bean>
 
-
+    <bean class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory" />
+    </bean>
 
 </beans>

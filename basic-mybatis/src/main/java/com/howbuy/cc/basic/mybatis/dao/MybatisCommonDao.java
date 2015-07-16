@@ -1,29 +1,24 @@
 package com.howbuy.cc.basic.mybatis.dao;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import com.howbuy.cc.basic.mybatis.annotation.CCDatasourceRoute;
+import com.howbuy.cc.basic.mybatis.dao.callback.ExecuteCallBack;
 import com.howbuy.cc.basic.mybatis.model.Page;
-import com.howbuy.cc.basic.mybatis.util.RouteBeanNameGenerator;
-import com.howbuy.cc.basic.spring.SpringBean;
-import org.apache.ibatis.session.SqlSession;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.annotation.PostConstruct;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 /**
+ * mybatis基本基本dao层
  * Created by xinwei.cheng on 2015/6/3.
  */
+@SuppressWarnings("unused")
 public class MybatisCommonDao<T>{
 
-    protected SqlSessionTemplate sqlSession;
+    @Autowired
+    private SqlSessionTemplate sqlSession;
 
     private final Class<T> clazz;
 
@@ -37,26 +32,26 @@ public class MybatisCommonDao<T>{
 
     /**
      * 插入
-     * @param t
+     * @param t 插入的对象
      */
-    public void insert(T t){
-        sqlSession.insert(nameSpace + ".insert" , t);
+    public int insert(T t){
+        return sqlSession.insert(nameSpace + ".insert" , t);
     }
 
 
     /**
      * 查询一个
-     * @param params
+     * @param params 查询的参数
      */
-    public void selectOne(Map<String,Object> params){
-        sqlSession.insert(nameSpace  + ".selectOne", params);
+    public T selectOne(Map<String,Object> params){
+        return sqlSession.selectOne(nameSpace  + ".selectOne", params);
     }
 
 
     /**
      * 查询列表
-     * @param params
-     * @return
+     * @param params 查询的参数
+     * @return 返回对象LIST
      */
     public List<T> selectList(Map<String,Object> params){
         return sqlSession.selectList(nameSpace + ".selectList", params);
@@ -65,11 +60,11 @@ public class MybatisCommonDao<T>{
 
     /**
      * 分页
-     * @param params
-     * @param pageNo
-     * @param pageSize
-     * @param orderby
-     * @return
+     * @param params 查询的参数
+     * @param pageNo 第几页
+     * @param pageSize 每页多少条
+     * @param orderby 排序
+     * @return 分页对象
      */
     public Page<T> page(Map<String,Object> params , Integer pageNo , Integer pageSize , String orderby){
 
@@ -89,39 +84,9 @@ public class MybatisCommonDao<T>{
     }
 
     /**
-     * 分页
-     * @param params
-     * @param pageNo
-     * @param pageSize
-     * @param orderby
-     * @return
-     */
-    public Page<T> page(Map<String,Object> params , Integer pageNo , Integer pageSize , Integer count , String orderby ){
-
-        Page<T> page = new Page<>(pageSize , pageNo , count);
-
-        if(pageNo > page.getTotalPage()){
-            page.setPageList(new ArrayList<T>());
-            return page;
-        }
-
-        if(count == 0 ){
-            page.setPageList(new ArrayList<T>());
-            return page;
-        }
-
-        params.put("beginNum" , page.getBeginNum());
-        params.put("endNum" ,  page.getEndNum());
-        params.put("orderby" , orderby);
-        List<T> list = sqlSession.selectList(nameSpace  + ".selectList", params);
-        page.setPageList(list);
-        return page;
-    }
-
-    /**
      * 查询数量
-     * @param params
-     * @return
+     * @param params 查询条件
+     * @return 数量
      */
     public int count(Map<String,Object> params){
         return sqlSession.selectOne(nameSpace  + ".count" , params);
@@ -130,25 +95,21 @@ public class MybatisCommonDao<T>{
 
     /**
      * 更新
-     * @param t
+     * @param t 更新的对象
      */
-    public void update(T t){
-        sqlSession.insert(nameSpace  + ".update", t);
+    public int update(T t){
+        return sqlSession.update(nameSpace + ".update", t);
     }
 
 
+    /**
+     * 执行某一个特定的方法
+     * @param executeCallBack 执行的接口函数
+     * @param <E>   泛型类
+     * @return 返回数据
+     */
+    public <E> E execute(ExecuteCallBack<E> executeCallBack){
+        return executeCallBack.execute(sqlSession);
+    }
 
-//    @PostConstruct
-//    public void init() throws Exception {
-//        CCDatasourceRoute ccDatasourceRoute = this.getClass().getAnnotation(CCDatasourceRoute.class);
-//        if(ccDatasourceRoute != null){
-//            DruidDataSource datasource = SpringBean.getBean(ccDatasourceRoute.value() , DruidDataSource.class);
-//            if(datasource == null){
-//                throw new BeanCreationException("can not find bean for bean name :"+ ccDatasourceRoute.value() + ", class " + DruidDataSource.class);
-//            }
-//            SqlSessionFactoryBean sqlSessionFactoryBean =
-//                    SpringBean.getBean(RouteBeanNameGenerator.getBeanName(ccDatasourceRoute.value()) , SqlSessionFactoryBean.class);
-//            this.sqlSession = new SqlSessionTemplate(sqlSessionFactoryBean.getObject());
-//        }
-//    }
 }

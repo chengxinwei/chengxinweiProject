@@ -10,6 +10,7 @@ public class Pom {
     private String artifactId;
     private String jarName;
     private String fullJarPath;
+    private ClassLoader classLoader;
 
     public String getVersion() {
         return version;
@@ -51,6 +52,14 @@ public class Pom {
         this.fullJarPath = fullJarPath;
     }
 
+    public ClassLoader getClassLoader() {
+        return classLoader;
+    }
+
+    public void setClassLoader(ClassLoader classLoader) {
+        this.classLoader = classLoader;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -58,7 +67,6 @@ public class Pom {
 
         Pom pom = (Pom) o;
 
-        if (version != null ? !version.equals(pom.version) : pom.version != null) return false;
         if (groupId != null ? !groupId.equals(pom.groupId) : pom.groupId != null) return false;
         return !(artifactId != null ? !artifactId.equals(pom.artifactId) : pom.artifactId != null);
 
@@ -66,8 +74,7 @@ public class Pom {
 
     @Override
     public int hashCode() {
-        int result = version != null ? version.hashCode() : 0;
-        result = 31 * result + (groupId != null ? groupId.hashCode() : 0);
+        int result = groupId != null ? groupId.hashCode() : 0;
         result = 31 * result + (artifactId != null ? artifactId.hashCode() : 0);
         return result;
     }

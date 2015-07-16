@@ -13,13 +13,14 @@ import java.util.HashMap;
  */
 public class MybatisTest extends BaseTest{
 
-//    @Autowired
-//    private CustInfoDao custInfoDao;
+    @Autowired
+    private CustInfoDao custInfoDao;
 
 
     @Test
     public void selectOne(){
-//        custInfoDao.selectOne(new HashMap<String, Object>());
+        System.out.println(custInfoDao.selectOne(new HashMap<String, Object>()));
+
     }
 
 }

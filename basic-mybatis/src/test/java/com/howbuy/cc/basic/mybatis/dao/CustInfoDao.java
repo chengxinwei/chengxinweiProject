@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * Created by xinwei.cheng on 2015/7/8.
  */
 @Service
-@CCDatasourceRoute("cim")
+//@CCDatasourceRoute("cim")
 public class CustInfoDao extends MybatisCommonDao<CustInfo>{
 
 
