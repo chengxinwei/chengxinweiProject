@@ -40,6 +40,13 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="D:/workspace/chengxinweiProject/dubbo-for-rest/dubbp-for-rest/pom.xml" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -210,12 +217,12 @@
       <created>1437039624497</created>
       <option name="number" value="Default" />
       <updated>1437039624497</updated>
-      <workItem from="1437039627466" duration="284000" />
+      <workItem from="1437039627466" duration="659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284000" />
+    <option name="totallyTimeSpent" value="659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

@@ -22,7 +22,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="basic-logger" />
         <module name="basic-mongo" />
         <module name="basic-mq" />
         <module name="basic-test" />

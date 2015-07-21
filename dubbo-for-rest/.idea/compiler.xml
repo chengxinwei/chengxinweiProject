@@ -17,6 +17,24 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for dubbo-for-rest" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="dubbo-for-rest" />
+      </profile>
+      <profile default="false" name="Annotation profile for dubbo-for-rest-execute" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="dubbo-for-rest-execute" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dubbo-for-rest" target="1.7" />
+      <module name="dubbo-for-rest-execute" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

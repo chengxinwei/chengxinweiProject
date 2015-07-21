@@ -1,7 +1,9 @@
 package com.howbuy.cc.basic.mybatis.dao;
 
+import com.howbuy.cc.basic.mybatis.annotation.CCDatasourceRoute;
 import com.howbuy.cc.basic.mybatis.annotation.CCNameSpaceMapper;
 import com.howbuy.cc.basic.mybatis.dao.callback.ExecuteCallBack;
+import com.howbuy.cc.basic.mybatis.datasourceRoute.DynamicDataSourceSwitch;
 import com.howbuy.cc.basic.mybatis.model.Page;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,8 +58,13 @@ public class MybatisCommonDao<T>{
      * 插入
      * @param t 插入的对象
      */
-    public int insert(T t){
-        return sqlSession.insert(nameSpace + ".insert" , t);
+    public int insert(final T t){
+        return execute(new ExecuteCallBack<Integer>(){
+            @Override
+            public Integer execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.insert(nameSpace + ".insert", t);
+            }
+        });
     }
 
 
@@ -65,8 +72,14 @@ public class MybatisCommonDao<T>{
      * 查询一个
      * @param params 查询的参数
      */
-    public T selectOne(Map<String,Object> params){
-        return sqlSession.selectOne(nameSpace  + ".selectOne", params);
+    public T selectOne(final Map<String,Object> params){
+        return execute(new ExecuteCallBack<T>(){
+            @Override
+            public T execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.selectOne(nameSpace + ".selectOne", params);
+            }
+        });
+
     }
 
 
@@ -75,8 +88,14 @@ public class MybatisCommonDao<T>{
      * @param params 查询的参数
      * @return 返回对象LIST
      */
-    public List<T> selectList(Map<String,Object> params){
-        return sqlSession.selectList(nameSpace + ".selectList", params);
+    public List<T> selectList(final Map<String,Object> params){
+        return execute(new ExecuteCallBack<List<T>>(){
+            @Override
+            public List<T> execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.selectList(nameSpace + ".selectList", params);
+            }
+        });
+
     }
 
 
@@ -89,7 +108,6 @@ public class MybatisCommonDao<T>{
      * @return 分页对象
      */
     public Page<T> page(Map<String,Object> params , Integer pageNo , Integer pageSize , String orderby){
-
         int count = this.count(params);
         Page<T> page = new Page<>(pageSize , pageNo , count);
         if(count == 0 ){
@@ -100,7 +118,7 @@ public class MybatisCommonDao<T>{
         params.put("beginNum" , page.getBeginNum());
         params.put("endNum" ,  page.getEndNum());
         params.put("orderby" , orderby);
-        List<T> list = sqlSession.selectList(nameSpace  + ".selectList", params);
+        List<T> list = this.selectList(params);
         page.setPageList(list);
         return page;
     }
@@ -110,8 +128,13 @@ public class MybatisCommonDao<T>{
      * @param params 查询条件
      * @return 数量
      */
-    public int count(Map<String,Object> params){
-        return sqlSession.selectOne(nameSpace  + ".count" , params);
+    public int count(final Map<String,Object> params){
+        return execute(new ExecuteCallBack<Integer>(){
+            @Override
+            public Integer execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.selectOne(nameSpace  + ".count" , params);
+            }
+        });
     }
 
 
@@ -119,8 +142,13 @@ public class MybatisCommonDao<T>{
      * 更新
      * @param t 更新的对象
      */
-    public int update(T t){
-        return sqlSession.update(nameSpace + ".update", t);
+    public int update(final T t){
+        return execute(new ExecuteCallBack<Integer>(){
+            @Override
+            public Integer execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.update(nameSpace + ".update", t);
+            }
+        });
     }
 
 
@@ -131,6 +159,12 @@ public class MybatisCommonDao<T>{
      * @return 返回数据
      */
     protected  <E> E execute(ExecuteCallBack<E> executeCallBack){
+        Class<?> clazz = this.getClass();
+        if(clazz.isAnnotationPresent(CCDatasourceRoute.class)){
+            CCDatasourceRoute ccDatasourceRoute = clazz.getAnnotation(CCDatasourceRoute.class);
+            String datasourceName = ccDatasourceRoute.value();
+            DynamicDataSourceSwitch.setDataSource(datasourceName);
+        }
         return executeCallBack.execute(this.nameSpace , sqlSession);
     }
 

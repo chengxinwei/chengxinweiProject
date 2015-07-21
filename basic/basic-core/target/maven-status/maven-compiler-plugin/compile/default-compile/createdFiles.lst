@@ -2,5 +2,5 @@ com\howbuy\cc\basic\config\Configuration.class
 com\howbuy\cc\basic\util\SerializationUtil.class
 com\howbuy\cc\basic\CommonConstant.class
 com\howbuy\cc\basic\spring\SpringBean.class
-com\howbuy\cc\basic\config\PropertyPlaceHolderResolver.class
 com\howbuy\cc\basic\util\IpUtil.class
+com\howbuy\cc\basic\config\PropertyPlaceHolderResolver.class

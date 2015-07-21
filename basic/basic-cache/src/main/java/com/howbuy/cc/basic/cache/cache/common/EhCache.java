@@ -2,6 +2,7 @@ package com.howbuy.cc.basic.cache.cache.common;
 
 import com.howbuy.cc.basic.cache.constant.CacheConstant;
 import com.howbuy.cc.basic.cache.util.CacheKeyGenerator;
+import com.howbuy.cc.basic.logger.CCLogger;
 import net.sf.ehcache.Ehcache;
 import net.sf.ehcache.Element;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,12 @@ public abstract class EhCache implements Cache {
     }
 
     public ValueWrapper get(Object key) {
-        Element element = ehcache.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
+        Element element = null;
+        try {
+            element = ehcache.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
+        }catch(Exception e){
+            CCLogger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+        }
         if (element == null) {
             return null;
         }
@@ -34,13 +40,22 @@ public abstract class EhCache implements Cache {
     }
 
     public void put(Object key, Object value) {
-        Element element = new Element(CacheKeyGenerator.getKeyStr(String.valueOf(key)) , value);
-        element.setTimeToLive(getTimeout());
-        ehcache.put(element);
+        try {
+            Element element = new Element(CacheKeyGenerator.getKeyStr(String.valueOf(key)) , value);
+            element.setTimeToLive(getTimeout());
+            ehcache.put(element);
+        }catch(Exception e){
+            CCLogger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+        }
     }
 
     public void evict(Object key) {
-        ehcache.remove(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
+        try {
+            ehcache.remove(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
+        }catch(Exception e){
+            CCLogger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+        }
+
     }
 
     public void clear() {

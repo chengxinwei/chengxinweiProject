@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dubbo-for-rest.iml" filepath="$PROJECT_DIR$/.idea/dubbo-for-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbp-for-rest/dubbo-for-rest.iml" filepath="$PROJECT_DIR$/dubbp-for-rest/dubbo-for-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-for-rest-execute/dubbo-for-rest-execute.iml" filepath="$PROJECT_DIR$/dubbo-for-rest-execute/dubbo-for-rest-execute.iml" />
     </modules>
   </component>
 </project>

@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import java.io.*;
 
 /**
- * ���л�������
+ * 序列化的工具类
  * Created by xinwei.cheng on 2015/5/29.
  */
 @SuppressWarnings("unused")
@@ -13,11 +13,6 @@ public class SerializationUtil {
 
     private final Logger logger = Logger.getLogger(this.getClass());
 
-    /**
-     * ���л�
-     * @param object ��Ҫ���л��Ķ���
-     * @return ���л�֮����ֽ�����
-     */
     public static byte[] serialize(Object object) throws IOException {
         ObjectOutputStream oos = null;
         ByteArrayOutputStream baos = null;
@@ -36,11 +31,6 @@ public class SerializationUtil {
         }
     }
 
-    /**
-     * �����л�
-     * @param bytes ���л�֮���byte����
-     * @return ���ض���
-     */
     public static Object deserialize(byte[] bytes) throws IOException, ClassNotFoundException {
         ByteArrayInputStream bais = null;
         try {

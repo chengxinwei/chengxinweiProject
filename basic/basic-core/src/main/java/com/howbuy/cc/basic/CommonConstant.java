@@ -7,6 +7,8 @@ public class CommonConstant {
 
     public final static String CONFIG_PATH = "configPath";
 
-    public final static String NAMESPACE = "namespace";
+    public final static String DEFAULT_APPLICATION_NAME = "default.application.name";
+
+    public final static String LOGGER_APPLICATION_NAME = "logger.application.name";
 
 }

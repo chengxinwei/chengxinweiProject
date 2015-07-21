@@ -46,6 +46,9 @@ public final class IpUtil {
                 ip = (InetAddress) addresses.nextElement();
                 if (ip != null && ip instanceof Inet4Address) {
                     String localIp = ip.getHostAddress();
+                    if(localIp.equals("127.0.0.1")){
+                        continue;
+                    }
                     ipList.add(localIp);
                 }
             }

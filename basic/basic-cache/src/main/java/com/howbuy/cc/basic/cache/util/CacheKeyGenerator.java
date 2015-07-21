@@ -17,7 +17,8 @@ public class CacheKeyGenerator {
         if(key == null){
             return null;
         }
-        String namespace = Configuration.getNamespace();
+
+        String namespace = getNameSpace();
         return (namespace + key).getBytes();
     }
 
@@ -25,8 +26,13 @@ public class CacheKeyGenerator {
         if(key == null){
             return null;
         }
-        String namespace = Configuration.getNamespace();
+        String namespace = getNameSpace();
         return namespace + key;
+    }
+
+
+    public static String getNameSpace(){
+        return Configuration.get("cache.application.name") == null ? Configuration.getDefaultApplicationName() : Configuration.get("cache.application.name");
     }
 
 }

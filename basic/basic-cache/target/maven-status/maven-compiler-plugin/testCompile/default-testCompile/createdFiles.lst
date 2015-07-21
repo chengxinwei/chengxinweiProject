@@ -1,6 +1,6 @@
-com\howbuy\cc\basic\cache\model\User.class
-com\howbuy\cc\basic\cache\EhCacheTest.class
-com\howbuy\cc\basic\cache\service\RedisDbService.class
 com\howbuy\cc\basic\cache\BaseTest.class
 com\howbuy\cc\basic\cache\service\EhDbService.class
+com\howbuy\cc\basic\cache\EhCacheTest.class
+com\howbuy\cc\basic\cache\model\User.class
+com\howbuy\cc\basic\cache\service\RedisDbService.class
 com\howbuy\cc\basic\cache\RadisCacheTest.class

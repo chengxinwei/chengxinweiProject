@@ -103,9 +103,11 @@
 
 
             <h5>返回数据</h5>
-            <p class="wBreak" ng-class="{true:'text-info' , false : 'text-danger' }[isOk]">
-               {{responseMessage}}
-            </p>
+            <div ng-class="{true:'text-info' , false : 'text-danger' }[isOk]">
+                <p ng-repeat="ms in responseMessage">
+                   {{ms}}
+                </p>
+            </div>
         </div>
 
 

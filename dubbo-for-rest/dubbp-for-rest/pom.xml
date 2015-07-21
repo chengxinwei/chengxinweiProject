@@ -90,6 +90,11 @@
             <version>3.20.0-GA</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.howbuy.cc.basic</groupId>
+            <artifactId>dubbo-for-rest-execute</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 

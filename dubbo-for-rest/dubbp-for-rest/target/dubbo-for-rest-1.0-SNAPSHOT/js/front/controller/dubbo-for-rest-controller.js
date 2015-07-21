@@ -49,15 +49,15 @@ dubboForRestApp.controller("dubbo-for-rest-controller",function($scope,$http,$fi
         $scope.isSend = true;
         var paramsAry = [];
         $scope.selectInterface.methodParamsInfoAry.forEach(function(item){
-            paramsAry.push(item.value);
+            paramsAry.push(encodeURIComponent(item.value));
         });
         var params = {};
+
         params.valueAry = paramsAry;
         params.interfaceName = $scope.selectInterface.clazz;
         params.methodParamsClassAry = $scope.selectInterface.method.parameterTypes;
-        params.method = $scope.selectInterface.method.name;
-        params.groupId = $scope.pom.groupId;
-        params.artifactId = $scope.pom.artifactId;
+        params.methodName = $scope.selectInterface.method.name;
+        params.fullJarPath = $scope.selectInterface.fullJarPath;
         $http.post("/dubbo/excute" , params).success(function (data) {
             $scope.responseMessage = data.message;
             if (data.status == 'ok') {

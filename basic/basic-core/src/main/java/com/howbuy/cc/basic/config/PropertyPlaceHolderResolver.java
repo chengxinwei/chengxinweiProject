@@ -1,6 +1,7 @@
 package com.howbuy.cc.basic.config;
 
 import com.howbuy.cc.basic.CommonConstant;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 
@@ -21,8 +22,6 @@ import java.util.jar.JarFile;
 public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
 
     private static Logger logger = Logger.getLogger(PropertyPlaceHolderResolver.class);
-
-    private final static String GLOBAL = "global.properties";
 
     private final static String PROPERTIES_SUFFIX = ".properties";
 
@@ -45,6 +44,9 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
         loadPropByDir(dirPath == null ? defaultDirPath : dirPath, prop);
         PropertyPlaceHolderResolver.properties = prop;
         Configuration.init(prop);
+        if(StringUtils.isEmpty(prop.getProperty(CommonConstant.DEFAULT_APPLICATION_NAME))){
+            throw new RuntimeException(CommonConstant.DEFAULT_APPLICATION_NAME + " is null");
+        }
         return properties;
     }
 

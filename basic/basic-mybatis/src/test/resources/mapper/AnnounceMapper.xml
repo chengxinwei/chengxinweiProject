@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AnnounceMapper">
+    <resultMap id="Announce" type="com.howbuy.cc.basic.mybatis.model.Announce">
+        <result property="announcedid" column="announcedid"></result>
+        <result property="subject" column="SUBJECT"></result>
+    </resultMap>
+
+    <select id="batchUpdate" parameterType="List">
+
+        <foreach collection="announceList" item="item" open="begin" close=";end;" separator=";">
+          update cm_announce set subject = #{item.subject} where announcedid = #{item.announcedid}
+        </foreach>
+
+    </select>
+</mapper>

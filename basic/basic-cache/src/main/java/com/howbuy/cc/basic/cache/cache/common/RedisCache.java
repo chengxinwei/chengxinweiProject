@@ -2,6 +2,7 @@ package com.howbuy.cc.basic.cache.cache.common;
 
 import com.howbuy.cc.basic.cache.client.RedisCacheClient;
 import com.howbuy.cc.basic.cache.constant.CacheConstant;
+import com.howbuy.cc.basic.logger.CCLogger;
 import org.apache.log4j.Logger;
 import org.springframework.cache.Cache;
 import org.springframework.cache.support.SimpleValueWrapper;
@@ -15,8 +16,6 @@ public abstract class RedisCache implements Cache {
 
     Logger logger = Logger.getLogger(this.getClass());
 
-    @Override
-    public abstract String getName();
     public abstract Integer getTimeout();
 
     @Override
@@ -25,7 +24,12 @@ public abstract class RedisCache implements Cache {
     }
     @Override
     public ValueWrapper get(Object key) {
-        Object obj = RedisCacheClient.get(String.valueOf(key));
+        Object obj = null;
+        try {
+            obj = RedisCacheClient.get(String.valueOf(key));
+        }catch(Exception e){
+            CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+        }
         if (obj == null) {
             return null;
         }
@@ -33,11 +37,20 @@ public abstract class RedisCache implements Cache {
     }
     @Override
     public void put(Object key, Object value) {
-        RedisCacheClient.set(String.valueOf(key) , value , getTimeout());
+        try {
+            RedisCacheClient.set(String.valueOf(key), value, getTimeout());
+        }catch (Exception e){
+            CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+        }
     }
     @Override
     public void evict(Object key) {
-        RedisCacheClient.del(String.valueOf(key));
+        try {
+            RedisCacheClient.del(String.valueOf(key));
+        }catch (Exception e){
+            CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+        }
+
     }
     @Override
     public void clear() {

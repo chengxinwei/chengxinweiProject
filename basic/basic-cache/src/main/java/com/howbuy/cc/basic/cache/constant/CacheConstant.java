@@ -15,6 +15,6 @@ public final class CacheConstant {
     public static final String EH_CACHE_5M = "EH_CACHE_5M";
     public static final String EH_CACHE_5S = "EH_CACHE_5S";
 
-
+    public static final String EHCACHE_ERROR = "EHCACHE_ERROR";
 
 }

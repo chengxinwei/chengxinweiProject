@@ -33,8 +33,8 @@ public final class Configuration {
         return Configuration.configMap.get(key);
     }
 
-    public static String getNamespace(){
-        return Configuration.configMap.get(CommonConstant.NAMESPACE);
+    public static String getDefaultApplicationName(){
+        return Configuration.configMap.get(CommonConstant.DEFAULT_APPLICATION_NAME);
     }
 
 }
