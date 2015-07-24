@@ -15,7 +15,7 @@ public class RedisDbService {
     private int i = 0 ;
 
     @Cacheable(value = CacheConstant.REDIS_CACHE_5S, key = "#index")
-    public User getDate(Integer index){
+    public User getUser(Integer index){
         User user = new User();
         user.setId(i++);
         return user;

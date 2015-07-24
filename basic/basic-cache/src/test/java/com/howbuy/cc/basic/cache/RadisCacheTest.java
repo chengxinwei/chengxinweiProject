@@ -18,7 +18,7 @@ public class RadisCacheTest extends BaseTest{
     public void cacheTest() throws InterruptedException {
         for(int i = 0 ; i < 7 ; i ++){
             try {
-                System.out.println(dbService.getDate(0).getId());
+                System.out.println(dbService.getUser(0).getId());
             }catch (Exception e){
                 e.printStackTrace();
                 Thread.sleep(5*1000);
