@@ -13,6 +13,11 @@
         <property name="keyLimit" value="128"></property>
         <property name="valueLimit" value="1048576"></property>
         <property name="dbNum" value="1"></property>
+        <property name="keySerializer" ref="objectSerializer"></property>
+        <property name="valueSerializer" ref="objectSerializer"></property>
     </bean>
+
+
+    <bean id="objectSerializer" class="com.howbuy.tp.common.redis.serializer.ObjectSerializer"></bean>
 
 </beans>

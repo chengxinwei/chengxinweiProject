@@ -13,15 +13,6 @@ public class CacheKeyGenerator {
      * @param key 客户key
      * @return 生成key
      */
-    public static byte[] getKeyByteAry (String key){
-        if(key == null){
-            return null;
-        }
-
-        String namespace = getNameSpace();
-        return (namespace + key).getBytes();
-    }
-
     public static String getKeyStr(String key){
         if(key == null){
             return null;

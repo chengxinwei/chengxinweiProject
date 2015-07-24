@@ -1,8 +1,9 @@
 package com.howbuy.cc.basic.cache.cache.common;
 
-import com.howbuy.cc.basic.cache.client.RedisCacheClient;
 import com.howbuy.cc.basic.cache.constant.CacheConstant;
+import com.howbuy.cc.basic.cache.util.CacheKeyGenerator;
 import com.howbuy.cc.basic.logger.CCLogger;
+import com.howbuy.tp.common.redis.core.ops.SerializeOps;
 import org.apache.log4j.Logger;
 import org.springframework.cache.Cache;
 import org.springframework.cache.support.SimpleValueWrapper;
@@ -20,13 +21,13 @@ public abstract class RedisCache implements Cache {
 
     @Override
     public Object getNativeCache() {
-        return RedisCacheClient.getShardedJedis();
+        return SerializeOps.getClientList();
     }
     @Override
     public ValueWrapper get(Object key) {
         Object obj = null;
         try {
-            obj = RedisCacheClient.get(String.valueOf(key));
+            obj = SerializeOps.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch(Exception e){
             CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
         }
@@ -38,7 +39,7 @@ public abstract class RedisCache implements Cache {
     @Override
     public void put(Object key, Object value) {
         try {
-            RedisCacheClient.set(String.valueOf(key), value, getTimeout());
+            SerializeOps.set(CacheKeyGenerator.getKeyStr(String.valueOf(key)), value, getTimeout());
         }catch (Exception e){
             CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
         }
@@ -46,7 +47,7 @@ public abstract class RedisCache implements Cache {
     @Override
     public void evict(Object key) {
         try {
-            RedisCacheClient.del(String.valueOf(key));
+            SerializeOps.delete(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch (Exception e){
             CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
         }
