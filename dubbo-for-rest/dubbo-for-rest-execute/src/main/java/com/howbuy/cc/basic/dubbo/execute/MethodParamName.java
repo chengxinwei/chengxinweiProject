@@ -1,10 +1,13 @@
 package com.howbuy.cc.basic.dubbo.execute;
 
 import com.howbuy.cc.basic.dubbo.execute.model.MethodParamsInfo;
-import org.codehaus.jackson.map.ObjectMapper;
 
-import java.io.IOException;
+import java.io.File;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * 获取方法的参数信息
@@ -42,7 +45,21 @@ public class MethodParamName {
 //            int pos = Modifier.isStatic(cm.getModifiers()) ? 0 : 1;
             for (int i = 0; i < paramNames.length; i++) {
                 MethodParamsInfo methodParamsInfo = new MethodParamsInfo();
-                methodParamsInfo.setParamsClass(methodParamsClasseAry[i]);
+                Class<?> paramsClass = methodParamsClasseAry[i];
+
+                if(!isPrimitive(paramsClass)){
+                    Field[] fieldAry = paramsClass.getDeclaredFields();
+                    List<Field> fieldList = new ArrayList<>();
+                    for(Field field : fieldAry){
+                        if(field.getName().equals("serialVersionUID")){
+                            continue;
+                        }
+                        fieldList.add(field);
+                    }
+                    methodParamsInfo.setFieldList(fieldList);
+                }
+
+                methodParamsInfo.setParamsClass(paramsClass);
 //                methodParamsInfo.setParamsName(attr == null ? null : attr.variableName(i + pos));
                 paramNames[i] = methodParamsInfo;
             }
@@ -52,4 +69,34 @@ public class MethodParamName {
 //        }
         return paramNames;
     }
+
+
+    private static boolean isPrimitive(Class<?> clazz){
+        if(clazz.equals(Integer.class)){
+            return true;
+        }else if(clazz.equals(String.class)){
+            return true;
+        }else if(clazz.equals(Boolean.class)){
+            return true;
+        }else if(clazz.equals(Character.class)){
+            return true;
+        }else if(clazz.equals(Float.class)){
+            return true;
+        }else if(clazz.equals(Double.class)){
+            return true;
+        }else if(clazz.equals(Short.class)){
+            return true;
+        }else if(clazz.equals(Long.class)){
+            return true;
+        }else if(clazz.equals(Byte.class)){
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPrimitive(Object.class));
+        System.out.println(isPrimitive(String.class));
+    }
+
 }

@@ -48,9 +48,18 @@ dubboForRestApp.controller("dubbo-for-rest-controller",function($scope,$http,$fi
     $scope.excute = function(){
         $scope.isSend = true;
         var paramsAry = [];
-        $scope.selectInterface.methodParamsInfoAry.forEach(function(item){
-            paramsAry.push(encodeURIComponent(item.value));
+        $scope.selectInterface.methodParamsInfoAry.forEach(function(item) {
+            if(item.fieldList){
+                var obj = {};
+                item.fieldList.forEach(function(field){
+                    obj[field.name] = field.fieldValue;
+                });
+                paramsAry.push(encodeURIComponent(angular.toJson(obj)));
+            }else{
+                paramsAry.push(encodeURIComponent(item.value));
+            }
         });
+
         var params = {};
 
         params.valueAry = paramsAry;
