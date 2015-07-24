@@ -62,7 +62,7 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
             return;
         }
         File dirFile = new File(dirPath);
-        this.loadPropByDir(dirFile , superProperties , 0);
+        this.loadPropByDir(dirFile , superProperties);
     }
 
 
@@ -71,7 +71,7 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
      * @param superProperties
      * @throws IOException
      */
-    public void loadPropByDir(File dirFile , Properties superProperties , int dept) throws IOException {
+    public void loadPropByDir(File dirFile , Properties superProperties) throws IOException {
         if(!dirFile.isDirectory()){
             logger.warn("配置文件目录"+ dirFile.getAbsolutePath() + "不是一个文件夹，忽略");
             return;
@@ -79,7 +79,7 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
         File[] fileList = dirFile.listFiles();
         for(File file : fileList){
             if(file.isDirectory()){
-                this.loadPropByDir(file , superProperties , dept++);
+                this.loadPropByDir(file , superProperties);
             }else if(file.getName().endsWith(PROPERTIES_SUFFIX)){
                 this.loadPropFile(new FileInputStream(file) , superProperties , file.getName());
             }
@@ -135,7 +135,6 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
      */
     public void loadPropFileByJar(String dirPath ,  Properties superProperties , int dept) throws IOException {
         String baseJarPath = "jar:file:" + this.getClass().getProtectionDomain().getCodeSource().getLocation().getFile() + "!";
-//        String baseJarPath = "jar:file:/D:/workspace/chengxinweiProject/basic-test/target/crm-label-job-deploy.jar!";
         Enumeration<JarEntry> jarEntrys = this.getJarEntry(baseJarPath + dirPath);
         while (jarEntrys.hasMoreElements()) {
             JarEntry entry = jarEntrys.nextElement();
