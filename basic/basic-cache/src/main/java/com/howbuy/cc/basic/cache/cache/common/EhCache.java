@@ -15,6 +15,8 @@ import org.springframework.cache.support.SimpleValueWrapper;
  */
 public abstract class EhCache implements Cache {
 
+    CCLogger logger = CCLogger.getLogger(this.getClass());
+
     @Autowired
     private Ehcache ehcache;
 
@@ -31,7 +33,7 @@ public abstract class EhCache implements Cache {
         try {
             element = ehcache.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch(Exception e){
-            CCLogger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+            logger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
         }
         if (element == null) {
             return null;
@@ -45,7 +47,7 @@ public abstract class EhCache implements Cache {
             element.setTimeToLive(getTimeout());
             ehcache.put(element);
         }catch(Exception e){
-            CCLogger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+            logger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
         }
     }
 
@@ -53,7 +55,7 @@ public abstract class EhCache implements Cache {
         try {
             ehcache.remove(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch(Exception e){
-            CCLogger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+            logger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
         }
 
     }

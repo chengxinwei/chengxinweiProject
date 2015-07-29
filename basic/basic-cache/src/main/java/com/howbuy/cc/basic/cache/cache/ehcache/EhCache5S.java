@@ -1,7 +1,6 @@
 package com.howbuy.cc.basic.cache.cache.ehcache;
 
 import com.howbuy.cc.basic.cache.cache.common.EhCache;
-import com.howbuy.cc.basic.cache.cache.common.RedisCache;
 import com.howbuy.cc.basic.cache.constant.CacheConstant;
 
 /**

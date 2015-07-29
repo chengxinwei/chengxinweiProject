@@ -4,7 +4,6 @@ import com.howbuy.cc.basic.cache.constant.CacheConstant;
 import com.howbuy.cc.basic.cache.util.CacheKeyGenerator;
 import com.howbuy.cc.basic.logger.CCLogger;
 import com.howbuy.tp.common.redis.core.ops.SerializeOps;
-import org.apache.log4j.Logger;
 import org.springframework.cache.Cache;
 import org.springframework.cache.support.SimpleValueWrapper;
 
@@ -14,8 +13,7 @@ import org.springframework.cache.support.SimpleValueWrapper;
  */
 @SuppressWarnings("unused")
 public abstract class RedisCache implements Cache {
-
-    Logger logger = Logger.getLogger(this.getClass());
+    CCLogger logger = CCLogger.getLogger(this.getClass());
 
     public abstract Integer getTimeout();
 
@@ -29,7 +27,7 @@ public abstract class RedisCache implements Cache {
         try {
             obj = SerializeOps.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch(Exception e){
-            CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+            logger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
         }
         if (obj == null) {
             return null;
@@ -41,7 +39,7 @@ public abstract class RedisCache implements Cache {
         try {
             SerializeOps.set(CacheKeyGenerator.getKeyStr(String.valueOf(key)), value, getTimeout());
         }catch (Exception e){
-            CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+            logger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
         }
     }
     @Override
@@ -49,7 +47,7 @@ public abstract class RedisCache implements Cache {
         try {
             SerializeOps.delete(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch (Exception e){
-            CCLogger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+            logger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
         }
 
     }

@@ -2,11 +2,6 @@ package com.howbuy.cc.basic.cache.cache.ehcache;
 
 import com.howbuy.cc.basic.cache.cache.common.EhCache;
 import com.howbuy.cc.basic.cache.constant.CacheConstant;
-import com.howbuy.cc.basic.cache.util.CacheKeyGenerator;
-import net.sf.ehcache.Element;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.Cache;
-import org.springframework.cache.support.SimpleValueWrapper;
 
 /**
  * EH 集成spring-cache
