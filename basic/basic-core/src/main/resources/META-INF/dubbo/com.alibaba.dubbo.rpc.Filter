@@ -1,0 +1,2 @@
+dubboAccessLoggerFilter=com.howbuy.cc.basic.filter.DubboAccessLoggerFilter
+dubboCodeLoggerFilter=com.howbuy.cc.basic.filter.DubboCodeLoggerFilter
