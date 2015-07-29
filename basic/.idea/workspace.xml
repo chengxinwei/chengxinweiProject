@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="">
+    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="完善basic-core">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/test/java/com/howbuy/cc/basic/TestClassLoader.java" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__com_howbuy_cc_basic_base_core_1_0_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__com_howbuy_pa_basic_howbuy_cache_client_1_0_0_RELEASE.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\target\classes\com\howbuy\cc\basic\test\Main.class" afterPath="" />
       <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\target\classes\com\howbuy\cc\basic\test\service\TestService.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/Main.java" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/service/TestService.java" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/service/TestService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" afterPath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/basic-test.iml" afterPath="$PROJECT_DIR$/basic-test/basic-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/pom.xml" afterPath="$PROJECT_DIR$/basic-mongo/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/pom.xml" afterPath="$PROJECT_DIR$/basic-test/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="7fa1a1d4-d0f7-4e35-84f8-bf6cc6ce66b2" name="Failed commit: Default (2)" comment="添加日志记录=" />
@@ -263,11 +258,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-mybatis.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spring-mybatis.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/resources/spring-mybatis.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61180127">
+            <state vertical-scroll-proportion="-6.5666666">
               <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -326,7 +331,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/basic-core/src/test/java/com/howbuy/cc/basic/DubboLoggerTest.java" />
         <option value="$PROJECT_DIR$/basic-core/src/test/resources/test-spring-dubbo.xml" />
         <option value="$PROJECT_DIR$/basic-core/pom.xml" />
         <option value="$PROJECT_DIR$/basic-core/src/test/resources/testPath/test.properties" />
@@ -377,6 +381,7 @@
         <option value="$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/interceptor/DataSourceRouteInterceptor.java" />
         <option value="$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java" />
         <option value="$PROJECT_DIR$/basic-mybatis/src/test/resources/spring-mybatis.xml" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -1125,7 +1130,7 @@
       <workItem from="1437958239283" duration="608000" />
       <workItem from="1437959157172" duration="17054000" />
       <workItem from="1438044676864" duration="6761000" />
-      <workItem from="1438062440763" duration="16298000" />
+      <workItem from="1438062440763" duration="16320000" />
     </task>
     <task id="LOCAL-00001" summary="删除target">
       <created>1437706185065</created>
@@ -1181,11 +1186,17 @@
       <option name="project" value="LOCAL" />
       <updated>1438140545454</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完善basic-core">
+      <created>1438144596022</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1438144596022</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90186000" />
+    <option name="totallyTimeSpent" value="90208000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1735,8 +1746,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/resources/spring-mybatis.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61180127">
+        <state vertical-scroll-proportion="-6.5666666">
           <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
