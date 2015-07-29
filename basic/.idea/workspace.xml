@@ -21,8 +21,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-core/basic-core.iml" afterPath="$PROJECT_DIR$/basic-core/basic-core.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" afterPath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/basic-test.iml" afterPath="$PROJECT_DIR$/basic-test/basic-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/pom.xml" afterPath="$PROJECT_DIR$/basic-test/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mybatis/target/test-classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/basic-mybatis/target/test-classes/spring-mybatis.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -1062,7 +1060,7 @@
       <workItem from="1437958239283" duration="608000" />
       <workItem from="1437959157172" duration="17054000" />
       <workItem from="1438044676864" duration="6761000" />
-      <workItem from="1438062440763" duration="22152000" />
+      <workItem from="1438062440763" duration="22172000" />
     </task>
     <task id="LOCAL-00001" summary="删除target">
       <created>1437706185065</created>
@@ -1154,11 +1152,17 @@
       <option name="project" value="LOCAL" />
       <updated>1438144746284</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="dubbo不引入spring， 避免冲突">
+      <created>1438150495859</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1438150495859</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96040000" />
+    <option name="totallyTimeSpent" value="96060000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1221,7 +1225,8 @@
     <MESSAGE value="添加日志记录=" />
     <MESSAGE value="完善basic-core" />
     <MESSAGE value="其他对应修改类提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="其他对应修改类提交" />
+    <MESSAGE value="dubbo不引入spring， 避免冲突" />
+    <option name="LAST_COMMIT_MESSAGE" value="dubbo不引入spring， 避免冲突" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
