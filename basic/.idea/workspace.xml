@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="完善basic-core">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/test/java/com/howbuy/cc/basic/TestClassLoader.java" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\target\classes\com\howbuy\cc\basic\test\Main.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\target\classes\com\howbuy\cc\basic\test\service\TestService.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/Main.java" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/service/TestService.java" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/service/TestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" afterPath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/basic-test.iml" afterPath="$PROJECT_DIR$/basic-test/basic-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/pom.xml" afterPath="$PROJECT_DIR$/basic-mongo/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/pom.xml" afterPath="$PROJECT_DIR$/basic-test/pom.xml" />
+    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="7fa1a1d4-d0f7-4e35-84f8-bf6cc6ce66b2" name="Failed commit: Default (2)" comment="添加日志记录=" />
@@ -273,7 +264,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1438144612797" expanded="true" signature="107197:107239" placeholder="..." />
+                <marker date="1438144612797" expanded="true" signature="107197:107257" placeholder="..." />
+                <marker date="1438144612797" expanded="true" signature="107197:107270" placeholder="..." />
+                <marker date="1438144612797" expanded="true" signature="107197:107285" placeholder="..." />
+                <marker date="1438144612797" expanded="true" signature="107197:110256" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1130,7 +1127,7 @@
       <workItem from="1437958239283" duration="608000" />
       <workItem from="1437959157172" duration="17054000" />
       <workItem from="1438044676864" duration="6761000" />
-      <workItem from="1438062440763" duration="16320000" />
+      <workItem from="1438062440763" duration="16335000" />
     </task>
     <task id="LOCAL-00001" summary="删除target">
       <created>1437706185065</created>
@@ -1192,11 +1189,17 @@
       <option name="project" value="LOCAL" />
       <updated>1438144596022</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="其他对应修改类提交">
+      <created>1438144624968</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1438144624968</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90208000" />
+    <option name="totallyTimeSpent" value="90223000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1281,7 +1284,8 @@
     <MESSAGE value="添加日志记录，删除不需要得类" />
     <MESSAGE value="添加日志记录=" />
     <MESSAGE value="完善basic-core" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善basic-core" />
+    <MESSAGE value="其他对应修改类提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="其他对应修改类提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1756,7 +1760,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1438144612797" expanded="true" signature="107197:107239" placeholder="..." />
+            <marker date="1438144612797" expanded="true" signature="107197:107257" placeholder="..." />
+            <marker date="1438144612797" expanded="true" signature="107197:107270" placeholder="..." />
+            <marker date="1438144612797" expanded="true" signature="107197:107285" placeholder="..." />
+            <marker date="1438144612797" expanded="true" signature="107197:110256" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1764,7 +1774,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1438144612797" expanded="true" signature="107197:107239" placeholder="..." />
+            <marker date="1438144612797" expanded="true" signature="107197:107257" placeholder="..." />
+            <marker date="1438144612797" expanded="true" signature="107197:107270" placeholder="..." />
+            <marker date="1438144612797" expanded="true" signature="107197:107285" placeholder="..." />
+            <marker date="1438144612797" expanded="true" signature="107197:110256" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
