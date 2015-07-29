@@ -9,5 +9,5 @@ import org.mybatis.spring.SqlSessionTemplate;
 @SuppressWarnings("unused")
 public interface ExecuteCallBack<E>{
 
-    E execute(String namespace , SqlSessionTemplate sqlSessionTemplate);
+    E execute(String fullSqlId , SqlSessionTemplate sqlSessionTemplate);
 }

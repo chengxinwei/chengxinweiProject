@@ -48,10 +48,21 @@
                 <value>classpath:mapper/*Mapper.xml</value>
             </list>
         </property>
+        <property name="plugins">
+            <list>
+                <ref bean="sqlLoggerInterceptor"></ref>
+                <ref bean="dataSourceRouteInterceptor"></ref>
+            </list>
+        </property>
     </bean>
+
+    <bean id="dataSourceRouteInterceptor" class="com.howbuy.cc.basic.mybatis.interceptor.DataSourceRouteInterceptor"></bean>
+    <bean id="sqlLoggerInterceptor" class="com.howbuy.cc.basic.mybatis.interceptor.SqlLoggerInterceptor"></bean>
 
     <bean class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory" />
     </bean>
+
+
 
 </beans>

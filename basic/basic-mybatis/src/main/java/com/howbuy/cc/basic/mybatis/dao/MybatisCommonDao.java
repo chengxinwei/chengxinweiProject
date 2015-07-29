@@ -1,7 +1,9 @@
 package com.howbuy.cc.basic.mybatis.dao;
 
+import com.howbuy.cc.basic.logger.CCLogger;
 import com.howbuy.cc.basic.mybatis.annotation.CCDatasourceRoute;
 import com.howbuy.cc.basic.mybatis.annotation.CCNameSpaceMapper;
+import com.howbuy.cc.basic.mybatis.constant.MyBatisConstant;
 import com.howbuy.cc.basic.mybatis.dao.callback.ExecuteCallBack;
 import com.howbuy.cc.basic.mybatis.datasourceRoute.DynamicDataSourceSwitch;
 import com.howbuy.cc.basic.mybatis.model.Page;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +30,8 @@ public class MybatisCommonDao<T>{
     private final Class<T> clazz;
 
     private  String nameSpace;
+
+    CCLogger ccLogger = CCLogger.getLogger(this.getClass());
 
     public MybatisCommonDao() {
         ParameterizedType parameterizedType = null;
@@ -58,11 +63,11 @@ public class MybatisCommonDao<T>{
      * 插入
      * @param t 插入的对象
      */
-    public int insert(final T t){
-        return execute(new ExecuteCallBack<Integer>(){
+    protected int insert(final String sqlId , final T t){
+        return execute(sqlId , new ExecuteCallBack<Integer>(){
             @Override
-            public Integer execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
-                return sqlSessionTemplate.insert(nameSpace + ".insert", t);
+            public Integer execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.insert(fullSqlId , t);
             }
         });
     }
@@ -72,11 +77,11 @@ public class MybatisCommonDao<T>{
      * 查询一个
      * @param params 查询的参数
      */
-    public T selectOne(final Map<String,Object> params){
-        return execute(new ExecuteCallBack<T>(){
+    public T selectOne(final String sqlId , final Map<String,Object> params){
+        return execute(sqlId , new ExecuteCallBack<T>(){
             @Override
-            public T execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
-                return sqlSessionTemplate.selectOne(nameSpace + ".selectOne", params);
+            public T execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.selectOne(fullSqlId , params);
             }
         });
 
@@ -88,11 +93,11 @@ public class MybatisCommonDao<T>{
      * @param params 查询的参数
      * @return 返回对象LIST
      */
-    public List<T> selectList(final Map<String,Object> params){
-        return execute(new ExecuteCallBack<List<T>>(){
+    protected List<T> selectList(final String sqlId , final Map<String,Object> params){
+        return execute(sqlId , new ExecuteCallBack<List<T>>(){
             @Override
-            public List<T> execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
-                return sqlSessionTemplate.selectList(nameSpace + ".selectList", params);
+            public List<T> execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.selectList(fullSqlId , params);
             }
         });
 
@@ -107,8 +112,8 @@ public class MybatisCommonDao<T>{
      * @param orderby 排序
      * @return 分页对象
      */
-    public Page<T> page(Map<String,Object> params , Integer pageNo , Integer pageSize , String orderby){
-        int count = this.count(params);
+    protected Page<T> page(final String listSqlId , final String countSqlId , Map<String,Object> params , Integer pageNo , Integer pageSize , String orderby){
+        int count = this.count(countSqlId , params);
         Page<T> page = new Page<>(pageSize , pageNo , count);
         if(count == 0 ){
             page.setPageList(new ArrayList<T>());
@@ -118,7 +123,7 @@ public class MybatisCommonDao<T>{
         params.put("beginNum" , page.getBeginNum());
         params.put("endNum" ,  page.getEndNum());
         params.put("orderby" , orderby);
-        List<T> list = this.selectList(params);
+        List<T> list = this.selectList(listSqlId , params);
         page.setPageList(list);
         return page;
     }
@@ -128,11 +133,11 @@ public class MybatisCommonDao<T>{
      * @param params 查询条件
      * @return 数量
      */
-    public int count(final Map<String,Object> params){
-        return execute(new ExecuteCallBack<Integer>(){
+    protected int count(final String sqlId , final Map<String,Object> params){
+        return execute(sqlId , new ExecuteCallBack<Integer>(){
             @Override
-            public Integer execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
-                return sqlSessionTemplate.selectOne(nameSpace  + ".count" , params);
+            public Integer execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.selectOne(fullSqlId , params);
             }
         });
     }
@@ -142,15 +147,28 @@ public class MybatisCommonDao<T>{
      * 更新
      * @param t 更新的对象
      */
-    public int update(final T t){
-        return execute(new ExecuteCallBack<Integer>(){
+    protected int update(final String sqlId , final T t){
+        return execute(sqlId , new ExecuteCallBack<Integer>(){
             @Override
-            public Integer execute(String nameSpace, SqlSessionTemplate sqlSessionTemplate) {
-                return sqlSessionTemplate.update(nameSpace + ".update", t);
+            public Integer execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.update(fullSqlId , t);
             }
         });
     }
 
+
+    /**
+     * 删除
+     * @param params 删除的条件
+     */
+    protected int delete(String sqlId , final Map<String,Object> params){
+        return execute(sqlId , new ExecuteCallBack<Integer>(){
+            @Override
+            public Integer execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.delete(fullSqlId, params);
+            }
+        });
+    }
 
     /**
      * 执行某一个特定的方法
@@ -158,14 +176,16 @@ public class MybatisCommonDao<T>{
      * @param <E>   泛型类
      * @return 返回数据
      */
-    protected  <E> E execute(ExecuteCallBack<E> executeCallBack){
+    protected  <E> E execute(String sqlId , ExecuteCallBack<E> executeCallBack){
         Class<?> clazz = this.getClass();
         if(clazz.isAnnotationPresent(CCDatasourceRoute.class)){
             CCDatasourceRoute ccDatasourceRoute = clazz.getAnnotation(CCDatasourceRoute.class);
             String datasourceName = ccDatasourceRoute.value();
             DynamicDataSourceSwitch.setDataSource(datasourceName);
         }
-        return executeCallBack.execute(this.nameSpace , sqlSession);
+        String fullSqlId = this.nameSpace + "." + sqlId;
+        E e = executeCallBack.execute(fullSqlId , sqlSession);
+        return e;
     }
 
 }

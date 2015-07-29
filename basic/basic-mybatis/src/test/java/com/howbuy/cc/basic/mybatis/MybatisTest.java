@@ -1,6 +1,5 @@
 package com.howbuy.cc.basic.mybatis;
 
-import com.howbuy.cc.basic.mybatis.annotation.CCNameSpaceMapper;
 import com.howbuy.cc.basic.mybatis.dao.CustInfoMasterDao;
 import com.howbuy.cc.basic.mybatis.dao.CustInfoSlaveDao;
 import org.junit.Test;
@@ -19,8 +18,8 @@ public class MybatisTest extends BaseTest{
 
     @Test
     public void selectOne() throws InterruptedException {
-        System.out.println(custInfoMasterDao.selectOne(null));
-        System.out.println(custInfoSlaveDao.selectOne(null));
+        System.out.println(custInfoMasterDao.selectOne("selectOne" , null));
+        System.out.println(custInfoSlaveDao.selectOne("selectOne" , null));
     }
 
 }
