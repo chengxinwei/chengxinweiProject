@@ -11,6 +11,8 @@ basic-core 是基于spring + dubbo的应用框架，开发basic-core的核心目
             <packaging>jar</packaging>
          </dependency>
     2.  添加 default.application.name 在properties 中
+    3.  引入配置文件 <import resource="classpath:basic/spring/base-spring.xml"></import>
+
 二、功能点以及相关使用
     1.  配置文件读取，默认加载classpath下所有以properties结尾的配置文件。
         读取jar包当前目录的 conf 文件夹，读取目录下所有properties结尾的配置文件，若有重复则覆盖原有的配置
