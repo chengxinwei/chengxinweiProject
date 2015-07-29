@@ -24,6 +24,7 @@
         <mybatis.version>3.3.0</mybatis.version>
         <fastjson.version>1.2.6</fastjson.version>
         <junit.version>4.12</junit.version>
+        <dubbo.version>2.5.3</dubbo.version>
     </properties>
 
     <dependencyManagement>
@@ -154,6 +155,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
             </dependency>
 
 
