@@ -33,7 +33,7 @@ basic-core 是基于spring + dubbo的应用框架，开发basic-core的核心目
         1）通过  CCLogger ccLogger = CCLogger.getLogger(this.getClass()); 获取 CCLogger
         2）调用同 log4j 一样
             cclogger.info(code , message , args...)
-        3) CCLogger 会默认打印当前机器的ip 当前的应用名
+        3) CCLogger 会默认打印当前机器的ip 当前的应用名，若想独立设置日志的应用名，在properties中添加logger.application.name
         4）范例：code|192.168.121.199,192.168.61.1,192.168.187.1|logger-base-core|message|
         *参考 test.java.com.howbuy.cc.basic.logger 下的测试类
         5）基于dubbo请求自动生成code ，code 自动生成规则 dubbo 请求的类名+方法名
@@ -50,4 +50,16 @@ basic-core 是基于spring + dubbo的应用框架，开发basic-core的核心目
                 interface="com.howbuy.cc.basic.dubbo.DubboInterfaceTest"
                 ref="dubboProviderTest"
                 filter="dubboAccessLoggerFilter"/>
+
+        2）在log4j中添加如下配置
+            log4j.logger.com.howbuy.cc.basic.dubbo.filter.DubboAccessLoggerFilter = info,access
+            log4j.additivity.com.howbuy.cc.basic.dubbo.filter.DubboAccessLoggerFilter = false
+            log4j.appender.access=org.apache.log4j.DailyRollingFileAppender
+            log4j.appender.access.File=log/access.log
+            log4j.appender.access.Append = true
+            log4j.appender.access.layout=org.apache.log4j.PatternLayout
+            log4j.appender.access.layout.ConversionPattern= %-d{yyyy-MM-dd HH:mm:ss}  [ %t:%r ] - [ %p ]  %m%n
+
+         *参考 test.java.com.howbuy.cc.basic.dubbo 下的测试类
+         *以及 test.resources 下的log4j配置
 
