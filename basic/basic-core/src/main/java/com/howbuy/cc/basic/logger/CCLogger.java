@@ -1,12 +1,10 @@
 package com.howbuy.cc.basic.logger;
 
-import com.howbuy.cc.basic.CommonConstant;
+import com.howbuy.cc.basic.constant.CommonConstant;
 import com.howbuy.cc.basic.config.Configuration;
 import com.howbuy.cc.basic.util.IpUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.joda.time.DateTime;
-import org.nutz.lang.Strings;
 
 import java.util.List;
 
@@ -15,40 +13,66 @@ import java.util.List;
  * Created by xinwei.cheng on 2015/7/16.
  */
 @SuppressWarnings("unused")
-public class CCLogger {
+public class CCLogger{
 
-    final static public Logger logger = Logger.getLogger(CCLogger.class);
+    private Logger logger = null;
 
-    public static void info(String code , String text , String... messageAry){
+    public static CCLogger getLogger(Class<?> clazz){
+        CCLogger ccLogger = new CCLogger();
+        ccLogger.logger = Logger.getLogger(clazz);
+        return ccLogger;
+    }
+
+    public void info(String message){
+        this.info(null , message);
+    }
+
+    public void info(String code , String text , String... messageAry){
         if(logger.isInfoEnabled()){
-            logger.info(CCLogger.getDefaultLogHeader(code) + "|" + text + StringUtils.join(messageAry , "|"));
+            logger.info(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
         }
     }
 
-    public static void debug(String code , String text , String... messageAry){
+    public void debug(String message){
+        this.debug(null , message);
+    }
+
+    public void debug(String code , String text , String... messageAry){
         if(logger.isDebugEnabled()){
-            logger.debug(CCLogger.getDefaultLogHeader(code) + "|" + text + StringUtils.join(messageAry, "|"));
+            logger.debug(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
         }
     }
 
-    public static void error(String code , String text , String... messageAry){
-        logger.error(CCLogger.getDefaultLogHeader(code) + "|" + text + StringUtils.join(messageAry, "|"));
+    public void error(String text , Exception e){
+        this.error(null, text, e);
     }
 
-    public static void error(String code , String text , Exception e , String... messageAry){
-        logger.error(CCLogger.getDefaultLogHeader(code) + "|" + text + StringUtils.join(messageAry, "|") , e);
+    public void error(String code , String text , String... messageAry){
+        logger.error(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
     }
 
-    public static void warn(String code , String text , String... messageAry){
-        logger.warn(CCLogger.getDefaultLogHeader(code) + "|" + text + StringUtils.join(messageAry, "|"));
+    public void error(String code , String text , Exception e , String... messageAry){
+        logger.error(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"), e);
+    }
+
+    public void warn(String text){
+        this.warn(null ,text);
+    }
+
+    public void warn(String code , String text , String... messageAry){
+        logger.warn(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
     }
 
 
-    protected static String getDefaultLogHeader(String code){
+    protected String getDefaultLogHeader(String code){
+        String threadLocalCode = CCLoggerThreadLocal.get();
         List<String> ipList = IpUtil.getIp();
         String ip = StringUtils.join(ipList.toArray(new String[ipList.size()]), ",");
-        String date = new DateTime().toString("yyyyMMddHHmmss");
-        String applicationName = Configuration.get(CommonConstant.LOGGER_APPLICATION_NAME) == null ? Configuration.getDefaultApplicationName() : Configuration.get(CommonConstant.LOGGER_APPLICATION_NAME);
-        return "["+code+"]" + "|" + date + "|" + ip + "|" + applicationName;
+        String applicationName = StringUtils.defaultString(Configuration.get(CommonConstant.LOGGER_APPLICATION_NAME) ,  Configuration.getDefaultApplicationName());
+        return StringUtils.defaultString(StringUtils.defaultString(code , threadLocalCode) , "") + "|" + ip + "|" + applicationName;
+    }
+
+    public Logger getOriginalLog(){
+        return logger;
     }
 }

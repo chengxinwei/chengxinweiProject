@@ -1,6 +1,6 @@
 package com.howbuy.cc.basic.config;
 
-import com.howbuy.cc.basic.CommonConstant;
+import com.howbuy.cc.basic.constant.CommonConstant;
 
 import java.util.HashMap;
 import java.util.Map;

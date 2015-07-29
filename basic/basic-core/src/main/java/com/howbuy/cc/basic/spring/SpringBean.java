@@ -24,9 +24,6 @@ public class SpringBean implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        if (SpringBean.applicationContext != null) {
-            throw new IllegalStateException("applicationContext is already exists");
-        }
         SpringBean.applicationContext = applicationContext;
         for (Map.Entry<String, BeanDefinitionBuilder> entry : registBeanMap.entrySet()) {
             regist(entry.getKey(), entry.getValue());

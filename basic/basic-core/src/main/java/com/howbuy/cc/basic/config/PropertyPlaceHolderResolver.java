@@ -1,6 +1,6 @@
 package com.howbuy.cc.basic.config;
 
-import com.howbuy.cc.basic.CommonConstant;
+import com.howbuy.cc.basic.constant.CommonConstant;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
@@ -29,6 +29,7 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
 
     @Override
     protected Properties mergeProperties() throws IOException {
+
         Properties prop = super.mergeProperties();
         this.loadPropFileByPath(prop);
         //获取配置文件物理地址
