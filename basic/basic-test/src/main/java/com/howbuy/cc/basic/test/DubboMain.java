@@ -1,6 +1,6 @@
 package com.howbuy.cc.basic.test;
 
-import com.howbuy.cc.basic.test.dubbo.DubboConsumerTest;
+import com.alibaba.dubbo.container.Main;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -9,9 +9,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DubboMain {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("dubbo/application.xml");
-        DubboConsumerTest.testSuccess();
-
+        new ClassPathXmlApplicationContext("application.xml");
+        Main.main(args);
     }
 
 }

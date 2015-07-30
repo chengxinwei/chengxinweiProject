@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AaaaMapper">
+    <resultMap id="Aaaa" type="com.howbuy.cc.basic.test.model.Aaaa">
+        <result property="cate" column="CATE"></result>
+        <result property="score" column="SCORE"></result>
+        <result property="no" column="NO"></result>
+    </resultMap>
+
+    <select id="selectList" parameterType="Map" resultMap="Aaaa">
+          select * from  aaaa where NO = ${id}
+    </select>
+
+    <insert id="insert">
+        insert into aaaa(cate , score , no) values(#{cate} , #{score} , #{no})
+    </insert>
+
+    <update id="update">
+        update aaaa set cate = #{cate} , score = #{score} where no = #{no}
+    </update>
+
+    <delete id="delete">
+        delete aaaa where no = #{no}
+    </delete>
+</mapper>

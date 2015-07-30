@@ -20,7 +20,7 @@
 
 
     <!-- loadbalance  服务端的均衡策略 -->
-    <dubbo:service application="basic-dubbo-test-provider" interface="com.howbuy.cc.basic.test.dubbo.DubboInterfaceTest"
+    <dubbo:service application="basic-dubbo-test-provider" interface="com.howbuy.cc.basic.test.interfac.DubboInterfaceTest"
                    ref="dubboProviderTest"
                    filter="dubboAccessLoggerFilter,dubboCodeLoggerFilter"/>
 
