@@ -3,6 +3,7 @@ package com.howbuy.cc.basic.mybatis;
 import com.howbuy.cc.basic.mybatis.dao.AnnounceDao;
 import com.howbuy.cc.basic.mybatis.model.Announce;
 import org.junit.Test;
+import org.nutz.json.Json;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -33,6 +34,14 @@ public class AnnounceDaoTest extends BaseTest{
         announceList.add(announce1);
 
         announceDao.batchUpdate(announceList);
+    }
+
+
+
+
+    @Test
+    public void pageTest(){
+        System.out.println(Json.toJson(announceDao.page()));
     }
 
 }

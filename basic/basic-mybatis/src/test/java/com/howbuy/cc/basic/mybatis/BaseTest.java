@@ -10,9 +10,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @SuppressWarnings("unused")
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {
-        "classpath:basic/spring/mybatis/basic-spring-mybatis.xml" ,
         "classpath:spring-mybatis.xml" ,
-        "classpath:basic/spring/base-spring.xml"})
+        "classpath:basic/spring/base-spring.xml" ,
+        "classpath:basic/spring/mybatis/spring-mybatis.xml"})
 public abstract class BaseTest {
 
 

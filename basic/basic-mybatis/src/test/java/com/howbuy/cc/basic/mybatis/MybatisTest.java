@@ -18,8 +18,7 @@ public class MybatisTest extends BaseTest{
 
     @Test
     public void selectOne() throws InterruptedException {
-        System.out.println(custInfoMasterDao.selectOne("selectOne" , null));
-        System.out.println(custInfoSlaveDao.selectOne("selectOne" , null));
+        System.out.println(custInfoMasterDao.selectOne());
+        System.out.println(custInfoSlaveDao.selectOne());
     }
-
 }

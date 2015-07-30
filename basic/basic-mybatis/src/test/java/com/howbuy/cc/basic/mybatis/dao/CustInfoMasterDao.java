@@ -9,4 +9,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class CustInfoMasterDao extends MybatisCommonDao<CustInfo>{
 
+    public CustInfo selectOne(){
+        return super.selectOne("selectOne" , null);
+    }
+
 }

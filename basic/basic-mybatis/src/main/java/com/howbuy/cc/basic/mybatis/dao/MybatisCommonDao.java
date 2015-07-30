@@ -77,7 +77,7 @@ public class MybatisCommonDao<T>{
      * 查询一个
      * @param params 查询的参数
      */
-    public T selectOne(final String sqlId , final Map<String,Object> params){
+    protected T selectOne(final String sqlId , final Map<String,Object> params){
         return execute(sqlId , new ExecuteCallBack<T>(){
             @Override
             public T execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {

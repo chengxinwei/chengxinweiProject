@@ -12,4 +12,7 @@ import org.springframework.stereotype.Service;
 @CCDatasourceRoute("slave")
 public class CustInfoSlaveDao extends MybatisCommonDao<CustInfo>{
 
+    public CustInfo selectOne() {
+        return super.selectOne("selectOne" , null);
+    }
 }

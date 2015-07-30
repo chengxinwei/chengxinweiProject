@@ -15,4 +15,15 @@
         </foreach>
 
     </select>
+
+    <select id="page" resultMap="Announce">
+        <include refid="commonMapper.Pagination_Head"></include>
+        select * from cm_announce
+        <include refid="commonMapper.Pagination_Foot"></include>
+    </select>
+
+
+    <select id="count" resultType="Integer">
+        select count(1) from cm_announce
+    </select>
 </mapper>

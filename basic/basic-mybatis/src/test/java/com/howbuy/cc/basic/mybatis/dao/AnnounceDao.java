@@ -4,6 +4,7 @@ import com.howbuy.cc.basic.mybatis.BaseTest;
 import com.howbuy.cc.basic.mybatis.annotation.CCDatasourceRoute;
 import com.howbuy.cc.basic.mybatis.dao.callback.ExecuteCallBack;
 import com.howbuy.cc.basic.mybatis.model.Announce;
+import com.howbuy.cc.basic.mybatis.model.Page;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
@@ -32,6 +33,11 @@ public class AnnounceDao extends MybatisCommonDao<Announce>{
                 return null;
             }
         });
+    }
+
+
+    public Page<Announce> page(){
+        return super.page("page" , "count" , new HashMap<String, Object>() , 1 , 2 , null);
     }
 
 }
