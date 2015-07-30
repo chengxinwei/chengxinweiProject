@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="文档提交&#10;">
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__com_alibaba_druid_1_0_15.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-core/basic-core.iml" afterPath="$PROJECT_DIR$/basic-core/basic-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-core/src/test/resources/log4j.properties" afterPath="$PROJECT_DIR$/basic-core/src/test/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="7fa1a1d4-d0f7-4e35-84f8-bf6cc6ce66b2" name="Failed commit: Default (2)" comment="添加日志记录=" />
@@ -899,7 +894,7 @@
       <workItem from="1437959157172" duration="17054000" />
       <workItem from="1438044676864" duration="6761000" />
       <workItem from="1438062440763" duration="43231000" />
-      <workItem from="1438231974940" duration="6052000" />
+      <workItem from="1438231974940" duration="6075000" />
     </task>
     <task id="LOCAL-00001" summary="删除target">
       <created>1437706185065</created>
@@ -1081,11 +1076,17 @@
       <option name="project" value="LOCAL" />
       <updated>1438238114566</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="idea 文件提交">
+      <created>1438238137359</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1438238137359</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123171000" />
+    <option name="totallyTimeSpent" value="123194000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1159,7 +1160,8 @@
     <MESSAGE value="basic-test-exemple 提交" />
     <MESSAGE value="文档提交&#10;删除不需要的类" />
     <MESSAGE value="文档提交&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="文档提交&#10;" />
+    <MESSAGE value="idea 文件提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea 文件提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
