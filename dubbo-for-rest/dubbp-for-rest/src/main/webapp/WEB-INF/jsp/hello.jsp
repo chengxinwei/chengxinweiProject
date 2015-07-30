@@ -91,11 +91,11 @@
                         <td style="word-break:break-all; word-wrap:break-word;">{{params.paramsName || '-'}}</td>
                         <td style="word-break:break-all; word-wrap:break-word;">{{params.paramsClass}}</td>
                         <td>
-                            <div class="input-group" ng-show="params.fieldList && params.fieldList.size > 0" ng-repeat="field in params.fieldList">
+                            <div class="input-group" ng-show="params.fieldList && params.fieldList.length > 0" ng-repeat="field in params.fieldList">
                                 <div class="input-group-addon">{{field.name}}</div>
                                 <input type="text" class="form-control" placeholder="参数值" ng-model="field.fieldValue">
                             </div>
-                            <textarea ng-hide="params.fieldList && params.fieldList.size > 0" class="form-control" rows="2" ng-model="params.value" style="max-width: 500px;min-width: 500px;"></textarea>
+                            <textarea ng-hide="params.fieldList && params.fieldList.length > 0" class="form-control" rows="2" ng-model="params.value" style="max-width: 500px;min-width: 500px;"></textarea>
                         </td>
                     </tr>
                     </tbody>

@@ -22,8 +22,8 @@ public class DubboService {
 
 
 
-    public static List<Class> generator(Pom pom) throws ParserConfigurationException, SAXException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        return DubboClassLoader.loadJar(pom.getFullJarPath());
+    public static List<Class> generator(Pom pom , boolean useSystemClassLoader) throws ParserConfigurationException, SAXException, IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        return DubboClassLoader.loadJar(pom.getFullJarPath() , useSystemClassLoader);
     }
 
 
@@ -57,7 +57,7 @@ public class DubboService {
     public static Object execute(String zookeeperHost, String fullJarPath, String interfaceClass,
                                  String methodName, String[] methodClassStrAry, String... args) throws ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchMethodException, IOException, ParserConfigurationException, SAXException, InstantiationException {
 
-        DubboClassLoader.loadJar(fullJarPath);
+        DubboClassLoader.loadJar(fullJarPath , true);
 
         Class[] methodClassAry = new Class[methodClassStrAry.length];
         for(int i = 0 ; i < methodClassAry.length ; i ++){

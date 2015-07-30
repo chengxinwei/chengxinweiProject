@@ -22,7 +22,7 @@ public class DubboClassLoader {
 
     private  final static  Logger logger = Logger.getLogger(DubboClassLoader.class);
 
-    public static List<Class> loadJar(String jarPath) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+    public static List<Class> loadJar(String jarPath , boolean useSystemClassLoader) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 
         jarPath = "jar:file:" + jarPath + "!/";
 
@@ -31,11 +31,16 @@ public class DubboClassLoader {
         JarURLConnection secJarCon = (JarURLConnection)url.openConnection();
         JarFile jarFile = secJarCon.getJarFile();
 
-        URLClassLoader urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+        URLClassLoader urlClassLoader;
+        if(!useSystemClassLoader) {
+            urlClassLoader = new URLClassLoader(new URL[]{url});
+        }else{
+            urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+            Method method = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
+            method.setAccessible(true);
+            method.invoke(urlClassLoader, url);
 
-        Method method = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
-        method.setAccessible(true);
-        method.invoke(urlClassLoader, url);
+        }
 
         Enumeration<JarEntry> jarEntrys = jarFile.entries();
 

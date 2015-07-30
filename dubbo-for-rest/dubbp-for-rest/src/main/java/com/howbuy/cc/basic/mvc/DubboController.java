@@ -34,20 +34,15 @@ public class DubboController {
     @RequestMapping("/excute")
     public Object dubboExcute(String interfaceName,
                               @RequestParam(value = "valueAry[]" , required = false) String[] valueAry ,
-                              @RequestParam(value = "methodParamsClassAry[]" , required = false) Class[] methodParamsClassAry,
+                              @RequestParam(value = "methodParamsClassAry[]" , required = false) String[] methodParamsClassAry,
                               String methodName,
                               String fullJarPath
                               ) throws IOException {
         Map<String,Object> result = new HashMap<>();
 
         try {
-            methodParamsClassAry = methodParamsClassAry == null ? new Class[0] : methodParamsClassAry ;
+            methodParamsClassAry = methodParamsClassAry == null ? new String[0] : methodParamsClassAry ;
             valueAry = valueAry == null ? new String[0] : valueAry;
-
-            String[] methodParamsClassStrAry = new String[methodParamsClassAry.length];
-            for(int i = 0 ; i < methodParamsClassAry.length ; i ++){
-                methodParamsClassStrAry[i] = methodParamsClassAry[i].getName();
-            }
 
             String paramsStr = StringUtils.join(valueAry , " ").replace("\"", "\\\"");
             String executePath = Configuration.get("executePath");
@@ -56,7 +51,7 @@ public class DubboController {
                     " " + interfaceName +
                     " " + Configuration.get("zookeeper.ip_port") +
                     " " + methodName +
-                    " " + StringUtils.join(methodParamsClassStrAry , "|") +
+                    " " + StringUtils.join(methodParamsClassAry , "|") +
                     " " + paramsStr;
             logger.info("执行命令:" + cmd);
             Runtime run = Runtime.getRuntime();//返回与当前 Java 应用程序相关的运行时对象
@@ -106,7 +101,7 @@ public class DubboController {
             Pom pom = JarGenerator.getPomByStr(pomStr);
             JarGenerator.getJarByPom(pom);
 
-            List<Class> classList = DubboService.generator(pom);
+            List<Class> classList = DubboService.generator(pom , false);
             for (Class clazz : classList) {
                 if (!clazz.isInterface()) {
                     continue;
