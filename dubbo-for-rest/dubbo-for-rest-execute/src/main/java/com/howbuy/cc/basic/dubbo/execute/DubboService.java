@@ -28,7 +28,7 @@ public class DubboService {
 
 
 
-    public static Object execute(String zookeeperHost, Class<?> clazz, Method method, Object[] args) {
+    public static Object execute(String zookeeperHost, Class<?> clazz, Method method, Object[] args) throws InvocationTargetException, IllegalAccessException {
         ApplicationConfig application = new ApplicationConfig();
         application.setName("dubbo-for-rest");
 
@@ -41,18 +41,8 @@ public class DubboService {
         rc.setInterface(clazz);
         rc.setProtocol("dubbo");
 
-        try {
-            Object obj = rc.get();
-            return method.invoke(obj, args);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } finally {
-        }
-        return null;
+        Object obj = rc.get();
+        return method.invoke(obj, args);
     }
 
     /**
@@ -120,4 +110,17 @@ public class DubboService {
         return resultObjectAry;
     }
 
+
+    public static Class<?> getClass(String className) throws ClassNotFoundException {
+        switch (className){
+            case "int":
+                className ="java.lang.Integer";
+                break;
+        }
+        return Class.forName(className);
+    }
+
+    public static void main(String[] args) throws ClassNotFoundException {
+        System.out.println(getClass("int"));
+    }
 }
