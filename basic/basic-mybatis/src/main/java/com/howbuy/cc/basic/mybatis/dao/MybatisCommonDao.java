@@ -73,6 +73,8 @@ public class MybatisCommonDao<T>{
     }
 
 
+
+
     /**
      * 查询一个
      * @param params 查询的参数
@@ -87,6 +89,19 @@ public class MybatisCommonDao<T>{
 
     }
 
+    /**
+     * 查询一个
+     * @param id 查询的参数
+     */
+    protected T selectById(final String sqlId , final String id){
+        return execute(sqlId , new ExecuteCallBack<T>(){
+            @Override
+            public T execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.selectOne(fullSqlId , id);
+            }
+        });
+
+    }
 
     /**
      * 查询列表
@@ -114,6 +129,19 @@ public class MybatisCommonDao<T>{
      */
     protected Page<T> page(final String listSqlId , final String countSqlId , Map<String,Object> params , Integer pageNo , Integer pageSize , String orderby){
         int count = this.count(countSqlId , params);
+        return this.page(listSqlId , count , params , pageNo , pageSize , orderby);
+    }
+
+    /**
+     * 分页
+     * @param count 一共多少条
+     * @param params 查询的参数
+     * @param pageNo 第几页
+     * @param pageSize 每页多少条
+     * @param orderby 排序
+     * @return 分页对象
+     */
+    protected Page<T> page(final String listSqlId , int count, Map<String,Object> params , Integer pageNo , Integer pageSize , String orderby){
         Page<T> page = new Page<>(pageSize , pageNo , count);
         if(count == 0 ){
             page.setPageList(new ArrayList<T>());

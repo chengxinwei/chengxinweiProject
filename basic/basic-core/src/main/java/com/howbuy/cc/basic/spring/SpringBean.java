@@ -2,6 +2,7 @@ package com.howbuy.cc.basic.spring;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -20,12 +21,12 @@ public class SpringBean implements ApplicationContextAware {
 
     private static ApplicationContext applicationContext = null;
 
-    private static Map<String, BeanDefinitionBuilder> registBeanMap = new HashMap<>();
+    private static Map<String, AbstractBeanDefinition> registBeanMap = new HashMap<>();
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         SpringBean.applicationContext = applicationContext;
-        for (Map.Entry<String, BeanDefinitionBuilder> entry : registBeanMap.entrySet()) {
+        for (Map.Entry<String, AbstractBeanDefinition> entry : registBeanMap.entrySet()) {
             regist(entry.getKey(), entry.getValue());
         }
     }
@@ -44,9 +45,9 @@ public class SpringBean implements ApplicationContextAware {
     }
 
 
-    public static void regist(String beanName, BeanDefinitionBuilder beanDefinitionBuilder) {
+    public static void regist(String beanName, AbstractBeanDefinition abstractBeanDefinition) {
         if (applicationContext == null) {
-            registBeanMap.put(beanName, beanDefinitionBuilder);
+            registBeanMap.put(beanName, abstractBeanDefinition);
             return;
         }
 
@@ -57,7 +58,7 @@ public class SpringBean implements ApplicationContextAware {
         DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) configurableApplicationContext.getBeanFactory();
 
         // 注册bean
-        defaultListableBeanFactory.registerBeanDefinition(beanName, beanDefinitionBuilder.getRawBeanDefinition());
+        defaultListableBeanFactory.registerBeanDefinition(beanName, abstractBeanDefinition);
     }
 
     public static ApplicationContext getApplicationContext(){

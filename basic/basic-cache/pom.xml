@@ -17,6 +17,7 @@
 
     <dependencies>
 
+
         <dependency>
             <groupId>com.howbuy.cc.basic</groupId>
             <artifactId>basic-core</artifactId>

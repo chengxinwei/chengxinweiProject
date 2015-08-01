@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SqlMapper">
+
+    <select id="select" resultType="Map">
+        <include refid="commonMapper.Pagination_Head"></include>
+        select * from ${tableName}
+        <include refid="commonMapper.Pagination_Foot"></include>
+    </select>
+
+    <select id="count" resultType="Integer">
+        select count(1) from ${tableName}
+    </select>
+
+</mapper>

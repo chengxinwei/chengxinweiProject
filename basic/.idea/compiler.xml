@@ -23,7 +23,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="basic-mongo" />
-        <module name="basic-mq" />
       </profile>
       <profile default="false" name="Annotation profile for basic-core" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
@@ -60,13 +59,20 @@
         <processorPath useClasspath="true" />
         <module name="basic-test-interface" />
       </profile>
+      <profile default="false" name="Annotation profile for basic-mq" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="basic-mq" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="basic-cache" target="1.7" />
       <module name="basic-core" target="1.7" />
       <module name="basic-logger" target="1.5" />
       <module name="basic-mongo" target="1.5" />
-      <module name="basic-mq" target="1.5" />
+      <module name="basic-mq" target="1.7" />
       <module name="basic-mybatis" target="1.7" />
       <module name="basic-test" target="1.7" />
       <module name="basic-test-interface" target="1.7" />

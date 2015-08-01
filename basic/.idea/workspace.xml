@@ -1,8 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="">
+    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="idea 文件提交">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/AbstractListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/AbstractSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/model/ActiveMQFieldMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMQThreadLocal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActiveMQTransactional.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/intercepter/ActiveTransactionalIntercepter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/AopTargetUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/java/chengxinwei/datas/App.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/java/chengxinwei/datas/reader/data/DataReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/java/chengxinwei/datas/reader/handler/DataReaderHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/Datas.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/java/chengxinwei/datas/reader/data/DbReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/constant/MQConstant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__cglib_cglib_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__com_alibaba_dubbo_2_5_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__com_alibaba_fastjson_1_2_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__com_github_sgroschupf_zkclient_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__com_howbuy_cc_basic_basic_core_1_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__com_howbuy_cc_basic_basic_mybatis_1_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__com_oracle_ojdbc14_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__io_netty_netty_3_7_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__jline_jline_0_9_94.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__joda_time_joda_time_2_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_javassist_javassist_3_15_0_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_jboss_netty_netty_3_2_5_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_mybatis_mybatis_3_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_nutz_nutz_1_b_52.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_ow2_asm_asm_4_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_aop_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_asm_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_beans_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_context_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_core_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_expression_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_jdbc_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_test_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/libraries/Maven__org_springframework_spring_tx_3_1_4_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/java/chengxinwei/datas/reader/util/PageNoGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/QueueAbstractListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/QueueAbstractSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/QueueMessageListenerContainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/java/chengxinwei/datas/reader/redis/RedisClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/resources/mapper/SqlMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/TestConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/TestSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/TopicAbstractListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/TopicAbstractSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/TopicMessageListenerContainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/VirtualAbstractListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/VirtualAbstractSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/VirtualMessageListenerContainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/resources/application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/resources/application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/resources/basic/activemq/basic-activemq.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/resources/global.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/resources/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/resources/mq.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/resources/mybatis/mybatis-config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/provider.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/provider/src/main/resources/mybatis/spring-mybatis.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\App.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\test\java\com\howbuy\cc\basic\AppTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\test\java\com\howbuy\cc\basic\TestClassLoader.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/mapper/AaaaMapper.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/mapper/AaaaMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java" afterPath="$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java" afterPath="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/spring/SpringBean.java" afterPath="$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/spring/SpringBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-cache/basic-cache.iml" afterPath="$PROJECT_DIR$/basic-cache/basic-cache.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/basic-mq.iml" afterPath="$PROJECT_DIR$/basic-mq/basic-mq.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/basic-test.iml" afterPath="$PROJECT_DIR$/basic-test/basic-test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/compiler.xml" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="$PROJECT_DIR$/../.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-cache/pom.xml" afterPath="$PROJECT_DIR$/basic-cache/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/pom.xml" afterPath="$PROJECT_DIR$/basic-mq/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/pom.xml" afterPath="$PROJECT_DIR$/basic-test/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\test\java\com\howbuy\cc\basic\AppTest.java" afterPath="$PROJECT_DIR$/../Datas/provider/src/test/java/chengxinwei/datas/AppTest.java" />
     </list>
     <list id="7fa1a1d4-d0f7-4e35-84f8-bf6cc6ce66b2" name="Failed commit: Default (2)" comment="添加日志记录=" />
     <list id="2b3f3ee1-5043-40c9-a9dd-1dfaad7af880" name="Failed commit: Default" comment="其他对应修改类提交" />
@@ -173,6 +275,54 @@
     <ignored path="../dubboserver/.idea/workspace.xml" />
     <ignored path="../dubboserver/.idea/compiler.xml" />
     <ignored path="$PROJECT_DIR$/basic-test-interface/target/" />
+    <ignored path="basic-mybatis/log/sqlTime.log" />
+    <ignored path="../dubbo-for-rest/dubbp-for-rest/target/dubbo-for-rest-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+    <ignored path="../basic.rar" />
+    <ignored path=".idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" />
+    <ignored path=".idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
+    <ignored path="log/sqlTime.log" />
+    <ignored path="basic-mybatis/log/sqlTime.log.2015-07-29" />
+    <ignored path="log/access.log" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_tx_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_activemq_protobuf_activemq_protobuf_1_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_core_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_fusesource_hawtbuf_hawtbuf_1_9.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_activemq_activemq_core_5_7_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_fusesource_mqtt_client_mqtt_client_1_3.xml" />
+    <ignored path=".idea/libraries/Maven__org_fusesource_hawtdispatch_hawtdispatch_1_11.xml" />
+    <ignored path=".idea/libraries/Maven__org_slf4j_slf4j_api_1_6_6.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_geronimo_specs_geronimo_j2ee_management_1_1_spec_1_0_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_activemq_kahadb_5_7_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_jasypt_jasypt_1_9_0.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_asm_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_test_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_expression_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__commons_net_commons_net_3_1.xml" />
+    <ignored path=".idea/libraries/Maven__org_fusesource_hawtdispatch_hawtdispatch_transport_1_11.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_beans_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_aop_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_jms_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_springframework_spring_context_3_1_1_RELEASE.xml" />
+    <ignored path=".idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jms_1_1_spec_1_1_1.xml" />
+    <ignored path="../Datas/.idea/libraries/Maven__redis_clients_jedis_2_7_3.xml" />
+    <ignored path="../Datas/.idea/.name" />
+    <ignored path="../Datas/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" />
+    <ignored path="../Datas/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_3.xml" />
+    <ignored path="../Datas/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
+    <ignored path="../Datas/provider/target/classes/chengxinwei/datas/App.class" />
+    <ignored path="../Datas/provider/target/classes/mapper/SqlMapper.xml" />
+    <ignored path="../Datas/provider/target/classes/chengxinwei/datas/reader/handler/DataReaderHandler.class" />
+    <ignored path="../Datas/provider/target/classes/chengxinwei/datas/reader/handler/DataReaderHandler$1.class" />
+    <ignored path="../Datas/provider/target/classes/chengxinwei/datas/reader/redis/RedisClient.class" />
+    <ignored path="../Datas/provider/target/classes/chengxinwei/datas/reader/thread/ProviderThread.class" />
+    <ignored path="../Datas/provider/target/test-classes/chengxinwei/datas/AppTest.class" />
+    <ignored path="../Datas/provider/target/classes/chengxinwei/datas/reader/data/DataProvider.class" />
+    <ignored path="../Datas/provider/target/classes/chengxinwei/datas/reader/data/DbProvider.class" />
+    <ignored path="../Datas/provider/target/classes/mybatis/mybatis-config.xml" />
+    <ignored path="../Datas/provider/target/classes/application.xml" />
+    <ignored path="../Datas/provider/target/classes/mybatis/spring-mybatis.xml" />
+    <ignored path="../Datas/provider/target/classes/global.properties" />
+    <ignored path="../Datas/provider/target/classes/jdbc.properties" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,59 +350,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DubboProviderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboProviderTest.java">
+      <file leaf-file-name="MybatisTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-              <folding>
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#1204#1205#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redis.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/redis/redis.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnnounceDaoTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/AnnounceDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39763778">
-              <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
-              <folding>
-                <element signature="e#970#971#0" expanded="true" />
-                <element signature="e#1037#1038#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyBatisMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/MyBatisMain.java">
+      <file leaf-file-name="TransactionAspectSupport.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE-sources.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="386" column="47" selection-start-line="386" selection-start-column="47" selection-end-line="386" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DubboConsumerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboConsumerTest.java">
+      <file leaf-file-name="PlatformTransactionManager.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE-sources.jar!/org/springframework/transaction/PlatformTransactionManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractPlatformTransactionManager.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE-sources.jar!/org/springframework/transaction/support/AbstractPlatformTransactionManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="806" column="0" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/config/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PropertyPlaceHolderResolver.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/config/PropertyPlaceHolderResolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.3578274">
+              <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SqlLoggerInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/interceptor/SqlLoggerInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="52" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigurationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-core/src/test/java/com/howbuy/cc/basic/configuration/ConfigurationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoggerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-core/src/test/java/com/howbuy/cc/basic/logger/LoggerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-core/src/test/resources/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -279,44 +474,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/basic-test/src/main/resources/META-INF/dubbo/com.alibaba.dubbo.rpc.Filter" />
-        <option value="$PROJECT_DIR$/basic-core/src/test/resources/test-spring-dubbo-provider.xml" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/datasourceRoute/DynamicDataSource.java" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/CacheMain.java" />
-        <option value="$PROJECT_DIR$/basic-core/doc/README.txt" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/service/TestService.java" />
-        <option value="$PROJECT_DIR$/basic-cache/doc/README.txt" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/cache/TestService.java" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/cache/CacheServiceTest.java" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AnnounceDaoTest.java" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/model/Announce.java" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/resources/mybatis/application.xml" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/resources/mybatis/jdbc.properties" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/basic-core/src/test/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/basic-mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/dao/AnnounceDao.java" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/dao/CustInfoMasterDao.java" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/dao/CustInfoSlaveDao.java" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/resources/mapper/AnnounceMapper.xml" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/AnnounceDaoTest.java" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/main/resources/basic/mapper/commonMapper.xml" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/basic-mybatis/doc/README.txt" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/main/resources/basic/spring/mybatis/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/resources/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/BaseTest.java" />
-        <option value="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java" />
-        <option value="$PROJECT_DIR$/basic-test-interface/src/main/java/com/howbuy/cc/test/interfac/model/Announce.java" />
-        <option value="$PROJECT_DIR$/basic-test-interface/src/main/java/com/howbuy/cc/test/model/Announce.java" />
-        <option value="$PROJECT_DIR$/basic-test-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-test/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboConsumerTest.java" />
-        <option value="$PROJECT_DIR$/basic-test-interface/src/main/java/com/howbuy/cc/test/model/Aaa.java" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/resources/mapper/AnnounceMapper.xml" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AnnounceDao.java" />
         <option value="$PROJECT_DIR$/basic-test-interface/src/main/java/com/howbuy/cc/test/interfac/DubboInterfaceTest.java" />
         <option value="$PROJECT_DIR$/basic-test/src/main/resources/application.xml" />
         <option value="$PROJECT_DIR$/basic-test/src/main/resources/mybatis/spring-mybatis.xml" />
@@ -325,11 +482,49 @@
         <option value="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-consumer.xml" />
         <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/DubboMain.java" />
         <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboProviderTest.java" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/resources/mapper/AaaaMapper.xml" />
         <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/MyBatisMain.java" />
         <option value="$PROJECT_DIR$/basic-test-interface/src/main/java/com/howbuy/cc/basic/test/model/Aaaa.java" />
         <option value="$PROJECT_DIR$/basic-test-interface/src/main/java/com/howbuy/cc/basic/test/interfac/DubboInterfaceTest.java" />
         <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java" />
+        <option value="$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/model/Page.java" />
+        <option value="$PROJECT_DIR$/basic-test/src/main/resources/mapper/AaaaMapper.xml" />
+        <option value="$PROJECT_DIR$/basic-cache/src/test/java/com/howbuy/cc/basic/cache/RadisCacheTest.java" />
+        <option value="$PROJECT_DIR$/basic-test/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-core/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-cache/src/test/resources/redis.properties" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqPlaceholder.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/model/xingcheng/XingchengReqProperty.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/AbstractSender.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/AbstractListener.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMQThreadLocal.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/IConst.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/MQConstant.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/constant/MQConstant.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/intercepter/ActiveTransactionalIntercepter.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/TopicMessageListenerContainer.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/model/ActiveMQFieldMessage.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-mq/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/resources/plus/dy-activemq.xml" />
+        <option value="$PROJECT_DIR$/basic-mq/src/test/src/activemq/sender/TestSender.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/test/src/activemq/consumer/TestConsumer.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/test/resources/application.xml" />
+        <option value="$PROJECT_DIR$/basic-mq/src/test/src/activemq/Main.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/test/resources/mq.properties" />
+        <option value="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/Main.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/QueueAbstractListener.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/TopicAbstractListener.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/VirtualAbstractListener.java" />
+        <option value="$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/spring/SpringBean.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqListener.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqSender.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/TestSender.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java" />
+        <option value="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/TestConsumer.java" />
+        <option value="$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java" />
+        <option value="$PROJECT_DIR$/basic-core/src/test/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java" />
       </list>
     </option>
   </component>
@@ -385,6 +580,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -406,12 +602,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dubbo-for-rest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cim-web-server" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -426,79 +621,34 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\chengxinweiProject\basic\basic-mq\src\test\resources" />
       <recent name="D:\workspace\chengxinweiProject\basic\basic-test\src\main\resources" />
       <recent name="D:\workspace\chengxinweiProject\basic\basic-mybatis\src\main\resources\basic\spring\mybatis" />
       <recent name="D:\workspace\chengxinweiProject\basic\basic-mybatis\src\main\resources" />
       <recent name="D:\workspace\chengxinweiProject\basic\basic-test\src\main\resources\mybatis" />
-      <recent name="D:\workspace\chengxinweiProject\basic\basic-test\src\main\resources\mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\chengxinweiProject\basic\basic-mq\src\test\src" />
+      <recent name="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\resources\basic\activemq" />
       <recent name="D:\workspace\chengxinweiProject\basic\basic-mybatis\src\test\resources" />
       <recent name="D:\workspace\chengxinweiProject\basic\basic-test\src\main\resources\META-INF\dubbo" />
       <recent name="D:\workspace\chengxinweiProject\basic\basic-test\src\main\resources\dubbo" />
-      <recent name="D:\workspace\chengxinweiProject\basic\basic-test\src\main\resources\redis" />
-      <recent name="D:\workspace\chengxinweiProject\basic\basic-core\src\test\resources\META-INF" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.howbuy" />
       <recent name="com.howbuy.cc.test" />
       <recent name="basic" />
       <recent name="com.howbuy.cc.basic.test.mybatis" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.howbuy.cc.basic.mq.listener.common" />
       <recent name="com.howbuy.cc.test.interfac.model" />
       <recent name="com.howbuy.cc.test.interfac" />
       <recent name="com.howbuy.cc.basic.test.mybatis.dao" />
       <recent name="com.howbuy.cc.basic.test.mybatis.model" />
-      <recent name="com.howbuy.cc.basic.mybatis.interceptor" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DubboMain">
-    <configuration default="false" name="MyBatisMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.howbuy.cc.basic.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.howbuy.cc.basic.test.MyBatisMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="basic-test" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="AnnounceDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.howbuy.cc.basic.mybatis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="basic-mybatis" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.howbuy.cc.basic.mybatis" />
-      <option name="MAIN_CLASS_NAME" value="com.howbuy.cc.basic.mybatis.AnnounceDaoTest" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.MybatisTest.selectOne">
     <configuration default="false" name="AnnounceDaoTest.pageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -569,6 +719,52 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="basic-test" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.howbuy.activemq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.howbuy.activemq.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="basic-mq" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LoggerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.howbuy.cc.basic.logger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="basic-core" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.howbuy.cc.basic.logger" />
+      <option name="MAIN_CLASS_NAME" value="com.howbuy.cc.basic.logger.LoggerTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -850,19 +1046,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.MyBatisMain" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.update" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.pageTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MybatisTest.selectOne" />
-      <item index="4" class="java.lang.String" itemvalue="Application.DubboMain" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.pageTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MybatisTest.selectOne" />
+      <item index="2" class="java.lang.String" itemvalue="Application.DubboMain" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LoggerTest.test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.DubboMain" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MybatisTest.selectOne" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.pageTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.update" />
-        <item index="4" class="java.lang.String" itemvalue="Application.MyBatisMain" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MybatisTest.selectOne" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LoggerTest.test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="3" class="java.lang.String" itemvalue="Application.DubboMain" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.pageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -892,7 +1088,8 @@
       <workItem from="1437959157172" duration="17054000" />
       <workItem from="1438044676864" duration="6761000" />
       <workItem from="1438062440763" duration="43231000" />
-      <workItem from="1438231974940" duration="6082000" />
+      <workItem from="1438231974940" duration="17056000" />
+      <workItem from="1438310073467" duration="15443000" />
     </task>
     <task id="LOCAL-00001" summary="删除target">
       <created>1437706185065</created>
@@ -1086,11 +1283,17 @@
       <option name="project" value="LOCAL" />
       <updated>1438238150838</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="idea 文件提交">
+      <created>1438238158948</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1438238158948</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123201000" />
+    <option name="totallyTimeSpent" value="149618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1106,22 +1309,22 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3050571" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23491028" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45513865" sideWeight="0.5030257" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.290469" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.53833604" sideWeight="0.4969743" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41435564" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4420881" sideWeight="0.4969743" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47960848" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26590538" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23327896" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28441754" sideWeight="0.59859157" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37065053" sideWeight="0.59859157" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28214827" sideWeight="0.40140846" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5122349" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47797716" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1163,9 +1366,9 @@
     <MESSAGE value="添加classloader 的判断" />
     <MESSAGE value="basic-test-exemple 提交" />
     <MESSAGE value="文档提交&#10;删除不需要的类" />
-    <MESSAGE value="idea 文件提交" />
     <MESSAGE value="文档提交&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="文档提交&#10;" />
+    <MESSAGE value="idea 文件提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea 文件提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1182,8 +1385,38 @@
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/Main.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/interceptor/SqlLoggerInterceptor.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="60" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1192,167 +1425,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71875">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/dao/CustInfoSlaveDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38877338">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/dao/CustInfoSlaveDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/nutz/nutz/1.b.52/nutz-1.b.52.jar!/org/nutz/json/Json.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.892857">
-          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
-          <folding>
-            <element signature="e#1992#2228#0" expanded="false" />
-            <element signature="e#2227#2228#0" expanded="false" />
-            <element signature="e#4088#4332#0" expanded="false" />
-            <element signature="e#4331#4332#0" expanded="false" />
-            <element signature="e#4885#5125#0" expanded="false" />
-            <element signature="e#5124#5125#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/dao/AnnounceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding>
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/dao/CustInfoMasterDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/resources/mapper/CustInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/resources/basic/mapper/commonMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="78" selection-start-line="11" selection-start-column="78" selection-end-line="11" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/resources/mapper/AnnounceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="64" selection-start-line="19" selection-start-column="6" selection-end-line="21" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/model/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/resources/basic/spring/mybatis/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/resources/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0640178">
-          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/log/sqlTime.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10149254">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test-interface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/dubbo/application.xml">
+    <entry file="file://$PROJECT_DIR$/basic-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -1360,287 +1433,456 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/mybatis/application.xml">
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="69" />
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="18" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/redis/application.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/global.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/application.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.892857">
-          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+        <state vertical-scroll-proportion="-4.857143">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/resources/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic-mybatis/doc/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6964286">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-provider.xml">
+    <entry file="file://$PROJECT_DIR$/basic-cache/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="103" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-consumer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35416666">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/mybatis/spring-mybatis.xml">
+    <entry file="file://$PROJECT_DIR$/basic-cache/src/test/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/filter/DubboCodeLoggerFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="26" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE.jar!/org/springframework/aop/framework/Cglib2AopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.1.4.RELEASE/spring-core-3.1.4.RELEASE-sources.jar!/org/springframework/core/NestedRuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE.jar!/org/springframework/dao/DataAccessException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3227848">
-          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE.jar!/org/springframework/dao/NonTransientDataAccessException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3227848">
-          <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE.jar!/org/springframework/dao/UncategorizedDataAccessException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3227848">
-          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.2/mybatis-spring-1.2.2.jar!/org/mybatis/spring/MyBatisSystemException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/mapper/AaaaMapper.xml">
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/VirtualAbstractSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/TopicAbstractSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActiveMQTransactional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/AopTargetUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/constant/MQConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/QueueMessageListenerContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <marker date="1438233162755" expanded="true" signature="-1:-1" placeholder="select * fro..aaaa..." />
-            <marker date="1438233162755" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1438233162755" expanded="true" signature="-1:-1" placeholder="update aaaa ..." />
+            <element signature="imports" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
+            <element signature="e#413#414#0" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#494#495#0" expanded="false" />
+            <element signature="e#523#524#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#657#658#0" expanded="false" />
+            <element signature="e#686#687#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/DubboMain.java">
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/VirtualMessageListenerContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
+            <element signature="e#504#505#0" expanded="false" />
+            <element signature="e#552#553#0" expanded="false" />
+            <element signature="e#585#586#0" expanded="false" />
+            <element signature="e#624#625#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#705#706#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/TopicMessageListenerContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#273#300#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/model/ActiveMQFieldMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-cache/src/test/resources/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11643836">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/resources/basic/spring/mybatis/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23287672">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/test/resources/mq.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/AbstractSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/AbstractListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/QueueAbstractListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/TopicAbstractListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/VirtualAbstractListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/BeanDefinitionBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="139" column="33" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="33" />
+          <folding>
+            <element signature="e#5361#5362#0" expanded="false" />
+            <element signature="e#5394#5395#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/spring/SpringBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5333333">
+          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+          <folding>
+            <element signature="e#2403#2404#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/test/resources/application.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/resources/basic/activemq/basic-activemq.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/pom.xml">
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="21" selection-start-line="41" selection-start-column="5" selection-end-line="45" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test-interface/src/main/java/com/howbuy/cc/basic/test/model/Aaaa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27272728">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding>
-            <element signature="e#120#147#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/util/CacheKeyGenerator.java">
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/cache/redis/RedisCache5M.java">
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-49.866665">
+          <caret line="101" column="68" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/TestSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/howbuy/pa/basic/howbuy-cache-client/1.1.0-RELEASE/howbuy-cache-client-1.1.0-RELEASE.jar!/com/howbuy/tp/common/redis/core/ops/SerializeOps.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16333333">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-          <folding>
-            <element signature="e#1084#1349#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/cache/common/RedisCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38414633">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/cache/CacheServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3262195">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38109756">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test-interface/src/main/java/com/howbuy/cc/basic/test/interfac/DubboInterfaceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3628049">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboConsumerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/MyBatisMain.java">
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/TestConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
           <folding>
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/resources/redis/redis.properties">
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/intercepter/ActiveTransactionalIntercepter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/AnnounceDaoTest.java">
+    <entry file="file://$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMQThreadLocal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39763778">
-          <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+          <folding>
+            <element signature="e#814#841#0" expanded="true" />
+            <element signature="e#2799#3027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="16.392857">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#5863#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE-sources.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="38" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE-sources.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="386" column="47" selection-start-line="386" selection-start-column="47" selection-end-line="386" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE-sources.jar!/org/springframework/transaction/PlatformTransactionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-core/src/test/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.1.4.RELEASE/spring-tx-3.1.4.RELEASE-sources.jar!/org/springframework/transaction/support/AbstractPlatformTransactionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="806" column="0" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-core/src/test/java/com/howbuy/cc/basic/configuration/ConfigurationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/config/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-core/src/test/java/com/howbuy/cc/basic/logger/LoggerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/interceptor/SqlLoggerInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="52" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/config/PropertyPlaceHolderResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3578274">
+          <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1696,11 +1938,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|basic-mybatis</last-edited>
+          <last-edited>basic-mq</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.3" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

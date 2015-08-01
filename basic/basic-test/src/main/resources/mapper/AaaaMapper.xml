@@ -22,6 +22,6 @@
     </update>
 
     <delete id="delete">
-        delete aaaa where no = #{no}
+        delete aaaa where no = #{id}
     </delete>
 </mapper>

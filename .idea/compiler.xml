@@ -48,7 +48,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="dubbo-for-rest-execute" />
         <module name="dubboclient" />
         <module name="dubboservice" />
       </profile>
@@ -57,7 +56,6 @@
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="dubbp-for-rest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

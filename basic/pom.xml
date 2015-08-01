@@ -25,10 +25,31 @@
         <fastjson.version>1.2.6</fastjson.version>
         <junit.version>4.12</junit.version>
         <dubbo.version>2.5.3</dubbo.version>
+        <geronimo-jms.version>1.1.1</geronimo-jms.version>
+        <activemq.core.version>5.7.0</activemq.core.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jms</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.geronimo.specs</groupId>
+                <artifactId>geronimo-jms_1.1_spec</artifactId>
+                <version>${geronimo-jms.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-core</artifactId>
+                <version>${activemq.core.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-spring</artifactId>
@@ -137,6 +158,7 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
 
             <dependency>
@@ -172,6 +194,7 @@
 
         </dependencies>
     </dependencyManagement>
+
 
     <build>
         <plugins>

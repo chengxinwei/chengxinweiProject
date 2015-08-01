@@ -2,96 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfd9d0eb-956a-41f8-818b-c39ffbae7b60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__cglib_cglib_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__com_alibaba_dubbo_2_5_4_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__com_github_sgroschupf_zkclient_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_howbuy_cc_basic_basic_core_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__com_howbuy_cc_basic_basic_core_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__jline_jline_0_9_94.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_3_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_jboss_netty_netty_3_2_5_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_jdom_jdom_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_ow2_asm_asm_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_aop_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_asm_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_beans_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_context_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_context_support_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_core_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_expression_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_test_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_web_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/libraries/Maven__org_springframework_spring_webmvc_3_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbo-for-rest-execute/dubbo-for-rest-execute.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/dubbo-for-rest.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/artifacts/dubbo_for_rest_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/artifacts/dubbo_for_rest_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbo-for-rest-execute/pom.xml" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-cache\src\main\resources\log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-logger\src\main\java\com\howbuy\cc\basic\App.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mybatis\src\test\java\com\howbuy\cc\basic\mybatis\dao\CustInfoDao.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/annotation/CCDatasourceRoute.java" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/annotation/CCDatasourceRoute.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/test/resources/mapper/CustInfoMapper.xml" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/test/resources/mapper/CustInfoMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/aop/DynamicDataSourceAspect.java" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/aop/DynamicDataSourceAspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/callback/ExecuteCallBack.java" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/callback/ExecuteCallBack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-cache/basic-cache.iml" afterPath="$PROJECT_DIR$/basic/basic-cache/basic-cache.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-core/basic-core.iml" afterPath="$PROJECT_DIR$/basic/basic-core/basic-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-logger/basic-logger.iml" afterPath="$PROJECT_DIR$/basic/basic-logger/basic-logger.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/basic-mybatis.iml" afterPath="$PROJECT_DIR$/basic/basic-mybatis/basic-mybatis.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/main/resources/basic/spring/mybatis/basic-spring-mybatis.xml" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/main/resources/basic/spring/mybatis/basic-spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-test/basic-test.iml" afterPath="$PROJECT_DIR$/basic/basic-test/basic-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/test/resources/jdbc.properties" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/test/resources/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/.idea/misc.xml" afterPath="$PROJECT_DIR$/basic/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Datas/provider/provider.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-logger/pom.xml" afterPath="$PROJECT_DIR$/basic/basic-logger/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic-mybatis/src/test/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/basic/basic-mybatis/src/test/resources/spring-mybatis.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/.idea/workspace.xml" afterPath="$PROJECT_DIR$/basic/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\dubbp-for-rest.iml" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/dubbp-for-rest.iml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\pom.xml" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/pom.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\dubbo\generator\DubboClassLoader.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/DubboClassLoader.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\dubbo\generator\DubboService.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/DubboService.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\dubbo\generator\DubboXmlGenerator.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/DubboXmlGenerator.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\dubbo\generator\JarGenerator.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/JarGenerator.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\dubbo\generator\MethodParamName.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/MethodParamName.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\dubbo\generator\model\InterfaceInfo.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/model/InterfaceInfo.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\dubbo\generator\model\MethodParamsInfo.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/model/MethodParamsInfo.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\dubbo\generator\model\Pom.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/model/Pom.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\mvc\DubboController.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/mvc/DubboController.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\java\com\howbuy\cc\basic\mvc\HelloController.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/mvc/HelloController.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\resources\dubbo-for-rest.properties" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/resources/dubbo-for-rest.properties" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\resources\dubbo\dubbo-t.template" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/resources/dubbo/dubbo-t.template" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\resources\dubbo\dubbo.xml" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/resources/dubbo/dubbo.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\resources\log4j.properties" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/resources/log4j.properties" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\WEB-INF\jsp\hello.jsp" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/WEB-INF/jsp/hello.jsp" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\WEB-INF\mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\WEB-INF\web.xml" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\css\bootstrap.min.css" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\js\angular.js" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/js/angular.js" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\js\bootstrap.min.js" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\js\front\app.js" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/js/front/app.js" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\js\front\controller\dubbo-for-rest-controller.js" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/js/front/controller/dubbo-for-rest-controller.js" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\main\webapp\js\jquery-1.11.3.js" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/webapp/js/jquery-1.11.3.js" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\test\java\com\howbuy\cc\basic\BaseTest.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/test/java/com/howbuy/cc/basic/BaseTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\test\java\com\howbuy\cc\basic\DubboGeneratorTest.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/test/java/com/howbuy/cc/basic/DubboGeneratorTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\test\java\com\howbuy\cc\basic\JarGeneratorTest.java" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/test/java/com/howbuy/cc/basic/JarGeneratorTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\test\resources\dubbo-for-rest.properties" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/test/resources/dubbo-for-rest.properties" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\dubbp-for-rest\src\test\resources\dubbo\dubbo-t.template" afterPath="$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/test/resources/dubbo/dubbo-t.template" />
     </list>
     <ignored path="chengxinweiProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,16 +57,6 @@
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DubboService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/DubboService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -316,7 +220,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -367,6 +271,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -385,29 +291,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chengxinweiProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chengxinweiProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dubbo-for-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dubbo-for-rest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Datas" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -732,6 +622,38 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -779,6 +701,22 @@
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="dubbo-for-rest" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.62" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
@@ -874,6 +812,11 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\xinwei.cheng\AppData\Roaming\Subversion</configuration>
@@ -890,6 +833,7 @@
       <workItem from="1437016969718" duration="91000" />
       <workItem from="1437017078155" duration="219000" />
       <workItem from="1437039702634" duration="106000" />
+      <workItem from="1438238330056" duration="209000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1436859298132</created>
@@ -919,7 +863,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116523000" />
+    <option name="totallyTimeSpent" value="116732000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,22 +875,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48534203" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39087948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2549168" sideWeight="0.4914842" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40065145" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3762215" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28907436" sideWeight="0.6814815" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4218241" sideWeight="0.3210332" order="14" side_tool="true" content_ui="tabs" x="615" y="421" width="340" height="613" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28895614" sideWeight="0.6814815" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -956,9 +896,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47557002" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4723127" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.50851583" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4218241" sideWeight="0.3210332" order="14" side_tool="true" content_ui="tabs" x="615" y="421" width="340" height="613" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -992,6 +936,32 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/basic/basic-mybatis/src/test/java/com/howbuy/cc/basic/mybatis/MybatisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbo-for-rest/dubbo-for-rest-execute/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/basic-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/basic/basic-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1168,13 +1138,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/aop/DynamicDataSourceAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/redis/clients/jedis/2.7.2/jedis-2.7.2.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1200,7 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,13 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/basic-cache/src/main/java/com/howbuy/cc/basic/cache/client/RedisCacheClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1267,14 +1222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/basic-mybatis/src/main/resources/basic/spring/mybatis/basic-spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19058296">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1342,14 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dubbo-for-rest/dubbp-for-rest/src/main/java/com/howbuy/cc/basic/dubbo/generator/DubboService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
