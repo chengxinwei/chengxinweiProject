@@ -98,3 +98,6 @@ basic-cache 是基于PA的cache-client + spring + redis + ehcache 的应用框�
             log4j.appender.sqlTime.Append = true
             log4j.appender.sqlTime.layout=org.apache.log4j.PatternLayout
             log4j.appender.sqlTime.layout.ConversionPattern= %-d{yyyy-MM-dd HH:mm:ss}  [ %t:%r ] - [ %p ]  %m%n
+
+    5.  mybatis 的命名空间默认为当前类的包名+类名 如 com.howbuy.cc.basic.TestDao
+        若需要自己制定命名空间，使用CCNamespace注解自定义
