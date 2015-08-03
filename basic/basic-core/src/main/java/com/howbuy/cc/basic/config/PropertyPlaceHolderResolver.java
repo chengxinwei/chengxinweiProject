@@ -31,18 +31,21 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
     protected Properties mergeProperties() throws IOException {
 
         Properties prop = super.mergeProperties();
-        this.loadPropFileByPath(prop);
-        //获取配置文件物理地址
 
-        String defaultDirPath = null;
+        String defaultDirPath;
         String baseJarPath = this.getClass().getProtectionDomain().getCodeSource().getLocation().getFile();
         if(baseJarPath.endsWith(".jar")){
+            logger.info("检测到jar包启动");
             baseJarPath = baseJarPath.replace("\\" , "/");
             baseJarPath = baseJarPath.substring( 0 , baseJarPath.lastIndexOf("/") + 1);
             defaultDirPath = baseJarPath + "conf";
+            String dirPath = prop.getProperty(CommonConstant.CONFIG_PATH);
+            loadPropByDir(dirPath == null ? defaultDirPath : dirPath, prop);
+        }else{
+            logger.info("检测到源码项目启动");
+            this.loadPropFileByPath(prop);
         }
-        String dirPath = prop.getProperty(CommonConstant.CONFIG_PATH);
-        loadPropByDir(dirPath == null ? defaultDirPath : dirPath, prop);
+
         PropertyPlaceHolderResolver.properties = prop;
         Configuration.init(prop);
         if(StringUtils.isEmpty(prop.getProperty(CommonConstant.DEFAULT_APPLICATION_NAME))){
@@ -119,13 +122,8 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
     public void loadPropFileByPath(Properties superProperties) throws IOException {
         String dirPath = "/";
         URL pathUrl = this.getClass().getResource("/");
-        if(pathUrl == null){
-            loadPropFileByJar(dirPath , superProperties , 0);
-        }else {
-            String path = URLDecoder.decode(pathUrl.getPath());
-            this.loadPropByDir(path + dirPath , superProperties);
-
-        }
+        String path = URLDecoder.decode(pathUrl.getPath());
+        this.loadPropByDir(path + dirPath , superProperties);
     }
 
 
@@ -134,7 +132,7 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
      * @param superProperties
      * @throws IOException
      */
-    public void loadPropFileByJar(String dirPath ,  Properties superProperties , int dept) throws IOException {
+    private void loadPropFileByJar(String dirPath ,  Properties superProperties , int dept) throws IOException {
         String baseJarPath = "jar:file:" + this.getClass().getProtectionDomain().getCodeSource().getLocation().getFile() + "!";
         Enumeration<JarEntry> jarEntrys = this.getJarEntry(baseJarPath + dirPath);
         while (jarEntrys.hasMoreElements()) {

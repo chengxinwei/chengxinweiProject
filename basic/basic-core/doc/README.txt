@@ -54,8 +54,8 @@ basic-core 是基于spring + dubbo的应用框架，开发basic-core的核心目
                 filter="dubboAccessLoggerFilter"/>
 
         2）在log4j中添加如下配置
-            log4j.logger.com.howbuy.cc.basic.dubbo.filter.DubboAccessLoggerFilter = info,access
-            log4j.additivity.com.howbuy.cc.basic.dubbo.filter.DubboAccessLoggerFilter = false
+            log4j.logger.com.howbuy.cc.basic.filter.DubboAccessLoggerFilter = info,access
+            log4j.additivity.com.howbuy.cc.basic.filter.DubboAccessLoggerFilter = false
             log4j.appender.access=org.apache.log4j.DailyRollingFileAppender
             log4j.appender.access.File=log/access.log
             log4j.appender.access.Append = true

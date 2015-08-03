@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="AaaaMapper">
+<mapper namespace="com.howbuy.cc.basic.test.mybatis.dao.AaaaDao">
     <resultMap id="Aaaa" type="com.howbuy.cc.basic.test.model.Aaaa">
         <result property="cate" column="CATE"></result>
         <result property="score" column="SCORE"></result>
