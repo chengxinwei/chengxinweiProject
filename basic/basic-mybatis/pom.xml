@@ -5,11 +5,11 @@
     <parent>
         <groupId>com.howbuy.cc.basic</groupId>
         <artifactId>basic-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>basic-mybatis</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>basic-mybatis</name>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.howbuy.cc.basic</groupId>
             <artifactId>basic-core</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
@@ -54,21 +54,6 @@
             <version>3.1.4.RELEASE</version>
         </dependency>
 
-
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <!-- or whatever version you use -->
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-
-        </plugins>
-    </build>
 </project>

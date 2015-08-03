@@ -1,7 +1,9 @@
 package com.howbuy.cc.basic.cache.cache.common;
 
+import com.howbuy.cc.basic.cache.constant.CacheCloseConstant;
 import com.howbuy.cc.basic.cache.constant.CacheConstant;
 import com.howbuy.cc.basic.cache.util.CacheKeyGenerator;
+import com.howbuy.cc.basic.config.Configuration;
 import com.howbuy.cc.basic.logger.CCLogger;
 import net.sf.ehcache.Ehcache;
 import net.sf.ehcache.Element;
@@ -31,6 +33,11 @@ public abstract class EhCache implements Cache {
     public ValueWrapper get(Object key) {
         Element element = null;
         try {
+            //关闭缓存开关，如果关闭缓存则不获取直接返回空
+            Boolean close = Configuration.getBoolean(CacheCloseConstant.EHCACHE_CLOSE);
+            if(close != null && close){
+                return null;
+            }
             element = ehcache.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch(Exception e){
             logger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);

@@ -1,5 +1,6 @@
 package chengxinwei.datas.reader.redis;
 
+import com.howbuy.cc.basic.config.Configuration;
 import redis.clients.jedis.Jedis;
 
 /**
@@ -13,7 +14,8 @@ public class RedisClient {
         if(jedisThreadLocal.get()!=null){
             return jedisThreadLocal.get();
         }
-        Jedis jedis = new Jedis("192.168.220.220", 6379);
+        Jedis jedis = new Jedis(Configuration.get("redis.server.url") ,
+                Integer.parseInt(Configuration.get("redis.server.port")));
         jedisThreadLocal.set(jedis);
         return jedis;
     }

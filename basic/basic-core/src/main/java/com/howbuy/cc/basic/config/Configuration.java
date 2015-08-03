@@ -33,6 +33,22 @@ public final class Configuration {
         return Configuration.configMap.get(key);
     }
 
+    public static Integer getInt(String key){
+        String value = Configuration.configMap.get(key);
+        if(value == null){
+            return null;
+        }
+        return Integer.parseInt(value);
+    }
+
+    public static Boolean getBoolean(String key){
+        String value = Configuration.configMap.get(key);
+        if(value == null){
+            return null;
+        }
+        return Boolean.parseBoolean(value);
+    }
+
     public static String getDefaultApplicationName(){
         return Configuration.configMap.get(CommonConstant.DEFAULT_APPLICATION_NAME);
     }

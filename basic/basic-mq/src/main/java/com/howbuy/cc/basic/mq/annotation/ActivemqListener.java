@@ -10,10 +10,9 @@ import org.springframework.stereotype.Service;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@Service
 public @interface ActivemqListener {
 
-	String destinationName()  ;
+	String value()  ;
 	
 	String systemName() default MQConstant.DETAULT_NONE;
 	

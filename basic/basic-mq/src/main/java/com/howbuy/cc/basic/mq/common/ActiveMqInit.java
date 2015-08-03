@@ -50,8 +50,8 @@ public class ActiveMqInit {
     private void initSender(AbstractSender abstractSender){
     	ActivemqSender activemqSender =  abstractSender.getClass().getAnnotation(ActivemqSender.class);
 		if(activemqSender != null){
-			abstractSender.setDestinationName(activemqSender.destinationName());
-            abstractSender.setDestinationName(activemqSender.destinationName());
+			abstractSender.setDestinationName(activemqSender.value());
+            abstractSender.setDestinationName(activemqSender.value());
 			abstractSender.setConnectionFactory(activeMQConnectionFactory);
 		}
     }
@@ -101,7 +101,7 @@ public class ActiveMqInit {
                 //初始化参数
  				params.put("connectionFactory", activeMQConnectionFactory);
  				params.put("messageListener", abstractListener);
- 				params.put("destinationName", activemqListenerAnno.destinationName());
+ 				params.put("destinationName", activemqListenerAnno.value());
 
  				registBean.setBeanClass(registClazz);
  				registBean.setPropertyValues(new MutablePropertyValues(params));

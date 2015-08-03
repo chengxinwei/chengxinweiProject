@@ -7,13 +7,13 @@
     <parent>
         <groupId>com.howbuy.cc.basic</groupId>
         <artifactId>basic-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
 
     <packaging>jar</packaging>
-    <artifactId>basic-activemq</artifactId>
-    <version>1.0.0</version>
+    <artifactId>basic-mq</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,7 +41,8 @@
         <dependency>
             <groupId>com.howbuy.cc.basic</groupId>
             <artifactId>basic-core</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

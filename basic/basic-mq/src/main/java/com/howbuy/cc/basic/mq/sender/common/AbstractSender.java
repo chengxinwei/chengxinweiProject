@@ -31,7 +31,7 @@ public abstract class AbstractSender {
 	 * @param message 消息
 	 * @throws Exception 
 	 */
-	public void sendMessage(String message) throws Exception {
+	public void sendMessage(String message){
 		//判断是否开启了事物 如果开启了事物,则不发送 放到缓冲队列中,等待 aop 结束commit
 		if(ActiveMQThreadLocal.isOpenActiveMQTransactional()){
 			ActiveMQThreadLocal.putMessage(this , message);
@@ -41,6 +41,7 @@ public abstract class AbstractSender {
 			logger.debug(message);
 		}
 		log(destinationName, message);
+
 		Connection connection = null;
 		Session session = null;
 		Destination destination = null;
@@ -60,14 +61,15 @@ public abstract class AbstractSender {
 //			producer.setTimeToLive(timetolive);
 			TextMessage textMessage = session.createTextMessage(message);
 			producer.send(textMessage);
-		} catch (Exception e) {
-			throw e;
+		} catch (JMSException e) {
+			throw new RuntimeException(e);
 		} finally {
 			try {
-				if (null != connection)
-					connection.close();
+				if (null != connection) {
+                    connection.close();
+                }
 			} catch (Throwable e1) {
-			    throw e1;
+                //ignore
 			}
 		}
 	}

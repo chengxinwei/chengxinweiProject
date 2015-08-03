@@ -1,10 +1,13 @@
 package chengxinwei.datas.reader.data;
 
+import chengxinwei.datas.reader.data.common.DataReader;
 import com.howbuy.cc.basic.mybatis.annotation.CCNameSpaceMapper;
 import com.howbuy.cc.basic.mybatis.model.Page;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,14 +21,27 @@ public class DbReader extends DataReader {
     public Page getData(String tableName , int count, int pageNo, int pageSize) {
         Map<String,Object> params = new HashMap<>();
         params.put("tableName" , tableName);
-        Page page =  super.page("select", count, params, pageNo , pageSize  , "id");
+//        Page page =  super.page("select", count, params, pageNo , pageSize  , "id");
+
+        Map<String,Object> a = new HashMap<>();
+        a.put("a"  , "b");
+        List<Map> list = new ArrayList<>();
+        list.add(a);
+        list.add(a);
+        list.add(a);
+        list.add(a);
+        list.add(a);
+
+        Page<Map> page = new Page<>(pageSize , pageNo , count);
+        page.setPageList(list);
         return page;
     }
 
     @Override
     public int count(String tableName){
-        Map<String,Object> params = new HashMap<>();
-        params.put("tableName" , tableName);
-        return super.count("count" , params);
+//        Map<String,Object> params = new HashMap<>();
+//        params.put("tableName" , tableName);
+//        return super.count("count" , params);
+        return 100;
     }
 }

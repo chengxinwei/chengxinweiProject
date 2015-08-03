@@ -12,10 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * mybatis基本基本dao层
@@ -35,7 +32,7 @@ public class MybatisCommonDao<T>{
 
     public MybatisCommonDao() {
         ParameterizedType parameterizedType = null;
-        Class _clazz =  getClass();
+        Class _clazz =  this.getClass();
         while (true) {
             Type type = _clazz.getGenericSuperclass();
             if (type instanceof ParameterizedType) {
@@ -54,8 +51,13 @@ public class MybatisCommonDao<T>{
      * @return
      */
     public String getNameSpace(){
-        CCNameSpaceMapper ccMapper = this.getClass().getAnnotation(CCNameSpaceMapper.class);
-        return ccMapper == null ?  clazz.getSimpleName() + "Mapper" : ccMapper.value();
+        Class<?> daoClazz = this.getClass();
+        CCNameSpaceMapper ccMapper = daoClazz.getAnnotation(CCNameSpaceMapper.class);
+        if(ccMapper == null){
+            return daoClazz.getName();
+        }else{
+            return ccMapper.value();
+        }
     }
 
 
@@ -73,8 +75,6 @@ public class MybatisCommonDao<T>{
     }
 
 
-
-
     /**
      * 查询一个
      * @param params 查询的参数
@@ -86,7 +86,6 @@ public class MybatisCommonDao<T>{
                 return sqlSessionTemplate.selectOne(fullSqlId , params);
             }
         });
-
     }
 
     /**
@@ -100,7 +99,6 @@ public class MybatisCommonDao<T>{
                 return sqlSessionTemplate.selectOne(fullSqlId , id);
             }
         });
-
     }
 
     /**
@@ -198,6 +196,7 @@ public class MybatisCommonDao<T>{
         });
     }
 
+
     /**
      * 执行某一个特定的方法
      * @param executeCallBack 执行的接口函数
@@ -210,6 +209,8 @@ public class MybatisCommonDao<T>{
             CCDatasourceRoute ccDatasourceRoute = clazz.getAnnotation(CCDatasourceRoute.class);
             String datasourceName = ccDatasourceRoute.value();
             DynamicDataSourceSwitch.setDataSource(datasourceName);
+        }else{
+            DynamicDataSourceSwitch.setDataSource(null);
         }
         String fullSqlId = this.nameSpace + "." + sqlId;
         E e = executeCallBack.execute(fullSqlId , sqlSession);

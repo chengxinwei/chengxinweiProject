@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="CustInfoMapper">
+<mapper namespace="com.howbuy.cc.basic.mybatis.dao.CustInfoMasterDao">
     <resultMap id="CustInfo" type="com.howbuy.cc.basic.mybatis.model.CustInfo">
         <result property="custNo" column="CUST_NO"></result>
         <result property="regDt" column="REG_DT"></result>

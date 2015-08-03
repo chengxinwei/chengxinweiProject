@@ -1,10 +1,12 @@
-package chengxinwei.datas.reader.data;
+package chengxinwei.datas.reader.data.common;
 
 import chengxinwei.datas.reader.redis.RedisClient;
+import chengxinwei.datas.reader.sender.DataSender;
 import chengxinwei.datas.reader.util.PageNoGenerator;
 import com.howbuy.cc.basic.mybatis.dao.MybatisCommonDao;
 import com.howbuy.cc.basic.mybatis.model.Page;
 import org.nutz.json.Json;
+import org.springframework.beans.factory.annotation.Autowired;
 import redis.clients.jedis.Jedis;
 
 import java.util.Map;
@@ -16,6 +18,9 @@ import java.util.Map;
 public abstract class DataReader extends MybatisCommonDao<Map>{
 
     private int pageSize = 1000;
+
+    @Autowired
+    private DataSender dataSender;
 
     public abstract Page<Map> getData(String tableName, int count , int pageNo, int pageSize);
 
@@ -34,7 +39,8 @@ public abstract class DataReader extends MybatisCommonDao<Map>{
         }
 
         page = this.getData(tableName, count, (int)pageNo, pageSize);
-        System.out.println(page);
+
+        dataSender.sendMessage(Json.toJson(page.getPageList()));
         return true;
     }
 
