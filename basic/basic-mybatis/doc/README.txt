@@ -99,5 +99,9 @@ basic-cache 是基于PA的cache-client + spring + redis + ehcache 的应用框�
             log4j.appender.sqlTime.layout=org.apache.log4j.PatternLayout
             log4j.appender.sqlTime.layout.ConversionPattern= %-d{yyyy-MM-dd HH:mm:ss}  [ %t:%r ] - [ %p ]  %m%n
 
+            日志demo如下：
+            2015-08-04 11:01:16  [ main:18070 ] - [ INFO ]  sql_time|192.168.121.199,192.168.61.1,192.168.187.1|base-mybatis|执行sql|com.howbuy.cc.basic.mybatis.dao.CustInfoMasterDao.delete|1|14931
+
+        3）新增参数 mybatis.sql.log.time 用来设置超长时间的sql打印，如果设置了mybatis.sql.log.time，超过 mybatis.sql.log.time 的sql才会打印
     5.  mybatis 的命名空间默认为当前类的包名+类名 如 com.howbuy.cc.basic.TestDao
         若需要自己制定命名空间，使用CCNamespace注解自定义

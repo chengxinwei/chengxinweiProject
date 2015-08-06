@@ -6,4 +6,6 @@ package com.howbuy.cc.basic.mybatis.constant;
 public final class MyBatisConstant {
 
     public final static String SQL_TIME = "sql_time";
+
+    public final static String SQL_LOG_TIME = "mybatis.sql.log.time";
 }

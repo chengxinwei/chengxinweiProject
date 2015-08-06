@@ -13,4 +13,17 @@ public class CustInfoMasterDao extends MybatisCommonDao<CustInfo>{
         return super.selectOne("selectOne" , null);
     }
 
+    public void delete(Integer id){
+            super.deleteById("delete", id);
+    }
+
+    public void insert(){
+            super.insert("insert", new CustInfo());
+
+    }
+
+    public void update(){
+            super.update("update", new CustInfo());
+    }
+
 }

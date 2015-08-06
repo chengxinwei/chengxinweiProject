@@ -18,7 +18,10 @@ public class MybatisTest extends BaseTest{
 
     @Test
     public void selectOne(){
-        System.out.println(custInfoMasterDao.selectOne());
-//        System.out.println(custInfoSlaveDao.selectOne());
+        custInfoMasterDao.delete(1);
+        custInfoMasterDao.insert();
+        custInfoMasterDao.update();
+        System.out.println(custInfoMasterDao.selectOne().getCustNo());
+
     }
 }

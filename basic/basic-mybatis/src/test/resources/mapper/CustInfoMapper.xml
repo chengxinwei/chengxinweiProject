@@ -18,4 +18,16 @@
     <select id="selectOne" resultMap="CustInfo">
       select * from MID_PUB_CUST_TOTAL_INFO_LABEL where cust_no = '1000000180'
     </select>
+
+    <update id="update">
+        update MID_PUB_CUST_TOTAL_INFO_LABEL set cust_name = 'test_name' where cust_no = '1000000180'
+    </update>
+
+    <delete id="delete" >
+        delete MID_PUB_CUST_TOTAL_INFO_LABEL where cust_no = '1000000180'
+    </delete>
+
+    <insert id="insert">
+       insert into MID_PUB_CUST_TOTAL_INFO_LABEL(cust_no) values('1000000180')
+    </insert>
 </mapper>

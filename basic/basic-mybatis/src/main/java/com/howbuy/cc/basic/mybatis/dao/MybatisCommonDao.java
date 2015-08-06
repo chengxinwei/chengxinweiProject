@@ -3,16 +3,18 @@ package com.howbuy.cc.basic.mybatis.dao;
 import com.howbuy.cc.basic.logger.CCLogger;
 import com.howbuy.cc.basic.mybatis.annotation.CCDatasourceRoute;
 import com.howbuy.cc.basic.mybatis.annotation.CCNameSpaceMapper;
-import com.howbuy.cc.basic.mybatis.constant.MyBatisConstant;
 import com.howbuy.cc.basic.mybatis.dao.callback.ExecuteCallBack;
 import com.howbuy.cc.basic.mybatis.datasourceRoute.DynamicDataSourceSwitch;
 import com.howbuy.cc.basic.mybatis.model.Page;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * mybatis基本基本dao层
@@ -92,7 +94,7 @@ public class MybatisCommonDao<T>{
      * 查询一个
      * @param id 查询的参数
      */
-    protected T selectById(final String sqlId , final String id){
+    protected T selectById(final String sqlId , final Serializable id){
         return execute(sqlId , new ExecuteCallBack<T>(){
             @Override
             public T execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
@@ -115,6 +117,22 @@ public class MybatisCommonDao<T>{
         });
 
     }
+
+    /**
+     * 查询列表
+     * @param id 查询的参数
+     * @return 返回对象LIST
+     */
+    protected List<T> selectListById(final String sqlId , final Serializable id){
+        return execute(sqlId , new ExecuteCallBack<List<T>>(){
+            @Override
+            public List<T> execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.selectList(fullSqlId , id);
+            }
+        });
+
+    }
+
 
 
     /**
@@ -196,6 +214,19 @@ public class MybatisCommonDao<T>{
         });
     }
 
+    /**
+     * 删除
+     * @param id 删除的ID
+     */
+    protected int deleteById(String sqlId , final Integer id){
+        return execute(sqlId , new ExecuteCallBack<Integer>(){
+            @Override
+            public Integer execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {
+                return sqlSessionTemplate.delete(fullSqlId, id);
+            }
+        });
+    }
+
 
     /**
      * 执行某一个特定的方法
@@ -213,6 +244,7 @@ public class MybatisCommonDao<T>{
             DynamicDataSourceSwitch.setDataSource(null);
         }
         String fullSqlId = this.nameSpace + "." + sqlId;
+
         E e = executeCallBack.execute(fullSqlId , sqlSession);
         return e;
     }
