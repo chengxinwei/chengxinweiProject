@@ -34,7 +34,12 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
 
         String defaultDirPath;
         String baseJarPath = this.getClass().getProtectionDomain().getCodeSource().getLocation().getFile();
-        if(baseJarPath.endsWith(".jar")){
+
+        logger.info("baseJarPath:" + baseJarPath);
+        URL pathUrl = this.getClass().getResource("/");
+        logger.info("pathUrl:" + (pathUrl == null ? "" : pathUrl.toString()));
+
+        if(pathUrl == null){
             logger.info("检测到jar包启动");
             baseJarPath = baseJarPath.replace("\\" , "/");
             baseJarPath = baseJarPath.substring( 0 , baseJarPath.lastIndexOf("/") + 1);
@@ -120,10 +125,9 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
      * @throws IOException
      */
     public void loadPropFileByPath(Properties superProperties) throws IOException {
-        String dirPath = "/";
         URL pathUrl = this.getClass().getResource("/");
         String path = URLDecoder.decode(pathUrl.getPath());
-        this.loadPropByDir(path + dirPath , superProperties);
+        this.loadPropByDir(path , superProperties);
     }
 
 

@@ -2,6 +2,8 @@ package com.howbuy.cc.basic.logger;
 
 import com.howbuy.cc.basic.constant.CommonConstant;
 import com.howbuy.cc.basic.config.Configuration;
+import com.howbuy.cc.basic.threadLocal.CCLoggerThreadLocal;
+import com.howbuy.cc.basic.threadLocal.UUIDThreadLocal;
 import com.howbuy.cc.basic.util.IpUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
@@ -27,9 +29,9 @@ public class CCLogger{
         this.info(null , message);
     }
 
-    public void info(String code , String text , String... messageAry){
+    public void info(String text , String... messageAry){
         if(logger.isInfoEnabled()){
-            logger.info(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
+            logger.info(getDefaultLogHeader(null) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
         }
     }
 
@@ -37,30 +39,30 @@ public class CCLogger{
         this.debug(null , message);
     }
 
-    public void debug(String code , String text , String... messageAry){
+    public void debug(String text , String... messageAry){
         if(logger.isDebugEnabled()){
-            logger.debug(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
+            logger.debug(getDefaultLogHeader(null) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
         }
     }
 
     public void error(String text , Exception e){
-        this.error(null, text, e);
+        this.error(text, e);
     }
 
-    public void error(String code , String text , String... messageAry){
-        logger.error(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
+    public void error(String text , String... messageAry){
+        logger.error(getDefaultLogHeader(null) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
     }
 
-    public void error(String code , String text , Exception e , String... messageAry){
-        logger.error(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"), e);
+    public void error(String text , Exception e , String... messageAry){
+        logger.error(getDefaultLogHeader(null) + "|" + text + "|" + StringUtils.join(messageAry, "|"), e);
     }
 
     public void warn(String text){
         this.warn(null ,text);
     }
 
-    public void warn(String code , String text , String... messageAry){
-        logger.warn(getDefaultLogHeader(code) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
+    public void warn(String text , String... messageAry){
+        logger.warn(getDefaultLogHeader(null) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
     }
 
 
@@ -69,7 +71,8 @@ public class CCLogger{
         List<String> ipList = IpUtil.getIp();
         String ip = StringUtils.join(ipList.toArray(new String[ipList.size()]), ",");
         String applicationName = StringUtils.defaultString(Configuration.get(CommonConstant.LOGGER_APPLICATION_NAME) ,  Configuration.getDefaultApplicationName());
-        return StringUtils.defaultString(StringUtils.defaultString(code , threadLocalCode) , "") + "|" + ip + "|" + applicationName;
+        String uuid = UUIDThreadLocal.get();
+        return StringUtils.defaultString(StringUtils.defaultString(code , threadLocalCode) , "") + "|" + uuid + "|" + ip + "|" + applicationName;
     }
 
     public Logger getOriginalLog(){

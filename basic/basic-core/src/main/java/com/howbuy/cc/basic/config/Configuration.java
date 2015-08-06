@@ -1,6 +1,7 @@
 package com.howbuy.cc.basic.config;
 
 import com.howbuy.cc.basic.constant.CommonConstant;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +36,7 @@ public final class Configuration {
 
     public static Integer getInt(String key){
         String value = Configuration.configMap.get(key);
-        if(value == null){
+        if(StringUtils.isEmpty(value)){
             return null;
         }
         return Integer.parseInt(value);
@@ -43,7 +44,7 @@ public final class Configuration {
 
     public static Boolean getBoolean(String key){
         String value = Configuration.configMap.get(key);
-        if(value == null){
+        if(StringUtils.isEmpty(value)){
             return null;
         }
         return Boolean.parseBoolean(value);

@@ -16,7 +16,9 @@ basic-core 是基于spring + dubbo的应用框架，开发basic-core的核心目
 二、功能点以及相关使用
     1.  配置文件读取，默认加载classpath下所有以properties结尾的配置文件。
         读取jar包当前目录的 conf 文件夹，读取目录下所有properties结尾的配置文件，若有重复则覆盖原有的配置
-        1）可以使用 Configuration.get("default.application.name") 获取
+        1）可以使用
+            Configuration.get("default.application.name") 获取
+            Configuration.getInt(key) , Configuration.getBoolean(key) 获取不同的类型
         2）可以使用 spring @Value("${testValue}") 注入
         *参考 test.java.com.howbuy.cc.basic.configuration 下的测试类
 

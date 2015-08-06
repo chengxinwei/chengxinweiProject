@@ -1,9 +1,9 @@
 package com.howbuy.cc.basic.filter;
 
 import com.alibaba.dubbo.rpc.*;
-import com.howbuy.cc.basic.constant.CommonConstant;
 import com.howbuy.cc.basic.logger.CCLogger;
 import org.nutz.json.Json;
+import org.nutz.json.JsonFormat;
 
 import java.util.Date;
 
@@ -23,7 +23,7 @@ public class DubboAccessLoggerFilter implements Filter {
 
         logInfo[0] = invoker.getInterface().getName();
         logInfo[1] = invocation.getMethodName();
-        logInfo[2] = Json.toJson(invocation.getArguments());
+        logInfo[2] = Json.toJson(invocation.getArguments(), JsonFormat.compact());
 
         Date now = new Date();
         Result result = invoker.invoke(invocation);
@@ -34,10 +34,10 @@ public class DubboAccessLoggerFilter implements Filter {
             logInfo[3] = result.getException().toString();
             message = "dubbo请求失败";
         }else{
-            logInfo[3] = Json.toJson(result.getValue());
+            logInfo[3] = Json.toJson(result.getValue(), JsonFormat.compact());
             message = "dubbo请求成功";
         }
-        ccLogger.info(CommonConstant.DUBBO_ACCESS , message , logInfo);
+        ccLogger.info(message , logInfo);
         return result;
     }
 }
