@@ -52,6 +52,12 @@ public class DubboProviderTest implements DubboInterfaceTest {
     }
 
     @Override
+    public String set(Aaaa aaaa) {
+        aaaaDao.set(aaaa);
+        return "ok";
+    }
+
+    @Override
     public String ping() {
         return "ok";
     }

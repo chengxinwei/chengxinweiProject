@@ -26,13 +26,13 @@ public class AaaaDao extends MybatisCommonDao<Aaaa> {
     }
 
 
-    @Cacheable(value = CacheConstant.REDIS_CACHE_5M , key = "'AnnounceDao.getAnnounceCache' + #id")
+    @Cacheable(value = CacheConstant.REDIS_CACHE_1H , key = "'aaaa' + #id")
     public List<Aaaa> getAaaaCache(int id){
        return this.getAaaa(id);
     }
 
 
-    @CacheEvict(value = CacheConstant.REDIS_CACHE_5M , key = "'AnnounceDao.getAnnounceCache' + #id")
+    @CacheEvict(value = CacheConstant.REDIS_CACHE_1H , key = "'aaaa' + #id")
     public void clearCache(int id){}
 
     public void update(Aaaa a){
@@ -49,4 +49,8 @@ public class AaaaDao extends MybatisCommonDao<Aaaa> {
         super.delete("delete" , params);
     }
 
+    @Cacheable(value = CacheConstant.REDIS_CACHE_1H , key = "'aaaa' + #aaaa.no")
+    public Aaaa set(Aaaa aaaa) {
+        return aaaa;
+    }
 }
