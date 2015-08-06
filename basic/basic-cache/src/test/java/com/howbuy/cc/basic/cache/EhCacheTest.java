@@ -22,13 +22,9 @@ public class EhCacheTest extends BaseTest{
 
     @Test
     public void cacheTest(){
-        for(int i = 0 ; i < 8 ; i ++){
-            System.out.println(dbService.getDate(0).getId());
-            try {
-                Thread.sleep(1*1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
+        for(int i = 0 ; i < 1 ; i ++){
+            System.out.println(dbService.getDate(i).getId());
         }
     }
 

@@ -40,7 +40,7 @@ public abstract class EhCache implements Cache {
             }
             element = ehcache.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch(Exception e){
-            logger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+            logger.error(e.getMessage() , e);
         }
         if (element == null) {
             return null;
@@ -54,7 +54,7 @@ public abstract class EhCache implements Cache {
             element.setTimeToLive(getTimeout());
             ehcache.put(element);
         }catch(Exception e){
-            logger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+            logger.error(e.getMessage() , e);
         }
     }
 
@@ -62,7 +62,7 @@ public abstract class EhCache implements Cache {
         try {
             ehcache.remove(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch(Exception e){
-            logger.error(CacheConstant.EHCACHE_ERROR , e.getMessage() , e);
+            logger.error(e.getMessage() , e);
         }
 
     }

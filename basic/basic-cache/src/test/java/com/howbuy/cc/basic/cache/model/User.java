@@ -13,7 +13,17 @@ public class User implements Serializable {
         return id;
     }
 
+    public byte[] byteAry;
+
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public byte[] getByteAry() {
+        return byteAry;
+    }
+
+    public void setByteAry(byte[] byteAry) {
+        this.byteAry = byteAry;
     }
 }

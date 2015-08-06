@@ -14,14 +14,17 @@ public class RedisDbService {
 
     private int i = 0 ;
 
-    @Cacheable(value = CacheConstant.REDIS_CACHE_5S, key = "#index")
+    int byteCount = 1024 * 1024;
+
+    @Cacheable(value = CacheConstant.REDIS_CACHE_1H, key = "#index")
     public User getUser(Integer index){
         User user = new User();
         user.setId(i++);
+        user.setByteAry(new byte[byteCount]);
         return user;
     }
 
-    @CacheEvict(value = CacheConstant.REDIS_CACHE_5S , key = "#index")
+    @CacheEvict(value = CacheConstant.REDIS_CACHE_1H , key = "#index")
     public void clearDate(Integer index){
 
     }

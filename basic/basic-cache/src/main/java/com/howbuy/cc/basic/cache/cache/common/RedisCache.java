@@ -35,7 +35,7 @@ public abstract class RedisCache implements Cache {
             }
             obj = SerializeOps.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch(Exception e){
-            logger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+            logger.error( e.getMessage(), e);
         }
         if (obj == null) {
             return null;
@@ -50,7 +50,7 @@ public abstract class RedisCache implements Cache {
             }
             SerializeOps.set(CacheKeyGenerator.getKeyStr(String.valueOf(key)), value, getTimeout());
         }catch (Exception e){
-            logger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+            logger.error(e.getMessage(), e);
         }
     }
     @Override
@@ -58,7 +58,7 @@ public abstract class RedisCache implements Cache {
         try {
             SerializeOps.delete(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
         }catch (Exception e){
-            logger.error(CacheConstant.EHCACHE_ERROR, e.getMessage(), e);
+            logger.error( e.getMessage(), e);
         }
 
     }

@@ -18,7 +18,7 @@ public class CacheKeyGenerator {
             return null;
         }
         String namespace = getNameSpace();
-        return namespace + key;
+        return namespace + "." + key;
     }
 
 
