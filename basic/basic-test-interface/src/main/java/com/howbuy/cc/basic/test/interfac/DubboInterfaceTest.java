@@ -21,6 +21,8 @@ public interface DubboInterfaceTest {
 
     public String clearAaaaCache(Integer id);
 
+    public String set(Aaaa aaaa);
+
     public String ping();
 
     public void exception();
