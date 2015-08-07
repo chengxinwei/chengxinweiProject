@@ -46,7 +46,7 @@ public class CCLogger{
     }
 
     public void error(String text , Exception e){
-        this.error(text, e);
+        this.error(text, e , null);
     }
 
     public void error(String text , String... messageAry){
@@ -58,7 +58,7 @@ public class CCLogger{
     }
 
     public void warn(String text){
-        this.warn(null ,text);
+        this.warn(text , null);
     }
 
     public void warn(String text , String... messageAry){
