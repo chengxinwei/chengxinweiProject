@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://com.howbuy.cc.basic/schema/basic-core"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://com.howbuy.cc.basic/schema/basic-core">
+
+    <xsd:element name="core-driven" type="coreType">
+    </xsd:element>
+
+    <xsd:complexType name="coreType">
+    </xsd:complexType>
+
+</xsd:schema>

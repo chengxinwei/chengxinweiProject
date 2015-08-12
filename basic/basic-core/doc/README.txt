@@ -67,3 +67,31 @@ basic-core 是基于spring + dubbo的应用框架，开发basic-core的核心目
          *参考 test.java.com.howbuy.cc.basic.dubbo 下的测试类
          *以及 test.resources 下的log4j配置
 
+2015-08-12
+    1. cclogger 新增字符串的构造函数
+    2. 日志记录区分了access和request日志 request的filter名字 dubboRequestLoggerFilter
+    3. 日志代码优化，抽离了公共的方法
+    4. 错误日志以warn形式输出，成功日志以info形式输出
+        request demo：
+        log4j.logger.com.howbuy.cc.basic.filter.DubboRequestLoggerFilter = info,request
+        log4j.additivity.com.howbuy.cc.basic.filter.DubboRequestLoggerFilter = false
+        log4j.appender.request=org.apache.log4j.DailyRollingFileAppender
+        log4j.appender.request.File=log/request.log
+        log4j.appender.request.Append = true
+        log4j.appender.request.layout=org.apache.log4j.PatternLayout
+        log4j.appender.request.layout.ConversionPattern= %-d{yyyy-MM-dd HH:mm:ss}  [ %t:%r ] - [ %p ]  %m%n
+
+        范例：
+        2015-08-12 10:20:00  [ main:3075 ] - [ INFO ]  DubboInterfaceTest.getDate|2bcda6e7-b17c-4f03-9c42-2adfa4139cd2|192.168.121.199,192.168.61.1,192.168.187.1|logger-base-core|request.success|DubboInterfaceTest|getDate|[]|"2015-08-12 10:20:00"|352
+        2015-08-12 10:20:47  [ main:2342 ] - [ WARN ]  DubboInterfaceTest.exception|d846cb53-568c-42c4-a4c4-7f02366b189c|192.168.121.199,192.168.61.1,192.168.187.1|logger-base-core|request.fail|DubboInterfaceTest|exception|[]|java.lang.NullPointerException: testException|381
+        2015-08-12 10:20:48  [ main:2345 ] - [ INFO ]  DubboInterfaceTest.getDate|d846cb53-568c-42c4-a4c4-7f02366b189c|192.168.121.199,192.168.61.1,192.168.187.1|logger-base-core|request.success|DubboInterfaceTest|getDate|[]|"2015-08-12 10:20:47"|2
+
+
+    5. 新增驱动 <basic-core:core-driven/>
+        <beans xmlns="http://www.springframework.org/schema/beans"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:basic-core="http://com.howbuy.cc.basic/schema/basic-core"
+               xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                http://com.howbuy.cc.basic/schema/basic-core
+                http://com.howbuy.cc.basic/schema/basic-core.xsd">
