@@ -9,6 +9,8 @@
         ">
     <dubbo:application name="basic-dubbo-test-consumer" />
     <dubbo:registry  protocol="zookeeper"  address="${zookeeper.url}"/>
-    <dubbo:reference application="basic-dubbo-test-consumer" id="dubboReferenceTest" interface="com.howbuy.cc.basic.dubbo.DubboInterfaceTest"/>
+    <dubbo:reference application="basic-dubbo-test-consumer" id="dubboReferenceTest"
+                     interface="com.howbuy.cc.basic.dubbo.DubboInterfaceTest"
+                     filter="dubboRequestLoggerFilter"/>
 
 </beans>

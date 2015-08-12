@@ -1,7 +1,5 @@
 package com.howbuy.cc.basic.threadLocal;
 
-import java.util.Map;
-
 /**
  * Created by xinwei.cheng on 2015/7/27.
  */

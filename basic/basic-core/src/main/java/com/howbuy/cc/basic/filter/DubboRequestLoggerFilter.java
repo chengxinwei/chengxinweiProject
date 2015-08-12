@@ -6,12 +6,10 @@ import com.howbuy.cc.basic.logger.CCLogger;
 import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
 
-import java.util.Date;
-
 /**
  * Created by xinwei.cheng on 2015/5/27.
  */
-public class DubboAccessLoggerFilter implements Filter {
+public class DubboRequestLoggerFilter implements Filter {
 
     CCLogger ccLogger = CCLogger.getLogger(this.getClass());
 
@@ -21,9 +19,9 @@ public class DubboAccessLoggerFilter implements Filter {
 
         Result result = LoggerFilterUtil.executeAndGetLoggerInfo(logInfo, invoker, invocation);
         if(result.hasException()){
-            ccLogger.warn("access.fail" , logInfo);
+            ccLogger.warn("request.fail" , logInfo);
         }else{
-            ccLogger.info("access.success" , logInfo);
+            ccLogger.info("request.success" , logInfo);
         }
         return result;
     }

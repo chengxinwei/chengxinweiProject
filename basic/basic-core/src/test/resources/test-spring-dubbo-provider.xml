@@ -27,4 +27,5 @@
     <!-- 本地bean实现类 -->
     <bean id="dubboProviderTest" class="com.howbuy.cc.basic.dubbo.DubboProviderTest" />
 
+    <dubbo:monitor protocol="registry"></dubbo:monitor>
 </beans>

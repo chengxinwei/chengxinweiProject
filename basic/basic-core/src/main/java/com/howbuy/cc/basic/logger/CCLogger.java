@@ -25,6 +25,12 @@ public class CCLogger{
         return ccLogger;
     }
 
+    public static CCLogger getLogger(String name){
+        CCLogger ccLogger = new CCLogger();
+        ccLogger.logger = Logger.getLogger(name);
+        return ccLogger;
+    }
+
     public void info(String message){
         this.info(null , message);
     }
