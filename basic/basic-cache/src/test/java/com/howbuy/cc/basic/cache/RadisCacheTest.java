@@ -13,10 +13,9 @@ public class RadisCacheTest extends BaseTest{
     private RedisDbService dbService;
 
 
-
     @Test
     public void cacheTest() throws InterruptedException {
-        for(int i = 0 ; i < 1 ; i ++){
+        for(int i = 0 ; i < 10 ; i ++){
             System.out.println(dbService.getUser(i).getId());
         }
     }

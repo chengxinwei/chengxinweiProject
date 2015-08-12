@@ -28,3 +28,15 @@ basic-cache 是基于PA的cache-client + spring + redis + ehcache 的应用框�
     3.  若要使用 redis 请在配置文件中配置
         redis.sentinel.path=${sentinel.ip}
         redis.sentinel.serverName=${sentinel.serverName}
+
+
+    2015-08-12
+    1.  新增驱动
+        <basic-cache:cache-driven/>
+        <beans xmlns="http://www.springframework.org/schema/beans"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:basic-cache="http://com.howbuy.cc.basic/schema/basic-cache"
+               xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                http://com.howbuy.cc.basic/schema/basic-cache
+                http://com.howbuy.cc.basic/schema/basic-cache.xsd">
