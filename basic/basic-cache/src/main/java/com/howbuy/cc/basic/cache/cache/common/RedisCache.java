@@ -1,12 +1,11 @@
 package com.howbuy.cc.basic.cache.cache.common;
 
 import com.howbuy.cc.basic.cache.constant.CacheCloseConstant;
-import com.howbuy.cc.basic.cache.constant.CacheConstant;
+import com.howbuy.cc.basic.cache.hit.threadlocal.CacheHitThreadLocal;
 import com.howbuy.cc.basic.cache.util.CacheKeyGenerator;
 import com.howbuy.cc.basic.config.Configuration;
 import com.howbuy.cc.basic.logger.CCLogger;
 import com.howbuy.tp.common.redis.core.ops.SerializeOps;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.cache.Cache;
 import org.springframework.cache.support.SimpleValueWrapper;
 
@@ -34,12 +33,15 @@ public abstract class RedisCache implements Cache {
                 return null;
             }
             obj = SerializeOps.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
+
         }catch(Exception e){
             logger.error( e.getMessage(), e);
         }
         if (obj == null) {
+            CacheHitThreadLocal.setHit(false);
             return null;
         }
+        CacheHitThreadLocal.setHit(true);
         return new SimpleValueWrapper(obj);
     }
     @Override

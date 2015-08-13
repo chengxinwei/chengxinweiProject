@@ -24,7 +24,7 @@ public class RedisDbService {
         return user;
     }
 
-    @CacheEvict(value = CacheConstant.REDIS_CACHE_1H , key = "#index")
+    @CacheEvict(value = CacheConstant.REDIS_CACHE_1H  , key = "#index")
     public void clearDate(Integer index){
 
     }

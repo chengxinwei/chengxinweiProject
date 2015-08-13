@@ -10,7 +10,7 @@
         http://com.howbuy.cc.basic/schema/basic-cache.xsd">
 
 
-    <basic-cache:cache-driven/>
+    <basic-cache:cache-driven hitLog="d:/rat.log" hitLogTime="1000" />
     <basic-core:core-driven/>
 
 </beans>

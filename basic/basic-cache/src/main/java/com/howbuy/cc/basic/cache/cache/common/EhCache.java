@@ -1,7 +1,7 @@
 package com.howbuy.cc.basic.cache.cache.common;
 
 import com.howbuy.cc.basic.cache.constant.CacheCloseConstant;
-import com.howbuy.cc.basic.cache.constant.CacheConstant;
+import com.howbuy.cc.basic.cache.hit.threadlocal.CacheHitThreadLocal;
 import com.howbuy.cc.basic.cache.util.CacheKeyGenerator;
 import com.howbuy.cc.basic.config.Configuration;
 import com.howbuy.cc.basic.logger.CCLogger;
@@ -39,12 +39,15 @@ public abstract class EhCache implements Cache {
                 return null;
             }
             element = ehcache.get(CacheKeyGenerator.getKeyStr(String.valueOf(key)));
+
         }catch(Exception e){
             logger.error(e.getMessage() , e);
         }
         if (element == null) {
+            CacheHitThreadLocal.setHit(false);
             return null;
         }
+        CacheHitThreadLocal.setHit(true);
         return new SimpleValueWrapper(element.getObjectValue());
     }
 
