@@ -19,6 +19,8 @@ public class CCLogger{
 
     private Logger logger = null;
 
+    private boolean addHeader = true;
+
     public static CCLogger getLogger(Class<?> clazz){
         CCLogger ccLogger = new CCLogger();
         ccLogger.logger = Logger.getLogger(clazz);
@@ -28,6 +30,13 @@ public class CCLogger{
     public static CCLogger getLogger(String name){
         CCLogger ccLogger = new CCLogger();
         ccLogger.logger = Logger.getLogger(name);
+        return ccLogger;
+    }
+
+    public static CCLogger getLogger(Class<?> clazz , boolean addHeader){
+        CCLogger ccLogger = new CCLogger();
+        ccLogger.logger = Logger.getLogger(clazz);
+        ccLogger.addHeader = addHeader;
         return ccLogger;
     }
 
@@ -73,6 +82,9 @@ public class CCLogger{
 
 
     protected String getDefaultLogHeader(String code){
+        if(!addHeader){
+            return "";
+        }
         String threadLocalCode = CCLoggerThreadLocal.get();
         List<String> ipList = IpUtil.getIp();
         String ip = StringUtils.join(ipList.toArray(new String[ipList.size()]), ",");
@@ -84,4 +96,5 @@ public class CCLogger{
     public Logger getOriginalLog(){
         return logger;
     }
+
 }
