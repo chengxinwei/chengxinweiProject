@@ -16,7 +16,7 @@
          threadpool 线程池用在什么地方
          threads 线程数量
     -->
-    <dubbo:protocol name="dubbo" port="20882" dispatcher="all" threadpool="fixed" threads="100" />
+    <dubbo:protocol name="dubbo" port="20882" dispatcher="all" threadpool="fixed" threads="2000" />
 
 
     <!-- loadbalance  服务端的均衡策略 -->

@@ -49,7 +49,7 @@ public class AaaaDao extends MybatisCommonDao<Aaaa> {
         super.delete("delete" , params);
     }
 
-    @Cacheable(value = CacheConstant.REDIS_CACHE_1H , key = "'aaaa' + #aaaa.no")
+    @Cacheable(value = CacheConstant.REDIS_CACHE_1H , key = "'setAaaa' + #aaaa.no")
     public Aaaa set(Aaaa aaaa) {
         return aaaa;
     }

@@ -4,6 +4,9 @@ import com.howbuy.cc.basic.mq.annotation.ActivemqListener;
 import com.howbuy.cc.basic.mq.annotation.ActivemqSender;
 import com.howbuy.cc.basic.mq.constant.MQConstant;
 import com.howbuy.cc.basic.mq.listener.common.*;
+import com.howbuy.cc.basic.mq.listener.common.container.QueueMessageListenerContainer;
+import com.howbuy.cc.basic.mq.listener.common.container.TopicMessageListenerContainer;
+import com.howbuy.cc.basic.mq.listener.common.container.VirtualMessageListenerContainer;
 import com.howbuy.cc.basic.mq.sender.common.AbstractSender;
 import com.howbuy.cc.basic.spring.SpringBean;
 import org.apache.activemq.spring.ActiveMQConnectionFactory;
@@ -99,9 +102,10 @@ public class ActiveMqInit {
 
      			GenericBeanDefinition registBean = new GenericBeanDefinition();
                 //初始化参数
- 				params.put("connectionFactory", activeMQConnectionFactory);
- 				params.put("messageListener", abstractListener);
- 				params.put("destinationName", activemqListenerAnno.value());
+ 				params.put("connectionFactory" , activeMQConnectionFactory);
+ 				params.put("messageListener" , abstractListener);
+ 				params.put("destinationName" , activemqListenerAnno.value());
+                params.put("concurrentConsumers" , activemqListenerAnno.threadCount());
 
  				registBean.setBeanClass(registClazz);
  				registBean.setPropertyValues(new MutablePropertyValues(params));

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chengxinwei.datas.writer.dao.WriterDao">
+
+    <insert id="insert">
+        insert into ${tableName}
+        <foreach collection="map.keys" item="k" open="(" close=")" separator=",">
+            ${k}
+        </foreach>
+        values
+        <foreach collection="map.keys" item="k" open="(" close=")" separator=",">
+            #{map[${k}] , jdbcType=VARCHAR}
+        </foreach>
+    </insert>
+
+</mapper>

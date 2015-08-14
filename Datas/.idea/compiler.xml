@@ -31,9 +31,41 @@
         <processorPath useClasspath="true" />
         <module name="consumer" />
       </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="datas-model" />
+      </profile>
+      <profile default="false" name="Annotation profile for datas-provider" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="datas-provider" />
+      </profile>
+      <profile default="false" name="Annotation profile for datas-consumer" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="datas-consumer" />
+      </profile>
+      <profile default="false" name="Annotation profile for datas-web" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="datas-web" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="consumer" target="1.7" />
+      <module name="datas-consumer" target="1.7" />
+      <module name="datas-model" target="1.5" />
+      <module name="datas-provider" target="1.7" />
+      <module name="datas-web" target="1.7" />
       <module name="provider" target="1.7" />
     </bytecodeTargetLevel>
   </component>

@@ -2,6 +2,7 @@ package com.howbuy.cc.basic.dubbo.execute;
 
 import com.alibaba.dubbo.common.json.JSON;
 import org.apache.commons.lang3.StringUtils;
+import org.nutz.json.Json;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -41,7 +42,7 @@ public class Main {
 
             Object object = DubboService.execute(zookeeperHost, fullJarPath, interfaceName, methodName, methodClassAry, methodValueAry);
             System.out.println("-------------------------数据返回----------------------");
-            System.out.println(JSON.json(object));
+            System.out.println(Json.toJson(object));
             System.out.println("-------------------------结束----------------------");
         } catch (Exception e) {
             StringWriter sw=new StringWriter();

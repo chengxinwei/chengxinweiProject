@@ -22,4 +22,6 @@ public @interface ActivemqListener {
 	//订阅者的ID
 	String clientId() default MQConstant.DETAULT_NONE;
 
+    int threadCount() default 1;
+
 }

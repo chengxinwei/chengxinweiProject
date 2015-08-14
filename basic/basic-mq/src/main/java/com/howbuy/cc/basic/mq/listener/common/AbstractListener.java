@@ -1,10 +1,14 @@
 package com.howbuy.cc.basic.mq.listener.common;
 
+import com.howbuy.cc.basic.logger.CCLogger;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.nutz.json.Json;
+import org.nutz.json.JsonFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.jms.*;
+import java.io.Serializable;
 
 /**
  * 公共监听的父类，子类继承即可
@@ -13,7 +17,7 @@ import javax.jms.*;
  */
 public abstract class AbstractListener implements MessageListener {  
 	
-	Logger logger = LoggerFactory.getLogger(this.getClass());
+	CCLogger logger = CCLogger.getLogger(this.getClass());
 	
 	/**
 	 * 有消息时被触发
@@ -23,18 +27,16 @@ public abstract class AbstractListener implements MessageListener {
     public void onMessage(Message message) {  
     	
         try {
-        	
+
         	if(message instanceof TextMessage){
-        		
         		String messageStr = ((TextMessage)message).getText();
-        		if(logger.isDebugEnabled()){
-        			logger.debug(messageStr);
-        		}
+        		logger.info(messageStr);
         		messageStr = StringEscapeUtils.unescapeHtml4(messageStr);
-        		log(messageStr);
         		onMessage(messageStr);
         	}else if(message instanceof ObjectMessage){
-                logger.error("不能解析ObjectMessage" + message.toString());
+                Serializable messageObj = ((ObjectMessage)message).getObject();
+                logger.info(Json.toJson(messageObj, JsonFormat.compact()));
+                onMessage(messageObj);
         	}
         }  
         catch (Exception ex) {
@@ -43,13 +45,11 @@ public abstract class AbstractListener implements MessageListener {
     }  
     
     /**
-	 * 有消息时被触发,打印日志
-	 * @author cheng.xinwei
-	 */
-    public void log(String message){}
-    /**
 	 * 有消息时被触发，子类使用 必须实现
 	 * @author cheng.xinwei
 	 */
-    public abstract void onMessage(String message) throws JMSException;
+    protected void onMessage(String message){}
+
+    protected void onMessage(Serializable message) {}
+
 }

@@ -36,6 +36,7 @@ public class DubboService {
         registry.setAddress(zookeeperHost);
 
         ReferenceConfig<?> rc = new ReferenceConfig();
+
         rc.setApplication(application);
         rc.setRegistry(registry);
         rc.setInterface(clazz);

@@ -8,5 +8,6 @@
 	</bean>
 	
     <bean class="com.howbuy.cc.basic.mq.common.ActiveMqInit"></bean>
-    
+
+
 </beans>  
