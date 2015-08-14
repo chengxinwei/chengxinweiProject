@@ -20,11 +20,11 @@ public class CacheNameSpaceTest{
 
         RedisDbService redisDbService = context1.getBean(RedisDbService.class);
 
-        redisDbService.getUser(11).getId();
+//        redisDbService.getUser(11).getId();
 
-//        while(true){
-//            int i = new Random().nextInt(100);
-//            redisDbService.getUser(i).getId();
-//        }
+        while(true){
+            int i = new Random().nextInt(100);
+            redisDbService.getUser(i).getId();
+        }
     }
 }

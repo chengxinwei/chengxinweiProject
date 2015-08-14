@@ -4,6 +4,7 @@ import com.howbuy.cc.basic.cache.hit.aop.CacheHitAdvisor;
 import com.howbuy.cc.basic.cache.hit.aop.CacheHitInterceptor;
 import com.howbuy.cc.basic.cache.hit.aop.CacheHitOperationSource;
 import com.howbuy.cc.basic.cache.hit.thread.CacheHitLogThread;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
 import org.springframework.beans.factory.parsing.BeanComponentDefinition;
@@ -44,8 +45,8 @@ public class CacheBeanDefinitionParser implements BeanDefinitionParser {
             sourceDef.setSource(eleSource);
             sourceDef.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);
             sourceDef.getPropertyValues().add("hitLogPath" , hitLogPath);
-            if(hitLogTime != null) {
-                sourceDef.getPropertyValues().add("hitLogTime", hitLogTime);
+            if(!StringUtils.isEmpty(hitLogTime)) {
+                sourceDef.getPropertyValues().add("hitLogTime", Integer.parseInt(hitLogTime));
             }
             String sourceName = parserContext.getReaderContext().registerWithGeneratedName(sourceDef);
 

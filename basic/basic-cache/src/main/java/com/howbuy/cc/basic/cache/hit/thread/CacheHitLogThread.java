@@ -44,6 +44,7 @@ public class CacheHitLogThread extends Thread{
                     strAry[3] = hitRat.toString();
                     ccLogger.info("缓存命中率", strAry);
                 }
+                HitCount.del();
             }catch(Exception e){
                 ccLogger.error(e.getMessage() , e);
             }
