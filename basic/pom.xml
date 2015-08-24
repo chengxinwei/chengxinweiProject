@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.howbuy.cc.basic</groupId>
     <artifactId>basic-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>The parent project of cc.basic</description>
@@ -27,10 +27,46 @@
         <dubbo.version>2.5.3</dubbo.version>
         <geronimo-jms.version>1.1.1</geronimo-jms.version>
         <activemq.core.version>5.7.0</activemq.core.version>
+        <apache.zookeeper.version>3.4.6</apache.zookeeper.version>
+        <zookeeper.client.version>0.1</zookeeper.client.version>
+        <mybatis.spring.version>1.2.2</mybatis.spring.version>
+        <mybatis.version>3.3.0</mybatis.version>
+        <commons.dbcp.version>1.4</commons.dbcp.version>
+        <oracle.version>10</oracle.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis.spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>${commons.dbcp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc14</artifactId>
+                <version>${oracle.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -60,24 +96,6 @@
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>1.0.15</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.oracle</groupId>
-                <artifactId>ojdbc14</artifactId>
-                <version>10</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jdbc</artifactId>
-                <version>${spring.version}</version>
             </dependency>
 
             <dependency>
@@ -191,6 +209,18 @@
                 </exclusions>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${apache.zookeeper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zookeeper.client.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
@@ -242,7 +272,7 @@
     <distributionManagement>
         <repository>
             <id>nexus_crm</id>
-            <!--<url>http://192.168.220.220:8081/nexus/content/repositories/com.howbuy.cc./</url>-->
+            <!--<url>http://192.168.220.220:8081/nexus/content/repositories/com.howbuy.cc/</url>-->
             <url>http://192.168.220.220:8081/nexus/content/repositories/com.howbuy.cc.snapshot/</url>
         </repository>
     </distributionManagement>
