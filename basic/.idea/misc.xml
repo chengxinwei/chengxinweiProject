@@ -7,6 +7,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/basic-sqlite/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-mongo/pom.xml" />
       </list>
     </option>
   </component>

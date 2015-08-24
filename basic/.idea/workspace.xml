@@ -1,89 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="mongo 开发">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaCacheDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/aop/AspectJTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/BeanScanTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/BeanScanner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboCacheProviderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboDBProviderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/register/ListenerRegister.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/aop/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/namespace/MqBeanDefinitionParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/MqBeanDefinitionScanner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/namespace/MqNameSpaceHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/namespace/MqOperationSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/transaction/MqTransactionSynchronization.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/register/SenderRegister.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/TopicConsumerTest1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/TopicConsumerTest2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/TopicSenderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/transaction/TransactionTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/aop/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/VirtualConsumerTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/VirtualSenderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/resources/META-INF/basic.mq.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/resources/bean-scan.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/resources/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/resources/META-INF/spring.handlers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/resources/META-INF/spring.schemas" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_mongodb_mongo_java_driver_2_13_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_slf4j_jcl_over_slf4j_1_7_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_data_spring_data_commons_1_10_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_data_spring_data_mongodb_1_7_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_aop_4_0_9_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_beans_4_0_9_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_context_4_0_9_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_core_4_0_9_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_tx_4_0_9_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\annotation\ActiveMQTransactional.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\common\AopTargetUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\intercepter\ActiveTransactionalIntercepter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\resources\basic\mq\basic-activemq.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\main\java\com\howbuy\cc\basic\test\MyBatisMain.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\main\java\com\howbuy\cc\basic\test\dubbo\DubboConsumerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\main\resources\mybatis\application.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/AbstractSender.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/AbstractSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/model/ActiveMQFieldMessage.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/model/ActiveMQFieldMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqListener.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/constant/MQConstant.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/constant/MQConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/Main.java" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/QueueMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/QueueMessageListenerContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/TopicMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/TopicMessageListenerContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/VirtualMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/VirtualMessageListenerContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/test/resources/application.xml" afterPath="$PROJECT_DIR$/basic-mq/src/test/resources/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/application.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/application.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/redis/application.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/redis/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-cache/basic-cache.iml" afterPath="$PROJECT_DIR$/basic-cache/basic-cache.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-core/basic-core.iml" afterPath="$PROJECT_DIR$/basic-core/basic-core.iml" />
+    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="sqlite 开发">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/common" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/dao" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/mongoTime" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/common/BaseTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace/MongoBeanDefinitionParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace/MongoNameSpaceHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace/MongoOperationSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/MongoTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/mongoTime/MongoTimeAdvisor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/mongoTime/MongoTimeInterceptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/model/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/dao/UserDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources/global.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources/mongo.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF/mongo.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources/spring-mongo.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF/spring.handlers" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF/spring.schemas" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/callback/MongoCallBack.java" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/callback/MongoCallBack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/dao/MongoCommonDao.java" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/dao/MongoCommonDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" afterPath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/basic-mq.iml" afterPath="$PROJECT_DIR$/basic-mq/basic-mq.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" afterPath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test-interface/basic-test-interface.iml" afterPath="$PROJECT_DIR$/basic-test-interface/basic-test-interface.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/basic-test.iml" afterPath="$PROJECT_DIR$/basic-test/basic-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/basic.iml" afterPath="$PROJECT_DIR$/.idea/basic.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/global.properties" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/global.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/pom.xml" afterPath="$PROJECT_DIR$/basic-mq/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/pom.xml" afterPath="$PROJECT_DIR$/basic-test/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/mybatis/spring-mybatis.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/mybatis/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-consumer.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-consumer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-provider.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-provider.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/pom.xml" afterPath="$PROJECT_DIR$/basic-mongo/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\common\ActiveMQThreadLocal.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/transaction/ActiveMQThreadLocal.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\test\src\com\howbuy\activemq\consumer\TestConsumer.java" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/QueueConsumerTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\test\src\com\howbuy\activemq\sender\TestSender.java" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/QueueSenderTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\main\java\com\howbuy\cc\basic\test\dubbo\DubboProviderTest.java" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboBaseProviderTest.java" />
     </list>
     <list id="7fa1a1d4-d0f7-4e35-84f8-bf6cc6ce66b2" name="Failed commit: Default (2)" comment="添加日志记录=" />
     <ignored path="basic.iws" />
@@ -342,6 +292,7 @@
     <ignored path="basic-sqlite/basic-sqlite.iml" />
     <ignored mask="*.db" />
     <ignored path="basic-mongo/log/mongo.log" />
+    <ignored path="$PROJECT_DIR$/untitled/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -369,8 +320,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/mybatis-config.xml">
+      <file leaf-file-name="customSpringBeans.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/customSpringBeans.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -379,103 +330,100 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/model/User.java">
+      <file leaf-file-name="encodings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#817#818#0" expanded="true" />
-                <element signature="e#934#935#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/mapper/UserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding>
-                <marker date="1440400568246" expanded="true" signature="302:338" placeholder="select * fro..aaaa..." />
-                <marker date="1440400568246" expanded="true" signature="387:475" placeholder="insert into ..." />
-                <marker date="1440400568246" expanded="true" signature="524:584" placeholder="create table..user..." />
-                <marker date="1440400568246" expanded="true" signature="651:669" placeholder="select * fro..user..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.625">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MybatisOperationSource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/namespace/MybatisOperationSource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/log4j.properties">
+      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-mybatis.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/spring-mybatis.xml">
+      <file leaf-file-name="MongoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/MongoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/jdbc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#595#596#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#712#941#0" expanded="true" />
-                <element signature="e#940#941#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoCommonDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/dao/MongoCommonDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+              <folding>
+                <element signature="e#2236#2237#0" expanded="true" />
+                <element signature="e#2291#2292#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoTemplate.java" pinned="false" current-in-tab="true">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45627376">
+              <caret line="518" column="0" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cglib2AopProxy.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/Cglib2AopProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="608" column="0" selection-start-line="608" selection-start-column="0" selection-end-line="608" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdvisedSupport.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/AdvisedSupport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="482" column="37" selection-start-line="482" selection-start-column="37" selection-end-line="482" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/query/Field.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#4093#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vcs.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -501,13 +449,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/basic-cache/src/test/resources/cache-test3.xml" />
-        <option value="$PROJECT_DIR$/basic-test/src/main/resources/application.xml" />
-        <option value="$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/namespace/CacheNameSpaceHandler.java" />
-        <option value="$PROJECT_DIR$/basic-cache/src/test/java/com/howbuy/cc/basic/cache/RadisCacheTest.java" />
-        <option value="$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/namespace/CoreNameSpaceHandler.java" />
-        <option value="$PROJECT_DIR$/basic-core/src/test/java/com/howbuy/cc/basic/common/BaseTest.java" />
-        <option value="$PROJECT_DIR$/basic-core/src/main/resources/META-INF/basic.core.xsd" />
         <option value="$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/namespace/CacheBeanDefinitionParser.java" />
         <option value="$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/namespace/CoreBeanDefinitionParser.java" />
         <option value="$PROJECT_DIR$/basic-core/src/main/resources/META-INF/spring.schemas" />
@@ -552,6 +493,13 @@
         <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java" />
         <option value="$PROJECT_DIR$/basic-sqlite/src/main/resources/spring-mybatis.xml" />
         <option value="$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/App.java" />
+        <option value="$PROJECT_DIR$/basic-sqlite/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/App.java" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-sqlite/pom.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/MongoTest.java" />
       </list>
     </option>
   </component>
@@ -671,7 +619,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="basic-sqlite" />
+              <option name="myItemId" value="basic-mongo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -685,11 +633,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="basic-sqlite" />
+              <option name="myItemId" value="basic-mongo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -703,7 +655,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="basic-sqlite" />
+              <option name="myItemId" value="basic-mongo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -711,29 +663,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic-sqlite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -741,19 +671,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sqlite" />
+              <option name="myItemId" value="mongo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic-mongo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/basic-sqlite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/basic-mongo" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -797,59 +745,7 @@
       <recent name="com.howbuy.cc.test.interfac.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CacheNameSpaceTest">
-    <configuration default="false" name="AnnounceDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.howbuy.cc.basic.mybatis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="basic-mybatis" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.howbuy.cc.basic.mybatis" />
-      <option name="MAIN_CLASS_NAME" value="com.howbuy.cc.basic.mybatis.AnnounceDaoTest" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="AnnounceDaoTest.testInter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.howbuy.cc.basic.mybatis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="basic-mybatis" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.howbuy.cc.basic.mybatis" />
-      <option name="MAIN_CLASS_NAME" value="com.howbuy.cc.basic.mybatis.AnnounceDaoTest" />
-      <option name="METHOD_NAME" value="testInter" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.MongoTest.findList">
     <configuration default="false" name="CacheNameSpaceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -914,6 +810,53 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="basic-cache" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in untitled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="untitled" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MongoTest.findList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.howbuy.cc.basic.mongo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="basic-mongo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.howbuy.cc.basic.mongo" />
+      <option name="MAIN_CLASS_NAME" value="com.howbuy.cc.basic.mongo.MongoTest" />
+      <option name="METHOD_NAME" value="findList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1195,19 +1138,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.update" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.testInter" />
-      <item index="2" class="java.lang.String" itemvalue="Application.CacheNameSpaceTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RadisCacheTest.cacheTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.CacheHitLogThread" />
+      <item index="0" class="java.lang.String" itemvalue="Application.CacheNameSpaceTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RadisCacheTest.cacheTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CacheHitLogThread" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in untitled" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MongoTest.findList" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.CacheNameSpaceTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.CacheHitLogThread" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RadisCacheTest.cacheTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.testInter" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AnnounceDaoTest.update" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MongoTest.findList" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in untitled" />
+        <item index="2" class="java.lang.String" itemvalue="Application.CacheNameSpaceTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.CacheHitLogThread" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RadisCacheTest.cacheTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1219,21 +1162,22 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" cleanupOnStartRun="true">
     <configuration>C:\Users\xinwei.cheng\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="SvnFileUrlMappingImpl">
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\chengxinweiProject\basic\basic-sqlite" />
-          <option name="myCopyRoot" value="D:\workspace\chengxinweiProject\basic\basic-sqlite" />
+          <option name="myVcsRoot" value="D:\workspace\chengxinweiProject\basic\basic-mongo" />
+          <option name="myCopyRoot" value="D:\workspace\chengxinweiProject\basic\basic-mongo" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\workspace\chengxinweiProject\basic\basic-sqlite" />
-          <option name="myCopyRoot" value="D:\workspace\chengxinweiProject\basic\basic-sqlite" />
+          <option name="myVcsRoot" value="D:\workspace\chengxinweiProject\basic\basic-mongo" />
+          <option name="myCopyRoot" value="D:\workspace\chengxinweiProject\basic\basic-mongo" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -1267,18 +1211,8 @@
       <workItem from="1439341232218" duration="30458000" />
       <workItem from="1439427143197" duration="25792000" />
       <workItem from="1439514214932" duration="1378000" />
-    </task>
-    <task id="LOCAL-00006" summary="删除不许需要的代码">
-      <created>1437706365984</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1437706365984</updated>
-    </task>
-    <task id="LOCAL-00007" summary="日志修改">
-      <created>1438139463887</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1438139463887</updated>
+      <workItem from="1440401858591" duration="1764000" />
+      <workItem from="1440403667151" duration="348000" />
     </task>
     <task id="LOCAL-00008" summary="添加日志记录，删除不需要得类">
       <created>1438139593676</created>
@@ -1562,11 +1496,23 @@
       <option name="project" value="LOCAL" />
       <updated>1440401275447</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="mongo 开发">
+      <created>1440401946099</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1440401946099</updated>
+    </task>
+    <task id="LOCAL-00056" summary="sqlite 开发">
+      <created>1440402666056</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1440402666056</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285573000" />
+    <option name="totallyTimeSpent" value="287685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1582,17 +1528,17 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44535074" sideWeight="0.49092284" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26916802" sideWeight="0.49092284" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.406199" sideWeight="0.21255673" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37443268" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5089723" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41272432" sideWeight="0.7874433" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52365416" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46818924" sideWeight="0.7874433" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21696573" sideWeight="0.68683815" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27231467" sideWeight="0.7519789" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25642964" sideWeight="0.7519789" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.49134198" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1608,22 +1554,22 @@
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28874388" sideWeight="0.49092284" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44535074" sideWeight="0.49092284" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.406199" sideWeight="0.21255673" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37443268" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35073408" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16313213" sideWeight="0.7874433" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21044046" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41272432" sideWeight="0.7874433" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34094617" sideWeight="0.68683815" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21696573" sideWeight="0.68683815" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24659607" sideWeight="0.7519789" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36535552" sideWeight="0.7519789" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.041603632" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49755302" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.49134198" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1710,8 +1656,20 @@
           <properties />
           <option name="timeStamp" value="173" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/MongoTest.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java</url>
+          <line>518</line>
+          <properties />
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="185" />
+      <option name="time" value="187" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1720,6 +1678,25 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/query/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#4093#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.6.5.RELEASE/spring-data-commons-1.6.5.RELEASE.jar!/org/springframework/data/util/ClassTypeInformation.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.607143">
@@ -1745,7 +1722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1817,9 +1793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="18" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#14859#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1834,11 +1807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#585#1012#0" expanded="false" />
-            <element signature="e#1011#1012#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1861,7 +1829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1869,7 +1836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1877,10 +1843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
-          <folding>
-            <element signature="e#1850#1851#0" expanded="false" />
-            <element signature="e#1892#1893#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1902,7 +1864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1910,7 +1871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1919,7 +1879,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1935,7 +1895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1951,18 +1910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="816" column="16" selection-start-line="816" selection-start-column="16" selection-end-line="816" selection-end-column="16" />
-          <folding>
-            <element signature="e#33440#34043#0" expanded="true" />
-            <element signature="e#34042#34043#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1971,29 +1918,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="70" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="70" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/MongoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
-          <folding>
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1409#1410#0" expanded="true" />
-            <element signature="e#1511#1512#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1652#1653#0" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1791#1792#0" expanded="true" />
-            <element signature="e#2009#2010#0" expanded="true" />
-            <element signature="e#2108#2109#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2017,7 +1941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2025,40 +1948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/dao/MongoCommonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#2129#2130#0" expanded="true" />
-            <element signature="e#2187#2188#0" expanded="true" />
-            <element signature="e#2236#2237#0" expanded="true" />
-            <element signature="e#2291#2292#0" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
-            <element signature="e#2385#2386#0" expanded="true" />
-            <element signature="e#2428#2429#0" expanded="true" />
-            <element signature="e#2485#2486#0" expanded="true" />
-            <element signature="e#2519#2520#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2603#2604#0" expanded="true" />
-            <element signature="e#2660#2661#0" expanded="true" />
-            <element signature="e#3132#3133#0" expanded="true" />
-            <element signature="e#3202#3203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2066,108 +1955,129 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1538461">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/global.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <marker date="1440400568246" expanded="true" signature="302:338" placeholder="select * fro..aaaa..." />
-            <marker date="1440400568246" expanded="true" signature="387:475" placeholder="insert into ..." />
-            <marker date="1440400568246" expanded="true" signature="524:584" placeholder="create table..user..." />
-            <marker date="1440400568246" expanded="true" signature="651:669" placeholder="select * fro..user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#712#941#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/namespace/MybatisOperationSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.625">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#234#235#0" expanded="false" />
+            <element signature="e#267#268#0" expanded="false" />
+            <element signature="e#319#320#0" expanded="false" />
+            <element signature="e#363#364#0" expanded="false" />
+            <element signature="e#401#402#0" expanded="false" />
+            <element signature="e#434#435#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#531#532#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1440403819741" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/customSpringBeans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/query/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#4093#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/AdvisedSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="482" column="37" selection-start-line="482" selection-start-column="37" selection-end-line="482" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/MongoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/dao/MongoCommonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+          <folding>
+            <element signature="e#2236#2237#0" expanded="true" />
+            <element signature="e#2291#2292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/Cglib2AopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="608" column="0" selection-start-line="608" selection-start-column="0" selection-end-line="608" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45627376">
+          <caret line="518" column="0" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2223,7 +2133,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|basic-sqlite</last-edited>
+          <last-edited>basic-mongo</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
