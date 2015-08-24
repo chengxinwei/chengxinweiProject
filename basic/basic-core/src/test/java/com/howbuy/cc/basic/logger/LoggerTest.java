@@ -13,24 +13,29 @@ public class LoggerTest extends BaseTest{
     CCLogger ccLogger = CCLogger.getLogger(this.getClass());
 
     @Test
-    public void test(){
-        ccLogger.info("code" , "message");
+    public void testInfo(){
+        ccLogger.info("code" );
     }
 
     @Test
-    public void changeTest(){
+    public void testDebug(){
+        ccLogger.debug("code");
+    }
 
-        String path = "d:/log.log";
+    @Test
+    public void testWarn(){
+        ccLogger.warn("code");
+    }
 
-        ccLogger.getOriginalLog().setAdditivity(false);
-        DailyRollingFileAppender appender=new DailyRollingFileAppender();
-        appender.setFile(path);
-        appender.setDatePattern("'.'yyyy-MM-dd");
-        PatternLayout layout=new PatternLayout("%-d{yyyy-MM-dd HH:mm:ss}  %m%n");
-        appender.setLayout(layout);
-        appender.setAppend(true);
-        appender.activateOptions();
-        ccLogger.getOriginalLog().addAppender(appender);
+    @Test
+    public void testError(){
+        ccLogger.error("code", new RuntimeException("test"));
+    }
+
+    @Test
+    public void changeLogTest(){
+        String log = "d:/log.log";
+        CCLoggerUtil.clearAndAddFileLog(ccLogger , log);
 
         ccLogger.info("111111");
     }

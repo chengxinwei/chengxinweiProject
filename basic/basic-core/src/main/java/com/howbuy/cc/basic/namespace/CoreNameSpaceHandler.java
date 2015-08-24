@@ -5,7 +5,7 @@ import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 /**
  * Created by xinwei.cheng on 2015/8/12.
  */
-public class BasicCoreNameSpaceHandler extends NamespaceHandlerSupport {
+public class CoreNameSpaceHandler extends NamespaceHandlerSupport {
 
     private  final static String CORE_DRIVEN = "core-driven";
 

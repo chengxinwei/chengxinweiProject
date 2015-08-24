@@ -40,18 +40,10 @@ public class CCLogger{
         return ccLogger;
     }
 
-    public void info(String message){
-        this.info(null , message);
-    }
-
     public void info(String text , String... messageAry){
         if(logger.isInfoEnabled()){
             logger.info(getDefaultLogHeader(null) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
         }
-    }
-
-    public void debug(String message){
-        this.debug(null , message);
     }
 
     public void debug(String text , String... messageAry){
@@ -70,10 +62,6 @@ public class CCLogger{
 
     public void error(String text , Exception e , String... messageAry){
         logger.error(getDefaultLogHeader(null) + "|" + text + "|" + StringUtils.join(messageAry, "|"), e);
-    }
-
-    public void warn(String text){
-        this.warn(text , null);
     }
 
     public void warn(String text , String... messageAry){

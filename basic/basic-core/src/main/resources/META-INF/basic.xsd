@@ -3,10 +3,24 @@
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://com.howbuy.cc.basic/schema/basic-core">
 
-    <xsd:element name="core-driven" type="coreType">
+    <xsd:element name="core-driven">
+        <xsd:complexType>
+            <!--<xsd:complexContent>-->
+                <!--<xsd:extension base="xsd:element">-->
+                    <xsd:sequence>
+                        <xsd:element ref="dubboLog" minOccurs="0" maxOccurs="1">
+                        </xsd:element>
+                    </xsd:sequence>
+                <!--</xsd:extension>-->
+            <!--</xsd:complexContent>-->
+        </xsd:complexType>
     </xsd:element>
 
-    <xsd:complexType name="coreType">
-    </xsd:complexType>
+    <xsd:element name="dubboLog">
+        <xsd:complexType>
+            <xsd:attribute name="requestLog"></xsd:attribute>
+            <xsd:attribute name="accessLog"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
 
 </xsd:schema>

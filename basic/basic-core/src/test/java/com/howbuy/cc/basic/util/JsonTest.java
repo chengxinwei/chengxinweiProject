@@ -1,5 +1,7 @@
 package com.howbuy.cc.basic.util;
 
+import com.howbuy.cc.basic.common.BaseTest;
+import org.junit.Test;
 import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
 
@@ -11,7 +13,8 @@ import java.util.Map;
  */
 public class JsonTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void testJson() {
         Map<String,Object> map = new HashMap<>();
         map.put("a"  , "b");
         System.out.println(Json.toJson(map, JsonFormat.compact()));
