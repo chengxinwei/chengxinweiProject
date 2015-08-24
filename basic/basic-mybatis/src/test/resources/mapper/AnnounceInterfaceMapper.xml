@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.howbuy.cc.basic.mybatis.dao.interfac.AnnounceInterfaceDao">
+    <resultMap id="Announce" type="com.howbuy.cc.basic.mybatis.model.Announce">
+        <result property="announcedid" column="announcedid"></result>
+        <result property="subject" column="SUBJECT"></result>
+    </resultMap>
+
+    <select id="count" resultType="Integer">
+        select count(1) from cm_announce
+    </select>
+</mapper>

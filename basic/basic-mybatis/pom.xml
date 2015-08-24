@@ -5,11 +5,11 @@
     <parent>
         <groupId>com.howbuy.cc.basic</groupId>
         <artifactId>basic-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>basic-mybatis</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>basic-mybatis</name>
@@ -20,38 +20,33 @@
         <dependency>
             <groupId>com.howbuy.cc.basic</groupId>
             <artifactId>basic-core</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>1.2.2</version>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.3.0</version>
         </dependency>
 
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
-            <version>1.4</version>
         </dependency>
 
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc14</artifactId>
-            <version>10</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>3.1.4.RELEASE</version>
         </dependency>
 
     </dependencies>

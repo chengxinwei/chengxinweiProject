@@ -1,13 +1,10 @@
 package com.howbuy.cc.basic.mybatis.dao;
 
-import com.howbuy.cc.basic.mybatis.BaseTest;
 import com.howbuy.cc.basic.mybatis.annotation.CCDatasourceRoute;
 import com.howbuy.cc.basic.mybatis.dao.callback.ExecuteCallBack;
 import com.howbuy.cc.basic.mybatis.model.Announce;
 import com.howbuy.cc.basic.mybatis.model.Page;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://com.howbuy.cc.basic/schema/basic-mybatis"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://com.howbuy.cc.basic/schema/basic-mybatis">
+
+    <xsd:element name="mybatis-driven">
+        <xsd:complexType>
+            <xsd:attribute name="sqlTimeLog" use="required" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="sqlTimeout" type="xsd:int"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+
+</xsd:schema>
