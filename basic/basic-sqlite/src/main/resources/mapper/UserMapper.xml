@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.howbuy.cc.basic.sqlite.dao.UserDao">
+
+    <select id="selectList" parameterType="Map" resultType="User">
+          select * from  aaaa where NO = ${id}
+    </select>
+
+    <insert id="insert">
+        insert into user(userCode , userName , type) values(#{userCode} , #{userName} , #{type})
+    </insert>
+
+    <select id="create">
+        create table if not exists user (userCode , userName , type)
+    </select>
+
+    <select id="select" resultType="User">
+        select * from user
+    </select>
+
+</mapper>
