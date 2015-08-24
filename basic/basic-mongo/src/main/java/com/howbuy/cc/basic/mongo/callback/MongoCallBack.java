@@ -7,6 +7,6 @@ import org.springframework.data.mongodb.core.MongoTemplate;
  */
 public interface MongoCallBack<E> {
 
-    public E doCallBack(MongoTemplate mongoTemplate , Class<?> clazz , String collectionName);
+    public E doCallBack(MongoTemplate mongoTemplate , Class<?> clazz);
 
 }

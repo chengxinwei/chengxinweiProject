@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://com.howbuy.cc.basic/schema/basic-mongo"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://com.howbuy.cc.basic/schema/basic-mongo">
+
+    <xsd:element name="mongo-driven">
+        <xsd:complexType>
+            <xsd:attribute name="mongo" type="xsd:string">
+            </xsd:attribute>
+            <xsd:attribute name="username" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="password" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="databaseName" type="xsd:string" use="required"></xsd:attribute>
+            <xsd:attribute name="mongoTimeout" type="xsd:integer" default="0"></xsd:attribute>
+            <xsd:attribute name="mongoTimeLog" type="xsd:string"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

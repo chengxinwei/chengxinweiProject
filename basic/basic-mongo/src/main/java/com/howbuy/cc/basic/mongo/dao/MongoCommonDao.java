@@ -1,74 +1,101 @@
 package com.howbuy.cc.basic.mongo.dao;
 
 import com.howbuy.cc.basic.mongo.callback.MongoCallBack;
+import com.howbuy.cc.basic.mongo.namespace.MongoOperationSource;
+import com.howbuy.cc.basic.spring.SpringBean;
 import com.mongodb.WriteResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
 import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.Date;
 import java.util.List;
 
 /**
  * Created by xinwei.cheng on 2015/6/2.
  */
+@SuppressWarnings("unused")
 public abstract class MongoCommonDao<T> {
 
     @Autowired
     private MongoTemplate mongoTemplate;
+    @Autowired
+    private MongoOperationSource mongoOperationSource;
 
     private final Class<T> clazz;
-    private final String collectionName;
-
 
     public MongoCommonDao(){
-        clazz = (Class <T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-        collectionName = clazz.getSimpleName();
+        ParameterizedType parameterizedType = null;
+        Class _clazz =  this.getClass();
+        while (true) {
+            Type type = _clazz.getGenericSuperclass();
+            if (type instanceof ParameterizedType) {
+                parameterizedType = (ParameterizedType)type;
+                break;
+            }
+            _clazz = _clazz.getSuperclass();
+        }
+        clazz = (Class<T>) parameterizedType.getActualTypeArguments()[0];
     }
 
-    public void add(T t){
-        mongoTemplate.insert(t , collectionName);
+    public void add(final T t){
+        mongoTemplate.insert(t);
     }
 
-    public WriteResult updateFirst(Query query ,Update update){
-        update.set("updateAt" , new Date());
-        return mongoTemplate.updateFirst(query , update ,clazz , collectionName);
+    public WriteResult updateFirst(final Query query ,final Update update){
+        update.set("updateAt", new Date());
+        return mongoTemplate.updateFirst(query, update, clazz);
     }
 
-    public WriteResult updateMulti(Query query ,Update update){
-        update.set("updateAt" , new Date());
-        return mongoTemplate.updateMulti(query, update , clazz , collectionName);
+    public WriteResult updateFirst(final Query query ,final Update update , final Sort sort){
+        update.set("updateAt", new Date());
+        return mongoTemplate.updateFirst(query.with(sort), update, clazz);
     }
 
-    public T findOne(Query query){
-        return mongoTemplate.findOne(query, clazz , collectionName);
+    public WriteResult updateMulti(final Query query ,final Update update){
+        update.set("updateAt", new Date());
+        return mongoTemplate.updateMulti(query, update, clazz);
     }
 
-    public List<T> findList(Query query){
-        return mongoTemplate.find(query, clazz, collectionName);
+    public T findOne(final Query query){
+        return mongoTemplate.findOne(query, clazz);
     }
 
-    public void delete(Query query){
-        mongoTemplate.remove(query , clazz , collectionName);
+    public List<T> findList(final Query query){
+        return mongoTemplate.find(query, clazz);
     }
 
-    public long count(Query query){
-        return mongoTemplate.count(query , clazz , collectionName);
+    public void delete(final Query query){
+        mongoTemplate.remove(query, clazz);
     }
 
-    public boolean exists(Query query){
-        return mongoTemplate.exists(query , clazz , collectionName);
+    public long count(final Query query){
+        return mongoTemplate.count(query , clazz);
     }
 
-    public void save(T t){
-        mongoTemplate.save(t , collectionName);
+    public void save(final T t){
+        mongoTemplate.save(t);
     }
 
-    public <E> E excute(MongoCallBack<E> mongoCallBack){
-        return mongoCallBack.doCallBack(mongoTemplate , clazz , collectionName);
+    public boolean exists(final Query query){
+        return mongoTemplate.exists(query, clazz);
     }
 
+    public List<T> page(final Query query , final int pageNo , final int pageSize , final Sort sort){
+        return mongoTemplate.find(query.with(sort).skip(pageNo * pageSize).limit(pageSize) , clazz);
+    }
+
+    public <E> E execute(MongoCallBack<E> mongoCallBack){
+        MongoCommonDao mongoCommonDao = SpringBean.getBean(this.getClass());
+        return (E)mongoCommonDao.doExecute(mongoCallBack);
+    }
+
+    public <E> E doExecute(MongoCallBack<E> mongoCallBack){
+        return mongoCallBack.doCallBack(mongoTemplate , clazz);
+    }
 
 }

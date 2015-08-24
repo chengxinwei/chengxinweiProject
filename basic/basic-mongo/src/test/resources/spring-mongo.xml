@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:basic-core="http://com.howbuy.cc.basic/schema/basic-core"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:basic-mongo="http://com.howbuy.cc.basic/schema/basic-mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+             http://com.howbuy.cc.basic/schema/basic-core http://com.howbuy.cc.basic/schema/basic-core.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd http://com.howbuy.cc.basic/schema/basic-mongo http://com.howbuy.cc.basic/schema/basic-mongo.xsd">
+
+    <basic-core:core-driven/>
+
+    <context:component-scan base-package="com.howbuy.cc.basic"/>
+
+    <basic-mongo:mongo-driven mongo="mongo" databaseName="testDatabase" mongoTimeLog="log/mongo.log" mongoTimeout="100" />
+
+    <mongo:mongo replica-set="${mongo.ip}" id="mongo">
+        <mongo:options connections-per-host="${mongo.connectionCount}" slave-ok="${mongo.slaveOk}" ></mongo:options>
+    </mongo:mongo>
+
+
+</beans>
