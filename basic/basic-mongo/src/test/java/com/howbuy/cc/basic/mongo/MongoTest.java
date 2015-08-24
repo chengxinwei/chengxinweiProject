@@ -1,9 +1,11 @@
 package com.howbuy.cc.basic.mongo;
 
+import com.alibaba.fastjson.JSON;
 import com.howbuy.cc.basic.mongo.common.BaseTest;
 import com.howbuy.cc.basic.mongo.dao.UserDao;
 import com.howbuy.cc.basic.mongo.model.User;
 import org.junit.Test;
+import org.nutz.json.Json;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -54,7 +56,9 @@ public class MongoTest extends BaseTest {
 
     @Test
     public void findList()  {
-        System.out.println(userDao.findList(new Query(Criteria.where("userCode").is(random))));
+        Query query = new Query(Criteria.where("userCode").is(random));
+        query.fields().include("_id");
+        System.out.println(userDao.findList(query));
     }
 
     @Test

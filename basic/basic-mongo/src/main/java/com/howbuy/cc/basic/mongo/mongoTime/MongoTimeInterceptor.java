@@ -10,6 +10,7 @@ import org.nutz.json.JsonFormat;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.data.mongodb.core.query.Query;
 
 import java.io.Serializable;
 
@@ -36,7 +37,12 @@ public class MongoTimeInterceptor implements MethodInterceptor, Serializable , I
             infoAry[0] = methodName;
             infoAry[1] = String.valueOf(time);
             for(int i = 0 ; i < invocation.getArguments().length ; i++) {
-                infoAry[i + infoLengthOffset] = Json.toJson(invocation.getArguments()[i], JsonFormat.compact());
+                Object obj = invocation.getArguments()[i];
+                if(obj instanceof Query){
+                    infoAry[i + infoLengthOffset] = obj.toString();
+                }else {
+                    infoAry[i + infoLengthOffset] = Json.toJson(obj, JsonFormat.compact());
+                }
             }
             ccLogger.info(MONGO_LOG , infoAry);
         }
