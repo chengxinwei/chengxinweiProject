@@ -1181,19 +1181,7 @@
       <workItem from="1439427143197" duration="25792000" />
       <workItem from="1439514214932" duration="1378000" />
       <workItem from="1440401858591" duration="1764000" />
-      <workItem from="1440403667151" duration="630000" />
-    </task>
-    <task id="LOCAL-00009" summary="完善basic-core">
-      <created>1438140545454</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1438140545454</updated>
-    </task>
-    <task id="LOCAL-00010" summary="完善basic-core">
-      <created>1438144596022</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1438144596022</updated>
+      <workItem from="1440403667151" duration="660000" />
     </task>
     <task id="LOCAL-00011" summary="其他对应修改类提交">
       <created>1438144624968</created>
@@ -1477,11 +1465,23 @@
       <option name="project" value="LOCAL" />
       <updated>1440404061619</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="mongo 开发">
+      <created>1440404312820</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1440404312828</updated>
+    </task>
+    <task id="LOCAL-00059" summary="mongo 开发">
+      <created>1440404330807</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1440404330807</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287967000" />
+    <option name="totallyTimeSpent" value="287997000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
