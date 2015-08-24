@@ -1,4 +1,4 @@
-package com.howbuy.cc.basic.cache.hit.aop;
+package com.howbuy.cc.basic.cache.namespace;
 
 /**
  * Created by xinwei.cheng on 2015/8/13.

@@ -1,5 +1,6 @@
 package com.howbuy.cc.basic.cache.hit.aop;
 
+import com.howbuy.cc.basic.cache.namespace.CacheHitOperationSource;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor;
 import org.springframework.aop.support.StaticMethodMatcherPointcut;

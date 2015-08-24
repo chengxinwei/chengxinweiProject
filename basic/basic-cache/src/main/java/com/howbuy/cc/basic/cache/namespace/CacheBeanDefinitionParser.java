@@ -2,7 +2,6 @@ package com.howbuy.cc.basic.cache.namespace;
 
 import com.howbuy.cc.basic.cache.hit.aop.CacheHitAdvisor;
 import com.howbuy.cc.basic.cache.hit.aop.CacheHitInterceptor;
-import com.howbuy.cc.basic.cache.hit.aop.CacheHitOperationSource;
 import com.howbuy.cc.basic.cache.hit.thread.CacheHitLogThread;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.config.BeanDefinition;

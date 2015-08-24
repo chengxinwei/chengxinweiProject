@@ -1,7 +1,7 @@
 package com.howbuy.cc.basic.cache.hit.thread;
 
 import com.howbuy.cc.basic.cache.hit.HitCount;
-import com.howbuy.cc.basic.cache.hit.aop.CacheHitOperationSource;
+import com.howbuy.cc.basic.cache.namespace.CacheHitOperationSource;
 import com.howbuy.cc.basic.logger.CCLogger;
 import org.apache.log4j.DailyRollingFileAppender;
 import org.apache.log4j.PatternLayout;

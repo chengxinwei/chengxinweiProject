@@ -2,6 +2,7 @@ package com.howbuy.cc.basic.cache.hit.aop;
 
 import com.howbuy.cc.basic.cache.hit.HitCount;
 import com.howbuy.cc.basic.cache.hit.threadlocal.CacheHitThreadLocal;
+import com.howbuy.cc.basic.cache.namespace.CacheHitOperationSource;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 

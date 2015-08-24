@@ -53,6 +53,9 @@ public abstract class EhCache implements Cache {
 
     public void put(Object key, Object value) {
         try {
+            if(value == null){
+                return;
+            }
             Element element = new Element(CacheKeyGenerator.getKeyStr(String.valueOf(key)) , value);
             element.setTimeToLive(getTimeout());
             ehcache.put(element);
