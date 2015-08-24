@@ -14,8 +14,6 @@ public class TopicMessageListenerContainer extends DefaultMessageListenerContain
 	private String destinationName;
 	
 	public TopicMessageListenerContainer() throws JMSException{
-		//以防需要非持久化的消息，不做强行控制
-//		super.setSubscriptionDurable(true);
 		super.setPubSubDomain(true);
 	}
 

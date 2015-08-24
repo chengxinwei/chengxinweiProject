@@ -12,18 +12,8 @@ public class VirtualMessageListenerContainer extends DefaultMessageListenerConta
 
 	private String destinationName;
 	
-	private boolean exclusive = false;
-	
 	private String sysName;
 	
-	public boolean isExclusive() {
-		return exclusive;
-	}
-
-	public void setExclusive(boolean exclusive) {
-		this.exclusive = exclusive;
-	}
-
 	public String getDestinationName() {
 		return destinationName;
 	}
@@ -45,10 +35,7 @@ public class VirtualMessageListenerContainer extends DefaultMessageListenerConta
 	public void initDestination(){
 		if(this.destinationName!=null && this.sysName!=null){
 			String destinationName = "Consumer."+ this.sysName + ".VirtualTopic." + this.destinationName;
-			if(exclusive){
-				destinationName = destinationName + "?consumer.exclusive=true";
-			}
-			ActiveMQQueue queue  =  new  ActiveMQQueue(destinationName);   
+			ActiveMQQueue queue  =  new  ActiveMQQueue(destinationName);
 			super.setDestination(queue);
 		}
 	}

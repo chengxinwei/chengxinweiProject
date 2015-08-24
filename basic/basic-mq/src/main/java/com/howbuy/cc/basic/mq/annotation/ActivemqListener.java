@@ -17,11 +17,12 @@ public @interface ActivemqListener {
 	String systemName() default MQConstant.DETAULT_NONE;
 	
 	//消费者持久化
-	boolean isSubscriptionDurable() default false;
+    boolean isSubscriptionDurable() default false;
 	
 	//订阅者的ID
 	String clientId() default MQConstant.DETAULT_NONE;
 
+    //线程数
     int threadCount() default 1;
 
 }

@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/basic-mongo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basic-mq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basic-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/basic-sqlite" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basic-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basic-test-interface" charset="UTF-8" />
   </component>

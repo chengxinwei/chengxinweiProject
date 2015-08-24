@@ -1,10 +1,7 @@
 package com.howbuy.cc.basic.test.mybatis.dao;
 
-import com.howbuy.cc.basic.cache.constant.CacheConstant;
 import com.howbuy.cc.basic.mybatis.dao.MybatisCommonDao;
 import com.howbuy.cc.basic.test.model.Aaaa;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -25,16 +22,6 @@ public class AaaaDao extends MybatisCommonDao<Aaaa> {
         return super.selectList("selectList", params);
     }
 
-
-    @Cacheable(value = CacheConstant.REDIS_CACHE_1H , key = "'aaaa' + #id")
-    public List<Aaaa> getAaaaCache(int id){
-       return this.getAaaa(id);
-    }
-
-
-    @CacheEvict(value = CacheConstant.REDIS_CACHE_1H , key = "'aaaa' + #id")
-    public void clearCache(int id){}
-
     public void update(Aaaa a){
         super.update("update" , a);
     }
@@ -49,8 +36,4 @@ public class AaaaDao extends MybatisCommonDao<Aaaa> {
         super.delete("delete" , params);
     }
 
-    @Cacheable(value = CacheConstant.REDIS_CACHE_1H , key = "'setAaaa' + #aaaa.no")
-    public Aaaa set(Aaaa aaaa) {
-        return aaaa;
-    }
 }

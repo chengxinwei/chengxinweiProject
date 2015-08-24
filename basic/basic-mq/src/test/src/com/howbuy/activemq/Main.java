@@ -1,7 +1,6 @@
 package com.howbuy.activemq;
 
-import com.howbuy.activemq.sender.TestSender;
-import com.howbuy.cc.basic.spring.SpringBean;
+import com.howbuy.activemq.transaction.TransactionTest;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -10,16 +9,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        new ClassPathXmlApplicationContext("classpath:application.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("classpath:application.xml");
 
-        TestSender testSender = SpringBean.getBean(TestSender.class);
+        TransactionTest transactionTest = classPathXmlApplicationContext.getBean(TransactionTest.class);
 
-        try {
-            testSender.sendMessage("111111111111");
-        } catch (Exception e) {
-            e.printStackTrace();
+        while (true) {
+            transactionTest.testCommit();
+            Thread.sleep(1000);
         }
 
-        Thread.sleep(10000);
     }
 }

@@ -1,86 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="新增方法">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/com/chengxinwei/datas/writer/App.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/com/chengxinwei/datas/writer/listener/DataListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/com/chengxinwei/datas/writer/writer/common/DataWriter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/com/chengxinwei/datas/writer/handler/DataWriterHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/com/chengxinwei/datas/writer/writer/DbWriter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/com/chengxinwei/datas/writer/writer/MongoWriter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/com/chengxinwei/datas/writer/dao/WriterDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/java/com/chengxinwei/datas/writer/writer/MongoWriter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/java/com/chengxinwei/datas/writer/dao/WriterDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/resources/global.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-web/src/main/resources/global.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-web/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-web/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-web/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/mybatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-provider/src/main/resources/mybatis/mybatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/resources/spring-mybatis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/spring-mybatis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/resources/mapper/writerMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/target/classes/mapper/writerMapper.xml" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\java\chengxinwei\datas\writer\App.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\java\chengxinwei\datas\writer\handler\DataWriterHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\java\chengxinwei\datas\writer\listener\DataListener.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\java\chengxinwei\datas\writer\writer\DbWriter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\java\chengxinwei\datas\writer\writer\common\DataWriter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\resources\global.properties" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\App.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\data\DbReader.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\data\MongoReader.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\data\common\DataReader.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\handler\DataReaderHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\listener\ExecuteListener.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\redis\RedisClient.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\sender\DataSender.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\java\chengxinwei\datas\reader\util\PageNoGenerator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\dubbo-for-rest\.idea\libraries\Maven__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\dubbo-for-rest\.idea\libraries\Maven__log4j_log4j_1_2_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\dubbo-for-rest\.idea\libraries\Maven__log4j_log4j_1_2_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\dubbo-for-rest\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\dubbo-for-rest\dubbp-for-rest\src\main\resources\dubbo\dubbo-t.template" afterPath="" />
+    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="mongo 开发">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaCacheDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/aop/AspectJTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/BeanScanTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/BeanScanner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboCacheProviderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboDBProviderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/register/ListenerRegister.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/aop/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/namespace/MqBeanDefinitionParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/MqBeanDefinitionScanner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/namespace/MqNameSpaceHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/namespace/MqOperationSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/transaction/MqTransactionSynchronization.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/register/SenderRegister.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/TopicConsumerTest1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/TopicConsumerTest2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/TopicSenderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/transaction/TransactionTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/model/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/aop/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/VirtualConsumerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/VirtualSenderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/resources/META-INF/basic.mq.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/resources/bean-scan.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/test/resources/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/resources/META-INF/spring.handlers" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mq/src/main/resources/META-INF/spring.schemas" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_mongodb_mongo_java_driver_2_13_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_slf4j_jcl_over_slf4j_1_7_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_data_spring_data_commons_1_10_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_data_spring_data_mongodb_1_7_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_aop_4_0_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_beans_4_0_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_context_4_0_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_core_4_0_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\.idea\libraries\Maven__org_springframework_spring_tx_4_0_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\annotation\ActiveMQTransactional.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\common\AopTargetUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\intercepter\ActiveTransactionalIntercepter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\resources\basic\mq\basic-activemq.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\main\java\com\howbuy\cc\basic\test\MyBatisMain.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\main\java\com\howbuy\cc\basic\test\dubbo\DubboConsumerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\main\resources\mybatis\application.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/AbstractListener.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/AbstractListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/AbstractSender.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/sender/common/AbstractSender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/model/ActiveMQFieldMessage.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/model/ActiveMQFieldMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/common/ActiveMqInit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqListener.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/annotation/ActivemqListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dubbo-for-rest/dubbo-for-rest-execute/src/main/java/com/howbuy/cc/basic/dubbo/execute/DubboService.java" afterPath="$PROJECT_DIR$/../dubbo-for-rest/dubbo-for-rest-execute/src/main/java/com/howbuy/cc/basic/dubbo/execute/DubboService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dubbo-for-rest/dubbo-for-rest-execute/src/main/java/com/howbuy/cc/basic/dubbo/execute/Main.java" afterPath="$PROJECT_DIR$/../dubbo-for-rest/dubbo-for-rest-execute/src/main/java/com/howbuy/cc/basic/dubbo/execute/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/constant/MQConstant.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/constant/MQConstant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/Main.java" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/QueueMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/QueueMessageListenerContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/TopicMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/TopicMessageListenerContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/VirtualMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/VirtualMessageListenerContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/test/resources/application.xml" afterPath="$PROJECT_DIR$/basic-mq/src/test/resources/application.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/application.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/src/main/resources/basic/mq/basic-activemq.xml" afterPath="$PROJECT_DIR$/basic-mq/src/main/resources/basic/mq/basic-activemq.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/application.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/redis/application.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/redis/application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-cache/basic-cache.iml" afterPath="$PROJECT_DIR$/basic-cache/basic-cache.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-core/basic-core.iml" afterPath="$PROJECT_DIR$/basic-core/basic-core.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" afterPath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/basic-mq.iml" afterPath="$PROJECT_DIR$/basic-mq/basic-mq.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datas/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../Datas/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dubbo-for-rest/dubbo-for-rest-execute/dubbo-for-rest-execute.iml" afterPath="$PROJECT_DIR$/../dubbo-for-rest/dubbo-for-rest-execute/dubbo-for-rest-execute.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dubbo-for-rest/dubbp-for-rest/dubbo-for-rest.iml" afterPath="$PROJECT_DIR$/../dubbo-for-rest/dubbp-for-rest/dubbo-for-rest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dubbo-for-rest/.idea/artifacts/dubbo_for_rest_war_exploded.xml" afterPath="$PROJECT_DIR$/../dubbo-for-rest/.idea/artifacts/dubbo_for_rest_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datas/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../Datas/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datas/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Datas/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datas/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Datas/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" afterPath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test-interface/basic-test-interface.iml" afterPath="$PROJECT_DIR$/basic-test-interface/basic-test-interface.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/basic-test.iml" afterPath="$PROJECT_DIR$/basic-test/basic-test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/basic.iml" afterPath="$PROJECT_DIR$/.idea/basic.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/global.properties" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/global.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mq/pom.xml" afterPath="$PROJECT_DIR$/basic-mq/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/pom.xml" afterPath="$PROJECT_DIR$/basic-test/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/mybatis/spring-mybatis.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/mybatis/spring-mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-consumer.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-consumer.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-provider.xml" afterPath="$PROJECT_DIR$/basic-test/src/main/resources/dubbo/test-spring-dubbo-provider.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datas/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Datas/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\pom.xml" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/pom.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\resources\application.xml" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/resources/application.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\resources\jdbc.properties" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/resources/jdbc.properties" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\main\resources\log4j.properties" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/resources/log4j.properties" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\consumer\src\test\java\chengxinwei\datas\AppTest.java" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/test/java/chengxinwei/datas/AppTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\pom.xml" afterPath="$PROJECT_DIR$/../Datas/datas-provider/pom.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\provider.iml" afterPath="$PROJECT_DIR$/../Datas/datas-provider/datas-provider.iml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\resources\application.xml" afterPath="$PROJECT_DIR$/../Datas/datas-provider/src/main/resources/application.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\resources\global.properties" afterPath="$PROJECT_DIR$/../Datas/datas-provider/src/main/resources/global.properties" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\resources\jdbc.properties" afterPath="$PROJECT_DIR$/../Datas/datas-provider/src/main/resources/jdbc.properties" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\resources\log4j.properties" afterPath="$PROJECT_DIR$/../Datas/datas-provider/src/main/resources/log4j.properties" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\resources\mapper\SqlMapper.xml" afterPath="$PROJECT_DIR$/../Datas/datas-provider/src/main/resources/mapper/SqlMapper.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\resources\mybatis\mybatis-config.xml" afterPath="$PROJECT_DIR$/../Datas/datas-consumer/src/main/resources/mybatis-config.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\main\resources\mybatis\spring-mybatis.xml" afterPath="$PROJECT_DIR$/../Datas/datas-provider/src/main/resources/mybatis/spring-mybatis.xml" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\Datas\provider\src\test\java\chengxinwei\datas\AppTest.java" afterPath="$PROJECT_DIR$/../Datas/datas-provider/src/test/java/chengxinwei/datas/AppTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\listener\common\QueueMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/QueueMessageListenerContainer.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\listener\common\TopicMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/TopicMessageListenerContainer.java" />
-      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\listener\common\VirtualMessageListenerContainer.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/listener/common/container/VirtualMessageListenerContainer.java" />
+      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\main\java\com\howbuy\cc\basic\mq\common\ActiveMQThreadLocal.java" afterPath="$PROJECT_DIR$/basic-mq/src/main/java/com/howbuy/cc/basic/mq/transaction/ActiveMQThreadLocal.java" />
+      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\test\src\com\howbuy\activemq\consumer\TestConsumer.java" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/consumer/QueueConsumerTest.java" />
+      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-mq\src\test\src\com\howbuy\activemq\sender\TestSender.java" afterPath="$PROJECT_DIR$/basic-mq/src/test/src/com/howbuy/activemq/sender/QueueSenderTest.java" />
+      <change type="MOVED" beforePath="D:\workspace\chengxinweiProject\basic\basic-test\src\main\java\com\howbuy\cc\basic\test\dubbo\DubboProviderTest.java" afterPath="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboBaseProviderTest.java" />
     </list>
     <list id="7fa1a1d4-d0f7-4e35-84f8-bf6cc6ce66b2" name="Failed commit: Default (2)" comment="添加日志记录=" />
     <ignored path="basic.iws" />
@@ -334,6 +337,11 @@
     <ignored path="log/" />
     <ignored path=".idea/" />
     <ignored path="basic-core/log/" />
+    <ignored path="../dubbo-for-rest/.idea/libraries/" />
+    <ignored path="$PROJECT_DIR$/basic-sqlite/target/" />
+    <ignored path="basic-sqlite/basic-sqlite.iml" />
+    <ignored mask="*.db" />
+    <ignored path="basic-mongo/log/mongo.log" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -361,188 +369,112 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CacheHitInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/aop/CacheHitInterceptor.java">
+      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/mybatis-config.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CacheBeanDefinitionParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/namespace/CacheBeanDefinitionParser.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cache-namespace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-cache/src/test/resources/cache-namespace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DubboConsumerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboConsumerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DubboProviderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboProviderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AaaaDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78546715">
-              <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
               <folding>
-                <element signature="e#1468#1469#0" expanded="true" />
-                <element signature="e#1495#1496#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CacheHitLogThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/thread/CacheHitLogThread.java">
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+              <folding>
+                <marker date="1440400568246" expanded="true" signature="302:338" placeholder="select * fro..aaaa..." />
+                <marker date="1440400568246" expanded="true" signature="387:475" placeholder="insert into ..." />
+                <marker date="1440400568246" expanded="true" signature="524:584" placeholder="create table..user..." />
+                <marker date="1440400568246" expanded="true" signature="651:669" placeholder="select * fro..user..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.625">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MybatisOperationSource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/namespace/MybatisOperationSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractAdvisorAutoProxyCreator.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java">
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#6351#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#3724#3725#0" expanded="false" />
-                <element signature="e#3784#3785#0" expanded="false" />
-                <element signature="e#4753#4754#0" expanded="false" />
-                <element signature="e#4771#4772#0" expanded="false" />
-                <element signature="e#5809#5810#0" expanded="false" />
-                <element signature="e#5827#5828#0" expanded="false" />
-                <element signature="e#6165#6166#0" expanded="false" />
-                <element signature="e#6192#6193#0" expanded="false" />
-              </folding>
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdvisedSupport.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/AdvisedSupport.java">
+      <file leaf-file-name="spring-mybatis.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/spring-mybatis.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="481" column="8" selection-start-line="481" selection-start-column="8" selection-end-line="481" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#18248#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#3356#3363#0" expanded="false" />
-                <element signature="e#3541#3550#0" expanded="false" />
-                <element signature="e#3795#3796#0" expanded="false" />
-                <element signature="e#3819#3820#0" expanded="false" />
-                <element signature="e#4104#4105#0" expanded="false" />
-                <element signature="e#4185#4186#0" expanded="false" />
-                <element signature="e#4417#4418#0" expanded="false" />
-                <element signature="e#4474#4475#0" expanded="false" />
-                <element signature="e#4661#4662#0" expanded="false" />
-                <element signature="e#4692#4693#0" expanded="false" />
-                <element signature="e#5355#5356#0" expanded="false" />
-                <element signature="e#5421#5422#0" expanded="false" />
-                <element signature="e#5458#5459#0" expanded="false" />
-                <element signature="e#5506#5507#0" expanded="false" />
-                <element signature="e#5558#5559#0" expanded="false" />
-                <element signature="e#5595#5596#0" expanded="false" />
-                <element signature="e#5630#5631#0" expanded="false" />
-                <element signature="e#5660#5661#0" expanded="false" />
-                <element signature="e#6117#6118#0" expanded="false" />
-                <element signature="e#6155#6156#0" expanded="false" />
-                <element signature="e#7157#7158#0" expanded="false" />
-                <element signature="e#7199#7200#0" expanded="false" />
-                <element signature="e#7241#7242#0" expanded="false" />
-                <element signature="e#7313#7314#0" expanded="false" />
-                <element signature="e#7537#7538#0" expanded="false" />
-                <element signature="e#7568#7569#0" expanded="false" />
-                <element signature="e#9581#9582#0" expanded="false" />
-                <element signature="e#9624#9625#0" expanded="false" />
-                <element signature="e#9791#9792#0" expanded="false" />
-                <element signature="e#9834#9835#0" expanded="false" />
-                <element signature="e#11743#11744#0" expanded="false" />
-                <element signature="e#11770#11771#0" expanded="false" />
-                <element signature="e#14787#14788#0" expanded="false" />
-                <element signature="e#14818#14819#0" expanded="false" />
-                <element signature="e#17075#17076#0" expanded="false" />
-                <element signature="e#17099#17100#0" expanded="false" />
-                <element signature="e#18211#18212#0" expanded="false" />
-                <element signature="e#18240#18241#0" expanded="false" />
-              </folding>
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cglib2AopProxy.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/Cglib2AopProxy.java">
+      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="608" column="0" selection-start-line="608" selection-start-column="0" selection-end-line="608" selection-end-column="0" />
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
               <folding>
-                <element signature="e#0#32277#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#3635#3651#0" expanded="false" />
-                <element signature="e#5618#5619#0" expanded="false" />
-                <element signature="e#5646#5647#0" expanded="false" />
-                <element signature="e#8556#8557#0" expanded="false" />
-                <element signature="e#8584#8585#0" expanded="false" />
-                <element signature="e#13335#13336#0" expanded="false" />
-                <element signature="e#13429#13430#0" expanded="false" />
-                <element signature="e#14059#14060#0" expanded="false" />
-                <element signature="e#14088#14089#0" expanded="false" />
-                <element signature="e#14656#14657#0" expanded="false" />
-                <element signature="e#14685#14686#0" expanded="false" />
-                <element signature="e#15483#15484#0" expanded="false" />
-                <element signature="e#15524#15525#0" expanded="false" />
-                <element signature="e#16208#16209#0" expanded="false" />
-                <element signature="e#16249#16250#0" expanded="false" />
-                <element signature="e#17086#17087#0" expanded="false" />
-                <element signature="e#17115#17116#0" expanded="false" />
-                <element signature="e#17147#17148#0" expanded="false" />
-                <element signature="e#17174#17175#0" expanded="false" />
-                <element signature="e#17424#17425#0" expanded="false" />
-                <element signature="e#17455#17456#0" expanded="false" />
-                <element signature="e#17844#17845#0" expanded="false" />
-                <element signature="e#17875#17876#0" expanded="false" />
-                <element signature="e#18731#18732#0" expanded="false" />
-                <element signature="e#18762#18763#0" expanded="false" />
-                <element signature="e#20241#20242#0" expanded="false" />
-                <element signature="e#20272#20273#0" expanded="false" />
-                <element signature="e#22343#22344#0" expanded="false" />
-                <element signature="e#22382#22383#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#513#514#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
+                <element signature="e#712#941#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -569,8 +501,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/namespace/CacheConfig.java" />
-        <option value="$PROJECT_DIR$/basic-cache/src/test/resources/cache-test1.xml" />
         <option value="$PROJECT_DIR$/basic-cache/src/test/resources/cache-test3.xml" />
         <option value="$PROJECT_DIR$/basic-test/src/main/resources/application.xml" />
         <option value="$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/namespace/CacheNameSpaceHandler.java" />
@@ -620,6 +550,8 @@
         <option value="$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/thread/CacheHitLogThread.java" />
         <option value="$PROJECT_DIR$/basic-cache/src/test/resources/cache-namespace.xml" />
         <option value="$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java" />
+        <option value="$PROJECT_DIR$/basic-sqlite/src/main/resources/spring-mybatis.xml" />
+        <option value="$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/App.java" />
       </list>
     </option>
   </component>
@@ -711,9 +643,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -742,16 +671,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="basic-cache" />
+              <option name="myItemId" value="basic-sqlite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic-sqlite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic-sqlite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic-sqlite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sqlite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cim-web-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/basic-sqlite" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -763,7 +765,7 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -1215,8 +1217,26 @@
     </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
     <configuration>C:\Users\xinwei.cheng\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\workspace\chengxinweiProject\basic\basic-sqlite" />
+          <option name="myCopyRoot" value="D:\workspace\chengxinweiProject\basic\basic-sqlite" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\workspace\chengxinweiProject\basic\basic-sqlite" />
+          <option name="myCopyRoot" value="D:\workspace\chengxinweiProject\basic\basic-sqlite" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -1247,18 +1267,6 @@
       <workItem from="1439341232218" duration="30458000" />
       <workItem from="1439427143197" duration="25792000" />
       <workItem from="1439514214932" duration="1378000" />
-    </task>
-    <task id="LOCAL-00004" summary="测试配置文件修改">
-      <created>1437706313265</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1437706313265</updated>
-    </task>
-    <task id="LOCAL-00005" summary="删除target">
-      <created>1437706350814</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1437706350814</updated>
     </task>
     <task id="LOCAL-00006" summary="删除不许需要的代码">
       <created>1437706365984</created>
@@ -1542,11 +1550,23 @@
       <option name="project" value="LOCAL" />
       <updated>1439515545938</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="mongo 开发">
+      <created>1440401137476</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1440401137476</updated>
+    </task>
+    <task id="LOCAL-00054" summary="sqlite 开发">
+      <created>1440401275447</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1440401275447</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284951000" />
+    <option name="totallyTimeSpent" value="285573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1562,29 +1582,54 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28874388" sideWeight="0.49092284" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44535074" sideWeight="0.49092284" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.406199" sideWeight="0.21255673" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.290469" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4812398" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37443268" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5089723" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41272432" sideWeight="0.7874433" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31810766" sideWeight="0.68683815" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21696573" sideWeight="0.68683815" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25718608" sideWeight="0.80759495" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27231467" sideWeight="0.7519789" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.49134198" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.19240506" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2934947" sideWeight="0.24802111" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36378467" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5089723" sideWeight="0.7874433" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1785174" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34747145" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.041603632" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49755302" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28874388" sideWeight="0.49092284" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.406199" sideWeight="0.21255673" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37443268" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35073408" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16313213" sideWeight="0.7874433" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34094617" sideWeight="0.68683815" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24659607" sideWeight="0.7519789" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.041603632" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49755302" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.49134198" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2934947" sideWeight="0.24802111" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36378467" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1599,8 +1644,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="添加文档说明" />
-    <MESSAGE value="添加classloader 的判断" />
     <MESSAGE value="basic-test-exemple 提交" />
     <MESSAGE value="文档提交&#10;删除不需要的类" />
     <MESSAGE value="文档提交&#10;" />
@@ -1624,7 +1667,9 @@
     <MESSAGE value="新增hitlog 和 hitlogtime 用于记录缓存命中率" />
     <MESSAGE value="日志新增方法 用于判断是否新增头" />
     <MESSAGE value="修改bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
+    <MESSAGE value="mongo 开发" />
+    <MESSAGE value="sqlite 开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="sqlite 开发" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1675,477 +1720,453 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/math/BigDecimal.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.6.5.RELEASE/spring-data-commons-1.6.5.RELEASE.jar!/org/springframework/data/util/ClassTypeInformation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.607143">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.6.5.RELEASE/spring-data-commons-1.6.5.RELEASE.jar!/org/springframework/data/mapping/context/AbstractMappingContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.428572">
+          <caret line="87" column="63" selection-start-line="87" selection-start-column="63" selection-end-line="87" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.6.5.RELEASE/spring-data-commons-1.6.5.RELEASE.jar!/org/springframework/data/mapping/context/MappingContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.464286">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/dao/MybatisCommonDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2377" column="22" selection-start-line="2377" selection-start-column="22" selection-end-line="2377" selection-end-column="22" />
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-core/src/main/java/com/howbuy/cc/basic/logger/CCLogger.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/WriteConcernResolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7331461">
-          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
-          <folding>
-            <element signature="e#458#485#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/log.log">
+    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/DubboMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/HitCount.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.1.4.RELEASE/spring-context-3.1.4.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <caret line="1357" column="22" selection-start-line="1357" selection-start-column="22" selection-end-line="1357" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/aop/CacheHitAdvisor.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/config/BeanPostProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="e#543#807#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-          </folding>
+          <caret line="77" column="11" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/lang/Integer.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/FactoryBeanRegistrySupport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="581" column="34" selection-start-line="581" selection-start-column="34" selection-end-line="581" selection-end-column="34" />
-          <folding />
+          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/resources/basic/spring/cache/spring-cache.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/AbstractPropertyAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+          <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/resources/basic/spring/cache/spring-redis.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/TypeConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/XMLSchema.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2005" column="2" selection-start-line="2005" selection-start-column="2" selection-end-line="2005" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/resources/META-INF/basic.cache.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/rat.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/test/java/com/howbuy/cc/basic/cache/EhCacheTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/cache/common/RedisCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/test/java/com/howbuy/cc/basic/cache/service/RedisDbService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/resources/basic/spring/cache/spring-ehcache.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.892858">
-          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE.jar!/org/springframework/aop/framework/Cglib2AopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.107143">
-          <caret line="287" column="53" selection-start-line="287" selection-start-column="53" selection-end-line="287" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE.jar!/org/springframework/aop/framework/AdvisorChainFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.25">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE.jar!/org/springframework/aop/framework/AdvisedSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.107143">
-          <caret line="366" column="0" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE.jar!/org/springframework/aop/framework/DefaultAdvisorChainFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.107143">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="181" column="21" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/AdvisorChainFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/DefaultAdvisorChainFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="475" column="9" selection-start-line="475" selection-start-column="9" selection-end-line="475" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/BeanDefinitionValueResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1365" column="17" selection-start-line="1365" selection-start-column="17" selection-end-line="1365" selection-end-column="17" />
+          <caret line="425" column="21" selection-start-line="425" selection-start-column="21" selection-end-line="425" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <caret line="192" column="17" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/InitializingBean.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.1.4.RELEASE/spring-beans-3.1.4.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#14859#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.1.4.RELEASE/spring-context-3.1.4.RELEASE-sources.jar!/org/springframework/cache/interceptor/CacheAspectSupport.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/intercept/Invocation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.25">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/mongoTime/MongoTimeAdvisor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="20" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="20" />
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#585#1012#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/aop/Advice.class">
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF/mongo.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4285715">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/intercept/Interceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.642857">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/intercept/MethodInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.642857">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.1.4.RELEASE/spring-context-3.1.4.RELEASE-sources.jar!/org/springframework/cache/interceptor/CacheInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.1.4.RELEASE/spring-core-3.1.4.RELEASE-sources.jar!/org/springframework/core/OrderComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="460" column="13" selection-start-line="460" selection-start-column="13" selection-end-line="460" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/aop/CacheHitOperationSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/namespace/CacheNameSpaceHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.6461988">
+          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/test/java/com/howbuy/cc/basic/cache/CacheNameSpaceTest.java">
+    <entry file="file://$PROJECT_DIR$/basic-mongo/log/mongo.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38387096">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace/MongoOperationSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/threadlocal/CacheHitThreadLocal.java">
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace/MongoBeanDefinitionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/mongoTime/MongoTimeInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          <folding>
+            <element signature="e#1850#1851#0" expanded="false" />
+            <element signature="e#1892#1893#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/2.10.1/mongo-java-driver-2.10.1-sources.jar!/com/mongodb/DBCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/WriteResultChecking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/mapping/Document.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.6.5.RELEASE/spring-data-commons-1.6.5.RELEASE.jar!/org/springframework/data/annotation/Id.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/model/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14049587">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.6.5.RELEASE/spring-data-commons-1.6.5.RELEASE.jar!/org/springframework/data/domain/Sort.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/callback/MongoCallBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="816" column="16" selection-start-line="816" selection-start-column="16" selection-end-line="816" selection-end-column="16" />
+          <folding>
+            <element signature="e#33440#34043#0" expanded="true" />
+            <element signature="e#34042#34043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/test/resources/spring-mongo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/MongoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+          <folding>
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
+            <element signature="e#2009#2010#0" expanded="true" />
+            <element signature="e#2108#2109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-cache/src/test/java/com/howbuy/cc/basic/cache/RedisCacheTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/dao/MongoCommonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#2129#2130#0" expanded="true" />
+            <element signature="e#2187#2188#0" expanded="true" />
+            <element signature="e#2236#2237#0" expanded="true" />
+            <element signature="e#2291#2292#0" expanded="true" />
+            <element signature="e#2335#2336#0" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+            <element signature="e#2428#2429#0" expanded="true" />
+            <element signature="e#2485#2486#0" expanded="true" />
+            <element signature="e#2519#2520#0" expanded="true" />
+            <element signature="e#2556#2557#0" expanded="true" />
+            <element signature="e#2603#2604#0" expanded="true" />
+            <element signature="e#2660#2661#0" expanded="true" />
+            <element signature="e#3132#3133#0" expanded="true" />
+            <element signature="e#3202#3203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1.jar!/org/sqlite/JDBC.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1538461">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/global.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding>
+            <marker date="1440400568246" expanded="true" signature="302:338" placeholder="select * fro..aaaa..." />
+            <marker date="1440400568246" expanded="true" signature="387:475" placeholder="insert into ..." />
+            <marker date="1440400568246" expanded="true" signature="524:584" placeholder="create table..user..." />
+            <marker date="1440400568246" expanded="true" signature="651:669" placeholder="select * fro..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#712#941#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-mybatis/src/main/java/com/howbuy/cc/basic/mybatis/namespace/MybatisOperationSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/resources/spring-mybatis.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-sqlite/src/main/java/com/howbuy/cc/basic/sqlite/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.625">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#6351#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#3724#3725#0" expanded="false" />
-            <element signature="e#3784#3785#0" expanded="false" />
-            <element signature="e#4753#4754#0" expanded="false" />
-            <element signature="e#4771#4772#0" expanded="false" />
-            <element signature="e#5809#5810#0" expanded="false" />
-            <element signature="e#5827#5828#0" expanded="false" />
-            <element signature="e#6165#6166#0" expanded="false" />
-            <element signature="e#6192#6193#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/AdvisedSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="481" column="8" selection-start-line="481" selection-start-column="8" selection-end-line="481" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#18248#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#3356#3363#0" expanded="false" />
-            <element signature="e#3541#3550#0" expanded="false" />
-            <element signature="e#3795#3796#0" expanded="false" />
-            <element signature="e#3819#3820#0" expanded="false" />
-            <element signature="e#4104#4105#0" expanded="false" />
-            <element signature="e#4185#4186#0" expanded="false" />
-            <element signature="e#4417#4418#0" expanded="false" />
-            <element signature="e#4474#4475#0" expanded="false" />
-            <element signature="e#4661#4662#0" expanded="false" />
-            <element signature="e#4692#4693#0" expanded="false" />
-            <element signature="e#5355#5356#0" expanded="false" />
-            <element signature="e#5421#5422#0" expanded="false" />
-            <element signature="e#5458#5459#0" expanded="false" />
-            <element signature="e#5506#5507#0" expanded="false" />
-            <element signature="e#5558#5559#0" expanded="false" />
-            <element signature="e#5595#5596#0" expanded="false" />
-            <element signature="e#5630#5631#0" expanded="false" />
-            <element signature="e#5660#5661#0" expanded="false" />
-            <element signature="e#6117#6118#0" expanded="false" />
-            <element signature="e#6155#6156#0" expanded="false" />
-            <element signature="e#7157#7158#0" expanded="false" />
-            <element signature="e#7199#7200#0" expanded="false" />
-            <element signature="e#7241#7242#0" expanded="false" />
-            <element signature="e#7313#7314#0" expanded="false" />
-            <element signature="e#7537#7538#0" expanded="false" />
-            <element signature="e#7568#7569#0" expanded="false" />
-            <element signature="e#9581#9582#0" expanded="false" />
-            <element signature="e#9624#9625#0" expanded="false" />
-            <element signature="e#9791#9792#0" expanded="false" />
-            <element signature="e#9834#9835#0" expanded="false" />
-            <element signature="e#11743#11744#0" expanded="false" />
-            <element signature="e#11770#11771#0" expanded="false" />
-            <element signature="e#14787#14788#0" expanded="false" />
-            <element signature="e#14818#14819#0" expanded="false" />
-            <element signature="e#17075#17076#0" expanded="false" />
-            <element signature="e#17099#17100#0" expanded="false" />
-            <element signature="e#18211#18212#0" expanded="false" />
-            <element signature="e#18240#18241#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.1.4.RELEASE/spring-aop-3.1.4.RELEASE-sources.jar!/org/springframework/aop/framework/Cglib2AopProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="608" column="0" selection-start-line="608" selection-start-column="0" selection-end-line="608" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32277#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#3635#3651#0" expanded="false" />
-            <element signature="e#5618#5619#0" expanded="false" />
-            <element signature="e#5646#5647#0" expanded="false" />
-            <element signature="e#8556#8557#0" expanded="false" />
-            <element signature="e#8584#8585#0" expanded="false" />
-            <element signature="e#13335#13336#0" expanded="false" />
-            <element signature="e#13429#13430#0" expanded="false" />
-            <element signature="e#14059#14060#0" expanded="false" />
-            <element signature="e#14088#14089#0" expanded="false" />
-            <element signature="e#14656#14657#0" expanded="false" />
-            <element signature="e#14685#14686#0" expanded="false" />
-            <element signature="e#15483#15484#0" expanded="false" />
-            <element signature="e#15524#15525#0" expanded="false" />
-            <element signature="e#16208#16209#0" expanded="false" />
-            <element signature="e#16249#16250#0" expanded="false" />
-            <element signature="e#17086#17087#0" expanded="false" />
-            <element signature="e#17115#17116#0" expanded="false" />
-            <element signature="e#17147#17148#0" expanded="false" />
-            <element signature="e#17174#17175#0" expanded="false" />
-            <element signature="e#17424#17425#0" expanded="false" />
-            <element signature="e#17455#17456#0" expanded="false" />
-            <element signature="e#17844#17845#0" expanded="false" />
-            <element signature="e#17875#17876#0" expanded="false" />
-            <element signature="e#18731#18732#0" expanded="false" />
-            <element signature="e#18762#18763#0" expanded="false" />
-            <element signature="e#20241#20242#0" expanded="false" />
-            <element signature="e#20272#20273#0" expanded="false" />
-            <element signature="e#22343#22344#0" expanded="false" />
-            <element signature="e#22382#22383#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/aop/CacheHitInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/namespace/CacheBeanDefinitionParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/main/java/com/howbuy/cc/basic/cache/hit/thread/CacheHitLogThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-cache/src/test/resources/cache-namespace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboConsumerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/dubbo/DubboProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-test/src/main/java/com/howbuy/cc/basic/test/mybatis/dao/AaaaDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78546715">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-          <folding>
-            <element signature="e#1468#1469#0" expanded="true" />
-            <element signature="e#1495#1496#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2171,7 +2192,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3" />
               </list>
             </option>
           </splitter-proportions>
@@ -2202,12 +2223,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>basic-mq</last-edited>
+          <last-edited>Spring|basic-sqlite</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.3" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -2231,7 +2251,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,17 +1,24 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:basic-cache="http://com.howbuy.cc.basic/schema/basic-cache"
+       xmlns:basic-core="http://com.howbuy.cc.basic/schema/basic-core"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
        http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+       http://www.springframework.org/schema/context/spring-context.xsd   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://com.howbuy.cc.basic/schema/basic-cache http://com.howbuy.cc.basic/schema/basic-cache.xsd http://com.howbuy.cc.basic/schema/basic-core http://com.howbuy.cc.basic/schema/basic-core.xsd">
 
     <context:component-scan base-package="com.howbuy"/>
 
-    <import resource="classpath:basic/spring/base-spring.xml"></import>
-    <import resource="classpath:dubbo/test-spring-dubbo-provider.xml"></import>
+    <aop:aspectj-autoproxy/>
+
+    <basic-core:core-driven>
+        <basic-core:dubboLog accessLog="log/access.log" requestLog="log/request.log" />
+    </basic-core:core-driven>
+    <basic-cache:cache-driven/>
+
+    <import resource="classpath:dubbo/application.xml"/>
     <import resource="classpath:mybatis/spring-mybatis.xml"></import>
-    <import resource="classpath:basic/spring/cache/spring-cache.xml"></import>
 
 </beans>

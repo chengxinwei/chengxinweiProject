@@ -2,8 +2,10 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       xmlns:basic-mybatis="http://com.howbuy.cc.basic/schema/basic-mybatis"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://com.howbuy.cc.basic/schema/basic-mybatis http://com.howbuy.cc.basic/schema/basic-mybatis.xsd">
 
+    <basic-mybatis:mybatis-driven sqlTimeLog="10"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driver}"/>
@@ -28,14 +30,7 @@
                 <value>classpath:mapper/*Mapper.xml</value>
             </list>
         </property>
-        <property name="plugins">
-            <list>
-                <ref bean="sqlLoggerInterceptor"></ref>
-            </list>
-        </property>
     </bean>
-
-    <bean id="sqlLoggerInterceptor" class="com.howbuy.cc.basic.mybatis.interceptor.SqlLoggerInterceptor"></bean>
 
     <bean class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory" />

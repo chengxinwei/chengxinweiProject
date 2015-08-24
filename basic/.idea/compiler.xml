@@ -22,49 +22,43 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="basic-mongo" />
+        <module name="basic-sqlite" />
       </profile>
       <profile default="false" name="Annotation profile for basic-core" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="basic-core" />
       </profile>
       <profile default="false" name="Annotation profile for basic-cache" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="basic-cache" />
       </profile>
       <profile default="false" name="Annotation profile for basic-mybatis" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="basic-mybatis" />
       </profile>
       <profile default="false" name="Annotation profile for basic-test" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="basic-test" />
       </profile>
       <profile default="false" name="Annotation profile for basic-test-interface" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="basic-test-interface" />
       </profile>
       <profile default="false" name="Annotation profile for basic-mq" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="basic-mq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -74,6 +68,7 @@
       <module name="basic-mongo" target="1.5" />
       <module name="basic-mq" target="1.7" />
       <module name="basic-mybatis" target="1.7" />
+      <module name="basic-sqlite" target="1.5" />
       <module name="basic-test" target="1.7" />
       <module name="basic-test-interface" target="1.7" />
     </bytecodeTargetLevel>

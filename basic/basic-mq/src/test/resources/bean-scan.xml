@@ -1,0 +1,10 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic-mq="http://com.howbuy.cc.basic/schema/basic-mq"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://com.howbuy.cc.basic/schema/basic-mq http://com.howbuy.cc.basic/schema/basic-mq.xsd">
+
+
+    <basic-mq:mq-driven brokerUrl="tcp://192.168.187.129:61616" afterTransaction="true"
+                        basePackage="com.howbuy.activemq.*"  />
+
+</beans>

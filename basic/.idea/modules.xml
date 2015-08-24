@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/basic-mongo/basic-mongo.iml" filepath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic-mq/basic-mq.iml" filepath="$PROJECT_DIR$/basic-mq/basic-mq.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" filepath="$PROJECT_DIR$/basic-mybatis/basic-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-sqlite/basic-sqlite.iml" filepath="$PROJECT_DIR$/basic-sqlite/basic-sqlite.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic-test/basic-test.iml" filepath="$PROJECT_DIR$/basic-test/basic-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic-test-interface/basic-test-interface.iml" filepath="$PROJECT_DIR$/basic-test-interface/basic-test-interface.iml" />
     </modules>

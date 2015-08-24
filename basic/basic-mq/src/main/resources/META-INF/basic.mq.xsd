@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://com.howbuy.cc.basic/schema/basic-mq"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://com.howbuy.cc.basic/schema/basic-mq">
+
+    <xsd:element name="mq-driven" type="mqType">
+    </xsd:element>
+
+    <xsd:complexType name="mqType">
+        <xsd:attribute name="brokerUrl" type="xsd:string" use="required"/>
+
+        <xsd:attribute name="afterTransaction" type="xsd:boolean" default="false" />
+
+        <xsd:attribute name="basePackage" type="xsd:string" use="required" />
+
+
+    </xsd:complexType>
+
+</xsd:schema>

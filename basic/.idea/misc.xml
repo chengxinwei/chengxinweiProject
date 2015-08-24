@@ -6,13 +6,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/basic-mq/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-core/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-test/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-cache/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-mongo/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-test-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-sqlite/pom.xml" />
       </list>
     </option>
   </component>
@@ -27,4 +21,24 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK" />
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$/basic-sqlite">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="svn://192.168.220.100/usr/local/subversion-1.4.4/repos/CRM/branches" />
+                  <option value="svn://192.168.220.100/usr/local/subversion-1.4.4/repos/CRM/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="svn://192.168.220.100/usr/local/subversion-1.4.4/repos/CRM/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
 </project>
