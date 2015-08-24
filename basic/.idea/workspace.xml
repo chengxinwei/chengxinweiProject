@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="sqlite 开发">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/common" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/dao" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/model" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/mongoTime" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/common/BaseTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace/MongoBeanDefinitionParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace/MongoNameSpaceHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/namespace/MongoOperationSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/MongoTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/mongoTime/MongoTimeAdvisor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/mongoTime/MongoTimeInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/java/com/howbuy/cc/basic/mongo/dao/UserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources/global.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources/mongo.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF/mongo.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/test/resources/spring-mongo.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF/spring.handlers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic-mongo/src/main/resources/META-INF/spring.schemas" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/callback/MongoCallBack.java" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/callback/MongoCallBack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/dao/MongoCommonDao.java" afterPath="$PROJECT_DIR$/basic-mongo/src/main/java/com/howbuy/cc/basic/mongo/dao/MongoCommonDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" afterPath="$PROJECT_DIR$/basic-mongo/basic-mongo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic-mongo/pom.xml" afterPath="$PROJECT_DIR$/basic-mongo/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="5cf30035-f3c0-4558-a191-afbc3c0a7a5d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="7fa1a1d4-d0f7-4e35-84f8-bf6cc6ce66b2" name="Failed commit: Default (2)" comment="添加日志记录=" />
@@ -378,8 +347,8 @@
       <file leaf-file-name="MongoTemplate.java" pinned="false" current-in-tab="true">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45627376">
-              <caret line="518" column="0" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6346749">
+              <caret line="523" column="28" selection-start-line="523" selection-start-column="28" selection-end-line="523" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -1212,13 +1181,7 @@
       <workItem from="1439427143197" duration="25792000" />
       <workItem from="1439514214932" duration="1378000" />
       <workItem from="1440401858591" duration="1764000" />
-      <workItem from="1440403667151" duration="348000" />
-    </task>
-    <task id="LOCAL-00008" summary="添加日志记录，删除不需要得类">
-      <created>1438139593676</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1438139593676</updated>
+      <workItem from="1440403667151" duration="630000" />
     </task>
     <task id="LOCAL-00009" summary="完善basic-core">
       <created>1438140545454</created>
@@ -1508,11 +1471,17 @@
       <option name="project" value="LOCAL" />
       <updated>1440402666056</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="mongo 开发">
+      <created>1440404061618</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1440404061619</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287685000" />
+    <option name="totallyTimeSpent" value="287967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1533,7 +1502,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.406199" sideWeight="0.21255673" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37443268" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52365416" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42577487" sideWeight="0.48487142" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46818924" sideWeight="0.7874433" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21696573" sideWeight="0.68683815" order="5" side_tool="false" content_ui="tabs" />
@@ -1613,9 +1582,9 @@
     <MESSAGE value="新增hitlog 和 hitlogtime 用于记录缓存命中率" />
     <MESSAGE value="日志新增方法 用于判断是否新增头" />
     <MESSAGE value="修改bug" />
-    <MESSAGE value="mongo 开发" />
     <MESSAGE value="sqlite 开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="sqlite 开发" />
+    <MESSAGE value="mongo 开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="mongo 开发" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1807,6 +1776,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#585#1012#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1829,6 +1803,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1836,6 +1811,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1843,6 +1819,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="56" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          <folding>
+            <element signature="e#1850#1851#0" expanded="false" />
+            <element signature="e#1892#1893#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1910,6 +1890,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2075,8 +2056,8 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.3.5.RELEASE/spring-data-mongodb-1.3.5.RELEASE-sources.jar!/org/springframework/data/mongodb/core/MongoTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45627376">
-          <caret line="518" column="0" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6346749">
+          <caret line="523" column="28" selection-start-line="523" selection-start-column="28" selection-end-line="523" selection-end-column="28" />
           <folding />
         </state>
       </provider>
