@@ -1,26 +1,20 @@
 package com.howbuy.cc.basic.mybatis.interceptor;
 
-import com.howbuy.cc.basic.config.Configuration;
 import com.howbuy.cc.basic.logger.CCLogger;
-import com.howbuy.cc.basic.map.CCHashMap;
-import com.howbuy.cc.basic.mybatis.constant.MyBatisConstant;
+import com.howbuy.cc.basic.logger.CCLoggerUtil;
+import com.howbuy.cc.basic.mybatis.namespace.MybatisOperationSource;
 import org.apache.ibatis.executor.Executor;
-import org.apache.ibatis.executor.statement.PreparedStatementHandler;
-import org.apache.ibatis.executor.statement.RoutingStatementHandler;
-import org.apache.ibatis.executor.statement.StatementHandler;
-import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
 
-import java.lang.reflect.Field;
-import java.sql.Connection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -30,9 +24,11 @@ import java.util.Properties;
         @Signature(type = Executor.class, method = "update", args = { MappedStatement.class, Object.class }),
         @Signature(type = Executor.class, method = "query", args = { MappedStatement.class, Object.class,
                 RowBounds.class, ResultHandler.class }) })
-public class SqlLoggerInterceptor implements Interceptor {
+public class SqlLoggerInterceptor implements Interceptor , BeanFactoryAware {
 
-    CCLogger ccLogger = CCLogger.getLogger(this.getClass());
+    private CCLogger ccLogger = CCLogger.getLogger(this.getClass());
+    private MybatisOperationSource mybatisOperationSource;
+
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
@@ -41,7 +37,7 @@ public class SqlLoggerInterceptor implements Interceptor {
         Object obj = invocation.proceed();
         long useTime = System.currentTimeMillis() - date;
 
-        Integer logSqlTime = Configuration.getInt(MyBatisConstant.SQL_LOG_TIME);
+        Integer logSqlTime = mybatisOperationSource.getSqlTimeout();
         //如果没有配置长sql打印 或者超过了配置时间 打印长时间的sql
         if(logSqlTime == null || useTime > logSqlTime){
             MappedStatement mappedStatement = (MappedStatement) invocation.getArgs()[0];
@@ -66,7 +62,21 @@ public class SqlLoggerInterceptor implements Interceptor {
 
     @Override
     public void setProperties(Properties properties) {
-
     }
 
+    @Override
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        SqlSessionTemplate sqlSessionTemplate = beanFactory.getBean(SqlSessionTemplate.class);
+        sqlSessionTemplate.getConfiguration().addInterceptor(this);
+        CCLoggerUtil.clearAndAddFileLog(ccLogger , mybatisOperationSource.getSqlTimeLog());
+    }
+
+
+    public MybatisOperationSource getMybatisOperationSource() {
+        return mybatisOperationSource;
+    }
+
+    public void setMybatisOperationSource(MybatisOperationSource mybatisOperationSource) {
+        this.mybatisOperationSource = mybatisOperationSource;
+    }
 }
