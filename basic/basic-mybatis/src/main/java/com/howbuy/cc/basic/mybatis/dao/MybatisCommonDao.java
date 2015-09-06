@@ -218,7 +218,7 @@ public class MybatisCommonDao<T>{
      * 删除
      * @param id 删除的ID
      */
-    protected int deleteById(String sqlId , final Integer id){
+    protected int deleteById(String sqlId , final Serializable id){
         return execute(sqlId , new ExecuteCallBack<Integer>(){
             @Override
             public Integer execute(String fullSqlId, SqlSessionTemplate sqlSessionTemplate) {

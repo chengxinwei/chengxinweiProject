@@ -6,7 +6,7 @@
     <xsd:element name="mybatis-driven">
         <xsd:complexType>
             <xsd:attribute name="sqlTimeLog" use="required" type="xsd:string"></xsd:attribute>
-            <xsd:attribute name="sqlTimeout" type="xsd:int"></xsd:attribute>
+            <xsd:attribute name="sqlTimeout" type="xsd:string" default="0"></xsd:attribute>
         </xsd:complexType>
     </xsd:element>
 
