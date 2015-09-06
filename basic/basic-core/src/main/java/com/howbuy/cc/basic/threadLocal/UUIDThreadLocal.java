@@ -1,5 +1,7 @@
 package com.howbuy.cc.basic.threadLocal;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.UUID;
 
 /**
@@ -10,14 +12,17 @@ public class UUIDThreadLocal {
 
     private final static ThreadLocal<String> threadLocal = new ThreadLocal<>();
 
-    public static String get(){
-        String uuid = threadLocal.get();
-        if(uuid == null){
-            uuid = UUID.randomUUID().toString();
-            threadLocal.set(uuid);
-            return uuid.toString();
-        }
+    public static String create(){
+        String uuid = UUID.randomUUID().toString();
+        threadLocal.set(uuid);
         return uuid;
+}
+
+    public static String get(){
+        return StringUtils.defaultString(threadLocal.get() , "");
     }
 
+    public static void remove(){
+        threadLocal.remove();
+    }
 }

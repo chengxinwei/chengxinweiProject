@@ -1,3 +1,4 @@
 dubboAccessLoggerFilter=com.howbuy.cc.basic.filter.DubboAccessLoggerFilter
 dubboRequestLoggerFilter=com.howbuy.cc.basic.filter.DubboRequestLoggerFilter
 dubboCodeLoggerFilter=com.howbuy.cc.basic.filter.DubboCodeLoggerFilter
+dubboUUIDLoggerFilter=com.howbuy.cc.basic.filter.DubboUUIDLoggerFilter

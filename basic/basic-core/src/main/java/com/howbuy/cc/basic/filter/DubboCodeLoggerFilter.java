@@ -1,6 +1,5 @@
 package com.howbuy.cc.basic.filter;
 
-import com.alibaba.dubbo.common.extension.Activate;
 import com.alibaba.dubbo.rpc.*;
 import com.howbuy.cc.basic.threadLocal.CCLoggerThreadLocal;
 

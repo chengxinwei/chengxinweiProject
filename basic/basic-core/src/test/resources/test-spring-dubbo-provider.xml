@@ -22,7 +22,7 @@
     <!-- loadbalance  服务端的均衡策略 -->
     <dubbo:service application="basic-dubbo-test-provider" interface="com.howbuy.cc.basic.dubbo.DubboInterfaceTest"
                    ref="dubboProviderTest"
-                   filter="dubboAccessLoggerFilter,dubboCodeLoggerFilter"/>
+                   filter="dubboUUIDLoggerFilter,dubboAccessLoggerFilter,dubboCodeLoggerFilter"/>
 
     <!-- 本地bean实现类 -->
     <bean id="dubboProviderTest" class="com.howbuy.cc.basic.dubbo.DubboProviderTest" />

@@ -5,14 +5,10 @@
 
     <xsd:element name="core-driven">
         <xsd:complexType>
-            <!--<xsd:complexContent>-->
-                <!--<xsd:extension base="xsd:element">-->
-                    <xsd:sequence>
-                        <xsd:element ref="dubboLog" minOccurs="0" maxOccurs="1">
-                        </xsd:element>
-                    </xsd:sequence>
-                <!--</xsd:extension>-->
-            <!--</xsd:complexContent>-->
+            <xsd:sequence>
+                <xsd:element ref="dubboLog" minOccurs="0" maxOccurs="1">
+                </xsd:element>
+            </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
