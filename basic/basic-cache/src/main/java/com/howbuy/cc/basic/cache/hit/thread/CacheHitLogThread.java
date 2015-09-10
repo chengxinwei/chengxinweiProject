@@ -17,7 +17,7 @@ public class CacheHitLogThread extends Thread{
 
     private CacheHitOperationSource cacheHitOperationSource;
 
-    CCLogger ccLogger = CCLogger.getLogger(this.getClass() , false);
+    private CCLogger ccLogger = CCLogger.getLogger(this.getClass() , false);
 
     public void init(){
         initLogger(cacheHitOperationSource.getHitLogPath());

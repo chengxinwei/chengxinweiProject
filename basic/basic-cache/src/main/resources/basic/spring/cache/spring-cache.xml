@@ -6,26 +6,22 @@
             http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-3.1.xsd">
 
 
-    <cache:annotation-driven cache-manager="cacheManager"/>
+    <!--<cache:annotation-driven cache-manager="cacheManager"/>-->
 
-    <!-- spring自己的换管理器，这里定义了两个缓存位置名称 ，既注解中的value -->
-    <bean id="cacheManager" class="com.howbuy.cc.basic.cache.cacheManager.CacheManager">
-        <property name="cacheList">
-            <list>
-                <bean class="com.howbuy.cc.basic.cache.cache.redis.RedisCache1H"/>
-                <bean class="com.howbuy.cc.basic.cache.cache.redis.RedisCache1D"/>
-                <bean class="com.howbuy.cc.basic.cache.cache.redis.RedisCache5M"/>
-                <bean class="com.howbuy.cc.basic.cache.cache.redis.RedisCache5S"/>
-                <bean class="com.howbuy.cc.basic.cache.cache.ehcache.EhCache1D"/>
-                <bean class="com.howbuy.cc.basic.cache.cache.ehcache.EhCache1H"/>
-                <bean class="com.howbuy.cc.basic.cache.cache.ehcache.EhCache5M"/>
-                <bean class="com.howbuy.cc.basic.cache.cache.ehcache.EhCache5S"/>
-
-            </list>
-        </property>
-    </bean>
-
-    <import resource="spring-redis.xml"></import>
-    <import resource="spring-ehcache.xml"></import>
+    <!--&lt;!&ndash; spring自己的换管理器，这里定义了两个缓存位置名称 ，既注解中的value &ndash;&gt;-->
+    <!--<bean id="cacheManager" class="com.howbuy.cc.basic.cache.cacheManager.CacheManager">-->
+        <!--<property name="cacheList">-->
+            <!--<list>-->
+                <!--<bean class="com.howbuy.cc.basic.cache.cache.redis.RedisCache1H"/>-->
+                <!--<bean class="com.howbuy.cc.basic.cache.cache.redis.RedisCache1D"/>-->
+                <!--<bean class="com.howbuy.cc.basic.cache.cache.redis.RedisCache5M"/>-->
+                <!--<bean class="com.howbuy.cc.basic.cache.cache.redis.RedisCache5S"/>-->
+                <!--<bean class="com.howbuy.cc.basic.cache.cache.ehcache.EhCache1D"/>-->
+                <!--<bean class="com.howbuy.cc.basic.cache.cache.ehcache.EhCache1H"/>-->
+                <!--<bean class="com.howbuy.cc.basic.cache.cache.ehcache.EhCache5M"/>-->
+                <!--<bean class="com.howbuy.cc.basic.cache.cache.ehcache.EhCache5S"/>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
 </beans>

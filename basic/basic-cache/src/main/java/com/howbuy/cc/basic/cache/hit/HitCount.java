@@ -14,19 +14,19 @@ public final class HitCount {
     public final static Map<String,AtomicInteger> missCount = new ConcurrentHashMap<>();
 
 
-    public static void incrHit(String classMethodName){
-        if(hitCount.get(classMethodName) == null){
-            hitCount.put(classMethodName , new AtomicInteger(1));
+    public static void incrHit(String key){
+        if(hitCount.get(key) == null){
+            hitCount.put(key, new AtomicInteger(1));
         }else{
-            hitCount.get(classMethodName).incrementAndGet();
+            hitCount.get(key).incrementAndGet();
         }
     }
 
-    public static void incrMiss(String classMethodName){
-        if(missCount.get(classMethodName) == null){
-            missCount.put(classMethodName , new AtomicInteger(1));
+    public static void incrMiss(String key){
+        if(missCount.get(key) == null){
+            missCount.put(key, new AtomicInteger(1));
         }else{
-            missCount.get(classMethodName).incrementAndGet();
+            missCount.get(key).incrementAndGet();
         }
     }
 

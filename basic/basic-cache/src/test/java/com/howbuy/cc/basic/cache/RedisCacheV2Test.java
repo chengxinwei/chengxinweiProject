@@ -3,7 +3,7 @@ package com.howbuy.cc.basic.cache;
 import com.howbuy.cc.basic.cache.client.RedisClient;
 import com.howbuy.cc.basic.cache.common.BaseTest;
 import com.howbuy.cc.basic.cache.model.User;
-import com.howbuy.cc.basic.cache.service.RedisService;
+import com.howbuy.cc.basic.cache.service.RedisV2Service;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * Created by xinwei.cheng on 2015/7/6.
  */
-public class RedisCacheTest extends BaseTest {
+public class RedisCacheV2Test extends BaseTest {
 
     @Autowired
-    private RedisService redisService;
+    private RedisV2Service redisService;
     @Autowired
     private RedisClient redisClient;
 
@@ -28,13 +28,14 @@ public class RedisCacheTest extends BaseTest {
 
     @Test
     public void redisTimeoutTest(){
-        redisService.getUser5Sec(1);
+        redisService.getUser1Sec(1);
         try {
-            Thread.sleep(5100);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
         Assert.assertNull(redisClient.get("redis.test", 1));
     }
+
 
     @Test
     public void redisClearAfterTest(){
@@ -42,6 +43,15 @@ public class RedisCacheTest extends BaseTest {
         User user = redisService.clearAfterUser(1);
         Assert.assertNull(redisClient.get("redis.test", 1));
         Assert.assertNotNull(user);
+    }
+
+
+    @Test
+    public void redisClearBeforeTest(){
+        redisService.getUser(1);
+        User user = redisService.clearBeforeUser(1);
+        Assert.assertNull(redisClient.get("redis.test", 1));
+        Assert.assertNull(user);
     }
 
 

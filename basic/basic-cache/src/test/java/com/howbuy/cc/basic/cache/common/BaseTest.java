@@ -1,4 +1,4 @@
-package com.howbuy.cc.basic.cache;
+package com.howbuy.cc.basic.cache.common;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

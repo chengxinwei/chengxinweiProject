@@ -10,11 +10,14 @@
         http://com.howbuy.cc.basic/schema/basic-cache
         http://com.howbuy.cc.basic/schema/basic-cache.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.howbuy.cc.basic"/>
+    <context:component-scan base-package="com.howbuy.cc.basic.cache"/>
 
     <basic-core:core-driven/>
 
-    <basic-cache:cache-driven hitLog="d:/rat.log" hitLogTime="1000" />
+    <basic-cache:cache-driven hitLog="${cache.rateLog}" hitLogTime="${cache.logTime}" >
+        <basic-cache:redis sentinels="${redis.sentinel.path}" serverName="${redis.sentinel.serverName}" />
+        <basic-cache:ehcache maxElementsInMemory="${ehcache.maxElementCount}"/>
+    </basic-cache:cache-driven>
 
 
 </beans>

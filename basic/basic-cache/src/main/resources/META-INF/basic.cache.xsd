@@ -3,15 +3,34 @@
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://com.howbuy.cc.basic/schema/basic-cache">
 
-    <xsd:element name="cache-driven" type="cacheType">
+    <xsd:element name="cache-driven">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="redis" minOccurs="0" maxOccurs="1"></xsd:element>
+                <xsd:element ref="ehcache" minOccurs="0" maxOccurs="1"></xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="hitLog" type="xsd:string"/>
+            <xsd:attribute name="hitLogTime" type="xsd:string"/>
+        </xsd:complexType>
     </xsd:element>
 
-    <xsd:complexType name="cacheType">
-        <xsd:attribute name="hitLog" type="xsd:string">
-        </xsd:attribute>
+    <xsd:element name="redis">
+        <xsd:complexType>
+            <xsd:attribute name="sentinels" type="xsd:string" use="required"/>
+            <xsd:attribute name="serverName" type="xsd:string" use="required"/>
+            <xsd:attribute name="maxIdle" type="xsd:string"  default="10"/>
+            <xsd:attribute name="maxTotal" type="xsd:string" default="100"/>
+            <xsd:attribute name="minIdle" type="xsd:string" default="5"/>
+            <xsd:attribute name="keyLimit" type="xsd:string" default="128"/>
+            <xsd:attribute name="valueLimit" type="xsd:string" default="1048576"/>
+            <xsd:attribute name="dbNum" type="xsd:string" default="1"/>
+        </xsd:complexType>
+    </xsd:element>
 
-        <xsd:attribute name="hitLogTime" type="xsd:int">
-        </xsd:attribute>
-    </xsd:complexType>
+    <xsd:element name="ehcache">
+        <xsd:complexType>
+            <xsd:attribute name="maxElementsInMemory" type="xsd:string" default="1000"/>
+        </xsd:complexType>
+    </xsd:element>
 
 </xsd:schema>
