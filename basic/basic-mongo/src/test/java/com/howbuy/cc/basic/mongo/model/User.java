@@ -1,6 +1,7 @@
 package com.howbuy.cc.basic.mongo.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
@@ -15,17 +16,18 @@ public class User {
     private Integer userCode;
     private String userName;
     private String type;
-    private List<User> userList = new ArrayList<>();
+    private Integer age;
+    @Version
+    private Integer version;
 
     public User() {
-        userList.add(this);
     }
 
-
-    public User(Integer userCode, String userName, String type) {
+    public User(Integer userCode, String userName, String type, Integer age) {
         this.userCode = userCode;
         this.userName = userName;
         this.type = type;
+        this.age = age;
     }
 
     public Integer getUserCode() {
@@ -52,11 +54,19 @@ public class User {
         this.type = type;
     }
 
-    public List<User> getUserList() {
-        return userList;
+    public Integer getVersion() {
+        return version;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

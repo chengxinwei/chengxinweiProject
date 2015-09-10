@@ -13,11 +13,10 @@
 
     <context:component-scan base-package="com.howbuy.cc.basic"/>
 
-    <basic-mongo:mongo-driven mongo="mongo" databaseName="testDatabase" mongoTimeLog="log/mongo.log" mongoTimeout="100" />
+    <basic-mongo:mongo-driven mongo="mongo" databaseName="testDatabase" mongoLog="log/mongo.log" mongoLogTimeout="${mongo.mongoLogTimeout}" />
 
     <mongo:mongo replica-set="${mongo.ip}" id="mongo">
         <mongo:options connections-per-host="${mongo.connectionCount}" slave-ok="${mongo.slaveOk}" ></mongo:options>
     </mongo:mongo>
-
 
 </beans>

@@ -5,22 +5,22 @@ package com.howbuy.cc.basic.mongo.namespace;
  */
 public class MongoOperationSource {
 
-    private String mongoTimeLog;
-    private int mongoTimeout;
+    private String mongoLog;
+    private int mongoLogTimeout;
 
-    public String getMongoTimeLog() {
-        return mongoTimeLog;
+    public String getMongoLog() {
+        return mongoLog;
     }
 
-    public void setMongoTimeLog(String mongoTimeLog) {
-        this.mongoTimeLog = mongoTimeLog;
+    public void setMongoLog(String mongoLog) {
+        this.mongoLog = mongoLog;
     }
 
-    public int getMongoTimeout() {
-        return mongoTimeout;
+    public int getMongoLogTimeout() {
+        return mongoLogTimeout;
     }
 
-    public void setMongoTimeout(int mongoTimeout) {
-        this.mongoTimeout = mongoTimeout;
+    public void setMongoLogTimeout(int mongoLogTimeout) {
+        this.mongoLogTimeout = mongoLogTimeout;
     }
 }

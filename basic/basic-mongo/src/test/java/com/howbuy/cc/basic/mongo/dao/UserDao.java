@@ -18,10 +18,10 @@ public class UserDao extends MongoCommonDao<User>{
             @Override
             public Void doCallBack(MongoTemplate mongoTemplate, Class<?> clazz) {
                 mongoTemplate.count(new Query(Criteria.where("userCode").is(41)) , clazz);
-//                try {
-//                    Thread.sleep(500);
-//                } catch (InterruptedException e) {
-//                }
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                }
                 return null;
             }
         });

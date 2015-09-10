@@ -7,9 +7,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.data.mongodb.core.query.Query;
 
 import java.io.Serializable;
@@ -29,7 +27,7 @@ public class MongoTimeInterceptor implements MethodInterceptor, Serializable , I
         long start = System.currentTimeMillis();
         Object result = invocation.proceed();
         long time = System.currentTimeMillis() - start;
-        if(time > mongoOperationSoure.getMongoTimeout()){
+        if(time > mongoOperationSoure.getMongoLogTimeout()){
             int infoLengthOffset =  2;
             String[] infoAry = new String[invocation.getArguments().length + infoLengthOffset];
 
@@ -60,6 +58,6 @@ public class MongoTimeInterceptor implements MethodInterceptor, Serializable , I
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        CCLoggerUtil.clearAndAddFileLog(ccLogger , mongoOperationSoure.getMongoTimeLog());
+        CCLoggerUtil.clearAndAddFileLog(ccLogger , mongoOperationSoure.getMongoLog());
     }
 }

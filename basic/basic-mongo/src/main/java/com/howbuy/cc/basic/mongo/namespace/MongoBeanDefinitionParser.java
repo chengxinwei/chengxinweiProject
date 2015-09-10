@@ -33,12 +33,12 @@ public class MongoBeanDefinitionParser implements BeanDefinitionParser {
         String username = element.getAttribute("username");
         String password = element.getAttribute("password");
 
-        String mongoTimeLog = element.getAttribute("mongoTimeLog");
-        String mongoTimeout = element.getAttribute("mongoTimeout");
+        String mongoLog = element.getAttribute("mongoLog");
+        String mongoLogTimeout = element.getAttribute("mongoLogTimeout");
 
         RootBeanDefinition mongoSourceDefinition = new RootBeanDefinition(MongoOperationSource.class);
-        mongoSourceDefinition.getPropertyValues().add("mongoTimeLog" , mongoTimeLog);
-        mongoSourceDefinition.getPropertyValues().add("mongoTimeout" , mongoTimeout);
+        mongoSourceDefinition.getPropertyValues().add("mongoLog" , mongoLog);
+        mongoSourceDefinition.getPropertyValues().add("mongoLogTimeout" , mongoLogTimeout);
         String sourceBeanName = parserContext.getReaderContext().registerWithGeneratedName(mongoSourceDefinition);
 
         RootBeanDefinition mongoBeanDefinition = new RootBeanDefinition(MongoTemplate.class);
@@ -61,7 +61,7 @@ public class MongoBeanDefinitionParser implements BeanDefinitionParser {
 
         parserContext.getReaderContext().registerWithGeneratedName(mongoBeanDefinition);
 
-        if(!StringUtils.isEmpty(mongoTimeLog)) {
+        if(!StringUtils.isEmpty(mongoLog)) {
             Object eleSource = parserContext.extractSource(element);
 
             // Create the CacheInterceptor definition.

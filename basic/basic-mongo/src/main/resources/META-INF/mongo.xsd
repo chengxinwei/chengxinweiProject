@@ -10,8 +10,8 @@
             <xsd:attribute name="username" type="xsd:string"></xsd:attribute>
             <xsd:attribute name="password" type="xsd:string"></xsd:attribute>
             <xsd:attribute name="databaseName" type="xsd:string" use="required"></xsd:attribute>
-            <xsd:attribute name="mongoTimeout" type="xsd:integer" default="0"></xsd:attribute>
-            <xsd:attribute name="mongoTimeLog" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="mongoLogTimeout" type="xsd:string" default="0"></xsd:attribute>
+            <xsd:attribute name="mongoLog" type="xsd:string"></xsd:attribute>
         </xsd:complexType>
     </xsd:element>
 
