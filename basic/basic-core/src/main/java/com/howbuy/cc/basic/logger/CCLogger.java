@@ -52,10 +52,6 @@ public class CCLogger{
         }
     }
 
-    public void error(String text , Exception e){
-        this.error(text, e , null);
-    }
-
     public void error(String text , String... messageAry){
         logger.error(getDefaultLogHeader(null) + "|" + text + "|" + StringUtils.join(messageAry, "|"));
     }
