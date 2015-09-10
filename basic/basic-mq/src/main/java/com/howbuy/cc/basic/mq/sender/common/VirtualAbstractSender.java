@@ -11,9 +11,4 @@ public abstract class VirtualAbstractSender extends AbstractSender{
 		super.setSub(true);
 	}
 
-	public void setDestinationName(String destinationName) {
-		super.destinationName = "VirtualTopic." + destinationName;
-	}
-	
-	
 }

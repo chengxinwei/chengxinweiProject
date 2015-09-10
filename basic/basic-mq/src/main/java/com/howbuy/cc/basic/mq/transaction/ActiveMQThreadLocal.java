@@ -33,7 +33,7 @@ public class ActiveMQThreadLocal {
 	 * @description   
 	 * @param obj
 	 */
-	public static void putMessage(AbstractSender abstractSender , Object obj){
+	public static void putMessage(AbstractSender abstractSender , Serializable obj){
 		List<ActiveMQFieldMessage> activeMQMessageList = activeMQMessageThreadLocal.get();
 		activeMQMessageList = activeMQMessageList == null ? new ArrayList<ActiveMQFieldMessage>() : activeMQMessageList;
 		ActiveMQFieldMessage activeMQFieldMessage = new ActiveMQFieldMessage(abstractSender , obj);
@@ -56,12 +56,7 @@ public class ActiveMQThreadLocal {
 		for(int i = 0 ; i < activeMQMessageList.size() ; i++){
 			ActiveMQFieldMessage activeMQFieldMessage = activeMQMessageList.get(i);
 			AbstractSender abstractSender = activeMQFieldMessage.getAbstractSender();
-			Object sendMessage = activeMQFieldMessage.getObj();
-			if(sendMessage instanceof String){
-				abstractSender.sendMessage((String)sendMessage);
-			}else{
-				abstractSender.sendMessage((Serializable)sendMessage);
-			}
+            abstractSender.sendMessage(activeMQFieldMessage.getObj());
 		}
 	}
 	

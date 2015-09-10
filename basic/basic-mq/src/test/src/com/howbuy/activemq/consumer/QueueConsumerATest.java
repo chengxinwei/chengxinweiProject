@@ -10,16 +10,12 @@ import java.io.Serializable;
 /**
  * Created by xinwei.cheng on 2015/7/31.
  */
+@Service
 @ActivemqListener(value = "test.queue")
-public class QueueConsumerTest extends QueueAbstractListener {
+public class QueueConsumerATest extends QueueAbstractListener {
 
     @Override
-    public void onMessage(String message)  {
-        System.out.println(message);
-    }
-
-    @Override
-    public void onMessage(Serializable message)  {
-        System.out.println(message);
+    public void onMessage(String id , Serializable message)  {
+        System.out.println("===>" + this.getClass() + "," + id + "," + message);
     }
 }

@@ -4,23 +4,24 @@ import com.howbuy.cc.basic.mq.sender.common.AbstractSender;
 
 import net.sf.cglib.proxy.MethodProxy;
 
+import java.io.Serializable;
+
 public class ActiveMQFieldMessage {
 
-	private Object obj;
-
+	private Serializable obj;
 	private AbstractSender abstractSender;
 
-	public ActiveMQFieldMessage(AbstractSender abstractSender , Object obj) {
+	public ActiveMQFieldMessage(AbstractSender abstractSender , Serializable obj) {
 		super();
 		this.abstractSender = abstractSender;
 		this.obj = obj;
 	}
 
-	public Object getObj() {
+	public Serializable getObj() {
 		return obj;
 	}
 
-	public void setObj(Object obj) {
+	public void setObj(Serializable obj) {
 		this.obj = obj;
 	}
 
@@ -31,6 +32,5 @@ public class ActiveMQFieldMessage {
 	public void setAbstractSender(AbstractSender abstractSender) {
 		this.abstractSender = abstractSender;
 	}
-
 
 }

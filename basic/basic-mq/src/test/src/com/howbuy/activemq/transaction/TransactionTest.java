@@ -17,13 +17,15 @@ public class TransactionTest {
 
     @Transactional
     public void testCommit(){
-        queueSenderTest.sendMessage(new User(11));
+        //do something
+        queueSenderTest.sendMessage("testCommit");
+        //do something
     }
 
 
     @Transactional
     public void testException(){
-        throw new RuntimeException("test");
+        throw new RuntimeException("testException");
     }
 
 }

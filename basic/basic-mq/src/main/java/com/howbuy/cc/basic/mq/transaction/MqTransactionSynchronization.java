@@ -1,5 +1,6 @@
 package com.howbuy.cc.basic.mq.transaction;
 
+import com.howbuy.cc.basic.logger.CCLogger;
 import org.springframework.transaction.support.TransactionSynchronizationAdapter;
 
 /**
@@ -7,6 +8,7 @@ import org.springframework.transaction.support.TransactionSynchronizationAdapter
  */
 public class MqTransactionSynchronization extends TransactionSynchronizationAdapter {
 
+    private CCLogger ccLogger = CCLogger.getLogger(this.getClass());
     private long threadId;
 
     public MqTransactionSynchronization(long threadId){
@@ -15,8 +17,12 @@ public class MqTransactionSynchronization extends TransactionSynchronizationAdap
 
     @Override
     public void afterCommit() {
-        ActiveMQThreadLocal.setEndTransaction(true);
-        ActiveMQThreadLocal.commitSendMessage();
+        try {
+            ActiveMQThreadLocal.setEndTransaction(true);
+            ActiveMQThreadLocal.commitSendMessage();
+        }catch (Exception e){
+            ccLogger.error(e.getMessage() , e);
+        }
     }
 
     @Override

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by xinwei.cheng on 2015/7/31.
  */
+@Service
 @ActivemqSender(value = "test.topic")
 public class TopicSenderTest extends TopicAbstractSender {
 

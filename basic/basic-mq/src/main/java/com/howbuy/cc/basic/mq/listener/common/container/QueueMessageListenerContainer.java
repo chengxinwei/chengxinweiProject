@@ -3,19 +3,15 @@ package com.howbuy.cc.basic.mq.listener.common.container;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.jms.listener.DefaultMessageListenerContainer;
 
-public class QueueMessageListenerContainer extends DefaultMessageListenerContainer{
+import javax.jms.Destination;
 
-	private String destinationName;
-	
-	public String getDestinationName() {
-		return destinationName;
-	}
+public class QueueMessageListenerContainer extends AbstractMessageListenerContainer {
 
-	public void setDestinationName(String destinationName) {
-		this.destinationName = destinationName;
-		ActiveMQQueue queue  =  new  ActiveMQQueue(destinationName);
-		super.setDestination(queue);
-	}
-	
-	
+
+    @Override
+    public Destination getDestination(String destinationName) {
+        return new  ActiveMQQueue(destinationName);
+    }
+
+
 }

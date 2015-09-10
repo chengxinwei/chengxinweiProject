@@ -1,22 +1,19 @@
 package com.howbuy.cc.basic.mq.listener.common.container;
 
 import org.apache.activemq.command.ActiveMQQueue;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.jms.listener.DefaultMessageListenerContainer;
+
+import javax.jms.Destination;
 
 /**
  * 虚拟的tioic
  * Title: VirtualMessageListenerContainer.java
  * @author cheng.xinwei
  */
-public class VirtualMessageListenerContainer extends DefaultMessageListenerContainer{
+public class VirtualMessageListenerContainer extends AbstractMessageListenerContainer{
 
-	private String destinationName;
-	
 	private String sysName;
-	
-	public String getDestinationName() {
-		return destinationName;
-	}
 
 	public String getSysName() {
 		return sysName;
@@ -24,21 +21,16 @@ public class VirtualMessageListenerContainer extends DefaultMessageListenerConta
 
 	public void setSysName(String sysName) {
 		this.sysName = sysName;
-		initDestination();
 	}
 
-	public void setDestinationName(String destinationName) {
-		this.destinationName =  destinationName;
-		initDestination();
-	}
-	
-	public void initDestination(){
-		if(this.destinationName!=null && this.sysName!=null){
-			String destinationName = "Consumer."+ this.sysName + ".VirtualTopic." + this.destinationName;
-			ActiveMQQueue queue  =  new  ActiveMQQueue(destinationName);
-			super.setDestination(queue);
-		}
-	}
-	
-	
+
+    @Override
+    public Destination getDestination(String destinationName) {
+        if(StringUtils.isEmpty(sysName)){
+            throw new IllegalArgumentException("VirtualAbstractListener 必须设置 systemName");
+        }
+        destinationName = "Consumer."+ this.sysName + ".VirtualTopic." + destinationName;
+        return new  ActiveMQQueue(destinationName);
+    }
+
 }

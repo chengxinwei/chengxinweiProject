@@ -6,10 +6,9 @@ import com.howbuy.cc.basic.mq.sender.common.VirtualAbstractSender;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by xinwei.cheng on 2015/7/31.
+ * Created by xinwei.cheng on 2015/8/25.
  */
 @Service
-@ActivemqSender(value = "test.virtual")
-public class VirtualSenderTest extends VirtualAbstractSender {
-
+@ActivemqSender(value = "test.topic.exception")
+public class ExceptionTopicSenderTest extends TopicAbstractSender {
 }

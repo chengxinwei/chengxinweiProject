@@ -1,10 +1,34 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic-mq="http://com.howbuy.cc.basic/schema/basic-mq"
+       xmlns:basic-core="http://com.howbuy.cc.basic/schema/basic-core"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://com.howbuy.cc.basic/schema/basic-mq http://com.howbuy.cc.basic/schema/basic-mq.xsd">
+       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://com.howbuy.cc.basic/schema/basic-mq http://com.howbuy.cc.basic/schema/basic-mq.xsd http://com.howbuy.cc.basic/schema/basic-core http://com.howbuy.cc.basic/schema/basic-core.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.howbuy.activemq"/>
+
+    <basic-core:core-driven/>
+
+    <basic-mq:mq-driven brokerUrl="${activemq.server.path}" afterTransactionSend="true" redeliveryListener="true"
+                       senderLog = "log/sender.log" listenerLog="log/listener.log" maximumRedeliveries="1"  />
 
 
-    <basic-mq:mq-driven brokerUrl="tcp://192.168.187.129:61616" afterTransaction="true"
-                        basePackage="com.howbuy.activemq.*"  />
+
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="validationQuery" value="select 1 from dual"/>
+    </bean>
 
 </beans>

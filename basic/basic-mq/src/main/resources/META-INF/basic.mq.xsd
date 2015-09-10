@@ -8,12 +8,16 @@
 
     <xsd:complexType name="mqType">
         <xsd:attribute name="brokerUrl" type="xsd:string" use="required"/>
-
-        <xsd:attribute name="afterTransaction" type="xsd:boolean" default="false" />
-
-        <xsd:attribute name="basePackage" type="xsd:string" use="required" />
-
-
+        <xsd:attribute name="afterTransactionSend" type="xsd:boolean" default="false" />
+        <xsd:attribute name="maxConnections" type="xsd:string" default="8"/>
+        <xsd:attribute name="maximumActiveSessionPerConnection" type="xsd:string" default="500"/>
+        <xsd:attribute name="idleTimeout" type="xsd:string" default="30000"/>
+        <xsd:attribute name="expiryTimeout" type="xsd:string" default="0"/>
+        <xsd:attribute name="senderLog" type="xsd:string"/>
+        <xsd:attribute name="listenerLog" type="xsd:string"/>
+        <xsd:attribute name="redeliveryListener" type="xsd:string" default="false"/>
+        <xsd:attribute name="initialRedeliveryDelay" type="xsd:string" default="5000"/>
+        <xsd:attribute name="maximumRedeliveries" type="xsd:string" default="5"/>
     </xsd:complexType>
 
 </xsd:schema>

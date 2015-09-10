@@ -8,14 +8,15 @@ import org.springframework.stereotype.Service;
 import java.io.Serializable;
 
 /**
- * Created by xinwei.cheng on 2015/7/31.
+ * Created by xinwei.cheng on 2015/8/25.
  */
 @Service
-@ActivemqListener(value = "test.topic")
-public class TopicConsumerTest2 extends TopicAbstractListener {
+@ActivemqListener(value = "test.topic.exception")
+public class ExceptionTopicConsumerTest extends TopicAbstractListener {
 
     @Override
-    public void onMessage(String id ,Serializable message)  {
+    public void onMessage(String id , Serializable message){
         System.out.println(this.getClass() + "," + id + "," + message);
+        throw new RuntimeException(message.toString());
     }
 }
