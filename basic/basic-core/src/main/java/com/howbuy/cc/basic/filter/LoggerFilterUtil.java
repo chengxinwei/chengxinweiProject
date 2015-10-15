@@ -11,7 +11,7 @@ import org.nutz.json.JsonFormat;
  */
 public class LoggerFilterUtil {
 
-    public static Result executeAndGetLoggerInfo(String[] logInfo, Invoker<?> invoker, Invocation invocation){
+    public static Result executeAndGetLoggerInfo(String[] logInfo, Invoker<?> invoker, Invocation invocation , boolean excludeLogDetail){
 
         logInfo[0] = invoker.getInterface().getSimpleName();
         logInfo[1] = invocation.getMethodName();
@@ -20,10 +20,14 @@ public class LoggerFilterUtil {
         long start = System.currentTimeMillis();
         Result result = invoker.invoke(invocation);
         long useTime = System.currentTimeMillis() - start;
-        if(result.hasException()){
-            logInfo[3] = result.getException().toString();
+        if(!excludeLogDetail) {
+            if (result.hasException()) {
+                logInfo[3] = result.getException().toString();
+            } else {
+                logInfo[3] = Json.toJson(result.getValue(), JsonFormat.compact());
+            }
         }else{
-            logInfo[3] = Json.toJson(result.getValue(), JsonFormat.compact());
+            logInfo[3] = "";
         }
         logInfo[4] = String.valueOf(useTime);
         return result;

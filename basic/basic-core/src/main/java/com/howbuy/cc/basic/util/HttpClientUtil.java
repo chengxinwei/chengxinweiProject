@@ -1,96 +1,118 @@
-//package com.howbuy.cc.basic.util;
-//
-//import com.howbuy.cc.basic.logger.CCLogger;
-//import org.apache.commons.httpclient.HttpClient;
-//import org.apache.commons.httpclient.HttpMethod;
-//import org.apache.commons.httpclient.HttpStatus;
-//import org.apache.commons.httpclient.NameValuePair;
-//import org.apache.commons.httpclient.methods.GetMethod;
-//import org.apache.commons.httpclient.methods.PostMethod;
-//import org.apache.commons.httpclient.params.HttpMethodParams;
-//
-//import java.io.BufferedReader;
-//import java.io.IOException;
-//import java.io.InputStreamReader;
-//import java.net.URLEncoder;
-//import java.util.*;
-//
-///**
-// * Created by xinwei.cheng on 2015/8/14.
-// */
-//public class HttpClientUtil {
-//
-//    static CCLogger logger = CCLogger.getLogger(HttpClientUtil.class);
-//
-//    /**
-//     * 执行一个HTTP GET请求，返回请求响应的HTML
-//     *
-//     * @param url         请求的URL地址
-//     * @return 返回请求响应的HTML
-//     */
-//    public static String doGet(String url, Map<String,String> queryMap) {
-//        StringBuffer response = new StringBuffer();
-//        HttpClient client = new HttpClient();
-//        HttpMethod method = new GetMethod(url);
-//        try {
-//            if (queryMap != null && queryMap.size() > 0) {
-//                List<NameValuePair> list = new ArrayList<>();
-//                for(Map.Entry<String,String> entry : queryMap.entrySet()) {
-//                    list.add(new NameValuePair(entry.getKey() , URLEncoder.encode(entry.getValue())));
-//                }
-//                method.setQueryString(list.toArray(new NameValuePair[list.size()]));
-//            }
-//            client.executeMethod(method);
-//            if (method.getStatusCode() == HttpStatus.SC_OK) {
-//                BufferedReader reader = new BufferedReader(new InputStreamReader(method.getResponseBodyAsStream(), "utf-8"));
-//                String line;
-//                while ((line = reader.readLine()) != null) {
-//                    response.append(line);
-//                }
-//                reader.close();
-//            }
-//        } catch (IOException e) {
-//            logger.error("执行HTTP Get请求" + url + "时，发生异常！", e);
-//        } finally {
-//            method.releaseConnection();
-//        }
-//        return response.toString();
-//    }
-//
-//    /**
-//     * 执行一个HTTP POST请求，返回请求响应的HTML
-//     *
-//     * @param url     请求的URL地址
-//     * @param params  请求的查询参数,可以为null
-//     * @return 返回请求响应的HTML
-//     */
-//    public static String doPost(String url, Map<String, String> params) {
-//        StringBuffer response = new StringBuffer();
-//        HttpClient client = new HttpClient();
-//        HttpMethod method = new PostMethod(url);
-//        //设置Http Post数据
-//        if (params != null) {
-//            HttpMethodParams p = new HttpMethodParams();
-//            for (Map.Entry<String, String> entry : params.entrySet()) {
-//                p.setParameter(entry.getKey(), entry.getValue());
-//            }
-//            method.setParams(p);
-//        }
-//        try {
-//            client.executeMethod(method);
-//            if (method.getStatusCode() == HttpStatus.SC_OK) {
-//                BufferedReader reader = new BufferedReader(new InputStreamReader(method.getResponseBodyAsStream(), "utf-8"));
-//                String line;
-//                while ((line = reader.readLine()) != null) {
-//                    response.append(line);
-//                }
-//                reader.close();
-//            }
-//        } catch (IOException e) {
-//            logger.error("执行HTTP Post请求" + url + "时，发生异常！", e);
-//        } finally {
-//            method.releaseConnection();
-//        }
-//        return response.toString();
-//    }
-//}
+package com.howbuy.cc.basic.util;
+
+import com.howbuy.cc.basic.logger.CCLogger;
+import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Created by xinwei.cheng on 2015/8/14.
+ */
+public class HttpClientUtil {
+
+    static CCLogger logger = CCLogger.getLogger(HttpClientUtil.class);
+
+    /**
+     * 执行一个HTTP GET请求
+     * @param url 请求的URL地址
+     * @return 返回请求响应的
+     */
+    /**
+     * 发送 get请求
+     */
+    public static Map<Integer,String> get(String url , Map<String,String> params) {
+        Map<Integer,String> result = new HashMap<>();
+        CloseableHttpClient httpclient = HttpClients.createDefault();
+        try {
+            HttpGet httpget = new HttpGet(getUrl(url , params));
+            CloseableHttpResponse response = httpclient.execute(httpget);
+            try {
+                HttpEntity entity = response.getEntity();
+                int httpCode = response.getStatusLine().getStatusCode();
+                if (entity != null) {
+                    result.put(httpCode , EntityUtils.toString(entity));
+                }else{
+                    result.put(httpCode , null);
+                }
+                return result;
+            } finally {
+                response.close();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                httpclient.close();
+            } catch (IOException e) {
+                //ignore
+            }
+        }
+    }
+
+
+    private static String getUrl(String url , Map<String,String> params){
+        if(params == null || params.isEmpty()){
+            return url;
+        }
+        StringBuilder paramsSb = new StringBuilder();
+        for(Map.Entry entry : params.entrySet()){
+            paramsSb.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
+        }
+        return url.endsWith("?") ? url + paramsSb.toString() : url + "?" + paramsSb.toString();
+    }
+
+
+    /**
+     * 发送 post请求访问本地应用并根据传递参数不同返回不同结果
+     */
+    public static Map<Integer , String> post(String url , Map<String,String> params) {
+        Map<Integer,String> result = new HashMap<>();
+        CloseableHttpClient httpclient = HttpClients.createDefault();
+        HttpPost httppost = new HttpPost(url);
+        List<NameValuePair> formparams = new ArrayList<>();
+        for(Map.Entry<String,String> entry : params.entrySet()){
+            formparams.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+        }
+        UrlEncodedFormEntity uefEntity;
+        try {
+            uefEntity = new UrlEncodedFormEntity(formparams, "UTF-8");
+
+            httppost.setEntity(uefEntity);
+            CloseableHttpResponse response = httpclient.execute(httppost);
+            try {
+                HttpEntity entity = response.getEntity();
+                int httpCode = response.getStatusLine().getStatusCode();
+                if (entity != null) {
+                    result.put(httpCode , EntityUtils.toString(entity, "UTF-8"));
+                }else{
+                    result.put(httpCode , null);
+                }
+                return result;
+            } finally {
+                response.close();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            // 关闭连接,释放资源
+            try {
+                httpclient.close();
+            } catch (IOException e) {
+                //ignore
+            }
+        }
+    }
+}

@@ -15,9 +15,10 @@ public class DubboRequestLoggerFilter implements Filter {
     CCLogger ccLogger = CCLogger.getLogger(this.getClass());
 
     private String requestLog;
+    private CoreOperationSource coreOperationSource;
 
     public DubboRequestLoggerFilter(){
-        CoreOperationSource coreOperationSource = SpringBean.getBean(CoreOperationSource.class);
+        coreOperationSource = SpringBean.getBean(CoreOperationSource.class);
         if(coreOperationSource == null || StringUtils.isEmpty(coreOperationSource.getRequestLog())){
             return;
         }
@@ -33,8 +34,8 @@ public class DubboRequestLoggerFilter implements Filter {
         }
 
         String[] logInfo = new String[5];
-
-        Result result = LoggerFilterUtil.executeAndGetLoggerInfo(logInfo, invoker, invocation);
+        boolean excludeLogDetail = coreOperationSource.getExcludeLogDetailClassList().contains(invoker.getInterface().getName());
+        Result result = LoggerFilterUtil.executeAndGetLoggerInfo(logInfo, invoker, invocation , excludeLogDetail);
         if(result.hasException()){
             ccLogger.warn("request.fail" , logInfo);
         }else{

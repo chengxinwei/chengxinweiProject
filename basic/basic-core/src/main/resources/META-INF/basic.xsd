@@ -6,16 +6,31 @@
     <xsd:element name="core-driven">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="dubboLog" minOccurs="0" maxOccurs="1">
-                </xsd:element>
+                <xsd:element ref="dubboLog" minOccurs="0" maxOccurs="1"></xsd:element>
+                <xsd:element ref="failover" minOccurs="0" maxOccurs="1"></xsd:element>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
     <xsd:element name="dubboLog">
         <xsd:complexType>
-            <xsd:attribute name="requestLog"></xsd:attribute>
-            <xsd:attribute name="accessLog"></xsd:attribute>
+            <xsd:attribute name="requestLog" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="accessLog" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="excludeLogDetail" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="autoFilter" default="false">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="true"/>
+                        <xsd:enumeration value="false"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="failover">
+        <xsd:complexType>
+            <xsd:attribute name="failOverLog" type="xsd:string"></xsd:attribute>
         </xsd:complexType>
     </xsd:element>
 

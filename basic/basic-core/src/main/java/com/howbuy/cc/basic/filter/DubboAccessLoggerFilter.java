@@ -13,11 +13,11 @@ import com.howbuy.cc.basic.spring.SpringBean;
 public class DubboAccessLoggerFilter implements Filter {
 
     private CCLogger ccLogger = CCLogger.getLogger(this.getClass());
-
     private String accessLog;
+    private CoreOperationSource coreOperationSource;
 
     public DubboAccessLoggerFilter(){
-        CoreOperationSource coreOperationSource = SpringBean.getBean(CoreOperationSource.class);
+        coreOperationSource = SpringBean.getBean(CoreOperationSource.class);
         if(coreOperationSource == null || StringUtils.isEmpty(coreOperationSource.getAccessLog())){
             return;
         }
@@ -33,7 +33,8 @@ public class DubboAccessLoggerFilter implements Filter {
 
         String[] logInfo = new String[5];
 
-        Result result = LoggerFilterUtil.executeAndGetLoggerInfo(logInfo, invoker, invocation);
+        boolean excludeLogDetail = coreOperationSource.getExcludeLogDetailClassList().contains(invoker.getInterface().getName());
+        Result result = LoggerFilterUtil.executeAndGetLoggerInfo(logInfo, invoker, invocation , excludeLogDetail);
         if(result.hasException()){
             ccLogger.warn("access.fail" , logInfo);
         }else{

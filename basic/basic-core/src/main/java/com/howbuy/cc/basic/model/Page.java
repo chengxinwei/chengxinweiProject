@@ -1,4 +1,4 @@
-package com.howbuy.cc.basic.mybatis.model;
+package com.howbuy.cc.basic.model;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class Page<T>{
 	private List<T> pageList;
 	private int pageNo;
 	private int totalPage;
-	private int totalCount = 0;
+	private long totalCount = 0;
 	private int pageSize = PAGE_NUMBER;
 	
 	public int getBeginNum() {
@@ -22,7 +22,7 @@ public class Page<T>{
 		return pageNo * pageSize + 1;
 	}
 	
-	public Page(Integer pageSize, Integer pageNo, Integer totalCount) {
+	public Page(Integer pageSize, Integer pageNo, Long totalCount) {
 		if(pageNo == null || pageNo <= 0) {
 			pageNo = 1;
 		}
@@ -60,9 +60,9 @@ public class Page<T>{
 			setTotalPage(1);
 		}else{
 			if (getTotalCount() % getPageSize() == 0) {
-				setTotalPage(getTotalCount() / getPageSize());
+				setTotalPage((int)getTotalCount() / getPageSize());
 			} else {
-				setTotalPage(getTotalCount() / getPageSize() + 1);
+				setTotalPage((int)(getTotalCount() / getPageSize()) + 1);
 			}
 		}
 		return totalPage;
@@ -72,7 +72,7 @@ public class Page<T>{
 		this.totalPage = totalPage;
 	}
 
-	public int getTotalCount() {
+	public long getTotalCount() {
 		return totalCount;
 	}
 
