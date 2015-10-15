@@ -14,6 +14,7 @@ import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -147,11 +148,20 @@ public abstract class AbstractSender implements  BeanFactoryPostProcessor {
 
     @Override
     public void postProcessBeanFactory( ConfigurableListableBeanFactory beanFactory){
+        MqOperationSource mqOperationSource;
+        try {
+            mqOperationSource = beanFactory.getBean(MqOperationSource.class);
+        }catch(NoSuchBeanDefinitionException e){
+            logger.warn("未检测到activemq驱动,无法初始化sender");
+            return;
+        }
+
+        this.mqOperationSource = mqOperationSource;
         this.destinationName = this.getClass().getAnnotation(ActivemqSender.class).value();
         if(VirtualAbstractSender.class.isAssignableFrom(this.getClass())){
             this.destinationName = "VirtualTopic." + destinationName;
         }
-        this.mqOperationSource = beanFactory.getBean(MqOperationSource.class);
+
         this.jmsTemplate = beanFactory.getBean(JmsTemplate.class);
         if(StringUtils.isEmpty(destinationName)){
             throw new RuntimeException(this.getClass().getSimpleName() + " destinationName is null");

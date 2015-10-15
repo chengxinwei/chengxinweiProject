@@ -12,8 +12,6 @@
     <basic-mq:mq-driven brokerUrl="${activemq.server.path}" afterTransactionSend="true" redeliveryListener="true"
                        senderLog = "log/sender.log" listenerLog="log/listener.log" maximumRedeliveries="1"  />
 
-
-
     <tx:annotation-driven transaction-manager="transactionManager" />
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -29,6 +27,14 @@
         <property name="maxActive" value="${jdbc.maxActive}"/>
         <property name="minIdle" value="${jdbc.minIdle}"/>
         <property name="validationQuery" value="select 1 from dual"/>
+    </bean>
+
+
+
+    <bean> class="container">
+        <property name="messageListener" >
+            <bean class="listener"></bean>
+        </property>
     </bean>
 
 </beans>

@@ -18,6 +18,7 @@ import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.support.RootBeanDefinition;
@@ -102,7 +103,15 @@ public abstract class AbstractListener implements MessageListener , BeanFactoryA
         if(activemqListenerAnno == null) {
             return;
         }
-        this.mqOperationSource = beanFactory.getBean(MqOperationSource.class);
+
+        MqOperationSource mqOperationSource;
+        try {
+            mqOperationSource = beanFactory.getBean(MqOperationSource.class);
+        }catch(NoSuchBeanDefinitionException e){
+            logger.warn("未检测到activemq驱动,无法初始化listener");
+            return;
+        }
+        this.mqOperationSource = mqOperationSource;
 
         Class<?> registClazz;
 
