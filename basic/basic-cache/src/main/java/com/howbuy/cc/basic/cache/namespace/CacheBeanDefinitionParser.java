@@ -6,8 +6,6 @@ import com.howbuy.cc.basic.cache.aop.SpringCacheAdvisor;
 import com.howbuy.cc.basic.cache.aop.SpringCacheInterceptor;
 import com.howbuy.cc.basic.cache.client.EhCacheClient;
 import com.howbuy.cc.basic.cache.client.RedisClient;
-//import com.howbuy.cc.basic.cache.hit.aop.CacheHitAdvisor;
-//import com.howbuy.cc.basic.cache.hit.aop.CacheHitInterceptor;
 import com.howbuy.cc.basic.cache.hit.aop.CacheHitAdvisor;
 import com.howbuy.cc.basic.cache.hit.aop.CacheHitInterceptor;
 import com.howbuy.cc.basic.cache.hit.thread.CacheHitLogThread;
@@ -30,18 +28,16 @@ import org.w3c.dom.Element;
 
 import java.util.List;
 
+
 /**
+ * 缓存启动配置类
  * Created by xinwei.cheng on 2015/8/12.
  */
 public class CacheBeanDefinitionParser implements BeanDefinitionParser {
 
-//    private final static String SPRING_CACHE_XML = "classpath:basic/spring/cache/spring-cache.xml";
-//    private final static String SPRING_EHCACHE_XML = "classpath:basic/spring/cache/spring-ehcache.xml";
-
 
     @Override
     public BeanDefinition parse(Element element, ParserContext parserContext) {
-//        parserContext.getReaderContext().getReader().loadBeanDefinitions(SPRING_CACHE_XML);
         AopNamespaceUtils.registerAutoProxyCreatorIfNecessary(parserContext, element);
 
         parseCacheAop(element , parserContext);
@@ -56,7 +52,6 @@ public class CacheBeanDefinitionParser implements BeanDefinitionParser {
             }else if("ehcache".equals(localName)){
                 parseEhcache(elt , parserContext);
             }
-
         }
         //cache hit
         this.parseCacheHit(element , parserContext);
@@ -65,8 +60,6 @@ public class CacheBeanDefinitionParser implements BeanDefinitionParser {
 
     /**
      * 配置redis
-     * @param element
-     * @param parserContext
      */
     private void parseRedis(Element element, ParserContext parserContext){
         String sentinels = element.getAttribute("sentinels");
@@ -102,9 +95,47 @@ public class CacheBeanDefinitionParser implements BeanDefinitionParser {
 
     }
 
+
+//    /**
+//     * PA版本1.3使用
+//     * @param element
+//     * @param parserContext
+//     */
+//    private void parseRedis2(Element element, ParserContext parserContext){
+//        String sentinels = element.getAttribute("sentinels");
+//        String serverName = element.getAttribute("serverName");
+//        String maxIdle = element.getAttribute("maxIdle");
+//        String maxTotal = element.getAttribute("maxTotal");
+//        String minIdle = element.getAttribute("minIdle");
+//        String keyLimit = element.getAttribute("keyLimit");
+//        String valueLimit = element.getAttribute("valueLimit");
+//        String dbNum = element.getAttribute("dbNum");
+//
+//
+//        RootBeanDefinition rcBeanDefinition = new RootBeanDefinition(RedisConfig.class);
+//        rcBeanDefinition.getPropertyValues().add("sentinels" , sentinels);
+//        rcBeanDefinition.getPropertyValues().add("masters" , serverName);
+//        rcBeanDefinition.getPropertyValues().add("maxIdle" , maxIdle);
+//        rcBeanDefinition.getPropertyValues().add("maxTotal" , maxTotal);
+//        rcBeanDefinition.getPropertyValues().add("dbNum" , dbNum);
+//        rcBeanDefinition.getPropertyValues().add("minIdle" , minIdle);
+//        rcBeanDefinition.getPropertyValues().add("keyLimit" , keyLimit);
+//        rcBeanDefinition.getPropertyValues().add("valueLimit" , valueLimit);
+//        rcBeanDefinition.getPropertyValues().add("valueLimit" , valueLimit);
+//        rcBeanDefinition.getPropertyValues().add("deployType" , JedisDeployType.SENTINEL.name());
+////         rc.setTimeout(2000); //todo
+//        String rcBeanName = parserContext.getReaderContext().registerWithGeneratedName(rcBeanDefinition);
+//
+//        RootBeanDefinition rcfBeanDefinition = new RootBeanDefinition(JedisConfigFactory.class);
+//        rcfBeanDefinition.getPropertyValues().add("defaultRedisConfig" , new RuntimeBeanReference(rcBeanName));
+//        rcfBeanDefinition.setInitMethodName("init");
+//        parserContext.getReaderContext().registerWithGeneratedName(rcfBeanDefinition);
+//
+//        parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(RedisClient.class));
+//    }
+
+
     public void parseCacheAop(Element element, ParserContext parserContext){
-
-
         Object eleSource = parserContext.extractSource(element);
 
         // Create the CacheInterceptor definition.
@@ -156,8 +187,6 @@ public class CacheBeanDefinitionParser implements BeanDefinitionParser {
 
     /**
      * 配置ehcache
-     * @param element
-     * @param parserContext
      */
     private void parseEhcache(Element element, ParserContext parserContext){
 
@@ -175,16 +204,11 @@ public class CacheBeanDefinitionParser implements BeanDefinitionParser {
 
         //ehcacheClient
         parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(EhCacheClient.class));
-
-
-        return;
     }
 
 
     /**
      * 配置命中率
-     * @param element
-     * @param parserContext
      */
     private void parseCacheHit(Element element, ParserContext parserContext){
         if(element.hasAttribute("hitLog")) {

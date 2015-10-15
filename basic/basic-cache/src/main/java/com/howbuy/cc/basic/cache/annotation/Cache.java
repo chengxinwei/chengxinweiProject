@@ -10,6 +10,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
+@SuppressWarnings("unused")
 public @interface Cache {
 
     CacheType cacheType() default CacheType.redis ;
@@ -20,7 +21,7 @@ public @interface Cache {
 
     int timeout() default 60 * 60;
 
-    public static enum CacheType{
+    enum CacheType{
         ehcache , redis
     }
 

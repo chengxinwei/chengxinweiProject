@@ -4,6 +4,7 @@ import com.howbuy.cc.basic.cache.client.RedisClient;
 import com.howbuy.cc.basic.cache.common.BaseTest;
 import com.howbuy.cc.basic.cache.model.User;
 import com.howbuy.cc.basic.cache.service.RedisV2Service;
+import com.howbuy.cc.basic.spring.SpringBean;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +60,15 @@ public class RedisCacheV2Test extends BaseTest {
     public void redisNullTest(){
         redisService.getNull(true);
         Assert.assertNotNull(redisService.getNull(false));
+    }
+
+
+    @Test
+    public void redisApiClearTest(){
+        redisClient.put("redis.test", 1, "abc", 1000);
+        redisClient.clear("redis.test" , 1);
+        System.out.println(redisClient.get("redis.test", 1));
+        Assert.assertNull(redisClient.get("redis.test", 1));
     }
 
     @Test

@@ -53,7 +53,7 @@ public class EhCacheV2Test extends BaseTest {
 
     @Test
     public void ehcacheMaxElement(){
-        int maxElementCount = Configuration.getInt("ehcache.maxElementCount");
+        Integer maxElementCount = Configuration.getInt("ehcache.maxElementCount");
         EhCacheClient ehCacheClient = SpringBean.getBean(EhCacheClient.class);
         for(int i = 0 ; i <= maxElementCount ; i++) {
             ehCacheClient.put("ehcache.test.maxElement" , String.valueOf(i) , new User() , 30 );
@@ -66,5 +66,17 @@ public class EhCacheV2Test extends BaseTest {
     public void ehcacheNull(){
         ehV2Service.getNull(true);
         Assert.assertNotNull(ehV2Service.getNull(false));
+    }
+
+    @Test
+    public void testLog(){
+        for(int i = 0 ; i < 50 ; i ++){
+            ehV2Service.getUser(i%5);
+        }
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

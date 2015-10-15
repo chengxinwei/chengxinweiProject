@@ -8,6 +8,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.math.BigDecimal;
+
 /**
  * Created by xinwei.cheng on 2015/7/6.
  */
@@ -17,6 +19,16 @@ public class RedisCacheTest extends BaseTest {
     private RedisService redisService;
     @Autowired
     private RedisClient redisClient;
+
+//    @Test
+//    public void redisInc(){
+//        redisClient.put("test" , "int" , new BigDecimal(1000000000012300L), 20000);
+//        System.out.println(redisClient.incr("test", "int"));
+//        System.out.println(redisClient.incr("test", "int", 10L));
+//
+//        System.out.println(redisClient.decr("test", "int"));
+//        System.out.println(redisClient.decr("test", "int", 10L));
+//    }
 
     @Test
     public void redisTest(){
@@ -62,5 +74,4 @@ public class RedisCacheTest extends BaseTest {
             e.printStackTrace();
         }
     }
-
 }

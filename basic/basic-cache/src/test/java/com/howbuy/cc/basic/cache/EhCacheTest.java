@@ -19,7 +19,7 @@ public class EhCacheTest extends BaseTest {
     private EhService ehService;
 
     @Test
-    public void ehcacheTest(){
+    public void getEhcacheTest(){
         User user1 = ehService.getUser(1);
         User user2 = ehService.getUser(1);
         Assert.assertEquals(user1, user2);
@@ -67,4 +67,18 @@ public class EhCacheTest extends BaseTest {
         ehService.getNull(true);
         Assert.assertNotNull(ehService.getNull(false));
     }
+
+
+    @Test
+    public void testLog(){
+        for(int i = 0 ; i < 50 ; i ++){
+            ehService.getUser(i%5);
+        }
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
