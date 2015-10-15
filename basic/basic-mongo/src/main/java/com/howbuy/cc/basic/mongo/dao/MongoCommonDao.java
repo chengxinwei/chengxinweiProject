@@ -1,5 +1,6 @@
 package com.howbuy.cc.basic.mongo.dao;
 
+import com.howbuy.cc.basic.model.Page;
 import com.howbuy.cc.basic.mongo.callback.MongoCallBack;
 import com.howbuy.cc.basic.mongo.namespace.MongoOperationSource;
 import com.howbuy.cc.basic.spring.SpringBean;
@@ -12,6 +13,7 @@ import org.springframework.data.mongodb.core.query.Update;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -85,8 +87,15 @@ public abstract class MongoCommonDao<T> {
         return mongoTemplate.exists(query, clazz);
     }
 
-    public List<T> page(final Query query , final int pageNo , final int pageSize , final Sort sort){
-        return mongoTemplate.find(query.with(sort).skip(pageNo * pageSize).limit(pageSize) , clazz);
+    public Page<T> page(final Query query , final int pageNo , final int pageSize , final Sort sort){
+        long count = this.count(query);
+        Page page = new Page(pageSize , pageNo , count);
+        if(count == 0 ){
+            page.setPageList(new ArrayList<T>());
+            return page;
+        }
+        page.setPageList(mongoTemplate.find(query.with(sort).skip(pageNo * pageSize).limit(pageSize), clazz));
+        return page;
     }
 
     public <E> E execute(MongoCallBack<E> mongoCallBack){
