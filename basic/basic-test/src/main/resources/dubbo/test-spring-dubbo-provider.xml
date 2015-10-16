@@ -22,19 +22,29 @@
     <!-- loadbalance  服务端的均衡策略 -->
     <dubbo:service application="basic-dubbo-test-provider" interface="com.howbuy.cc.basic.test.interfac.DubboCacheInterfaceTest"
                    ref="dubboCacheProviderTest"
-                   filter="dubboAccessLoggerFilter,dubboCodeLoggerFilter"/>
+                   />
 
     <dubbo:service application="basic-dubbo-test-provider" interface="com.howbuy.cc.basic.test.interfac.DubboBaseInterfaceTest"
                    ref="dubboBaseProviderTest"
-                   filter="dubboAccessLoggerFilter,dubboCodeLoggerFilter"/>
+                   />
 
     <dubbo:service application="basic-dubbo-test-provider" interface="com.howbuy.cc.basic.test.interfac.DubboDBInterfaceTest"
                    ref="dubboDBProviderTest"
-                   filter="dubboAccessLoggerFilter,dubboCodeLoggerFilter"/>
+                   />
+
+    <dubbo:service application="basic-dubbo-test-provider" interface="com.howbuy.cc.basic.test.interfac.DubboMongoInterfaceTest"
+                   ref="dubboMongoProviderTest"
+                   />
+
+
+    <dubbo:service application="basic-dubbo-test-provider" interface="com.howbuy.cc.basic.test.interfac.DubboMQInterfaceTest"
+                   ref="dubboMQInterfaceTest"
+            />
 
     <!-- 本地bean实现类 -->
     <bean id="dubboBaseProviderTest" class="com.howbuy.cc.basic.test.dubbo.DubboBaseProviderTest" />
     <bean id="dubboCacheProviderTest" class="com.howbuy.cc.basic.test.dubbo.DubboCacheProviderTest" />
     <bean id="dubboDBProviderTest" class="com.howbuy.cc.basic.test.dubbo.DubboDBProviderTest" />
-
+    <bean id="dubboMongoProviderTest" class="com.howbuy.cc.basic.test.dubbo.DubboMongoProviderTest" />
+    <bean id="dubboMQInterfaceTest" class="com.howbuy.cc.basic.test.dubbo.DubboMqProviderTest" />
 </beans>

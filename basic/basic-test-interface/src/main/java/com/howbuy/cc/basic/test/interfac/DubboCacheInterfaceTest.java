@@ -1,6 +1,7 @@
 package com.howbuy.cc.basic.test.interfac;
 
 import com.howbuy.cc.basic.test.model.Aaaa;
+import com.howbuy.cc.basic.test.model.User;
 
 import java.util.List;
 
@@ -9,10 +10,22 @@ import java.util.List;
  */
 public interface DubboCacheInterfaceTest {
 
-    public List<Aaaa> getAaaaByCache(Integer id);
+    public User getUserByCache(Integer id);
 
-    public String clearAaaaCache(Integer id);
+    public String clearUserCacheByUserCode(Integer id);
 
-    public String setCache(Aaaa aaaa);
+    public String setUserCacheByUserCode(User user);
+
+
+    public User getUserByCache_V2(Integer id);
+
+    public String clearUserCacheByUserCode_V2(Integer id);
+
+    public String setUserCacheByUserCode_V2(User user);
+
+
+    public String setString(String text) ;
+
+    public String getString(String text);
 
 }

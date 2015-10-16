@@ -5,6 +5,8 @@
        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
        http://com.howbuy.cc.basic/schema/basic-cache http://com.howbuy.cc.basic/schema/basic-cache.xsd">
 
-    <basic-cache:cache-driven/>
+    <basic-cache:cache-driven>
+        <basic-cache:redis sentinels="${redis.sentinel.path}" serverName="${redis.sentinel.serverName}"    />
+    </basic-cache:cache-driven>
 
 </beans>

@@ -5,7 +5,7 @@
        xmlns:basic-mybatis="http://com.howbuy.cc.basic/schema/basic-mybatis"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://com.howbuy.cc.basic/schema/basic-mybatis http://com.howbuy.cc.basic/schema/basic-mybatis.xsd">
 
-    <basic-mybatis:mybatis-driven sqlTimeLog="10"/>
+    <basic-mybatis:mybatis-driven sqlTimeLog="sql_time.log"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driver}"/>
