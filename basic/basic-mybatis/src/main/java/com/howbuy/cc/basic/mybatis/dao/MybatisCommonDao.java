@@ -1,11 +1,11 @@
 package com.howbuy.cc.basic.mybatis.dao;
 
 import com.howbuy.cc.basic.logger.CCLogger;
+import com.howbuy.cc.basic.model.Page;
 import com.howbuy.cc.basic.mybatis.annotation.CCDatasourceRoute;
 import com.howbuy.cc.basic.mybatis.annotation.CCNameSpaceMapper;
 import com.howbuy.cc.basic.mybatis.dao.callback.ExecuteCallBack;
 import com.howbuy.cc.basic.mybatis.datasourceRoute.DynamicDataSourceSwitch;
-import com.howbuy.cc.basic.mybatis.model.Page;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -158,7 +158,7 @@ public class MybatisCommonDao<T>{
      * @return 分页对象
      */
     protected Page<T> page(final String listSqlId , int count, Map<String,Object> params , Integer pageNo , Integer pageSize , String orderby){
-        Page<T> page = new Page<>(pageSize , pageNo , count);
+        Page<T> page = new Page<>(pageSize , pageNo , (long)count);
         if(count == 0 ){
             page.setPageList(new ArrayList<T>());
             return page;

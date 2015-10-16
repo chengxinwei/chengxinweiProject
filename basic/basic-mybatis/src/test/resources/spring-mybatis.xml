@@ -18,7 +18,7 @@
 
     <basic-core:core-driven></basic-core:core-driven>
 
-    <context:component-scan base-package="com.howbuy.cc"></context:component-scan>
+    <context:component-scan base-package="com.howbuy.cc"/>
 
     <bean id="dataSource" class="com.howbuy.cc.basic.mybatis.datasourceRoute.DynamicDataSource">
         <property name="targetDataSources" >

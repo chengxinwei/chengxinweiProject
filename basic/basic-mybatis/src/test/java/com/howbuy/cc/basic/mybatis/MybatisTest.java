@@ -1,6 +1,7 @@
 package com.howbuy.cc.basic.mybatis;
 
 import com.howbuy.cc.basic.mybatis.common.BaseTest;
+import com.howbuy.cc.basic.mybatis.dao.AnnounceDao;
 import com.howbuy.cc.basic.mybatis.dao.CustInfoMasterDao;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +14,8 @@ public class MybatisTest extends BaseTest {
 
     @Autowired
     private CustInfoMasterDao custInfoMasterDao;
+    @Autowired
+    private AnnounceDao announceDao;
 
     @Before
     public void before(){
@@ -36,6 +39,11 @@ public class MybatisTest extends BaseTest {
 
     public void delete(){
         custInfoMasterDao.delete(1);
+    }
+
+    @Test
+    public void updateAndSelect(){
+        System.out.println(announceDao.updateAndSelect());
     }
 
 }

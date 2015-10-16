@@ -24,4 +24,6 @@ public class AnnounceInterfaceDaoTest{
         System.out.println(announceInterfaceDao);
     }
 
+
+
 }
