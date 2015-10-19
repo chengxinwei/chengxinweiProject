@@ -1,6 +1,5 @@
 package com.howbuy.cc.basic.failover.annation;
 
-import com.howbuy.cc.basic.failover.handler.AbandonFailOverHandler;
 import com.howbuy.cc.basic.failover.handler.common.FailOverHandler;
 
 import java.lang.annotation.*;
