@@ -70,7 +70,7 @@ public class EhCacheV2Test extends BaseTest {
 
     @Test
     public void testLog(){
-        for(int i = 0 ; i < 50 ; i ++){
+        for(int i = 0 ; i < 10 ; i ++){
             ehV2Service.getUser(i%5);
         }
         try {

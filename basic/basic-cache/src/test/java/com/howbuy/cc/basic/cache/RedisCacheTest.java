@@ -65,11 +65,11 @@ public class RedisCacheTest extends BaseTest {
 
     @Test
     public void testLog(){
-        for(int i = 0 ; i < 50 ; i ++){
+        for(int i = 0 ; i < 10 ; i ++){
             redisService.getUser(i%5);
         }
         try {
-            Thread.sleep(6000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

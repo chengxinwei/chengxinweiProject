@@ -12,7 +12,9 @@
 
     <context:component-scan base-package="com.howbuy.cc.basic.cache"/>
 
-    <basic-core:core-driven/>
+    <basic-core:core-driven>
+        <basic-core:failover/>
+    </basic-core:core-driven>
 
     <basic-cache:cache-driven hitLog="${cache.rateLog}" hitLogTime="${cache.logTime}">
         <basic-cache:redis sentinels="${redis.sentinel.path}" serverName="${redis.sentinel.serverName}"  />

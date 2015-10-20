@@ -1,7 +1,6 @@
-package com.howbuy.cc.basic.failover.handler;
+package com.howbuy.cc.basic.cache.failover;
 
-import com.howbuy.cc.basic.cache.client.CacheClient;
-import com.howbuy.cc.basic.cache.client.RedisClient;
+import com.howbuy.cc.basic.cache.client.EhCacheClient;
 import com.howbuy.cc.basic.failover.annation.FailOver;
 import com.howbuy.cc.basic.failover.handler.common.FailOverHandler;
 import com.howbuy.cc.basic.spring.SpringBean;
@@ -12,7 +11,7 @@ import java.lang.reflect.Method;
 /**
  * Created by xinwei.cheng on 2015/9/28.
  */
-public class RedisCacheFailOverHandler implements FailOverHandler {
+public class EHCacheFailOverHandler implements FailOverHandler {
 
     @Override
     public Object handlerFailOver(FailOver failOver , Class<?> targetClass , Method method , Object[] args) {
@@ -21,8 +20,8 @@ public class RedisCacheFailOverHandler implements FailOverHandler {
         for(int i = 0 ; i < args.length ; i ++){
             sb.append(Json.toJson(args)).append(",");
         }
-        CacheClient cacheClient = SpringBean.getBean(RedisClient.class);
-        return cacheClient.get(cacheName , sb.toString());
+
+        return SpringBean.getBean(EhCacheClient.class).get(cacheName , sb.toString());
     }
 
     @Override
@@ -32,7 +31,6 @@ public class RedisCacheFailOverHandler implements FailOverHandler {
         for(int i = 0 ; i < args.length ; i ++){
             sb.append(Json.toJson(args)).append(",");
         }
-        SpringBean.getBean(RedisClient.class).put(cacheName, sb.toString(), object , failOver.failOverCacheTimeout());
-
+        SpringBean.getBean(EhCacheClient.class).put(cacheName, sb.toString(), object , failOver.failOverCacheTimeout());
     }
 }

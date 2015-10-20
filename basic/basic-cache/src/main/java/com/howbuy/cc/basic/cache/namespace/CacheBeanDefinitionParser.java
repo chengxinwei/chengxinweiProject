@@ -6,6 +6,8 @@ import com.howbuy.cc.basic.cache.aop.SpringCacheAdvisor;
 import com.howbuy.cc.basic.cache.aop.SpringCacheInterceptor;
 import com.howbuy.cc.basic.cache.client.EhCacheClient;
 import com.howbuy.cc.basic.cache.client.RedisClient;
+import com.howbuy.cc.basic.cache.failover.EHCacheFailOverHandler;
+import com.howbuy.cc.basic.cache.failover.RedisCacheFailOverHandler;
 import com.howbuy.cc.basic.cache.hit.aop.CacheHitAdvisor;
 import com.howbuy.cc.basic.cache.hit.aop.CacheHitInterceptor;
 import com.howbuy.cc.basic.cache.hit.thread.CacheHitLogThread;
@@ -55,6 +57,8 @@ public class CacheBeanDefinitionParser implements BeanDefinitionParser {
         }
         //cache hit
         this.parseCacheHit(element , parserContext);
+        parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(EHCacheFailOverHandler.class));
+        parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(RedisCacheFailOverHandler.class));
         return null;
     }
 

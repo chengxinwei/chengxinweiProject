@@ -71,7 +71,7 @@ public class EhCacheTest extends BaseTest {
 
     @Test
     public void testLog(){
-        for(int i = 0 ; i < 50 ; i ++){
+        for(int i = 0 ; i < 10 ; i ++){
             ehService.getUser(i%5);
         }
         try {
