@@ -81,9 +81,10 @@ public abstract class AbstractListener implements MessageListener , BeanFactoryA
                 text = message.toString();
             }
         }
-        String[] messageInfoAry = new String[2];
+        String[] messageInfoAry = new String[3];
         messageInfoAry[0] = id;
-        messageInfoAry[1] = text;
+        messageInfoAry[1] = this.getClass().getAnnotation(ActivemqListener.class).value();
+        messageInfoAry[2] = text;
         logger.info("activeMQ-listener" , messageInfoAry);
     }
     
