@@ -32,10 +32,6 @@ public class AnnounceDao extends MybatisCommonDao<Announce>{
         });
     }
 
-    public List<Announce> updateAndSelect(){
-        return super.selectList("updateAndSelect" , new HashMap<String, Object>());
-    }
-
 
     public Page<Announce> page(){
         return super.page("page" , "count" , new HashMap<String, Object>() , 1 , 2 , null);

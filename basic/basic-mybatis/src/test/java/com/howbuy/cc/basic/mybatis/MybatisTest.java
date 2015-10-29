@@ -41,9 +41,5 @@ public class MybatisTest extends BaseTest {
         custInfoMasterDao.delete(1);
     }
 
-    @Test
-    public void updateAndSelect(){
-        System.out.println(announceDao.updateAndSelect());
-    }
 
 }

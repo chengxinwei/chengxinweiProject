@@ -1,17 +1,17 @@
 package com.howbuy.cc.basic.mybatis.namespace;
 
-import com.howbuy.cc.basic.config.PropertyPlaceHolderResolver;
+import com.howbuy.cc.basic.mybatis.datasourceRoute.interceptor.DynamicDataSourceAdvisor;
+import com.howbuy.cc.basic.mybatis.datasourceRoute.interceptor.DynamicDataSourceInterceptor;
 import com.howbuy.cc.basic.mybatis.interceptor.SqlLoggerInterceptor;
-import com.howbuy.cc.basic.spring.SpringBean;
+import org.springframework.aop.config.AopNamespaceUtils;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
+import org.springframework.beans.factory.parsing.BeanComponentDefinition;
+import org.springframework.beans.factory.parsing.CompositeComponentDefinition;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
-import org.springframework.util.xml.DomUtils;
 import org.w3c.dom.Element;
-
-import java.util.List;
 
 /**
  * Created by xinwei.cheng on 2015/8/12.
@@ -35,7 +35,33 @@ public class MybatisBeanDefinitionParser implements BeanDefinitionParser {
         mybatisInterceptorBeanDefinition.getPropertyValues().add("mybatisOperationSource" , new RuntimeBeanReference(mybatisSourceBeanName));
         parserContext.getReaderContext().registerWithGeneratedName(mybatisInterceptorBeanDefinition);
 
+        //注册路由切换的aop
+        parseDynamicDataSource(element, parserContext);
         return null;
     }
 
+
+
+    private void parseDynamicDataSource(Element element, ParserContext parserContext){
+
+        AopNamespaceUtils.registerAutoProxyCreatorIfNecessary(parserContext, element);
+
+        Object eleSource = parserContext.extractSource(element);
+
+        RootBeanDefinition interceptorDef = new RootBeanDefinition(DynamicDataSourceInterceptor.class);
+        interceptorDef.setSource(eleSource);
+        interceptorDef.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);
+        String interceptorName = parserContext.getReaderContext().registerWithGeneratedName(interceptorDef);
+
+        RootBeanDefinition advisorDef = new RootBeanDefinition(DynamicDataSourceAdvisor.class);
+        advisorDef.setSource(eleSource);
+        advisorDef.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);
+        advisorDef.getPropertyValues().add("adviceBeanName", interceptorName);
+        String advisorBeanName = parserContext.getReaderContext().registerWithGeneratedName(advisorDef);
+
+        CompositeComponentDefinition compositeDef = new CompositeComponentDefinition(element.getTagName() , eleSource);
+        compositeDef.addNestedComponent(new BeanComponentDefinition(interceptorDef, interceptorName));
+        compositeDef.addNestedComponent(new BeanComponentDefinition(advisorDef, advisorBeanName));
+        parserContext.registerComponent(compositeDef);
+    }
 }

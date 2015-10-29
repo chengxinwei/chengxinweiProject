@@ -235,16 +235,7 @@ public class MybatisCommonDao<T>{
      * @return 返回数据
      */
     protected  <E> E execute(String sqlId , ExecuteCallBack<E> executeCallBack){
-        Class<?> clazz = this.getClass();
-        if(clazz.isAnnotationPresent(CCDatasourceRoute.class)){
-            CCDatasourceRoute ccDatasourceRoute = clazz.getAnnotation(CCDatasourceRoute.class);
-            String datasourceName = ccDatasourceRoute.value();
-            DynamicDataSourceSwitch.setDataSource(datasourceName);
-        }else{
-            DynamicDataSourceSwitch.setDataSource(null);
-        }
         String fullSqlId = this.nameSpace + "." + sqlId;
-
         E e = executeCallBack.execute(fullSqlId , sqlSession);
         return e;
     }

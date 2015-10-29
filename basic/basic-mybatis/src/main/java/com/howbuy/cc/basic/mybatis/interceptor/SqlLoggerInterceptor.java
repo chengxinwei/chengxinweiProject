@@ -32,7 +32,6 @@ public class SqlLoggerInterceptor implements Interceptor , BeanFactoryAware {
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
-
         long date = System.currentTimeMillis();
         Object obj = invocation.proceed();
         long useTime = System.currentTimeMillis() - date;

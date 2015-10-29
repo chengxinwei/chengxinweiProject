@@ -1,5 +1,6 @@
 package com.howbuy.cc.basic.mybatis.dao;
 
+import com.howbuy.cc.basic.mybatis.annotation.CCDatasourceRoute;
 import com.howbuy.cc.basic.mybatis.model.CustInfo;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class CustInfoMasterDao extends MybatisCommonDao<CustInfo>{
 
+
+    @CCDatasourceRoute("master")
     public CustInfo selectOne(){
         return super.selectOne("selectOne" , null);
     }
