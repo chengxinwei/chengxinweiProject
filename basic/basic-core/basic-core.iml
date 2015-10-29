@@ -44,18 +44,5 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.3" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
-    <orderEntry type="module" module-name="basic-cache" scope="PROVIDED" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: net.sf.ehcache:ehcache:2.10.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.howbuy.pa.basic:howbuy-cache-client:1.1.0-RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.github.xsonorg:xson-core:1.0.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: redis.clients:jedis:2.7.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.commons:commons-pool2:2.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: cglib:cglib-full:2.0.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javassist:javassist:3.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jodd:jodd-vtor:3.5.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jodd:jodd-core:3.5.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jodd:jodd-bean:3.5.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-lang:commons-lang:2.4" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
   </component>
 </module>

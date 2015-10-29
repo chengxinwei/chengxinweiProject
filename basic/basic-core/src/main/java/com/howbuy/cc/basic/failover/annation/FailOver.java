@@ -1,5 +1,6 @@
 package com.howbuy.cc.basic.failover.annation;
 
+import com.howbuy.cc.basic.failover.handler.AbandonFailOverHandler;
 import com.howbuy.cc.basic.failover.handler.common.FailOverHandler;
 
 import java.lang.annotation.*;
@@ -21,6 +22,6 @@ public @interface FailOver {
 
     int failOverCacheTimeout() default 60 * 60 ;
 
-    Class<? extends FailOverHandler> handlerClass() default FailOverHandler.class;
+    Class<? extends FailOverHandler> handlerClass() default AbandonFailOverHandler.class;
 
 }

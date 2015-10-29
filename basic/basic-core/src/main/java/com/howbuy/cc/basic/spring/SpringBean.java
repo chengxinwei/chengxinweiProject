@@ -44,6 +44,9 @@ public class SpringBean implements ApplicationContextAware {
         return applicationContext.getBean(beanName, clazz);
     }
 
+    public static <T> Map<String,T> getBeans(Class<T> clazz){
+        return applicationContext.getBeansOfType(clazz);
+    }
 
     public static void regist(String beanName, AbstractBeanDefinition abstractBeanDefinition) {
         if (applicationContext == null) {

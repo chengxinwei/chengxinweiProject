@@ -4,8 +4,6 @@ import com.howbuy.cc.basic.config.PropertyPlaceHolderResolver;
 import com.howbuy.cc.basic.failover.aop.FailOverAdvisor;
 import com.howbuy.cc.basic.failover.aop.FailOverInterceptor;
 import com.howbuy.cc.basic.failover.handler.AbandonFailOverHandler;
-import com.howbuy.cc.basic.failover.handler.EHCacheFailOverHandler;
-import com.howbuy.cc.basic.failover.handler.RedisCacheFailOverHandler;
 import com.howbuy.cc.basic.filter.FilterExcludeBeanPostProcessor;
 import com.howbuy.cc.basic.spring.SpringBean;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -89,7 +87,5 @@ public class CoreBeanDefinitionParser implements org.springframework.beans.facto
         parserContext.getRegistry().registerBeanDefinition(FailOverAdvisor.class.getName(), advisorDef);
 
         parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(AbandonFailOverHandler.class));
-        parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(EHCacheFailOverHandler.class));
-        parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(RedisCacheFailOverHandler.class));
-    }
+       }
 }
