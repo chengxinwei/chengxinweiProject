@@ -94,7 +94,7 @@ public abstract class MongoCommonDao<T> {
             page.setPageList(new ArrayList<T>());
             return page;
         }
-        page.setPageList(mongoTemplate.find(query.with(sort).skip(pageNo * pageSize).limit(pageSize), clazz));
+        page.setPageList(mongoTemplate.find(query.with(sort).skip(page.getBeginNum()).limit(pageSize), clazz));
         return page;
     }
 
