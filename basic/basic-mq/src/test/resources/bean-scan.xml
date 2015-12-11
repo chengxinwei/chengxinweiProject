@@ -30,11 +30,4 @@
     </bean>
 
 
-
-    <bean> class="container">
-        <property name="messageListener" >
-            <bean class="listener"></bean>
-        </property>
-    </bean>
-
 </beans>

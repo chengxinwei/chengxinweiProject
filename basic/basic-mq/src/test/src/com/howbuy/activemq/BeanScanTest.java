@@ -22,20 +22,9 @@ public class BeanScanTest {
         VirtualSenderTest virtualSenderTest = classPathXmlApplicationContext.getBean(VirtualSenderTest.class);
 
         QueueSenderTest queueSenderTest = classPathXmlApplicationContext.getBean(QueueSenderTest.class);
-        while(true) {
-            try {
-                queueSenderTest.sendMessage("queueSenderTest");
-                topicSenderTest.sendMessage("topicSenderTest");
-                virtualSenderTest.sendMessage("virtualSenderTest");
-                System.out.println("success");
-            }catch(Exception e){
-                System.out.println("fail");
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
-        }
+        queueSenderTest.sendMessage("queueSenderTest");
+        topicSenderTest.sendMessage("topicSenderTest");
+        virtualSenderTest.sendMessage("virtualSenderTest");
     }
 
 }
