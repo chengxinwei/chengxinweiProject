@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,6 +18,7 @@ public class User {
     private String userName;
     private String type;
     private Integer age;
+    private Date date;
     @Version
     private Integer version;
 
@@ -28,6 +30,16 @@ public class User {
         this.userName = userName;
         this.type = type;
         this.age = age;
+
+    }
+
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Integer getUserCode() {

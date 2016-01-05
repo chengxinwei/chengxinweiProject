@@ -1,9 +1,9 @@
 package com.howbuy.cc.basic.test.dubbo;
 
 import com.howbuy.cc.basic.test.interfac.DubboMQInterfaceTest;
-import com.howbuy.cc.basic.test.mq.QueueSender;
-import com.howbuy.cc.basic.test.mq.TopicSender;
-import com.howbuy.cc.basic.test.mq.VirtualSender;
+import com.howbuy.cc.basic.test.mq.sender.QueueSender;
+import com.howbuy.cc.basic.test.mq.sender.TopicSender;
+import com.howbuy.cc.basic.test.mq.sender.VirtualSender;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -21,7 +21,11 @@ public class DubboMqProviderTest implements DubboMQInterfaceTest{
 
     @Override
     public String sendQueue(String text) {
-        queueSender.sendMessage(text);
+        try {
+            queueSender.sendMessage(text);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return "ok";
     }
 

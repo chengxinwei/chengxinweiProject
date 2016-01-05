@@ -4,6 +4,7 @@ import com.howbuy.cc.basic.constant.CommonConstant;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
+import org.springframework.core.annotation.Order;
 
 import java.io.*;
 import java.net.JarURLConnection;
@@ -51,7 +52,7 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
             this.loadPropFileByPath(prop);
         }
 
-        PropertyPlaceHolderResolver.properties = prop;
+        PropertyPlaceHolderResolver.properties = prop; //todo get from config    hashmap
         Configuration.init(prop);
         if(StringUtils.isEmpty(prop.getProperty(CommonConstant.DEFAULT_APPLICATION_NAME))){
             throw new RuntimeException(CommonConstant.DEFAULT_APPLICATION_NAME + " is null");

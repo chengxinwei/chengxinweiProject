@@ -3,7 +3,18 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.howbuy.cc.basic</groupId>
     <artifactId>basic-parent</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>1.3.0-RELEASE</version>
+    <modules>
+        <!--<module>basic-kafka</module>-->
+        <!--<module>basic-netty</module>-->
+        <module>basic-core</module>
+        <module>basic-cache</module>
+        <module>basic-mongo</module>
+        <module>basic-mq</module>
+        <module>basic-mybatis</module>
+        <module>basic-es</module>
+        <module>basic-dropwizard</module>
+    </modules>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>The parent project of cc.basic</description>
@@ -20,8 +31,6 @@
         <log4j.version>1.2.17</log4j.version>
         <pa.jedis.version>1.1.0-RELEASE</pa.jedis.version>
         <ehcache.version>2.10.0</ehcache.version>
-        <mybatis.spring.version>1.2.2</mybatis.spring.version>
-        <mybatis.version>3.3.0</mybatis.version>
         <fastjson.version>1.2.6</fastjson.version>
         <junit.version>4.12</junit.version>
         <dubbo.version>2.5.3</dubbo.version>
@@ -33,21 +42,22 @@
         <mybatis.version>3.3.0</mybatis.version>
         <commons.dbcp.version>1.4</commons.dbcp.version>
         <oracle.version>10</oracle.version>
+        <activemq.pool.version>5.11.2</activemq.pool.version>
+        <spring.data.mongodb.version>1.3.5.RELEASE</spring.data.mongodb.version>
+        <slf4j.version>1.7.12</slf4j.version>
+        <commons.pool.version>1.5.4</commons.pool.version>
+        <slf4j.log4j12.version>1.6.1</slf4j.log4j12.version>
+        <httpclient.version>4.5.1</httpclient.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
 
             <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis.spring.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
+                <groupId>com.howbuy.cc.basic</groupId>
+                <artifactId>basic-core</artifactId>
+                <version>1.3.0-RELEASE</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -84,6 +94,12 @@
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-core</artifactId>
                 <version>${activemq.core.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -109,9 +125,16 @@
                 <artifactId>spring-core</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
                 <version>${spring.version}</version>
             </dependency>
 
@@ -165,11 +188,40 @@
                 <version>${joda.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jul-to-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>log4j-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.log4j12.version}</version>
             </dependency>
 
             <dependency>
@@ -183,6 +235,12 @@
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${ehcache.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -213,6 +271,20 @@
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
                 <version>${apache.zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -221,6 +293,54 @@
                 <version>${zookeeper.client.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-pool</artifactId>
+                <version>${activemq.pool.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>activemq-client</artifactId>
+                        <groupId>org.apache.activemq</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-pool</groupId>
+                        <artifactId>commons-pool</artifactId>
+                    </exclusion>
+                </exclusions>
+
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-mongodb</artifactId>
+                <version>${spring.data.mongodb.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>jul-to-slf4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-pool</groupId>
+                <artifactId>commons-pool</artifactId>
+                <version>${commons.pool.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
@@ -272,8 +392,8 @@
     <distributionManagement>
         <repository>
             <id>nexus_crm</id>
-            <!--<url>http://192.168.220.220:8081/nexus/content/repositories/com.howbuy.cc/</url>-->
-            <url>http://192.168.220.220:8081/nexus/content/repositories/com.howbuy.cc.snapshot/</url>
+            <url>http://192.168.220.220:8081/nexus/content/repositories/com.howbuy.cc/</url>
+            <!--<url>http://192.168.220.220:8081/nexus/content/repositories/com.howbuy.cc.snapshot/</url>-->
         </repository>
     </distributionManagement>
 </project>

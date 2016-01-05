@@ -13,7 +13,7 @@ public class LoggerFilterUtil {
 
     public static Result executeAndGetLoggerInfo(String[] logInfo, Invoker<?> invoker, Invocation invocation , boolean excludeLogDetail){
 
-        logInfo[0] = invoker.getInterface().getSimpleName();
+        logInfo[0] = invoker.getInterface().getName();
         logInfo[1] = invocation.getMethodName();
         logInfo[2] = Json.toJson(invocation.getArguments(), JsonFormat.compact());
 

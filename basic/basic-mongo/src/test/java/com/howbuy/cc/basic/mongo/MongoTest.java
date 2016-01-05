@@ -13,6 +13,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,6 +29,7 @@ public class MongoTest extends BaseTest {
     @Test
     public void insert()  {
         User user = new User(random , "testVersion" , "1" , 0);
+        user.setDate(new Date());
         userDao.add(user);
     }
 
@@ -109,7 +111,6 @@ public class MongoTest extends BaseTest {
     }
 
 
-
     @Test
     public void updateMulti()  {
         userDao.updateMulti(new Query(Criteria.where("userCode").is(random)), Update.update("userName", "updateMultiTestName"));
@@ -120,6 +121,11 @@ public class MongoTest extends BaseTest {
         Query query = new Query(Criteria.where("userCode").is(random));
         query.fields().include("_id");
         System.out.println(userDao.findList(query));
+    }
+
+    @Test
+    public void findByDate()  {
+        System.out.println(userDao.findOne(new Query(Criteria.where("date").lt(new Date()))));
     }
 
     @Test
@@ -169,4 +175,7 @@ public class MongoTest extends BaseTest {
     public void remove()  {
         userDao.delete(new Query(Criteria.where("userCode").is(random)));
     }
+
+
+    
 }

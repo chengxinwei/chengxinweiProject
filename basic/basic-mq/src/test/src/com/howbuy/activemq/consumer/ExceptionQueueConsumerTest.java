@@ -10,7 +10,7 @@ import java.io.Serializable;
  * Created by xinwei.cheng on 2015/8/25.
  */
 @Service
-@ActivemqListener(value = "test.queue.exception")
+@ActivemqListener("test.queue.exception")
 public class ExceptionQueueConsumerTest extends QueueAbstractListener {
 
     @Override

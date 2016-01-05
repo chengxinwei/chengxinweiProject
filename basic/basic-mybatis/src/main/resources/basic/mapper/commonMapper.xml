@@ -9,7 +9,7 @@
 
     <sql id="Pagination_Foot" >
         <if test="beginNum != null and endNum != null" >
-            <![CDATA[ ) row_ where rownum <= #{endNum} ) where rn > #{beginNum} ]]>
+            <![CDATA[ ) row_ where rownum < #{endNum} ) where rn >= #{beginNum} ]]>
         </if>
     </sql>
 </mapper>

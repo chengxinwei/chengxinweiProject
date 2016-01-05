@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:basic-core="http://com.howbuy.cc.basic/schema/basic-core"
+       xmlns:basic-mybatis="http://com.howbuy.cc.basic/schema/basic-mybatis"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://com.howbuy.cc.basic/schema/basic-core
+       http://com.howbuy.cc.basic/schema/basic-core.xsd
+       http://com.howbuy.cc.basic/schema/basic-mybatis
+       http://com.howbuy.cc.basic/schema/basic-mybatis.xsd">
+
+    <basic-mybatis:mybatis-driven sqlTimeLog="log/sql_time.log" sqlTimeout="10"/>
+
+    <basic-core:core-driven></basic-core:core-driven>
+
+    <context:component-scan base-package="com.howbuy.cc"/>
+
+    <bean id="dataSource" class="com.howbuy.cc.basic.mybatis.datasourceRoute.DynamicDataSource">
+        <property name="targetDataSources" >
+            <map>
+                <entry key="master" value-ref="master"></entry>
+                <entry key="slave" value-ref="slave"></entry>
+            </map>
+        </property>
+        <property name="defaultTargetDataSource" ref="master"></property>
+    </bean>
+
+    <bean id="master" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="validationQuery" value="select 1 from dual"/>
+    </bean>
+
+
+    <bean id="slave" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.slave.driver}"/>
+        <property name="url" value="${jdbc.slave.url}"/>
+        <property name="username" value="${jdbc.slave.username}"/>
+        <property name="password" value="${jdbc.slave.password}"/>
+        <property name="initialSize" value="${jdbc.slave.initialSize}"/>
+        <property name="maxActive" value="${jdbc.slave.maxActive}"/>
+        <property name="minIdle" value="${jdbc.slave.minIdle}"/>
+        <property name="validationQuery" value="select 1 from dual"/>
+    </bean>
+
+    <!-- 集成mybatis -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:mybatis-config.xml" />
+        <!-- 自动配置别名 -->
+        <property name="typeAliasesPackage" value="com.howbuy.cc.basic.mybatis.model" />
+        <property name="mapperLocations" >
+            <list>
+                <value>classpath:mapper/*Mapper.xml</value>
+                <value>classpath:basic/mapper/*Mapper.xml</value>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory" />
+    </bean>
+
+</beans>

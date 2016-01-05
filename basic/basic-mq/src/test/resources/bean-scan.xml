@@ -10,7 +10,7 @@
     <basic-core:core-driven/>
 
     <basic-mq:mq-driven brokerUrl="${activemq.server.path}" afterTransactionSend="true" redeliveryListener="true"
-                       senderLog = "log/sender.log" listenerLog="log/listener.log" maximumRedeliveries="1"  />
+                       senderLog = "log/sender.log" listenerLog="log/listener.log" maximumRedeliveries="1"   />
 
     <tx:annotation-driven transaction-manager="transactionManager" />
 

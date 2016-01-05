@@ -1,6 +1,5 @@
 package com.howbuy.activemq;
 
-import com.howbuy.activemq.model.User;
 import com.howbuy.activemq.sender.QueueSenderTest;
 import com.howbuy.activemq.sender.TopicSenderTest;
 import com.howbuy.activemq.sender.VirtualSenderTest;

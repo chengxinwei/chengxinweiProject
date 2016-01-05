@@ -29,6 +29,8 @@ public class FailOverInterceptor implements MethodInterceptor, Serializable , In
 
     private final static Map<String, AtomicInteger> currentExecuteMethod = new ConcurrentHashMap<>();
 
+    private final ExecutorService executor = Executors.newCachedThreadPool();
+
     @Autowired
     private CoreOperationSource coreOperationSource;
 
@@ -87,7 +89,6 @@ public class FailOverInterceptor implements MethodInterceptor, Serializable , In
      * @throws ExecutionException
      */
     public Object executeMethod(final FailOver failOver , final MethodInvocation invocation , final FailOverHandler failOverHandler) throws InterruptedException, ExecutionException {
-        ExecutorService executor = Executors.newCachedThreadPool();
         Future<Object> result = executor.submit(new Callable<Object>() {
             @Override
             public Object call() throws Exception {

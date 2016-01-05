@@ -24,7 +24,7 @@ public class FailOverTest extends BaseTest {
                 }
             }.start();
         }
-        Thread.sleep(10000);
+        Thread.sleep(1000);
     }
 
 

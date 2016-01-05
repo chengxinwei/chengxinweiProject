@@ -1,7 +1,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:basic-cache="http://com.howbuy.cc.basic/schema/basic-cache"
        xmlns:basic-core="http://com.howbuy.cc.basic/schema/basic-core"
        xmlns:basic-mongo="http://com.howbuy.cc.basic/schema/basic-mongo"
        xmlns:mongo="http://www.springframework.org/schema/data/mongo"
@@ -9,7 +8,7 @@
        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd
-         http://com.howbuy.cc.basic/schema/basic-cache http://com.howbuy.cc.basic/schema/basic-cache.xsd http://com.howbuy.cc.basic/schema/basic-core http://com.howbuy.cc.basic/schema/basic-core.xsd http://com.howbuy.cc.basic/schema/basic-mongo http://com.howbuy.cc.basic/schema/basic-mongo.xsd http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
+           http://com.howbuy.cc.basic/schema/basic-core http://com.howbuy.cc.basic/schema/basic-core.xsd http://com.howbuy.cc.basic/schema/basic-mongo http://com.howbuy.cc.basic/schema/basic-mongo.xsd http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
 
     <context:component-scan base-package="com.howbuy"/>
 
@@ -17,7 +16,7 @@
         <basic-core:dubboLog accessLog="log/access.log" requestLog="log/request.log" />
     </basic-core:core-driven>
 
-    <basic-mongo:mongo-driven mongo="mongo" databaseName="testDatabase" mongoLog="log/mongo.log" mongoLogTimeout="100" />
+    <basic-mongo:mongo-driven mongo="mongo" databaseName="testDatabase" mongoTimeLog="log/mongo.log" mongoTimeout="100" />
 
     <mongo:mongo replica-set="192.168.220.220:27017,192.168.220.220:27018" id="mongo">
         <mongo:options connections-per-host="100" slave-ok="true" ></mongo:options>
@@ -27,5 +26,6 @@
     <import resource="classpath:dubbo/application.xml"/>
     <import resource="classpath:mybatis/spring-mybatis.xml"></import>
     <import resource="classpath:redis/application.xml"/>
+    <import resource="classpath*:mq/application.xml"/>
 
 </beans>
