@@ -2,9 +2,8 @@ package com.howbuy.cc.basic.mvc;
 
 import com.alibaba.dubbo.common.json.JSON;
 import com.howbuy.cc.basic.config.Configuration;
-import com.howbuy.cc.basic.dubbo.execute.JarGenerator;
+import com.howbuy.cc.basic.dubbo.execute.util.JarGeneratorUtil;
 import com.howbuy.cc.basic.dubbo.execute.model.Pom;
-import javassist.ClassPath;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.xml.sax.SAXException;
 
@@ -31,8 +30,8 @@ public class App {
                 " \t\t</dependency>\n";
 
         pomStr = pomStr.replace("\t" , "").replace("\n" , "").replace(" " , "");
-        Pom pom = JarGenerator.getPomByStr(pomStr);
-        JarGenerator.getJarByPom(pom);
+        Pom pom = JarGeneratorUtil.getPomByStr(pomStr);
+        JarGeneratorUtil.getJarByPom(pom);
 
         System.out.println("----------------");
         Map<String,String> params = new HashMap<>();

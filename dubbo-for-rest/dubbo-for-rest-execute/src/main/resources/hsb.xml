@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="hsbClient" class="com.howbuy.hsb.hsbclient.HSBClient" />
+
+	<!--&lt;!&ndash;&lt;!&ndash; 通过公募客户号查询对应客户信息 &ndash;&gt;&ndash;&gt;-->
+	<!--<bean id="queryCustNo" class="com.howbuy.hsb.txio.NetConfig">-->
+		<!--<property name="recognizers">-->
+			<!--<value>${recognizers}</value>-->
+		<!--</property>-->
+		<!--<property name="communMode">-->
+			<!--<value>3</value>-->
+		<!--</property>-->
+		<!--<property name="timeout">-->
+			<!--<value>0</value>-->
+		<!--</property>-->
+		<!--<property name="local">-->
+			<!--<value>false</value>-->
+		<!--</property>-->
+		<!--<property name="ip">-->
+			<!--<value>${ip}</value>-->
+		<!--</property>-->
+		<!--<property name="port">-->
+			<!--<value>${port}</value>-->
+		<!--</property>-->
+		<!--<property name="communPort">-->
+			<!--<value>${communPort}</value>-->
+		<!--</property>-->
+		<!--<property name="endpointSelectionPolicy">-->
+			<!--<value>org.softamis.cluster4spring.support.invocation.DefaultEndpointSelectionPolicy</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+
+</beans>

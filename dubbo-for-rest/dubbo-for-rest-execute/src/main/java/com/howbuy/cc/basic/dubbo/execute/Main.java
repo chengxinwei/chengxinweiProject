@@ -1,6 +1,9 @@
 package com.howbuy.cc.basic.dubbo.execute;
 
-import com.alibaba.dubbo.common.json.JSON;
+import com.howbuy.cc.basic.dubbo.execute.model.ExecuteInfo;
+import com.howbuy.cc.basic.dubbo.execute.service.common.ExecuteService;
+import com.howbuy.cc.basic.dubbo.execute.service.dubbo.DubboExecute;
+import com.howbuy.cc.basic.dubbo.execute.service.hsb.HsbExecute;
 import org.apache.commons.lang3.StringUtils;
 import org.nutz.json.Json;
 
@@ -19,28 +22,32 @@ public class Main {
             System.out.println("参数错误");
             return;
         }
-
         String fullJarPath = args[0];
         String interfaceName = args[1];
         String zookeeperHost = args[2];
         String methodName = args[3];
+        String ip = args[4];
+        String port = args[5];
+        String communPort = args[6];
+        String recognizers = args[7];
+        boolean isDubbo = Boolean.valueOf(args[8]);
+        String[] methodClassAry = args[9].equals("null") ? new String[]{} : args[9].split("[|]");
 
-        String[] methodClassAry = new String[0];
-        String[] methodValueAry = new String[0];
-        if(args.length > 4) {
-            methodClassAry = args[4].split("[|]");
-
-            int methodAryLength = args.length - 5;
-            methodValueAry = new String[methodAryLength];
-            for(int i = 0 ; i < methodAryLength ; i ++) {
-                methodValueAry[i] = URLDecoder.decode(args[i + 5]);
-            }
+        int offset = 10;
+        int methodAryLength = args.length - offset;
+        String[] methodValueAry = new String[methodAryLength];
+        for(int i = 0 ; i < methodAryLength ; i ++) {
+            methodValueAry[i] = URLDecoder.decode(args[i + offset]);
         }
 
         try {
-
-
-            Object object = DubboService.execute(zookeeperHost, fullJarPath, interfaceName, methodName, methodClassAry, methodValueAry);
+            ExecuteInfo executeInfo = ExecuteService.prepareExecute(fullJarPath, interfaceName, methodName, methodClassAry, isDubbo , methodValueAry);
+            Object object;
+            if(isDubbo) {
+                object = DubboExecute.execute(zookeeperHost, executeInfo.getClazz(), executeInfo.getMethod(), executeInfo.getArgs());
+            }else{
+                object = HsbExecute.execute(ip , port , communPort , recognizers , interfaceName , methodValueAry[0]);
+            }
             System.out.println("-------------------------数据返回----------------------");
             System.out.println(Json.toJson(object));
             System.out.println("-------------------------结束----------------------");
@@ -51,4 +58,6 @@ public class Main {
             System.out.println(sw.toString());
         }
     }
+
+
 }

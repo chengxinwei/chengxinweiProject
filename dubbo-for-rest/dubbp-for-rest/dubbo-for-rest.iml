@@ -63,5 +63,8 @@
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.20.0-GA" level="project" />
     <orderEntry type="module" module-name="dubbo-for-rest-execute" />
+    <orderEntry type="library" name="Maven: com.howbuy:hsb:2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.howbuy:cluster4spring:0.85" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.5" level="project" />
   </component>
 </module>

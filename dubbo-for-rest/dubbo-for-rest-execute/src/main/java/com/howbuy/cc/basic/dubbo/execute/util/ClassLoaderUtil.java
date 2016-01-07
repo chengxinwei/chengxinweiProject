@@ -1,4 +1,4 @@
-package com.howbuy.cc.basic.dubbo.execute;
+package com.howbuy.cc.basic.dubbo.execute.util;
 
 import org.apache.log4j.Logger;
 
@@ -18,14 +18,12 @@ import java.util.jar.JarFile;
  * 负责下载完jar包之后 加载jar包中的所有class
  * Created by xinwei.cheng on 2015/7/13.
  */
-public class DubboClassLoader {
+public class ClassLoaderUtil {
 
-    private  final static  Logger logger = Logger.getLogger(DubboClassLoader.class);
+    private  final static  Logger logger = Logger.getLogger(ClassLoaderUtil.class);
 
     public static List<Class> loadJar(String jarPath , boolean useSystemClassLoader) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
-
         jarPath = "jar:file:" + jarPath + "!/";
-
         URL url = new URL(jarPath);
 
         JarURLConnection secJarCon = (JarURLConnection)url.openConnection();
@@ -33,13 +31,12 @@ public class DubboClassLoader {
 
         URLClassLoader urlClassLoader;
         if(!useSystemClassLoader) {
-            urlClassLoader = new URLClassLoader(new URL[]{url});
+            urlClassLoader = new URLClassLoader(new URL[]{url} , ClassLoaderUtil.class.getClassLoader());
         }else{
             urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
             Method method = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
             method.setAccessible(true);
             method.invoke(urlClassLoader, url);
-
         }
 
         Enumeration<JarEntry> jarEntrys = jarFile.entries();
@@ -54,7 +51,7 @@ public class DubboClassLoader {
                 try{
                     Class<?> clazz = urlClassLoader.loadClass(className);
                     classList.add(clazz);
-                }catch (ClassNotFoundException e){
+                }catch (Throwable e){
                     logger.error("加载class失败" , e);
                     continue;
                 }
@@ -62,4 +59,7 @@ public class DubboClassLoader {
         }
         return classList;
     }
+
+
+
 }

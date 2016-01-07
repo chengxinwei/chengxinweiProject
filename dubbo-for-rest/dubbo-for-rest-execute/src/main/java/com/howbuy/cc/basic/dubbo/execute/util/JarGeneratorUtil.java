@@ -1,4 +1,4 @@
-package com.howbuy.cc.basic.dubbo.execute;
+package com.howbuy.cc.basic.dubbo.execute.util;
 
 
 import com.howbuy.cc.basic.config.Configuration;
@@ -22,9 +22,13 @@ import java.util.List;
  * 负责获取到 pom 的字符串，下载jar包
  * Created by xinwei.cheng on 2015/7/10.
  */
-public class JarGenerator {
+public class JarGeneratorUtil {
 
-    final static  Logger logger = Logger.getLogger(JarGenerator.class);
+    final static  Logger logger = Logger.getLogger(JarGeneratorUtil.class);
+
+//    String[] mavenUrl = new String[]{
+//            "http://192.168.220.220:8081/nexus/service/local/repositories/com.howbuy.cc/content/${groupId}/${artifactId}/${version}/${jarname}" ,
+//            "http://192.168.220.220:8081/nexus/service/local/repositories/com.howbuy.tx.snapshots/content/${groupId}/${artifactId}/1.0.0-SNAPSHOT/howbuy-txio-1.0.0-20150920.211843-367.jar"};
 
     /**
      * 根据 pom xml 字符串创建pom对象
@@ -94,6 +98,8 @@ public class JarGenerator {
         downloadFile(url , pom.getFullJarPath());
     }
 
+    //http://192.168.220.220:8081/nexus/service/local/repositories/com.howbuy.cc/content/com/howbuy/test/howbuy-cxcp-txio/1.0.0/howbuy-cxcp-txio-1.0.0.jar
+    //http://192.168.220.220:8081/nexus/service/local/repositories/com.howbuy.cc/content/com/howbuy/test/howbuy-cxcp-txio/1.0.0/howbuy-cxcp-txio-1.0.0.jar
 
     /**
      * 下载远程文件并保存到本地
