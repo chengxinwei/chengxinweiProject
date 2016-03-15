@@ -84,19 +84,18 @@ public class MqTest extends BaseTest{
 
     }
 
-
-    @Test
-    public void queueSendAlways() throws InterruptedException {
-        for(int i = 0 ; i < 10 ; i ++){
-            queueSenderTest.sendMessage(i);
-        }
-    }
-
     @Test
     public void consumer() throws InterruptedException {
-        Thread.sleep(6*100000);
+//        Thread.sleep(6*100000);
     }
 
+
+    @Test
+    public void sendMessageWithAllInfo() throws InterruptedException {
+        for(int i = 0 ; i < 10 ; i ++) {
+            queueSenderTest.sendMessage("message", i , null);
+        }
+    }
 
 
 }

@@ -10,7 +10,7 @@ import java.io.Serializable;
  * Created by xinwei.cheng on 2015/7/31.
  */
 @Service
-@ActivemqListener(value = "test.queue" , prefetchSize = 10)
+@ActivemqListener(value = "test.queue")
 public class QueueConsumerBTest extends QueueAbstractListener {
 
     @Override

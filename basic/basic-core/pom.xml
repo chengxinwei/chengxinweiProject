@@ -5,10 +5,11 @@
     <parent>
         <groupId>com.howbuy.cc.basic</groupId>
         <artifactId>basic-parent</artifactId>
-        <version>1.3.0-RELEASE</version>
+        <version>1.4.1-RELEASE</version>
     </parent>
 
     <artifactId>basic-core</artifactId>
+    <version>1.4.5-RELEASE</version>
     <packaging>jar</packaging>
 
     <name>base</name>
@@ -120,6 +121,16 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.howbuy.pa.basic.config</groupId>
+            <artifactId>howbuy-config-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.howbuy.pa.basic.config</groupId>
+            <artifactId>howbuy-config-server-interface</artifactId>
         </dependency>
 
     </dependencies>

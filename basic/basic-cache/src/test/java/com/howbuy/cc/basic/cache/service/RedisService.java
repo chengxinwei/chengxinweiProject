@@ -1,7 +1,5 @@
 package com.howbuy.cc.basic.cache.service;
 
-import com.howbuy.cc.basic.cache.annotation.Cache;
-import com.howbuy.cc.basic.cache.annotation.CacheClear;
 import com.howbuy.cc.basic.cache.client.RedisClient;
 import com.howbuy.cc.basic.cache.constant.CacheConstant;
 import com.howbuy.cc.basic.cache.model.User;

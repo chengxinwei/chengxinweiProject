@@ -10,7 +10,7 @@
 
     <context:component-scan base-package="com.howbuy.cc.basic"/>
 
-    <basic-core:core-driven>
+    <basic-core:core-driven >
         <basic-core:dubboLog
                 accessLog="log/access.log"
                 requestLog="log/request.log"

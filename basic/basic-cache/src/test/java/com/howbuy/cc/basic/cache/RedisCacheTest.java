@@ -8,8 +8,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.math.BigDecimal;
-
 /**
  * Created by xinwei.cheng on 2015/7/6.
  */

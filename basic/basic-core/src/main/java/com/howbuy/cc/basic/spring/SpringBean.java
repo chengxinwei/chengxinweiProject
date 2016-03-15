@@ -8,6 +8,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.Ordered;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +18,7 @@ import java.util.Map;
  * Created by xinwei.cheng on 2015/7/8.
  */
 @SuppressWarnings("unused")
-public class SpringBean implements ApplicationContextAware {
+public class SpringBean implements ApplicationContextAware , Ordered {
 
     private static ApplicationContext applicationContext = null;
 
@@ -66,5 +67,10 @@ public class SpringBean implements ApplicationContextAware {
 
     public static ApplicationContext getApplicationContext(){
         return applicationContext;
+    }
+
+    @Override
+    public int getOrder() {
+        return Ordered.HIGHEST_PRECEDENCE;
     }
 }

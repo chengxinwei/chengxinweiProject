@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     private Integer id;
-
+    private String name;
     public Integer getId() {
         return id;
     }
@@ -25,5 +25,13 @@ public class User implements Serializable {
 
     public void setByteAry(byte[] byteAry) {
         this.byteAry = byteAry;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

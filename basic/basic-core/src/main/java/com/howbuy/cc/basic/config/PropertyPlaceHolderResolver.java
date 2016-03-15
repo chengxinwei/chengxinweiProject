@@ -1,8 +1,10 @@
 package com.howbuy.cc.basic.config;
 
 import com.howbuy.cc.basic.constant.CommonConstant;
+import com.howbuy.cc.basic.namespace.CoreOperationSource;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.core.annotation.Order;
 
@@ -22,15 +24,14 @@ import java.util.jar.JarFile;
 @SuppressWarnings("unused")
 public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
 
-    private static Logger logger = Logger.getLogger(PropertyPlaceHolderResolver.class);
+    private Logger logger = Logger.getLogger(PropertyPlaceHolderResolver.class);
 
     private final static String PROPERTIES_SUFFIX = ".properties";
 
-    private static Properties properties;
+    private Properties properties;
 
     @Override
     protected Properties mergeProperties() throws IOException {
-
         Properties prop = super.mergeProperties();
 
         String defaultDirPath;
@@ -45,14 +46,19 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
             baseJarPath = baseJarPath.replace("\\" , "/");
             baseJarPath = baseJarPath.substring( 0 , baseJarPath.lastIndexOf("/") + 1);
             defaultDirPath = baseJarPath + "conf";
-            String dirPath = prop.getProperty(CommonConstant.CONFIG_PATH);
-            loadPropByDir(dirPath == null ? defaultDirPath : dirPath, prop);
+            loadPropByDir(defaultDirPath, prop);
         }else{
             logger.info("检测到源码项目启动");
             this.loadPropFileByPath(prop);
         }
 
-        PropertyPlaceHolderResolver.properties = prop; //todo get from config    hashmap
+        String dirPath = prop.getProperty(CommonConstant.CONFIG_PATH);
+        if(dirPath != null) {
+            logger.info("检测到dirPath：" + dirPath);
+            loadPropByDir(dirPath, prop);
+        }
+
+        properties = prop;
         Configuration.init(prop);
         if(StringUtils.isEmpty(prop.getProperty(CommonConstant.DEFAULT_APPLICATION_NAME))){
             throw new RuntimeException(CommonConstant.DEFAULT_APPLICATION_NAME + " is null");
@@ -184,7 +190,8 @@ public class PropertyPlaceHolderResolver extends PropertyPlaceholderConfigurer {
         }
         for(String propName : prop.stringPropertyNames()){
             String value = prop.getProperty(propName);
-            superProperties.put(propName, value == null ? null : value.trim());
+            value = value == null ? null : new String(value.getBytes("ISO-8859-1") , "UTF-8").trim();
+            superProperties.put(propName, value);
             logger.info(propName + ":" + value);
         }
     }

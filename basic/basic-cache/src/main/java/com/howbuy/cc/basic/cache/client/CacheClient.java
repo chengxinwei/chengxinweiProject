@@ -3,13 +3,14 @@ package com.howbuy.cc.basic.cache.client;
 import com.howbuy.cc.basic.cache.hit.HitCount;
 import com.howbuy.cc.basic.cache.namespace.CacheHitOperationSource;
 import com.howbuy.cc.basic.cache.util.CacheKeyGenerator;
+import com.howbuy.tp.common.redis.core.ops.GeneralOps;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by xinwei.cheng on 2015/8/31.
  */
-public abstract class CacheClient {
+public abstract class CacheClient extends GeneralOps {
 
     @Autowired(required = false)
     private CacheHitOperationSource cacheHitOperationSource;

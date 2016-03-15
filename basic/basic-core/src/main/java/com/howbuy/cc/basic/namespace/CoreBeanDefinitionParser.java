@@ -1,6 +1,7 @@
 package com.howbuy.cc.basic.namespace;
 
 import com.howbuy.cc.basic.config.PropertyPlaceHolderResolver;
+import com.howbuy.cc.basic.config.PropertyPlaceHolderResolverForPa;
 import com.howbuy.cc.basic.failover.aop.FailOverAdvisor;
 import com.howbuy.cc.basic.failover.aop.FailOverInterceptor;
 import com.howbuy.cc.basic.failover.handler.AbandonFailOverHandler;
@@ -9,6 +10,7 @@ import com.howbuy.cc.basic.spring.SpringBean;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.beans.factory.xml.ParserContext;
+import org.springframework.core.Ordered;
 import org.springframework.util.xml.DomUtils;
 import org.w3c.dom.Element;
 
@@ -23,14 +25,17 @@ public class CoreBeanDefinitionParser implements org.springframework.beans.facto
 
     @Override
     public BeanDefinition parse(Element element, ParserContext parserContext) {
-
-        RootBeanDefinition placeHolderBeanDefinition = new RootBeanDefinition(PropertyPlaceHolderResolver.class);
-        parserContext.getReaderContext().registerWithGeneratedName(placeHolderBeanDefinition);
-
-        RootBeanDefinition springBeanDefinition = new RootBeanDefinition(SpringBean.class);
-        parserContext.getReaderContext().registerWithGeneratedName(springBeanDefinition);
+        boolean useConfigServer = Boolean.valueOf(element.getAttribute("useConfigServer"));
+        if(useConfigServer) {
+            parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(PropertyPlaceHolderResolverForPa.class));
+        }else {
+            parserContext.getReaderContext().registerWithGeneratedName(new RootBeanDefinition(PropertyPlaceHolderResolver.class));
+        }
+        parserContext.getReaderContext().registerWithGeneratedName( new RootBeanDefinition(SpringBean.class));
 
         RootBeanDefinition sourceDefinition = new RootBeanDefinition(CoreOperationSource.class);
+
+        sourceDefinition.getPropertyValues().add("useConfigServer" , useConfigServer);
 
         List<Element> childElts = DomUtils.getChildElements(element);
         for (Element elt: childElts) {
@@ -42,8 +47,6 @@ public class CoreBeanDefinitionParser implements org.springframework.beans.facto
             }
         }
         parserContext.getReaderContext().registerWithGeneratedName(sourceDefinition);
-
-
 
         return null;
     }

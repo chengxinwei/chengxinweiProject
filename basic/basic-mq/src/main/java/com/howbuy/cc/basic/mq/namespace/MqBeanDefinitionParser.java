@@ -60,14 +60,6 @@ public class MqBeanDefinitionParser implements BeanDefinitionParser {
         connectionPoolBeanDefinition.getPropertyValues().add("connectionFactory" , new RuntimeBeanReference(connectionBeanName));
         parserContext.getRegistry().registerBeanDefinition(MQConstant.MQ_CONNECTION_POOL_FACTORY_BEANNAME , connectionPoolBeanDefinition);
 
-
-        //jmsTemplate
-        BeanDefinition jmsTemplateBeanDefinition = new RootBeanDefinition(JmsTemplate.class);
-        jmsTemplateBeanDefinition.getPropertyValues().add("connectionFactory" , new RuntimeBeanReference(MQConstant.MQ_CONNECTION_POOL_FACTORY_BEANNAME));
-        jmsTemplateBeanDefinition.getPropertyValues().add("sessionTransacted" , afterTransaction);
-        jmsTemplateBeanDefinition.getPropertyValues().add("messageTimestampEnabled" , false);
-        parserContext.getRegistry().registerBeanDefinition(MQConstant.MQ_JMSTEMPLATE_BEANNAME , jmsTemplateBeanDefinition);
-
         return null;
     }
 

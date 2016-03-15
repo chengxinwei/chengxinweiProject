@@ -27,6 +27,7 @@ import java.lang.reflect.Method;
 public class MethodNameUtil {
 
     /**
+     *
      * <p>
      * 获取方法参数名称
      * </p>
@@ -35,18 +36,29 @@ public class MethodNameUtil {
      * @return
      */
     protected static String[] getMethodParamNames(CtMethod cm) throws NotFoundException {
+        CtClass cc = cm.getDeclaringClass();
         MethodInfo methodInfo = cm.getMethodInfo();
         CodeAttribute codeAttribute = methodInfo.getCodeAttribute();
         LocalVariableAttribute attr = (LocalVariableAttribute) codeAttribute
                 .getAttribute(LocalVariableAttribute.tag);
         if (attr == null) {
-            return new String[0];
+            return new String[]{};
         }
 
-        String[] paramNames = new String[cm.getParameterTypes().length];
-        int pos = Modifier.isStatic(cm.getModifiers()) ? 0 : 1;
-        for (int i = 0; i < paramNames.length; i++) {
-            paramNames[i] = attr.variableName(i + pos);
+        String[] paramNames =  new String[cm.getParameterTypes().length];
+//        int pos = Modifier.isStatic(cm.getModifiers()) ? 0 : 1;
+        boolean start = false;
+        int i = 0;
+        for (int index = 0; index < paramNames.length;) {
+            String name = attr.variableName(i);
+            if(start) {
+                paramNames[index] = name;
+                index ++;
+            }
+            if(name.equals("this")){
+                start = true;
+            }
+            i ++;
         }
         return paramNames;
     }
@@ -80,11 +92,27 @@ public class MethodNameUtil {
      * @throws NotFoundException  如果类或者方法不存在
      */
     public static String[] getMethodParamNames(Class<?> clazz, Method method) throws NotFoundException {
-        ClassPool pool = ClassPool.getDefault();
-        CtClass cc = pool.get(clazz.getName());
-        CtMethod cm = cc.getDeclaredMethod(method.getName());
-        return getMethodParamNames(cm);
+        CtClass cc = loadClass(clazz);
+        CtClass[] methodParams = new CtClass[method.getParameterTypes().length];
+        for(int i = 0 ; i < method.getParameterTypes().length ; i ++){
+            methodParams[i] = loadClass(method.getParameterTypes()[i]);
+        }
+        CtMethod ctMethod = cc.getDeclaredMethod(method.getName() ,methodParams);
+        return getMethodParamNames(ctMethod);
     }
+
+
+    public static CtClass loadClass(Class<?> clazz) throws NotFoundException {
+        ClassPool pool = ClassPool.getDefault();
+        try {
+            return pool.get(clazz.getName());
+        }catch (NotFoundException e) {
+            pool.insertClassPath(new ClassClassPath(clazz));
+            return pool.get(clazz.getName());
+        }
+    }
+
+
 
 }
 

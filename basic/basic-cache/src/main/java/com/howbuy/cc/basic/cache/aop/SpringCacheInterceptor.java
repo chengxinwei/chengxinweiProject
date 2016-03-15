@@ -161,7 +161,9 @@ public class SpringCacheInterceptor implements MethodInterceptor, Serializable {
             return paramsNameCache.get(method);
         }else{
             try {
-                return MethodNameUtil.getMethodParamNames(clazz , method);
+                String[] paramsNameAry = MethodNameUtil.getMethodParamNames(clazz , method);
+                paramsNameCache.put(method , paramsNameAry);
+                return paramsNameAry;
             } catch (NotFoundException e) {
                 return new String[0];
             }

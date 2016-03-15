@@ -167,6 +167,7 @@ public class MybatisCommonDao<T>{
         params.put("beginNum" , page.getBeginNum());
         params.put("endNum" ,  page.getEndNum());
         params.put("orderby" , orderby);
+        params.put("pageSize" , pageSize);
         List<T> list = this.selectList(listSqlId , params);
         page.setPageList(list);
         return page;

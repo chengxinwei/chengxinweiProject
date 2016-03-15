@@ -3,17 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.howbuy.cc.basic</groupId>
     <artifactId>basic-parent</artifactId>
-    <version>1.3.0-RELEASE</version>
+    <version>1.4.1-RELEASE</version>
     <modules>
         <!--<module>basic-kafka</module>-->
         <!--<module>basic-netty</module>-->
         <module>basic-core</module>
-        <module>basic-cache</module>
-        <module>basic-mongo</module>
-        <module>basic-mq</module>
-        <module>basic-mybatis</module>
-        <module>basic-es</module>
-        <module>basic-dropwizard</module>
+        <!--<module>basic-cache</module>-->
+        <!--<module>basic-mongo</module>-->
+        <!--<module>basic-mq</module>-->
+        <!--<module>basic-mybatis</module>-->
+        <!--<module>basic-es</module>-->
+        <!--<module>basic-dropwizard</module>-->
     </modules>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
@@ -247,6 +247,12 @@
                 <groupId>com.howbuy.pa.basic</groupId>
                 <artifactId>howbuy-cache-client</artifactId>
                 <version>${pa.jedis.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>cglib</groupId>
+                        <artifactId>cglib-full</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -342,6 +348,17 @@
                 <version>${httpclient.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.howbuy.pa.basic.config</groupId>
+                <artifactId>howbuy-config-client</artifactId>
+                <version>1.0.1-RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.howbuy.pa.basic.config</groupId>
+                <artifactId>howbuy-config-server-interface</artifactId>
+                <version>1.0.0-RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

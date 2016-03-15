@@ -10,7 +10,7 @@ import java.io.Serializable;
  * Created by xinwei.cheng on 2015/7/31.
  */
 @Service
-@ActivemqListener(value = "test.topic" , clientId = "sss")
+@ActivemqListener(value = "test.topic")
 public class TopicClientConsumerTest extends TopicAbstractListener {
 
 

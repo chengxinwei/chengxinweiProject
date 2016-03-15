@@ -44,6 +44,11 @@ public class EhCacheClient extends CacheClient{
 
     @Override
     protected void doClear(String key) {
+        //关闭缓存开关，如果关闭缓存则不获取直接返回空
+        Boolean close = Configuration.getBoolean(CacheCloseConstant.EHCACHE_CLOSE);
+        if(close != null && close){
+            return;
+        }
         ehcache.remove(key);
     }
 

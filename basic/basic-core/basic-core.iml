@@ -45,5 +45,7 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.3" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
+    <orderEntry type="library" name="Maven: com.howbuy.pa.basic.config:howbuy-config-client:1.0.1-RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.howbuy.pa.basic.config:howbuy-config-server-interface:1.0.0-RELEASE" level="project" />
   </component>
 </module>

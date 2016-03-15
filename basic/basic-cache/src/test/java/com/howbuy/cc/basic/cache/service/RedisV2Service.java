@@ -2,12 +2,10 @@ package com.howbuy.cc.basic.cache.service;
 
 import com.howbuy.cc.basic.cache.annotation.Cache;
 import com.howbuy.cc.basic.cache.annotation.CacheClear;
+import com.howbuy.cc.basic.cache.annotation.CacheUpdate;
 import com.howbuy.cc.basic.cache.client.RedisClient;
-import com.howbuy.cc.basic.cache.constant.CacheConstant;
 import com.howbuy.cc.basic.cache.model.User;
 import com.howbuy.cc.basic.spring.SpringBean;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 /**
@@ -46,5 +44,12 @@ public class RedisV2Service {
     @CacheClear(cacheName = "redis.test" , cacheExpr = "#index" , beforeExecute = true)
     public User clearBeforeUser(Integer index){
         return (User) SpringBean.getBean(RedisClient.class).get("redis.test" , index);
+    }
+
+    @CacheUpdate
+    @Cache(cacheName = "redis.user.test" , cacheExpr = "#user.id")
+    public User update(User user){
+        //update database
+        return user;
     }
 }
